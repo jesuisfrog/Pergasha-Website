@@ -1,0 +1,103 @@
+{
+    "Classes": [{
+      "Name": "Barbarian",
+      "Hit_points":{
+        "Hit_die": "1d12",
+        "1st_lvl": "12 + your Constitution modifier.",
+        "Higher_lvls": "1d12 (or 7) + your Constitution modifier per Barbarian level after 1st."
+      },
+      "Proficiencies":{
+        "armor": " light armor, medium armor, shields.",
+        "weapons": "simple weapons, martial weapons",
+        "saving_throws": "Choose one physical score (Strength, Dexterity, Constitution) and one mental score (Wisdom, Intelligence, Charisma). You have proficiency in saving throws for these two abilities.",
+        "skills_and_tools": "Choose any two skills or tools."
+      },
+      "Features":[{
+        "Feature_name": "Rage",
+        "Level": 1,
+        "Description": "<p>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:</p><ul><li>You have advantage on Strength checks and Strength saving throws.</li><li>When you make a melee weapon attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.</li><li>You have resistance to bludgeoning, piercing, and slashing damage.</li></ul><p>Rage affects the mind in a way that makes focused thought difficult. While raging, you cannot switch your Psionic Focus or use any effects that require concentration. Any active disciplines requiring your concentration immediately end and their effects dissipate. However, you can activate psionic abilities from disciplines from the Immortal Order that do not require concentration. You also can maintain your rage by attacking enemies with psionic abilities within the Immortal Order.</p><p>Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you have not attacked a hostile creature since your last turn or taken damage since then. Activities that  qualify for attacking a hostile creature includes weapon attacks, aggressive actions such as grappling, and targeted psionic attacks within the Immortal Order. You can also end your rage on your turn as a bonus action. Once you have raged the maximum number of times for your barbarian level, you must finish a long rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th.</p>"
+      },{
+        "Feature_name": "Unarmored Defense",
+        "Level": 1,
+        "Description": "<p>While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.</p>"
+      },{
+        "Feature_name": "Danger Sense",
+        "Level": 2,
+        "Description": "<p>At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be blinded, deafened, or incapacitated.</p>"
+      },{
+        "Feature_name": "Reckless Attack",
+        "Level": 2,
+        "Description": "<p>Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.</p>"
+      },{
+        "Feature_name": "Survival Instincts",
+        "Level": 2,
+        "Description": "<p>You may replace the 2nd-level feature <i>Danger Sense</i> as written in the <i>Player’s Handbook</i> with this alternative.<br> You become proficient in your choice of two of the following skills: Animal Handling, Medicine, Nature, Perception, or Survival. Your proficiency bonus is doubled for any ability check you make that uses either of those skills.</p>"
+      },{
+        "Feature_name": "Ability Score Improvement",
+        "Level": 4,
+        "Description": "<p>When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.<br> If your DM allows the use of feats, you may instead take a feat.</p>"
+      },{
+        "Feature_name": "Extra Attack",
+        "Level": 5,
+        "Description": "<p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>"
+      },{
+        "Feature_name": "Fast Movement",
+        "Level": 5,
+        "Description": "<p>Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor.</p>"
+      },{
+        "Feature_name": "Instinctive Pounce",
+        "Level": 5,
+        "Description": "<p>You may replace the 5th-level feature <i>Fast Movement</i> as written in the <i>Player’s Handbook</i> with this alternative.<br> When a creature ends its turn within 15 feet of you, you can use your reaction to move up to half your speed to a space closer to the creature. This movement doesn’t provoke opportunity attacks.</p>"
+      },{
+        "Feature_name": "Feral Instinct",
+        "Level": 7,
+        "Description": "<p>By 7th level, your instincts are so honed that you have advantage on initiative rolls.<br>Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.</p>"
+      },{
+        "Feature_name": "Ability Score Improvement",
+        "Level": 8,
+        "Description": "<p>When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.<br>If your DM uses the optional Feats, you can instead take a feat.</p>"
+      },{
+        "Feature_name": "Brutal Critical (1 die)",
+        "Level": 9,
+        "Description": "<p>Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.<br>This increases to two additional dice at 13th level and three additional dice at 17th level.</p>"
+      },{
+        "Feature_name": "Relentless Rage",
+        "Level": 11,
+        "Description": "<p>Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.<br>Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.</p>"
+      },{
+        "Feature_name": "Ability Score Improvement",
+        "Level": 12,
+        "Description": "<p>When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.<br>If your DM uses the optional Feats, you can instead take a feat.</p>"
+      },{
+        "Feature_name": "Brutal Critical (2 dice)",
+        "Level": 13,
+        "Description": "<p>At 13th level, you can roll two additional weapon damage dice when determining the extra damage for a critical hit with a melee attack.<br>This increases to three additional dice at 17th level.</p>"
+      },{
+        "Feature_name": "Persistent Rage",
+        "Level": 15,
+        "Description": "<p>Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.</p>"
+      },{
+        "Feature_name": "Ability Score Improvement",
+        "Level": 16,
+        "Description": "<p>When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.<br>If your DM uses the optional Feats, you can instead take a feat.</p>"
+      },{
+        "Feature_name": "Brutal Critical (3 dice)",
+        "Level": 17,
+        "Description": "<p>At 17th level, you can roll three additional weapon damage dice when determining the extra damage for a critical hit with a melee attack.</p>"
+      },{
+        "Feature_name": "Indomitable Might",
+        "Level": 18,
+        "Description": "<p>Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.</p>"
+      },{
+        "Feature_name": "Ability Score Improvement",
+        "Level": 19,
+        "Description": "<p>When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.<br>If your DM uses the optional Feats, you can instead take a feat.</p>"
+      },{
+        "Feature_name": "Primal Champion",
+        "Level": 20,
+        "Description": "<p>At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.</p>"
+      }
+    ]
+    }],
+    "Archetypes": [{}]  
+}
