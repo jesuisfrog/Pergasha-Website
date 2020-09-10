@@ -1,3 +1,48 @@
 body{
-    background-color: #95583E; 
+    background-color: #93878B; 
+}
+
+.navbar{
+    background-color: #260E17;
+}
+
+.navbar-nav .nav-item{
+    font-size: 25px;
+}
+
+.class-nav{
+    font-size: 25px !important;
+}
+
+#dreadful-logo{
+    width: 193px;
+    height: 59px;
+}
+
+.homepage-shortcuts{
+    margin: 50px;
+    align-items: center;
+
+}
+
+.shortcuts{
+    border-color: #260E17;
+    color: #260E17;
+    border: 5px solid #260E17;
+    border-radius: 5px;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    display: flex;
+    margin: 10px;
+    flex-basis: 17%;
+}
+
+.shortcuts:hover{
+    background-color: #77686E;
+}
+
+.shortcuts-icon{
+    height: 200px;
+    width: 200px;
 }
