@@ -8,11 +8,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="../pergasha.css">
-
+    <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico"/>
 
     <title>Feats - Pergasha</title>
 </head>
-<body>
+<body onload="featPage()">
 
 
     <header>
@@ -67,11 +67,31 @@
 
     </header>
 
-    <h1>Feats</h1>
+    <div class="row mt-5 mb-5 d-flex flex-wrap">
+        <div class="col-1"></div>
+        <div class="col-2">
+            <div class="list-group" id="feat-list" role="tablist">
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="all-filter" data-toggle="list" role="button">All Feats</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="psionics-filter" data-toggle="list" role="button">Psionic Feats</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="strength-filter" data-toggle="list" role="button">Strength</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="dexterity-filter" data-toggle="list" role="button">Dexterity</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="constitution-filter" data-toggle="list" role="button">Constitution</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="intelligence-filter" data-toggle="list" role="button">Intelligence</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="wisdom-filter" data-toggle="list" role="button">Wisdom</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="charisma-filter" data-toggle="list" role="button">Charisma</a>
+              </div>
+        </div>
+        <div class="col-7 d-flex flex-column" id="feat-display-section">
+            
+        </div>
+        <div class="col-2"></div>
+    </div>
 
     
 
     <footer class="text-right">©2020 Michael Baglio.</footer>
+
+    <script src="../pergasha.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
