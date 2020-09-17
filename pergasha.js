@@ -181,6 +181,7 @@ function classPage() {
     var classTable = document.getElementById('class-table');
     var classFeatures = document.getElementById('class-feature-body');
     var profBox = document.getElementById('prof-box');
+    var currentFilterClass = classSelection.getElementsByClassName('active');
 
     let classFeatureDisplay = '';
 
@@ -1105,7 +1106,19 @@ function classPage() {
                 console.log('something went wrong -- ' + classSelected);
                 break;
         }
-        
+        //WIP filter Active for class
+        //    var newFilter = document.getElementById(classSelected);
+        //     if (currentFilterClass[0].getAttribute('id') != newFilter) {
+        //         if (currentFilter[0]) {
+                    
+        //         }
+                   
+        //     }else{
+        //         document.getElementById('all-filter').classList.toggle("active");
+        //     }   
+           
+
+
     }
 
     var currentClass = sessionStorage.getItem("currentClassDisplay");
