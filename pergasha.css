@@ -25,7 +25,7 @@ body{
 .shortcuts{
     border-color: #260E17;
     color: #260E17;
-    border: 5px solid #260E17;
+    border: 3px solid #260E17;
     border-radius: 5px;
     text-align: center;
     flex-direction: column;
@@ -97,6 +97,12 @@ body{
 #prof-box td, #profBoxName, .class-feature-table td, .race-table td, .feat-box p{
     padding: 10px;
 }
+
+.feat-box ul{
+    padding-bottom:  15px;
+    padding-right: 20px;
+}
+
 
 
 #class-table tbody, .race-table tbody, .feat-box{

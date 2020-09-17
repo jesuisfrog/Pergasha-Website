@@ -1106,17 +1106,17 @@ function classPage() {
                 console.log('something went wrong -- ' + classSelected);
                 break;
         }
-        //WIP filter Active for class
-        //    var newFilter = document.getElementById(classSelected);
-        //     if (currentFilterClass[0].getAttribute('id') != newFilter) {
-        //         if (currentFilter[0]) {
-                    
-        //         }
-                   
-        //     }else{
-        //         document.getElementById('all-filter').classList.toggle("active");
-        //     }   
-           
+  
+        var newFilter = document.getElementById(classSelected);
+        if(currentFilterClass[0]){
+            console.log(currentFilterClass[0].getAttribute('id') + ' ---- first if --- ' + classSelected);
+            if(currentFilterClass[0].getAttribute('id') != classSelected){
+                newFilter.classList.toggle('active');
+                currentFilterClass[0].classList.toggle('active');
+            }  
+        }else{
+            newFilter.classList.toggle('active');
+        }
 
 
     }
@@ -1157,8 +1157,13 @@ function racePage() {
     function refreshedRaceFilter(filter) {
         var filterToActivate = document.getElementById(filter);
         if (filter != null) {
+            var filtered = document.getElementById(filter.slice(0, filter.indexOf('-list')));
+            filtered.classList.toggle("show");
+            filtered.classList.toggle("active");     
             filterToActivate.classList.toggle("active");   
         }else{
+            document.getElementById('cloud-pergashan').classList.toggle("active");
+            document.getElementById('cloud-pergashan').classList.toggle("show");
             document.getElementById('cloud-pergashan-list').classList.toggle("active");
         }
       }
