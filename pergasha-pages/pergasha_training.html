@@ -12,7 +12,7 @@
 
     <title>Training Points - Pergasha</title>
 </head>
-<body>
+<body onload="trainingPage()">
 
 
     <header>
@@ -67,7 +67,25 @@
 
     </header>
 
-    <h1>Training</h1>
+    <div class="row mt-5 mb-5 d-flex flex-wrap">
+        <div class="col-1"></div>
+        <div class="col-2">
+            <div class="list-group" id="feat-list" role="tablist">
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="all-filter" data-toggle="list" role="button">All Feats</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="psionics-filter" data-toggle="list" role="button">Psionic Feats</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="strength-filter" data-toggle="list" role="button">Strength</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="dexterity-filter" data-toggle="list" role="button">Dexterity</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="constitution-filter" data-toggle="list" role="button">Constitution</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="intelligence-filter" data-toggle="list" role="button">Intelligence</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="wisdom-filter" data-toggle="list" role="button">Wisdom</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="charisma-filter" data-toggle="list" role="button">Charisma</a>
+              </div>
+        </div>
+        <div class="col-7 d-flex flex-column" id="feat-display-section">
+            
+        </div>
+        <div class="col-2"></div>
+    </div>
 
     
 

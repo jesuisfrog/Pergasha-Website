@@ -65,6 +65,10 @@ body{
     font-size: 20px !important;
 }
 
+/* #class-selection li .active{
+    background-color: darkgrey;
+} */
+
 #class-selection{
     padding-left: 40px;
 }
@@ -113,10 +117,6 @@ body{
     margin-bottom: 20px;
 }
 
-.archetypes{
-    background-color: lightgray;
-    padding-left: 25px;
-}
 
 .class-feature-subtitle{
     font-size: 1.4rem;
