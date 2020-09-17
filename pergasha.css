@@ -98,7 +98,7 @@ body{
     background-color: #fdf1dc ;
 }
 
-#prof-box td, #profBoxName, .class-feature-table td, .race-table td, .feat-box p{
+#prof-box td, #profBoxName, .class-feature-table td, .race-table td, .feat-box p, #training-base td{
     padding: 10px;
 }
 
@@ -109,7 +109,7 @@ body{
 
 
 
-#class-table tbody, .race-table tbody, .feat-box{
+#class-table tbody, .race-table tbody, .feat-box, #training-base{
     background-color: #fdf1dc ;
 }
 
@@ -142,4 +142,10 @@ body{
 }
 
 
+#training-split{
+    border-bottom: 2px solid #ca1b13;
+}
 
+#trained-abilities .trained, #trained-abilities .trained-desc{
+    background-color: #fdf1dc ;
+}

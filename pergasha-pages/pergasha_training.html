@@ -68,21 +68,54 @@
     </header>
 
     <div class="row mt-5 mb-5 d-flex flex-wrap">
-        <div class="col-1"></div>
-        <div class="col-2">
-            <div class="list-group" id="feat-list" role="tablist">
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="all-filter" data-toggle="list" role="button">All Feats</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="psionics-filter" data-toggle="list" role="button">Psionic Feats</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="strength-filter" data-toggle="list" role="button">Strength</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="dexterity-filter" data-toggle="list" role="button">Dexterity</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="constitution-filter" data-toggle="list" role="button">Constitution</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="intelligence-filter" data-toggle="list" role="button">Intelligence</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="wisdom-filter" data-toggle="list" role="button">Wisdom</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="charisma-filter" data-toggle="list" role="button">Charisma</a>
-              </div>
+        <div class="ml-5 col-3">
+            <div >
+                <table class=" shadow" id="training-base">
+                    <tbody>
+                        <tr>
+                        <th class="class-border border-0" colspan="6"></th>
+                        </tr>
+        
+                        <tr>
+                        <td colspan="6" id='training-split' class="pb-3">
+                            <h5>Earning Training Points</h5>
+                            <div>Training Points are earned by completing character arcs, pursuing side quests to uncover places of power or mysteries of Pergasha, exploring the world, and helping NPCs. These points are used to purchase a new feature such as feats and psionic abilities. Each player also receives one Training Point at 4th, 8th, 12th, 16th, and 19th levels.</div>
+                        </td>
+                        </tr>
+                
+                        <tr>
+                        <td class="pt-3" colspan="6">
+                            <h5>Spending Training Points</h5>
+                            <div>Training Points can be spent when leveling up, with special trainers, at places of power, or at the GM’s discretion.</div>
+                            <br>
+                            <h6>Training Point Costs</h6>
+                            <table class="table table-striped table-bordered"><th class="text-center">Features</th><th class="text-center">Cost</th></tr><tr><td class="text-center">Psionic Talent</td><td class="text-center">1</td></tr><tr><td class="text-center">Psionic Discipline</td><td class="text-center">2</td></tr><tr><td class="text-center">Increase Psi Points</td><td class="text-center">3</td></tr><tr><td class="text-center">Feat</td><td class="text-center">4</td></tr><tr><td class="text-center">Trained Ability</td><td class="text-center">*</td></tr></table>
+                            <div><strong>Psionic Talent.</strong> Select one Psionic Talent. You now know this talent and can use it as per standard rules.</div>
+                            <div><strong>Psionic Discipline.</strong> Select one Psionic Discipline. You now know this discipline, its focus, and all the abilities for this discipline.</div>
+                            <div><strong>Increase Psi Points.</strong> Gain a number of Psi Points equal to 1d6 + your Intelligence modifier. Your maximum increases, but your Psi Limit remains the same.</div>
+                            <div><strong>Feat.</strong> Select one <a href="pergasha_feats.html">feat</a> and gain its benefits.</div>
+                            <div><strong>Trained Ability.</strong> Select an ability from the next section and gain its benefits. You must have sufficient Training Points for the ability as well as meet any requirements.</div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <th class="class-border border-0" colspan="6"></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="col-7 d-flex flex-column" id="feat-display-section">
-            
+        <div class="col-7 d-flex flex-column" id="trained-abilities">
+            <ul>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"  id="trained-header">
+                    <span>Name</span>
+                    <span>Cost</span>
+                  </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#barbarian-archetypes" id="barbarian">
+                    <span class="class-nav-item text-reset" id="barbarian-name">Trained Ability 1</span>
+                    <span class="badge badge-secondary badge-pill cost-pill" >2</span>
+                  </li>
+                  <div class="collapse archetypes trained-desc" id="barbarian-archetypes" data-parent="#trained-abilities">test</div>
+            </ul>
         </div>
         <div class="col-2"></div>
     </div>
@@ -90,6 +123,7 @@
     
 
     <footer class="text-right">©2020 Michael Baglio.</footer>
+    <script src="../pergasha.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

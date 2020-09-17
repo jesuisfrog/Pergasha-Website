@@ -1254,61 +1254,61 @@ function featPage() {
 //TRAINING START
 function trainingPage() {
 
-    const training = [];
-    let featText;
-    var featList = document.getElementById('feat-list');
-    var featFilters = featList.getElementsByTagName('a');
-    var featSection = document.getElementById('feat-display-section');
+    // const training = [];
+    // let featText;
+    // var featList = document.getElementById('feat-list');
+    // var featFilters = featList.getElementsByTagName('a');
+    // var featSection = document.getElementById('feat-display-section');
 
-    var currentFeatFilter = sessionStorage.getItem("currentFeatFilter");
+    // var currentFeatFilter = sessionStorage.getItem("currentFeatFilter");
     
-    function refreshedFeatFilter(filter) {
-        var filterToActivate = document.getElementById(filter);
-        if (filter != null) {
-            filterToActivate.classList.toggle("active");   
-        }else{
-            document.getElementById('all-filter').classList.toggle("active");
-        }   
-      } 
+    // function refreshedFeatFilter(filter) {
+    //     var filterToActivate = document.getElementById(filter);
+    //     if (filter != null) {
+    //         filterToActivate.classList.toggle("active");   
+    //     }else{
+    //         document.getElementById('all-filter').classList.toggle("active");
+    //     }   
+    //   } 
 
-      var displayFeats = function(filter = 'all-filter', refreshed = false) {
-        featText = '';
-        var featsToDisplay;
-        if (!refreshed) {
-            featsToDisplay =  event.target.getAttribute('id');           
-        }else{
-            featsToDisplay = filter;
-        }
+    //   var displayFeats = function(filter = 'all-filter', refreshed = false) {
+    //     featText = '';
+    //     var featsToDisplay;
+    //     if (!refreshed) {
+    //         featsToDisplay =  event.target.getAttribute('id');           
+    //     }else{
+    //         featsToDisplay = filter;
+    //     }
          
-        if (!featsToDisplay || featsToDisplay == null) {
-            featsToDisplay = 'all-filter'
-        }
-        if(refreshed){
-            refreshedFeatFilter(featsToDisplay);
-        }
+    //     if (!featsToDisplay || featsToDisplay == null) {
+    //         featsToDisplay = 'all-filter'
+    //     }
+    //     if(refreshed){
+    //         refreshedFeatFilter(featsToDisplay);
+    //     }
         
-        sessionStorage.setItem("currentFeatFilter", featsToDisplay);
+    //     sessionStorage.setItem("currentFeatFilter", featsToDisplay);
 
 
-        if (featsToDisplay == 'all-filter') {
-            feats.forEach(feat =>{
-                featText += feat;
-            }) 
-        } else {
-            feats.forEach(feat =>{
-                if (feat.includes(featsToDisplay)) {
-                    featText += feat;
-                }
-            })
-        }     
-        featSection.innerHTML = featText;
-    }
+    //     if (featsToDisplay == 'all-filter') {
+    //         feats.forEach(feat =>{
+    //             featText += feat;
+    //         }) 
+    //     } else {
+    //         feats.forEach(feat =>{
+    //             if (feat.includes(featsToDisplay)) {
+    //                 featText += feat;
+    //             }
+    //         })
+    //     }     
+    //     featSection.innerHTML = featText;
+    // }
 
-    for (let tag of featFilters) {
-        tag.addEventListener("click", displayFeats);
-    }
+    // for (let tag of featFilters) {
+    //     tag.addEventListener("click", displayFeats);
+    // }
 
-    displayFeats(currentFeatFilter, true);
+    // displayFeats(currentFeatFilter, true);
 }
 //TRAINING END
 
