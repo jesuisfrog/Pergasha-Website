@@ -149,3 +149,11 @@ body{
 #trained-abilities .trained, #trained-abilities .trained-desc{
     background-color: #fdf1dc ;
 }
+
+#trained-abilities li:nth-of-type(2n), #trained-abilities div:nth-of-type(2n+1) {
+    background-color: rgba(0,0,0,.05);
+}
+
+#trained-abilities div{
+    border: 1px solid rgba(0,0,0,.125);
+}
