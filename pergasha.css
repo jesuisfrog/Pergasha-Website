@@ -1,3 +1,4 @@
+/* General Rules Start*/
 body{
     background-color: white;
     /* background-color: #93878B;  */
@@ -15,6 +16,77 @@ body{
     width: 193px;
     height: 59px;
 }
+
+.table-header{
+    background-color: #fdf1dc!important;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+
+    #training-container{
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    #class-container{
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.8rem;
+    }
+
+    #class-container-top, #class-container-bottom{
+        
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 769px) {
+    #trained-abilities{
+        flex-basis: auto;
+    }
+    #training-info{
+        max-width: 100%!important;
+    }
+
+    .class-right-container{
+        flex-basis: auto;
+    }
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+
+    .class-left-container{
+        max-width: 100%!important;
+    }
+
+    .class-right-container{
+        min-width: 70%!important;
+    }
+ }
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    
+}
+
+/* General Rules End*/
+
 
 .homepage-shortcuts{
     margin: 50px;
@@ -45,15 +117,9 @@ body{
 }
 
 
-
-.table-header{
-    background-color: #fdf1dc!important;
-}
-
 #class-table-title, .race-table-title{
     font-size: 1.8rem;
 }
-
 
 
 .class-border{
@@ -65,13 +131,8 @@ body{
     font-size: 20px !important;
 }
 
-/* #class-selection li .active{
-    background-color: darkgrey;
-} */
 
-#class-selection{
-    padding-left: 40px;
-}
+
 
 #class-selection li:hover{
     background-color: gray;
@@ -94,11 +155,11 @@ body{
     color: #ca1b13;
 }
 
-#prof-box, .class-feature-table, .feat-table{
+#prof-box, #class-feature-table, .feat-table{
     background-color: #fdf1dc ;
 }
 
-#prof-box td, #profBoxName, .class-feature-table td, .race-table td, .feat-box p, #training-base td{
+#prof-box td, #profBoxName, #class-feature-table td, .race-table td, .feat-box p, #training-base td{
     padding: 10px;
 }
 
@@ -150,10 +211,41 @@ body{
     background-color: #fdf1dc ;
 }
 
-#trained-abilities li:nth-of-type(2n), #trained-abilities div:nth-of-type(2n+1) {
+#trained-abilities li:not(.internal-list):nth-of-type(2n), #trained-abilities ul div:nth-of-type(2n+1) {
     background-color: rgba(0,0,0,.05);
 }
 
 #trained-abilities div{
     border: 1px solid rgba(0,0,0,.125);
+}
+/* minimum sizing*/
+
+/*Class*/
+#class-selection{
+    padding-left: 15px;
+}
+
+.class-right-container{
+    min-width: 350px;
+}
+
+.class-left-container{
+    min-width: 250px;
+    max-width: 500px;
+}
+
+/*feat*/
+
+/*race*/
+
+
+
+/*training*/
+#training-info{
+        max-width: 500px;
+        min-width: 350px;
+}
+
+#trained-abilities{
+    min-width: 350px;
 }

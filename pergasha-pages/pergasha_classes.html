@@ -65,10 +65,10 @@
 
     </header>
 
-    <div class="class-container container-fluid d-flex flex-column ">
+    <div class="container-fluid d-flex flex-column " id="class-container">
 
-      <div class="row mt-5 mb-5 d-flex flex-wrap">
-        <ul class="list-group col-3  align-self-start accordion" id="class-selection">
+      <div class="row mt-5 mb-5 flex-wrap justify-content-center container-fluid" id="class-container-top">
+        <ul class="list-group col  align-self-start accordion mb-5 class-left-container" id="class-selection">
           <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#barbarian-archetypes" id="barbarian">
             <span class="nav-link class-nav-item text-reset" id="barbarian-name">Barbarian</span>
             <span class="badge badge-primary badge-pill" id="barbarian-pill">6</span>
@@ -138,7 +138,7 @@
           
         </ul>
         
-        <div class="col-8" >
+        <div class="col "  id="class-right-container">
           <table class="table-sm table-striped shadow w-100" id="class-table">
             <tbody>
               <tr>
@@ -321,14 +321,12 @@
             </tbody>
           </table>
         </div>
-        <div class="col-1"></div>
         
       </div>
 
-      <div class="row d-flex flex-wrap">
+      <div class="row flex-wrap justify-content-center container-fluid" id="class-container-bottom">
         
-        <div class="class-left col-3 ">
-          <table class=" ml-4 shadow" id="prof-box">
+        <table class="col mb-5 shadow class-left-container" id="prof-box">
             <tbody>
               <tr>
                 <th class="class-border border-0" colspan="6"></th>
@@ -359,10 +357,9 @@
                 <th class="class-border border-0" colspan="6"></th>
               </tr>
             </tbody>
-          </table>
-        </div>
-        <div class="class-right col-8 ">
-          <table class="class-feature-table shadow">
+        </table>
+        <div class="col" id="class-right-container">
+          <table class="shadow" id="class-feature-table">
             <tr>
               <th class="class-border" colspan="6"></th>
             </tr>
