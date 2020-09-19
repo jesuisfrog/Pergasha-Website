@@ -185,6 +185,21 @@ function classPage() {
 
     let classFeatureDisplay = '';
 
+    function collapsingButton(button, id) {
+        var section = document.getElementById(id);
+        if (button.innerText.includes('[-]')) {
+            button.innerText = '[+]';
+        } else {
+            button.innerText = '[-]';
+        }
+        if (section.style.display == "block") {
+            section.style.display = "none"
+        } else {
+            section.style.display = "block"
+        }
+
+        
+    }
 
     function baseClassDisplay(baseClass, currentClass){
         //baseClass
@@ -1132,21 +1147,7 @@ function classPage() {
 
     classSelection.addEventListener("click", displayClass);
 
-    function collapsingButton(button, id) {
-        var section = document.getElementById(id);
-        if (button.innerText.includes('[-]')) {
-            button.innerText = '[+]';
-        } else {
-            button.innerText = '[-]';
-        }
-        if (section.style.display == "block") {
-            section.style.display = "none"
-        } else {
-            section.style.display = "block"
-        }
-
-        
-    }
+    
 }
 //CLASSES & ARCHETYPES END
 

@@ -25,64 +25,71 @@ body{
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
 
-    #training-container{
-        flex-direction: column;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
-    #class-container{
-        flex-direction: column;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
+
+    #race-container, #feat-display-section{
         font-size: 0.8rem;
     }
-
-    #class-container-top, #class-container-bottom{
-        
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
 }
 
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 769px) {
-    #trained-abilities{
+    #trained-abilities, #race-tabDesc, #feat-display-section{
         flex-basis: auto;
     }
-    #training-info{
+    
+    #training-info, #race-list-container, #feat-list{
         max-width: 100%!important;
     }
-
-    .class-right-container{
-        flex-basis: auto;
+    #race-list-container, #feat-list{
+        text-align: center;
+        font-size: 1.5rem;
     }
 
+    #training-container, #class-container{
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+
+    .class-right-container, #prof-box{
+        font-size: 0.8rem;
+
+    }
+
+    #class-container-top, #class-container-bottom, #feat-container{ 
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #race-container{
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) { 
 
-    .class-left-container{
-        max-width: 100%!important;
+    .class-left-container, .class-right-container{
+        flex-basis: 100%;
     }
 
-    .class-right-container{
-        min-width: 70%!important;
+    .class-left-container{
+      max-width: 100%!important;
     }
  }
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { 
-    
+
 }
 
 /* General Rules End*/
@@ -127,7 +134,7 @@ body{
    padding: 0.2rem;
 }
 
-.class-nav-item{
+.class-nav-item, #class-container .badge-pill{
     font-size: 20px !important;
 }
 
@@ -230,14 +237,30 @@ body{
 }
 
 .class-left-container{
-    min-width: 250px;
+    min-width: 300px;
     max-width: 500px;
 }
 
+
 /*feat*/
 
-/*race*/
+#feat-list{
+    max-width: 250px;
+    padding-left: 15px;
+}
 
+#feat-display-section{
+    min-width: 350px;
+}
+
+/*race*/
+#race-list-container{
+    max-width: 300px;
+}
+
+#race-tabDesc{
+    min-width: 350px;
+}
 
 
 /*training*/
@@ -249,3 +272,4 @@ body{
 #trained-abilities{
     min-width: 350px;
 }
+
