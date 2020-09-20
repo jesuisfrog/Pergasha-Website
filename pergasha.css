@@ -289,6 +289,12 @@ body{
     color: #ca1b13;
 }
 
+.psionic-order{
+    font-size: 1rem!important;
+    color: black!important;
+    font-style: italic;
+}
+
 .psionics-body{
     border-top: 2px solid #ca1b13;
 

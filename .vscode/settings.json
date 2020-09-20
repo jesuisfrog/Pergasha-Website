@@ -1,3 +1,4 @@
 {
-    "editor.maxTokenizationLineLength": 100000
+    "editor.maxTokenizationLineLength": 100000,
+    "editor.minimap.enabled": false
 }
