@@ -26,7 +26,7 @@ body{
 @media (max-width: 575.98px) { 
 
 
-    #race-container, #feat-display-section{
+    #race-container, #psionics-display-section, #feat-display-section{
         font-size: 0.8rem;
     }
 }
@@ -34,14 +34,14 @@ body{
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 769px) {
-    #trained-abilities, #race-tabDesc, #feat-display-section{
+    #trained-abilities, #race-tabDesc, #feat-display-section, #psionics-display-section{
         flex-basis: auto;
     }
     
-    #training-info, #race-list-container, #feat-list{
+    #training-info, #race-list-container, #feat-list, #psionics-list{
         max-width: 100%!important;
     }
-    #race-list-container, #feat-list{
+    #race-list-container, #feat-list, #psionics-list{
         text-align: center;
         font-size: 1.5rem;
     }
@@ -60,14 +60,7 @@ body{
 
     }
 
-    #class-container-top, #class-container-bottom, #feat-container{ 
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    #race-container{
+    #class-container-top, #class-container-bottom, #feat-container, #psionics-container, #race-container{ 
         margin-left: 0;
         margin-right: 0;
         padding-left: 0;
@@ -128,19 +121,6 @@ body{
     font-size: 1.8rem;
 }
 
-
-.class-border{
-   background:#e69a28 ; 
-   padding: 0.2rem;
-}
-
-.class-nav-item, #class-container .badge-pill{
-    font-size: 20px !important;
-}
-
-
-
-
 #class-selection li:hover{
     background-color: gray;
 }
@@ -154,78 +134,18 @@ body{
 }
 
 
-.class-feature-title{
-    font-size: 1.5rem;
-    border-bottom: 1px solid black;
-    width: 100%;
-    display: flex;
-    color: #ca1b13;
-}
-
 #prof-box, #class-feature-table, .feat-table{
     background-color: #fdf1dc ;
 }
 
-#prof-box td, #profBoxName, #class-feature-table td, .race-table td, .feat-box p, #training-base td{
+#prof-box td, #profBoxName, #class-feature-table td, .race-table td, .feat-box p, #training-base td, .psionics-body{
     padding: 10px;
 }
 
-.feat-box ul{
-    padding-bottom:  15px;
-    padding-right: 20px;
-}
-
-
-
-#class-table tbody, .race-table tbody, .feat-box, #training-base{
+#class-table tbody, .race-table tbody, .feat-box, #training-base, #psionics-table tbody, .psionics-box{
     background-color: #fdf1dc ;
 }
 
-.feat-box{
-    margin-bottom: 20px;
-}
-
-
-.class-feature-subtitle{
-    font-size: 1.4rem;
-}
-
-.class-feature-archetype{
-    color: #005acd;
-}
-
-.feat-title{
-    font-size: 1.8rem;
-    border-bottom: 2px solid #ca1b13;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    color: #ca1b13;
-}
-
-.feat-prerequisites{
-    font-size: 1rem!important;
-    color: black!important;
-    font-style: italic;
-}
-
-
-#training-split{
-    border-bottom: 2px solid #ca1b13;
-}
-
-#trained-abilities .trained, #trained-abilities .trained-desc{
-    background-color: #fdf1dc ;
-}
-
-#trained-abilities li:not(.internal-list):nth-of-type(2n), #trained-abilities ul div:nth-of-type(2n+1) {
-    background-color: rgba(0,0,0,.05);
-}
-
-#trained-abilities div{
-    border: 1px solid rgba(0,0,0,.125);
-}
-/* minimum sizing*/
 
 /*Class*/
 #class-selection{
@@ -241,7 +161,32 @@ body{
     max-width: 500px;
 }
 
+.class-feature-subtitle, .psionics-subtitle{
+    font-size: 1.4rem;
+}
 
+.class-feature-archetype{
+    color: #005acd;
+}
+
+.class-feature-title{
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: flex;
+    color: #ca1b13;
+}
+
+.class-border{
+    background:#e69a28 ; 
+    padding: 0.2rem;
+ }
+ 
+ .class-nav-item, #class-container .badge-pill{
+     font-size: 20px !important;
+ }
+
+ 
 /*feat*/
 
 #feat-list{
@@ -252,6 +197,31 @@ body{
 #feat-display-section{
     min-width: 350px;
 }
+
+.feat-box, .psionics-box{
+    margin-bottom: 20px;
+}
+
+.feat-box ul, .psionics-box ul{
+    padding-bottom:  15px;
+    padding-right: 20px;
+}
+
+.feat-title{
+    font-size: 1.8rem;
+    border-bottom: 2px solid #ca1b13;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #ca1b13;
+}
+
+.feat-prerequisites, .psionic-order{
+    font-size: 1rem!important;
+    color: black!important;
+    font-style: italic;
+}
+
 
 /*race*/
 #race-list-container{
@@ -273,3 +243,53 @@ body{
     min-width: 350px;
 }
 
+#training-split{
+    border-bottom: 2px solid #ca1b13;
+}
+
+#trained-abilities .trained, #trained-abilities .trained-desc{
+    background-color: #fdf1dc ;
+}
+
+#trained-abilities li:not(.internal-list):nth-of-type(2n), #trained-abilities ul div:nth-of-type(2n+1) {
+    background-color: rgba(0,0,0,.05);
+}
+
+#trained-abilities div{
+    border: 1px solid rgba(0,0,0,.125);
+}
+/*psionics*/
+
+#psionics-list{
+
+    max-width: 300px;
+}
+
+#psionics-display-section{
+    min-width: 350px;
+}
+
+/* #psionics-table{
+
+} */
+
+.psionic-description{
+    font-size: 1rem!important;
+    color: black!important;
+}
+
+.psionics-title:hover{
+    background-color: rgba(0,0,0,.05);
+}
+.psionics-title{
+    font-size: 1.8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #ca1b13;
+}
+
+.psionics-body{
+    border-top: 2px solid #ca1b13;
+
+}

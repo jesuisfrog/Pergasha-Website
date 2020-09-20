@@ -12,7 +12,7 @@
 
     <title>Psionics - Pergasha</title>
 </head>
-<body>
+<body onload="psionicsPage()">
 
 
     <header>
@@ -67,12 +67,237 @@
 
     </header>
 
-    <h1 class="text-center mt-5">PSIONICS</h1>
-    <div class="row justify-content-center mb-5"><img class="" src="../assets/logos/WIP-logo.png" alt="Work in Progress"></div>
+    <div class="row mt-5 mb-5 mr-0 ml-0 flex-wrap justify-content-center container-fluid" id="psionic-container">
+        <div class="col list-group mb-5" id="psionics-list" role="tablist">
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="all-filter" data-toggle="list" role="button">All Orders & Talents</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="avatar-filter" data-toggle="list" role="button">Order of the Avatar</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="awakened-filter" data-toggle="list" role="button">Order of the Awakened</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="farhand-filter" data-toggle="list" role="button">Order of the Far Hand</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="immortal-filter" data-toggle="list" role="button">Order of the Immortal</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="nomad-filter" data-toggle="list" role="button">Order of the Nomad</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="talent-filter" data-toggle="list" role="button">Talents</a>
+        </div>
+        <div class="col d-flex flex-column" id="psionics-display-section">
+                <table class="table-sm table-striped shadow w-100 mb-5" id="psionics-table">
+                  <tbody>
+                    <tr>
+                      <th class="class-border border-0" colspan="10"></th>
+                    </tr>
+                    <tr class="table-header" >
+                      <th id="class-table-title" colspan=15></th>
+                    </tr>
+                    <tr class="table-header">
+                      <th class="text-center" scope="col">Level</th>
+                      <th class="text-center" scope="col">Disciplines<br>Known</th>
+                      <th scope="col">Psi Points</th>
+                      <th class="text-center" scope="col">Psi Limit</th>
+                      <th scope="col">Optional: Average Psi Points</th>
+                      <th scope="col">Features</th>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">1st</th>
+                      <td class="text-center">1</td>
+                      <td>1 + Intelligence modifier</td>
+                      <td class="text-center">2</td>
+                      <td>—</td>
+                      <td>Select a Psionic Discipline</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">2nd</th>
+                      <td class="text-center">1</td>
+                      <td>1d4 + Intelligence modifier</td>
+                      <td class="text-center">2</td>
+                      <td>2 + Intelligence modifier</td> 
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">3rd</th>
+                      <td class="text-center">1</td>
+                      <td>—</td>
+                      <td class="text-center">3</td>
+                      <td>—</td>
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">4th</th>
+                      <td class="text-center">1</td>
+                      <td>—</td>
+                      <td class="text-center">3</td>
+                      <td>—</td>
+                      <td>+1 Training Point, +1 Proficiency Point</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">5th</th>
+                      <td class="text-center">2</td>
+                      <td>1d4 + Intelligence modifier</td>
+                      <td class="text-center">3</td>
+                      <td>2 + Intelligence modifier</td>
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">6th</th>
+                      <td class="text-center">2</td>
+                      <td>—</td>
+                      <td class="text-center">3</td>
+                      <td>—</td>
+                      <td>Select a Psionic Talent</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">7th</th>
+                      <td class="text-center">2</td>
+                      <td>—</td>
+                      <td class="text-center">4</td>
+                      <td>—</td>
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">8th</th>
+                      <td class="text-center">2</td>
+                      <td>1d4 + Intelligence modifier</td>
+                      <td class="text-center">4</td>
+                      <td>2 + Intelligence modifier</td>
+                      <td>+1 Training Point, +1 Proficiency Point</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">9th</th>
+                      <td class="text-center">2</td>
+                      <td>—</td>
+                      <td class="text-center">4</td>
+                      <td>—</td>
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">10th</th>
+                      <td class="text-center">3</td>
+                      <td>1d6 + Intelligence modifier</td>
+                      <td class="text-center">4</td>
+                      <td>3 + Intelligence modifier</td>
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">11th</th>
+                      <td class="text-center">5</td>
+                      <td>—</td>
+                      <td class="text-center">3</td>
+                      <td>—</td>
+                      <td>Select a Psionic Mastery</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">12th</th>
+                      <td class="text-center">3</td>
+                      <td>—</td>
+                      <td class="text-center">5</td>
+                      <td>—</td>
+                      <td>+1 Training Point, +1 Proficiency Point</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">13th</th>
+                      <td class="text-center">3</td>
+                      <td>1d6 + Intelligence modifier</td>
+                      <td class="text-center">5</td>
+                      <td>3 + Intelligence modifier</td>
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">14th</th>
+                      <td class="text-center">3</td>
+                      <td>—</td>
+                      <td class="text-center">6</td>
+                      <td>—</td>
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">15th</th>
+                      <td class="text-center">4</td>
+                      <td>—</td>
+                      <td class="text-center">6</td>
+                      <td>—</td>
+                      <td>Select a Psionic Talent</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">16th</th>
+                      <td class="text-center">4</td>
+                      <td>1d6 + Intelligence modifier</td>
+                      <td class="text-center">6</td>
+                      <td>3 + Intelligence modifier</td>
+                      <td>+1 Training Point, +1 Proficiency Point</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">17th</th>
+                      <td class="text-center">4</td>
+                      <td>—</td>
+                      <td class="text-center">6</td>
+                      <td>—</td>
+                      <td>Mastery Improvement</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">18th</th>
+                      <td class="text-center">4</td>
+                      <td>—</td>
+                      <td class="text-center">7</td>
+                      <td>—</td>
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">19th</th>
+                      <td class="text-center">4</td>
+                      <td>1d8 + Intelligence modifier</td>
+                      <td class="text-center">7</td>
+                      <td>4 + Intelligence modifier</td>
+                      <td>+1 Training Point, +1 Proficiency Point</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center" scope="row">20th</th>
+                      <td class="text-center">5</td>
+                      <td>1d8 + Intelligence modifier</td>
+                      <td class="text-center">7</td>
+                      <td>4 + Intelligence modifier</td>
+                      <td>Select a Psionic Mastery</td>
+                    </tr>
+                    <tr>
+                      <th class="class-border border-0" colspan="10"></th>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="shadow psionics-box rounded border border-secondary immortal-filter">
+                    <span class="psionics-title p-2" onclick="collapsibleBox()">Adaptive Body<span class="psionic-order">Immortal Discipline</span><span class="psionic-description">You can alter your body to match your surroundings, allowing you to withstand punishing environments. With greater psi energy, you can extend this protection to others.</span></span>
+                    <div class="psionics-body" style="display: none">
+                        <span class="psionics-subtitle">Focus</span><ul style="list-style-type:none;"><li>While focused on this discipline, you don’t suffer any penalties for sustaining with half rations, you can hold your breath twice its normal time, and you need half the normal sleeping time (you have still to perform only light activity for the rest of your long rest). This focus must be active until you take a long rest for the benefits of half rations and sleeping time to take effect.</li></ul><span class="psionics-subtitle">Environmental Adaptation</span> <ul style="list-style-type:none;"><li><b>Cost: </b>1 psi point</li><li><b>Evoking Time: </b>1 action</li><li><b>Range: </b>Touch</li><li><b>Duration: </b>1 hour</li><li>You or a creature you touch ignores the effects of extreme heat or cold (but not cold or fire damage) for the next hour.</li></ul><span class="psionics-subtitle">Adaptive Shield</span><ul style="list-style-type:none;"><li><b>Cost: </b>2 psi point</li><li><b>Evoking Time: </b>1 reaction</li><li><b>Range: </b>Self</li><li><b>Duration: </b>Until the end of your next turn</li><li>When you take slashing, piercing, bludgeoning, acid, cold, fire, lightning, or thunder damage, you can use your reaction to gain resistance to damage of that type—including the triggering damage—until the end of your next turn. </li></ul><span class="psionics-subtitle">Injury Adaptation</span><ul style="list-style-type:none;"><li><b>Cost: </b>3 psi point</li><li><b>Evoking Time: </b>1 action</li><li><b>Range: </b>Touch</li><li><b>Duration: </b>Concentration, up to 1 hour</li><li>You can touch one creature and give it resistance to slashing, piercing, bludgeoning, acid, cold, fire, lightning, or thunder damage (your choice), which lasts until your concentration ends.</li></ul><span class="psionics-subtitle">Energy Immunity</span> <ul style="list-style-type:none;"><li><b>Cost: </b>5 psi point</li><li><b>Evoking Time: </b>1 action</li><li><b>Range: </b>Touch</li><li><b>Duration: </b>Concentration, up to 1 hour</li><li>You can touch one creature and give it immunity to acid, cold, fire, lightning, or thunder damage (your choice), which lasts until your concentration ends.</li></ul><span class="psionics-subtitle">Perfect Health (Mastery)</span> <ul style="list-style-type:none;"><li><i>Passive.</i> If you choose this discipline as your mastery, you become immune to disease and gain proficiency on Constitution saves.</li></ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
 
     
 
     <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+    <script>
+        function collapsibleBox(){
+            // var x = this.nextSibling.getAttribute('id'); 
+            console.log(this.target);
+        }
+
+
+        function collapsingButton(button, id) {
+        var section = document.getElementById(id);
+        if (button.innerText.includes('[-]')) {
+            button.innerText = '[+]';
+        } else {
+            button.innerText = '[-]';
+        }
+        if (section.style.display == "block") {
+            section.style.display = "none"
+        } else {
+            section.style.display = "block"
+        }
+
+        
+    }
+    </script>
+
+    <script src="../pergasha.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
