@@ -22,10 +22,19 @@ body{
 }
 
 
+@media (max-width: 420.98px) { 
+    #psionics-table{
+        font-size: 0.6rem;;
+    }
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
 
-
+    #psionic-container{
+        padding-left: 0;
+        padding-right: 0;
+    }
     #race-container, #psionics-display-section, #feat-display-section{
         font-size: 0.8rem;
     }
@@ -44,6 +53,11 @@ body{
     #race-list-container, #feat-list, #psionics-list{
         text-align: center;
         font-size: 1.5rem;
+        position: static;
+    }
+
+    #feat-list, #psionics-list{
+        position: static;
     }
 
     #training-container, #class-container{
@@ -297,5 +311,8 @@ body{
 
 .psionics-body{
     border-top: 2px solid #ca1b13;
+}
 
+#psionics-list{
+    padding-left: 15px;
 }

@@ -1310,6 +1310,40 @@ function trainingPage() {
 
 //PSIONICS START
 function psionicsPage(){
-    const psionics = [];
+    var psionicsFilterList = document.getElementById('psionics-list');
+    var psionicsBoxes = document.getElementsByClassName('psionics-box');
+
+    // function collapsibleBox(box){
+    //     let boxBody = box.parentNode.children[1];
+    //     if (boxBody.style.display == 'none') {
+    //       boxBody.style.display = 'block';
+    //     } else {
+    //       boxBody.style.display = 'none';
+    //     }
+    //   }
+
+    function psionicFilter(){
+        let filter = event.target.getAttribute('id');
+        let title = event.target.innerText;
+        document.getElementById('psionic-display-title').innerText = title;
+        for (const box of psionicsBoxes) {
+            box.children[1].style.display = 'none';
+            if(filter != 'all-filter'){
+                if (box.getAttribute('class').includes(filter)) {
+                    box.style.display = "block";
+                } else {
+                    box.style.display = "none";
+                }
+            }else{
+                box.style.display = "block";
+            }
+            
+        };
+        
+    }
+
+    psionicsFilterList.addEventListener('click',psionicFilter);
+
+
 }
 //PSIONICS END
