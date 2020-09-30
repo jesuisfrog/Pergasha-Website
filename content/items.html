@@ -12,7 +12,7 @@
 
     <title>Items - Pergasha</title>
 </head>
-<body>
+<body onload="itemsPage()">
 
 
     <header>
@@ -68,12 +68,35 @@
     </header>
 
     <h1 class="text-center mt-5">ITEMS</h1>
-    <div class="row justify-content-center mb-5"><img class="" src="../assets/logos/WIP-logo.png" alt="Work in Progress"></div>
+    <!-- <div class="row justify-content-center mb-5"><img class="" src="../assets/logos/WIP-logo.png" alt="Work in Progress"></div> -->
+
+    <div class="row justify-content-center mb-5" id="itemDisplay"> 
+        
+    </div>
+
+    <div class="row justify-content-center mb-5">
+        <form action='#' id="itemForm">
+            <select name="item-type id="itemType">
+                <option value="armor">Armor</option>
+                <option value="weapon">Weapon</option>
+                <option value="adventuring-gear">Adventuring Gear</option>
+                <option value="trade-good">Trade Good</option>
+                <option value="mounts>Mount</option>
+                <option value="mysterium>Mysterium</option>
+            </select>
+            <input type="text" placeholder="Name" id="itemName">
+            <input type="number" placeholder="Slots" id="itemSlots">
+            <button id="itemSave">Save</button>
+
+        </form>
+
+    </div>
     
 
     
 
     <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+    <script src="../pergasha.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
