@@ -135,6 +135,11 @@ body{
     font-size: 1.8rem;
 }
 
+.table-subtitle{
+    font-size: 1.5rem;
+    color: brown;
+}
+
 #class-selection li:hover{
     background-color: gray;
 }
@@ -156,7 +161,7 @@ body{
     padding: 10px;
 }
 
-#class-table tbody, .race-table tbody, .feat-box, #training-base, #psionics-table tbody, .psionics-box{
+#class-table tbody, .race-table tbody, .feat-box, #training-base, #psionics-table tbody, .psionics-box, #items-display-section tbody{
     background-color: #fdf1dc ;
 }
 
@@ -274,8 +279,7 @@ body{
 }
 /*psionics*/
 
-#psionics-list{
-
+#psionics-list, #items-list{
     max-width: 300px;
 }
 
