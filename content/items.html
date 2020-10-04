@@ -67,18 +67,20 @@
 
     </header>
 
-    <div class="row mt-5 mb-5 mr-0 ml-0 flex-wrap justify-content-center container-fluid" id="items-container">
+    <div class="row mt-5 mb-5 mr-0 ml-0 flex-wrap container-fluid" id="items-container">
         <div class="col list-group mb-5 align-self-start sticky-top" id="items-list" role="tablist">
-                <a class="list-group-item list-group-item-action list-group-item-secondary active" id="armor-filter" data-toggle="list" role="button">Armors and Shields</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="melee-weapons-filter" data-toggle="list" role="button">Melee Weapons</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="ranged-weapons-filter" data-toggle="list" role="button">Ranged Weapons</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="adventuring-gear-filter" data-toggle="list" role="button">Adventuring Gear</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="trade-goods-filter" data-toggle="list" role="button">Trade Goods</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary" id="mounts-filter" data-toggle="list" role="button">Mounts</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary active" id="armor" data-toggle="list" role="button">Armors and Shields</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="melee-weapons" data-toggle="list" role="button">Melee Weapons</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="ranged-weapons" data-toggle="list" role="button">Ranged Weapons</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="gear" data-toggle="list" role="button">Adventuring Gear</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="trade-goods" data-toggle="list" role="button">Trade Goods</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="mounts" data-toggle="list" role="button">Mounts</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary" id="others" data-toggle="list" role="button">Others</a>
         </div>
         <div class="col d-flex flex-column" id="items-display-section">
-                <h2 class="text-center" id="items-title">Armors & Shields</h2>
-                <table class="table-sm table-striped shadow w-100 mb-5" id="armor-table">
+            <!-- Armor -->
+                <h2 class="text-center armor item-section" id="items-title">Armors & Shields</h2>
+                <table class="table-sm table-striped shadow w-75 mb-5 armor align-self-center item-table item-section">
                   <tbody>
                     <tr>
                       <th class="class-border border-0" colspan="10"></th>
@@ -502,82 +504,2020 @@
                   </tbody>
                 </table>
                 
-                 <!-- <tr>
-                        <td class="text-center"></td>
-                        <td></td>
-                        <td class="text-center"></td>
-                        <td></td>
-                        <td class="text-center"></td>
-                        <td class="text-center"></td>
-                        <td class="text-center"></td>
-                      </tr> -->
+            <!-- Melee Weapons -->
+                <h2 class="text-center melee-weapons item-section" style="display: none;" id="items-title">Melee Weapons</h2>
+                <table style="display: none;" class="table-sm table-striped shadow w-75 mb-5 melee-weapons align-self-center item-table item-section">
+                  <tbody>
+                    <tr>
+                      <th class="class-border border-0" colspan="10"></th>
+                    </tr>
+                    <tr><th class="text-center table-subtitle" colspan="10">Unarmed Gear</th></tr>
+                    <tr class="table-header">
+                        <th scope="col">Name</th>
+                        <th scope="col">Damage</th>
+                        <th scope="col">Properties</th>
+                        <th class="text-center" scope="col">Slots</th>
+                        <th class="text-center" scope="col">Cost (UB)</th>
+                    </tr>
+                    <tr>
+                        <td>Stone Knuckles</td>
+                        <td>1d4 Bludgeoning</td>
+                        <td>Beatdown (1d4), Free-handed, Impact, Light, Special</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">4</td>
+                    </tr>
+                    <tr>
+                        <td>Clawed Gauntlet</td>
+                        <td>1d4 Slashing</td>
+                        <td>Beatdown (1d4), Free-handed, Light, Special, Vicious</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">4</td>
+                    </tr>
+                    <tr>
+                        <td>Spiked Glove</td>
+                        <td>1d4 Piercing</td>
+                        <td>Beatdown (1d4), Bleed, Free-handed, Light, Special</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">4</td>
+                    </tr>
+                    <tr><th class="text-center table-subtitle" colspan="10">Simple Melee Weapons</th></tr>
+                    <tr class="table-header">
+                        <th scope="col">Name</th>
+                        <th scope="col">Damage</th>
+                        <th scope="col">Properties</th>
+                        <th class="text-center" scope="col">Slots</th>
+                        <th class="text-center" scope="col">Cost (UB)</th>
+                    </tr>
+                    <tr>
+                        <td>Bowie Knife</td>
+                        <td>1d4 Piercing or Slashing</td>
+                        <td>Finesse, Light, Thrown (20/60)</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                        <td>Club</td>
+                        <td>1d4 Bludgeoning</td>
+                        <td>–</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">1</td>
+                    </tr>
+                    <tr>
+                        <td>Dagger</td>
+                        <td>1d4 Piercing</td>
+                        <td>Finesse, Light, Thrown (20/60), Mastery (Bleed)</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                        <td>Dagger, punch</td>
+                        <td>1d4 Piercing</td>
+                        <td>Finesse, Light, Vicious</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                        <td>Greatclub</td>
+                        <td>1d8 Bludgeoning</td>
+                        <td>Heavy, Two-handed, Mastery (Impact)</td>
+                        <td class="text-center">3</td>
+                        <td class="text-center">4</td>
+                    </tr>
+                    <tr>
+                        <td>Hammer, light</td>
+                        <td>1d4 Bludgeoning</td>
+                        <td>Finesse, Light, Thrown (30/60)</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">2</td>
+                    </tr>
+                    <tr>
+                        <td>Handaxe</td>
+                        <td>1d6 Slashing</td>
+                        <td>Finesse, Light, Thrown (20/60)</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                        <td>Javelin </td>
+                        <td>1d6 Piercing</td>
+                        <td>Fragile, Thrown (30/120), Mastery (Sharp)</td>
+                        <td class="text-center">2</td>
+                        <td class="text-center">1</td>
+                    </tr>
+                    <tr>
+                        <td>Kukri</td>
+                        <td>1d4 Slashing</td>
+                        <td>Finesse, Light, Vicious, Mastery (Sharp)</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">4</td>
+                    </tr>
+                    <tr>
+                        <td>Longspear</td>
+                        <td>1d8 Piercing</td>
+                        <td>Heavy, Reach, Two-Handed</td>
+                        <td class="text-center">4</td>
+                        <td class="text-center">4</td>
+                    </tr>
+                    <tr>
+                        <td>Mace, light</td>
+                        <td>1d6 Bludgeoning</td>
+                        <td>Finesse, Light</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                        <td>Main Gauche</td>
+                        <td>1 Piercing</td>
+                        <td>Finesse, Light, Parry, Special</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                        <td>Peasant Flail</td>
+                        <td>1d4 Bludgeoning, 1d4 Piercing</td>
+                        <td>Bypass, Two-Handed</td>
+                        <td class="text-center">2</td>
+                        <td class="text-center">4</td>
+                    </tr>
+                    <tr>
+                        <td>Quarterstaff</td>
+                        <td>1d6 Bludgeoning</td>
+                        <td>Finesse, Versatile (1d8)</td>
+                        <td class="text-center">3</td>
+                        <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                        <td>Shiv</td>
+                        <td>1d4 Piercing</td>
+                        <td>Finesse, Fragile, Light</td>
+                        <td class="text-center">0.2</td>
+                        <td class="text-center">0.5</td>
+                    </tr>
+                    <tr>
+                        <td>Shortsword</td>
+                        <td>1d6 Slashing</td>
+                        <td>Finesse, Light, Mastery (Parry)</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">5</td>
+                    </tr>
+                    <tr>
+                        <td>Spear</td>
+                        <td>1d6 Piercing</td>
+                        <td>Finesse, Thrown (20/60), Versatile (1d8), Mastery (Sharp)</td>
+                        <td class="text-center">3</td>
+                        <td class="text-center">4</td>
+                    </tr>
+                    <tr>
+                        <td>Stiletto</td>
+                        <td>1d4 Piercing</td>
+                        <td>Brutal, Finesse, Light</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">2</td>
+                    </tr>
+                    <tr>
+                        <td>Throwing Knife</td>
+                        <td>1d4 Piercing</td>
+                        <td>Finesse, Light, Limit (Thrown 40/120), Mastery (Brutal)</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                        <td>Whip</td>
+                        <td>1d4 Slashing</td>
+                        <td>Bypass, Finesse, Reach</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">3</td>
+                    </tr>
+                    <tr><th class="text-center table-subtitle" colspan="10">Martial Melee Weapons</th></tr>
+                    <tr class="table-header">
+                        <th scope="col">Name</th>
+                        <th scope="col">Damage</th>
+                        <th scope="col">Properties</th>
+                        <th class="text-center" scope="col">Slots</th>
+                        <th class="text-center" scope="col">Cost (UB)</th>
+                    </tr>
+                    <tr>
+                        <td>Battleaxe</td>
+                        <td>1d8 Slashing</td>
+                        <td>Sweeping, Versatile (1d10), Mastery (Effective)</td>
+                        <td class="text-center">3</td>
+                        <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>Chakram</td>
+                            <td>1d6 Slashing</td>
+                            <td>Brutal, Finesse, Light, Thrown (30/120), Mastery (Vicious)</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">5</td>
+                        </tr>
+                        <tr>
+                            <td>Dervish</td>
+                            <td>2d4 Slashing</td>
+                            <td>Double (1d4), Finesse, Two-Handed, Mastery (Vicious)</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>Double-Sword</td>
+                            <td>2d6 Slashing</td>
+                            <td>Double (1d6), Heavy, Two-Handed, Mastery (Brutal)</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center">8</td>
+                        </tr>
+                        <tr>
+                            <td>Dagger, Dueling</td>
+                            <td>1d4 Piercing</td>
+                            <td>Finesse, Light, Parry</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">3</td>
+                        </tr>
+                        <tr>
+                            <td>Flail</td>
+                            <td>1d4 Bludgeoning, 1d4 Piercing</td>
+                            <td>Bypass, Mastery (Brutal)</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center">4</td>
+                        </tr>
+                        <tr>
+                            <td>Flail, dire</td>
+                            <td>1d4 Bludgeoning, 1d4 Piercing</td>
+                            <td>Bypass, Double (1d4 Bludgeoning, 1d4 Piercing), Heavy, Two-Handed, Mastery (Impact)</td>
+                            <td class="text-center">4</td>
+                            <td class="text-center">9</td>
+                        </tr>
+                        <tr>
+                            <td>Glaive</td>
+                            <td>1d10 Slashing</td>
+                            <td>Heavy, Reach, Sweeping, Two-Handed</td>
+                            <td class="text-center">4</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>Goliath Hammer</td>
+                            <td>2d8 Bludgeoning</td>
+                            <td>Superheavy, Two-Handed, Mastery (Impact)</td>
+                            <td class="text-center">5</td>
+                            <td class="text-center">8</td>
+                        </tr>
+                        <tr>
+                            <td>Grand Spear</td>
+                            <td>1d8 Piercing</td>
+                            <td>Thrown (20/60), Versatile (1d10)</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center">4</td>
+                        </tr>
+                        <tr>
+                            <td>Great Scimitar</td>
+                            <td>1d8 Slashing</td>
+                            <td>Versatile (1d10), Mastery I (Vicious), Mastery II (Bleed)</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>Greataxe</td>
+                            <td>1d12 Slashing</td>
+                            <td>Heavy, Sweeping, Two-Handed, Mastery (Vicious)</td>
+                            <td class="text-center">4</td>
+                            <td class="text-center">7</td>
+                        </tr>
+                        <tr>
+                            <td>Greatsword</td>
+                            <td>2d6 Slashing</td>
+                            <td>Heavy, Sharp, Two-Handed</td>
+                            <td class="text-center">4</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>Halberd</td>
+                            <td>1d10 Piercing or Slashing</td>
+                            <td>Heavy, Reach, Two-Handed, Impact</td>
+                            <td class="text-center">4</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>Lance, light</td>
+                            <td>2d4 Piercing</td>
+                            <td>Finesse, Limit (Mounted Combat), Reach</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center">4</td>
+                        </tr>
+                        <tr>
+                            <td>Longsword</td>
+                            <td>1d8 Slashing</td>
+                            <td>Versatile (1d10), Mastery (Sharp)</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center">5</td>
+                        </tr>
+                        <tr>
+                            <td>Mace</td>
+                            <td>1d6 Bludgeoning</td>
+                            <td>Impact</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center">3</td>
+                        </tr>
+                        <tr>
+                            <td>Maul</td>
+                            <td>2d6 Bludgeoning</td>
+                            <td>Heavy, Two-Handed, Vicious</td>
+                            <td class="text-center">4</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>Morningstar</td>
+                            <td>1d4 Piercing, 1d4 Bludgeoning</td>
+                            <td>Vicious</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center">4</td>
+                        </tr>
+                        <tr>
+                            <td>Mountain Cleaver</td>
+                            <td>2d12 Slashing</td>
+                            <td>Massive, Superheavy, Two-Handed, Mastery (Bleed)</td>
+                            <td class="text-center">5</td>
+                            <td class="text-center">12</td>
+                        </tr>
+                        <tr>
+                            <td>Pike</td>
+                            <td>1d10 Piercing</td>
+                            <td>Heavy, Reach, Two-Handed</td>
+                            <td class="text-center">4</td>
+                            <td class="text-center">5</td>
+                        </tr>
+                        <tr>
+                            <td>Scimitar</td>
+                            <td>1d6 Slashing</td>
+                            <td>Effective, Finesse, Light, Mastery (Parry)</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">7</td>
+                        </tr>
+                        <tr>
+                            <td>Spiked Chain</td>
+                            <td>2d4 Piercing</td>
+                            <td>Finesse, Reach, Two-Handed, Mastery (Double 1d4)</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>Titan Maul</td>
+                            <td>2d12 Bludgeoning</td>
+                            <td>Massive, Superheavy, Two-Handed, Mastery I (Vicious), Mastery II (Impact)</td>
+                            <td class="text-center">6</td>
+                            <td class="text-center">13</td>
+                        </tr>
+                        <tr>
+                            <td>Trident</td>
+                            <td>1d6 Piercing</td>
+                            <td>Finesse, Thrown (20/60), Versatile (1d8)</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center">4</td>
+                        </tr>
+                        <tr>
+                            <td>Trident, Great</td>
+                            <td>1d12 Piercing</td>
+                            <td>Two-Handed, Sharp</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>Warhammer</td>
+                            <td>1d8 Bludgeoning</td>
+                            <td>Impact, Versatile (1d10)</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center">5</td>
+                        </tr>
+                        <tr>
+                            <td>Warpick</td>
+                            <td>1d8 Piercing</td>
+                            <td>Versatile (1d10), Mastery (Effective)</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center">5</td>
+                        </tr>
+                        <tr>
+                            <td>Warpike</td>
+                            <td>1d12 Piercing</td>
+                            <td>Reach, Superheavy, Two-Handed</td>
+                            <td class="text-center">5</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>Whip, combat</td>
+                            <td>1d6 Slashing</td>
+                            <td>Bypass, Finesse, Reach, Mastery (Vicious)</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center">5</td>
+                        </tr>
+                        <tr>
+                            <td>Whipsword </td>
+                            <td>1d8 Slashing</td>
+                            <td>Finesse, Switch (1d6 Slashing, Finesse, Reach), Mastery I (Vicious)</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center">7</td>
+                        </tr>
+                        <tr>
+                            <td>Zweihänder</td>
+                            <td>2d8 Slashing</td>
+                            <td>Superheavy, Two-Handed, Mastery (Bleed)</td>
+                            <td class="text-center">5</td>
+                            <td class="text-center">8</td>
+                        </tr>
+                        <tr>
+                            <th class="class-border border-0" colspan="10"></th>
+                          </tr>
+                    </tbody>
+                </table>
+               
+            <!-- Ranged Weapons -->
 
-                <h3 class="text-center" id="items-title">Armor & Shield Properties</h3>
+            <h2 class="text-center ranged-weapons item-section" style="display: none;" id="items-title">Ranged Weapons</h2>
+            <table style="display: none;" class="table-sm table-striped shadow w-75 mb-5 ranged-weapons align-self-center item-table item-section">
+                <tbody>
+                  <tr>
+                    <th class="class-border border-0" colspan="10"></th>
+                  </tr>
+                  <tr><th class="text-center table-subtitle" colspan="10">Simple Ranged Weapons</th></tr>
+                  <tr class="table-header">
+                      <th scope="col">Name</th>
+                      <th scope="col">Damage</th>
+                      <th class="text-center" scope="col">Range</th>
+                      <th scope="col">Properties</th>
+                      <th class="text-center" scope="col">Slots</th>
+                      <th class="text-center" scope="col">Cost (UB)</th>
+                  </tr>
+                  <tr>
+                      <td>Crossbow, Light</td>
+                      <td>1d8 Piercing</td>
+                      <td class="text-center">80/320</td>
+                      <td>Ammunition, Forceful (1), Loading (1), Stock, Two-handed, Mastery (Quick Reload)</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">6</td>
+                  </tr>
+                  <tr>
+                    <td>Dart (5)</td>
+                    <td>1d4 Piercing</td>
+                    <td class="text-center">20/60</td>
+                    <td>Light</td>
+                    <td class="text-center">1</td>
+                    <td class="text-center">1</td>
+                </tr>
+                <tr>
+                    <td>Shortbow</td>
+                    <td>1d6 Piercing</td>
+                    <td class="text-center">80/320</td>
+                    <td>Ammunition, Brutal, Two-Handed, Mastery (Effective)</td>
+                    <td class="text-center">2</td>
+                    <td class="text-center">5</td>
+                </tr>
+                <tr>
+                    <td>Sling</td>
+                    <td>1d4 Bludgeoning</td>
+                    <td class="text-center">30/120</td>
+                    <td>Ammunition, Light</td>
+                    <td class="text-center">1</td>
+                    <td class="text-center">1</td>
+                </tr>
+                <tr><th class="text-center table-subtitle" colspan="10">Martial Ranged Weapons</th></tr>
+                  <tr class="table-header">
+                      <th scope="col">Name</th>
+                      <th scope="col">Damage</th>
+                      <th class="text-center" scope="col">Range</th>
+                      <th scope="col">Properties</th>
+                      <th class="text-center" scope="col">Slots</th>
+                      <th class="text-center" scope="col">Cost (UB)</th>
+                  </tr>
+                  <tr>
+                    <td>Crossbow, Hand</td>
+                    <td>1d6 Piercing</td>
+                    <td class="text-center">30/120</td>
+                    <td>Ammunition, Light, Loading (1), Point Blank, Mastery (Quick Reload)</td>
+                    <td class="text-center">1</td>
+                    <td class="text-center">7</td>
+                </tr>
+                <tr>
+                    <td>Crossbow, Heavy</td>
+                    <td>1d10 Piercing</td>
+                    <td class="text-center">100/400</td>
+                    <td>Ammunition, Forceful (2), Loading (2), Stock, Two-handed, Velocity, Mastery (Quick Reload)</td>
+                    <td class="text-center">3</td>
+                    <td class="text-center">8</td>
+                </tr>
+                <tr>
+                    <td>Greatbow</td>
+                    <td>1d10 Piercing</td>
+                    <td class="text-center">150/600</td>
+                    <td>Ammunition, Brutal, Forceful (1), Limit (Unmounted), Strength (13), Two-Handed</td>
+                    <td class="text-center">3</td>
+                    <td class="text-center">7</td>
+                </tr>
+                <tr>
+                    <td>Longbow</td>
+                    <td>1d8 Piercing</td>
+                    <td class="text-center">150/600</td>
+                    <td>Ammunition, Brutal, Limit (Unmounted), Two-Handed, Mastery (Effective)</td>
+                    <td class="text-center">3</td>
+                    <td class="text-center">6</td>
+                </tr>
+                <tr>
+                    <td>Portable Ballista</td>
+                    <td>2d12 Piercing</td>
+                    <td class="text-center">200/800</td>
+                    <td>Ammunition, Forceful (3), Loading (3), Mounted, Two-Handed, Velocity, Special</td>
+                    <td class="text-center">9</td>
+                    <td class="text-center">16</td>
+                </tr>
+                <tr>
+                    <th class="class-border border-0" colspan="10"></th>
+                  </tr>
+                </tbody>
+            </table>
 
-                <div class="col d-flex flex-column" id="trained-abilities">
-                <ul class="pl-0 shadow">
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ability-1" id="trained-ability-1">
-                        <span class="class-nav-item">Bashing</span>
-                      </li>
-                    <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities"><p class="p-4">You may attack with a shield or component with the Bashing property as though it were a weapon, rolling the damage dice shown in the parenthesis.</p></div>
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ability-1" id="trained-ability-1">
-                        <span class="class-nav-item"></span>
-                      </li>
-                    <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities"><p class="p-4"></p></div>
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ability-1" id="trained-ability-1">
-                        <span class="class-nav-item"></span>
-                      </li>
-                    <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities"><p class="p-4"></p></div>
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ability-1" id="trained-ability-1">
-                        <span class="class-nav-item"></span>
-                      </li>
-                    <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities"><p class="p-4"></p></div>
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ability-1" id="trained-ability-1">
-                        <span class="class-nav-item"></span>
-                      </li>
-                    <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities"><p class="p-4"></p></div>
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ability-1" id="trained-ability-1">
-                        <span class="class-nav-item"></span>
-                      </li>
-                    <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities"><p class="p-4"><br>&nbsp;&nbsp;&nbsp;&nbsp;</p></div>
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ability-1" id="trained-ability-1">
-                        <span class="class-nav-item"></span>
-                      </li>
-                    <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities"><p class="p-4"><br>&nbsp;&nbsp;&nbsp;&nbsp;</p></div>
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ability-1" id="trained-ability-1">
-                        <span class="class-nav-item">Soak</span>
-                      </li>
-                    <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities"><p class="p-4">After damage is calculated and Damage Reduction is applied but before damage resistance (if any) is applied, for each 10 points of remaining damage, reduce the damage taken by 1.</p>
-                        <span class="d-flex flex-column "><h4 class="align-self-center">Soak Examples</h4>
-                        <table class="table table-striped table-bordered p-1 w-50 align-self-center"><tr><th class="text-center">Damage</th><th class="text-center">Soak</th></tr>
-                            <tr><td class="text-center">0-9</td><td class="text-center">0</td></tr>
-                            <tr><td class="text-center">10-19</td><td class="text-center">1</td></tr>
-                            <tr><td class="text-center">20-29</td><td class="text-center">2</td></tr>
-                            <tr><td class="text-center">...</td><td class="text-center">...</td></tr>
+            <h2 class="text-center ranged-weapons item-section" style="display: none;" id="items-title">Ammunition</h2>
 
-                    </table></span>
-                    </div>
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ability-1" id="trained-ability-1">
-                        <span class="class-nav-item">Special (Wall Shield)</span>
+            <!-- Gear -->
+            <h2 class="text-center gear item-section" style="display: none;" id="items-title">Adventuring Gear</h2>
+
+            <!-- Trade Goods-->
+            <h2 class="text-center trade-goods item-section" style="display: none;" id="items-title">Trade Goods</h2>
+
+            <div class="row justify-content-center">
+                <!-- Ranged Weapons -->
+                <div class="col-xs-6">
+                    <table style="display: none;" class="table-sm table-striped mb-1 ranged-weapons item-table item-section side-table">
+                        <tbody>
+                            <tr>
+                                <th class="class-border border-0" colspan="10"></th>
+                            </tr>
+                          <tr class="table-header">
+                              <th scope="col">Name</th>
+                              <th scope="col">Properties</th>
+                              <th class="text-center" scope="col">Slots</th>
+                              <th class="text-center" scope="col">Cost (UB)</th>
+                          </tr>
+                          <tr>
+                              <td>Arrow, Simple (20)</td>
+                              <td>–</td>
+                              <td class="text-center">1</td>
+                              <td class="text-center">1</td>
+                          </tr>
+                          <tr>
+                            <td>Arrow, Barbed (5)</td>
+                            <td>Bleed</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Arrow, Bodkin (5)</td>
+                            <td>Impact</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Arrow, Penetrating (5)</td>
+                            <td>Velocity</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Ballista Bolt</td>
+                            <td>–</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Quarrel, Simple (20)</td>
+                            <td>–</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1</td>
+                        </tr>
+                        <tr>
+                            <td>Quarrel, Barbed (5)</td>
+                            <td>Bleed</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Quarrel, Penetrating (5)</td>
+                            <td>Velocity</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Pellet, Stone (20)</td>
+                            <td>Special</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">0.5</td>
+                        </tr>
+                        <tr>
+                            <td>Component, Mounting (5)</td>
+                            <td>Special</td>
+                            <td class="text-center">–</td>
+                            <td class="text-center">3</td>
+                        </tr>
+                        <tr>
+                            <th class="class-border border-0" colspan="10"></th>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xs-6">
+                    <table style="display: none;" class="table-sm table-striped mb-5 ranged-weapons item-table item-section side-table">
+                        <tbody>
+                            <tr>
+                                <th class="class-border border-0" colspan="10"></th>
+                            </tr>
+                          <tr class="table-header">
+                              <th scope="col">Name</th>
+                              <th scope="col">Properties</th>
+                              <th class="text-center" scope="col">Slots</th>
+                              <th class="text-center" scope="col">Cost (UB)</th>
+                          </tr>
+                          <tr>
+                              <td>Arrow, Simple (20)</td>
+                              <td>–</td>
+                              <td class="text-center">1</td>
+                              <td class="text-center">1</td>
+                          </tr>
+                          <tr>
+                            <td>Arrow, Barbed (5)</td>
+                            <td>Bleed</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Arrow, Bodkin (5)</td>
+                            <td>Impact</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Arrow, Penetrating (5)</td>
+                            <td>Velocity</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Ballista Bolt</td>
+                            <td>–</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Quarrel, Simple (20)</td>
+                            <td>–</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1</td>
+                        </tr>
+                        <tr>
+                            <td>Quarrel, Barbed (5)</td>
+                            <td>Bleed</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Quarrel, Penetrating (5)</td>
+                            <td>Velocity</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2</td>
+                        </tr>
+                        <tr>
+                            <td>Pellet, Stone (20)</td>
+                            <td>Special</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">0.5</td>
+                        </tr>
+                        <tr>
+                            <td>Component, Mounting (5)</td>
+                            <td>Special</td>
+                            <td class="text-center">–</td>
+                            <td class="text-center">3</td>
+                        </tr>
+                        <tr>
+                            <th class="class-border border-0" colspan="10"></th>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Gear -->
+                <div class="col-xs-4">
+                    <table style="display: none;" class="table-sm table-striped mb-1 gear item-table item-section side-table">
+                        <tbody>
+                            <tr>
+                                <th class="class-border border-0" colspan="10"></th>
+                            </tr>
+                            <tr class="table-header">
+                                <th scope="col">Item</th>
+                                <th class="text-center" scope="col">Slots</th>
+                                <th class="text-center" scope="col">Cost</th>
+                            </tr>
+                            <tr>
+                                <td>Ball Bearings (1000)</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Barrel</td>
+                                <td class="text-center">9</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Bedroll</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Bell</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Blanket</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Block & Tackle</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Bottle, Glass</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Bucket</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Caltrops (20)</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Candle</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Chain (10 ft)</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Chalk (1 piece)</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">0.5cb</td>
+                            </tr>
+                            <tr>
+                                <td>Chest</td>
+                                <td class="text-center">6</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Clothes, Common</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Clothes, Costume</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Clothes, Fine</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">2gb</td>
+                            </tr>
+                            <tr>
+                                <td>Clothes, Traveler’s</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Crowbar</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Firestarter Kit</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Fishing Tackle</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Flask or Tankard</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Game, Cards or Dice</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Grappling Hook</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Hammer</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Hammer, Sledge</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Hourglass</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Hunting Trap</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Ink</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Ink Pen</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <th class="class-border border-0" colspan="10"></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xs-4">
+                    <table style="display: none;" class="table-sm table-striped mb-1 gear item-table item-section side-table">
+                        <tbody>
+                            <tr>
+                                <th class="class-border border-0" colspan="10"></th>
+                            </tr>
+                            <tr class="table-header">
+                                <th scope="col">Item</th>
+                                <th class="text-center" scope="col">Slots</th>
+                                <th class="text-center" scope="col">Cost</th>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Buzuq</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Drum</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Dulcimer</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Reed Flute</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Horn</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Lute</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Lyre</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Oud</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Pan Flute</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Rebab</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Shawm</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument, Zither</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Jug or Pitcher</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Kit, Climbers</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Kit, Healer’s</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Kit, Herbalism</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Kit, Mess</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Kit, Poisoner’s</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Ladder (10 ft)</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Lamp</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Lantern, Bullseye</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Lantern, Hooded</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Lock</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Magnifying Glass</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1pp</td>
+                            </tr>
+                            <tr>
+                                <td>Manacles</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Mirror, Steel</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">3cb</td>
+                            </tr>
+                            <tr>
+                                <td>Pick, Miner’s</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Piton</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Pole (10 ft)</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <th class="class-border border-0" colspan="10"></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xs-4">
+                    <table style="display: none;" class="table-sm table-striped mb-5 gear item-table item-section side-table">
+                        <tbody>
+                            <tr>
+                                <th class="class-border border-0" colspan="10"></th>
+                            </tr>
+                            <tr class="table-header">
+                                <th scope="col">Item</th>
+                                <th class="text-center" scope="col">Slots</th>
+                                <th class="text-center" scope="col">Cost</th>
+                            </tr>
+                            <tr>
+                                <td>Pot, Iron</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Ram, Portable</td>
+                                <td class="text-center">6</td>
+                                <td class="text-center">2gb</td>
+                            </tr>
+                            <tr>
+                                <td>Ration (1)</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Rope, Hempen (50 ft)</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Rope, Silk (50 ft)</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Sealing Wax</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Shovel</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Signal Whistle</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Signet Ring</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Soap</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">0.5cb</td>
+                            </tr>
+                            <tr>
+                                <td>Spikes, Iron (10)</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Spyglass</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1pp</td>
+                            </tr>
+                            <tr>
+                                <td>Tent, Two-person</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Tools, Artist’s</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Tools, Brewer’s</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Tools, Builder’s</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Tools, Cook’s</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Tools, Harvester’s</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Tools, Jeweler’s</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Tools, Leatherworker’s</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Tools, Smith’s</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Tools, Thieves’</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Tools, Tinker’s</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1gb</td>
+                            </tr>
+                            <tr>
+                                <td>Torch</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td>Vial</td>
+                                <td class="text-center">0.2</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Waterskin</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1ub</td>
+                            </tr>
+                            <tr>
+                                <td>Whetstone</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">1cb</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <td ></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <th class="class-border border-0" colspan="10"></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Trade Goods -->
+                <div class="col-xs-4">
+                    <table style="display: none;" class="table-sm table-striped mb-1 trade-goods item-table item-section side-table">
+                        <tbody>
+                          <tr>
+                            <th class="class-border border-0" colspan="10"></th>
+                          </tr>
+                          <tr class="table-header">
+                              <th scope="col">Item</th>
+                              <th class="text-center" scope="col">Slots</th>
+                              <th class="text-center" scope="col">Cost (UB)</th>
+                          </tr>
+                          <tr>
+                              <td>Black Pepper</td>
+                              <td class="text-center">1</td>
+                              <td class="text-center">1cb</td>
+                          </tr>
+                          <tr>
+                            <td>Canvas, 1 yard</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                        <tr>
+                            <td>Chicken</td>
+                            <td class="text-center">–</td>
+                            <td class="text-center">1cb</td>
+                        </tr>
+                        <tr>
+                            <td>Cinnamon</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1gb</td>
+                        </tr>
+                        <tr>
+                            <td>Cheese</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">2gb</td>
+                        </tr>
+                        <tr>
+                            <td>Cloves</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                        <tr>
+                            <td>Cow or Ox</td>
+                            <td class="text-center">–</td>
+                            <td class="text-center">1gb</td>
+                        </tr>
+                        <tr>
+                            <td>Eggs, 1 dozen</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                        <tr>
+                            <td>Fire Pepper, dried</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1pp</td>
+                        </tr>
+                        <tr>
+                            <td>Flour</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">3ub</td>
+                        </tr>
+                        <tr>
+                            <td>Fish, common, salted</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">2gb</td>
+                        </tr>
+                          <tr>
+                            <th class="class-border border-0" colspan="10"></th>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-xs-4">
+                    <table style="display: none;" class="table-sm table-striped mb-1 trade-goods item-table item-section side-table">
+                        <tbody>
+                          <tr>
+                            <th class="class-border border-0" colspan="10"></th>
+                          </tr>
+                          <tr class="table-header">
+                              <th scope="col">Item</th>
+                              <th class="text-center" scope="col">Slots</th>
+                              <th class="text-center" scope="col">Cost (UB)</th>
+                          </tr>
+                        <tr>
+                            <td>Fruit, common, dried</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                        <tr>
+                            <td>Fungi, dried</td>
+                            <td class="text-center">0.5</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                        <tr>
+                            <td>Ginger</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1gb</td>
+                        </tr>
+                        <tr>
+                            <td>Goat</td>
+                            <td class="text-center">–</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                        <tr>
+                            <td>Grain</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                        <tr>
+                            <td>Honey, jar</td>
+                            <td class="text-center">0.2</td>
+                            <td class="text-center">2gb</td>
+                        </tr>
+                        <tr>
+                            <td>Milk, cow, 1 gallon</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                        <tr>
+                            <td>Milk, exotic, 1 gallon</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1gb</td>
+                        </tr>
+                        <tr>
+                            <td>Milk, goat, 1 gallon</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">2ub</td>
+                        </tr>
+                        <tr>
+                            <td>Nuts, pinion</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1cb</td>
+                        </tr>
+                        <tr>
+                            <td>Rice</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                          <tr>
+                            <th class="class-border border-0" colspan="10"></th>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-xs-4">
+                    <table style="display: none;" class="table-sm table-striped mb-5 trade-goods item-table item-section side-table">
+                        <tbody>
+                          <tr>
+                            <th class="class-border border-0" colspan="10"></th>
+                          </tr>
+                          <tr class="table-header">
+                              <th scope="col">Item</th>
+                              <th class="text-center" scope="col">Slots</th>
+                              <th class="text-center" scope="col">Cost (UB)</th>
+                          </tr>
+                        <tr>
+                            <td>Root Vegetable</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                        <tr>
+                            <td>Saffron, bundle</td>
+                            <td class="text-center">0.2</td>
+                            <td class="text-center">5pp</td>
+                        </tr>
+                        <tr>
+                            <td>Salt</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1ub</td>
+                        </tr>
+                        <tr>
+                            <td>Sheep</td>
+                            <td class="text-center">–</td>
+                            <td class="text-center">1gb</td>
+                        </tr>
+                        <tr>
+                            <td>Sugar</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1pp</td>
+                        </tr>
+                        <tr>
+                            <td>Spiderling Silk, 1 yard</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1gb</td>
+                        </tr>
+                        <tr>
+                            <td>Tea</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">3ub</td>
+                        </tr>
+                        <tr>
+                            <td>Tumeric, jar</td>
+                            <td class="text-center">0.2</td>
+                            <td class="text-center">1gb</td>
+                        </tr>
+                        <tr>
+                            <td>Vanilla, bundle </td>
+                            <td class="text-center">0.2</td>
+                            <td class="text-center">1pp</td>
+                        </tr>
+                        <tr>
+                            <td>Wasabi Root</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1gb</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                        </tr>
+                          <tr>
+                            <th class="class-border border-0" colspan="10"></th>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+          
+            <!-- Mounts -->
+            <h2 class="text-center mounts item-section" style="display: none;" id="items-title">Mounts</h2>
+            <table style="display: none;" class="table-sm table-striped shadow w-75 mb-5 mounts align-self-center item-table item-section">
+                <tbody>
+                  <tr>
+                    <th class="class-border border-0" colspan="10"></th>
+                  </tr>
+                  <tr class="table-header">
+                      <th scope="col">Name</th>
+                      <th class="text-center" scope="col">Size</th>
+                      <th class="text-center" scope="col">Speed (mph)</th>
+                      <th class="text-center" scope="col">Slots</th>
+                      <th class="text-center" scope="col">Rarity of Creature</th>
+                      <th class="text-center" scope="col">Barter Category</th>
+                  </tr>
+                  <tr>
+                      <td>Bear</td>
+                      <td class="text-center">L</td>
+                      <td class="text-center">4</td>
+                      <td class="text-center">20</td>
+                      <td class="text-center">Common</td>
+                      <td class="text-center">Greater</td>
+                  </tr>
+                  <tr>
+                    <td>Boar, giant</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">18</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Bulette</td>
+                    <td class="text-center">H</td>
+                    <td class="text-center">5*</td>
+                    <td class="text-center">28</td>
+                    <td class="text-center">Remarkable</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Camel</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">24</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Cassowary, giant</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">6*</td>
+                    <td class="text-center">15</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Centipede, giant</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">5*</td>
+                    <td class="text-center">15</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Dinosaur, ankylosaurus</td>
+                    <td class="text-center">H</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">30</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Dinosaur, hadrosaurus</td>
+                    <td class="text-center">H</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">30</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Dinosaur, triceratops</td>
+                    <td class="text-center">H</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">35</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Donkey</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">23</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Eagle, giant</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">*</td>
+                    <td class="text-center">15</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Elephant, draft</td>
+                    <td class="text-center">H</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">33</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Elephant, war</td>
+                    <td class="text-center">H</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">30</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Lizard, giant</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">22</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Lizard, greater</td>
+                    <td class="text-center">H</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">25</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Horse, riding</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">24</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Horse, draft</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">25</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Horse, war</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">25</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Mammoth</td>
+                    <td class="text-center">H</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">35</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Mastiff</td>
+                    <td class="text-center">M</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">19</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Uncommon</td>
+                </tr>
+                <tr>
+                    <td>Musk Ox</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">4</td>
+                    <td class="text-center">27</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Pony</td>
+                    <td class="text-center">M</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">20</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Uncommon</td>
+                </tr>
+                <tr>
+                    <td>Rhinoceros, draft</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">32</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Rhinoceros, riding</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">8</td>
+                    <td class="text-center">30</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Sandworm, adolescent</td>
+                    <td class="text-center">H</td>
+                    <td class="text-center">*</td>
+                    <td class="text-center">28</td>
+                    <td class="text-center">Remarkable</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Scarab, giant</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">23</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Scorpion, giant</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">23</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Spider, giant</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">20</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                <tr>
+                    <td>Vulture, giant</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">*</td>
+                    <td class="text-center">18</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Premium</td>
+                </tr>
+                <tr>
+                    <td>Wolf, desert</td>
+                    <td class="text-center">M</td>
+                    <td class="text-center">5</td>
+                    <td class="text-center">20</td>
+                    <td class="text-center">Common</td>
+                    <td class="text-center">Uncommon</td>
+                </tr>
+                <tr>
+                    <td>Wolf, dire</td>
+                    <td class="text-center">L</td>
+                    <td class="text-center">6</td>
+                    <td class="text-center">25</td>
+                    <td class="text-center">Exotic</td>
+                    <td class="text-center">Greater</td>
+                </tr>
+                  <tr>
+                    <th class="class-border border-0" colspan="10"></th>
+                  </tr>
+                </tbody>
+            </table>
+
+                
+                
+
+
+                <div style="display: none!important;" class="col d-flex flex-column w-75 align-self-center melee-weapons ranged-weapons mounts others item-section" id="description-list">
+                    <!-- Melee Weapons -->
+                    <h2 style="display: none;" class="text-center melee-weapons item-section">Weapon Descriptions</h2>
+                    <ul style="display: none;" class="pl-0 shadow item-section melee-weapons">
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between  description" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#unarmed-1" id="item-unarmed-1">
+                        <span class="class-nav-item">Stone Knuckles</span>
                       </li>
-                    <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities"><p class="p-4">Even larger than a tower shield, a wall shield is a massive, door-sized shield with a set of imposing spikes set into the bottom edge, facing the ground. It is much more cumbersome to use and proves to be a bit less effective than a tower shield in normal melee combat.<br>&nbsp;&nbsp;&nbsp;&nbsp;The spikes along the bottom row serve to anchor the shield into the ground. As an action, you can slam the shield into the ground and brace yourself behind it. While anchored this way, a wall shield ceases to grant you a bonus to AC. Instead, it provides up to full cover for a Medium creature and half cover for a Large creature stationing itself behind the shield.</p></div>
-                </ul>
+                    <div class="collapse abilities description-desc" id="unarmed-1" data-parent="#description-list"><p class="p-4">These linked rings are worn over the knuckles. Considered a monk weapon. When performing your bonus action unarmed strike, you can use this weapon instead.</p></div>
+
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between  description" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#unarmed-2" id="item-unarmed-2">
+                        <span class="class-nav-item">Clawed Gauntlet</span>
+                      </li>
+                    <div class="collapse abilities description-desc" id="unarmed-2" data-parent="#description-list"><p class="p-4">This is worn on the arm and extends to the hand, so bracers cannot be worn in conjunction with this gauntlet. Considered a monk weapon. When performing your bonus action unarmed strike, you can use this weapon instead.</p></div>
+
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between  description" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#simple-1" id="item-simple-1">
+                        <span class="class-nav-item">Main Gauche</span>
+                      </li>
+                    <div class="collapse abilities description-desc" id="simple-1" data-parent="#description-list"><p class="p-4">Also known as sword-breakers, a main gauche is to be wielded in the off-hand to parry incoming blows. This weapon is not considered a monk weapon. To gain the Parry property, you must wield the Main Gauche in your off-hand.</p></div>
+
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between  description" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#unarmed-3" id="item-unarmed-3">
+                        <span class="class-nav-item">Spiked Glove</span>
+                      </li>
+                    <div class="collapse abilities description-desc" id="unarmed-3" data-parent="#description-list"><p class="p-4">This is worn on the hand and is considered a monk weapon. When performing your bonus action unarmed strike, you can use this weapon instead.</p></div>
+                    </ul>
+
+                    <!-- Ranged Weapons -->
+                    <h2 style="display: none;" class="text-center ranged-weapons item-section">Ranged Weapon & Ammunition Descriptions</h2>
+                    <ul style="display: none;" class="pl-0 shadow item-section ranged-weapons">
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between  description" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ranged-1" id="item-ranged-1">
+                        <span class="class-nav-item">Portable Ballista</span>
+                      </li>
+                    <div class="collapse abilities description-desc" id="ranged-1" data-parent="#description-list"><p class="p-4">If this weapon is mounted, multiple individuals can assist in reloading, using their attacks to help reload. If it is unmounted, one other individual can assist by using their attacks towards reloading.</p></div>
+
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between  description" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ranged-2" id="item-ranged-2">
+                        <span class="class-nav-item">Component, Mounting</span>
+                      </li>
+                    <div class="collapse abilities description-desc" id="ranged-2" data-parent="#description-list"><p class="p-4">This special component allows you to customize a piece of ammunition (other than a pellet). Customizations include attaching tiny objects or containers to enhance attacks. For example, an acid vial attached to a simple arrow would add acid damage on a successful hit. To prepare ammunition takes one minute per unit.</p></div>
+
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between  description" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ranged-3" id="item-ranged-3">
+                        <span class="class-nav-item">Stone Pellets</span>
+                      </li>
+                    <div class="collapse abilities description-desc" id="ranged-3" data-parent="#description-list"><p class="p-4">You can find 10 stone pellets for free when searching for one hour in an appropriate environment.</p></div>
+                    </ul>
+
+                    <!-- Others -->
+                    <h2 style="display: none;" class="text-center others item-section">Miscellaneous Items</h2>
+                    <ul style="display: none;" class="pl-0 shadow item-section others">
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  description" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#description-1" id="item-description-1">
+                            <span class="class-nav-item">Eggshell Grenade</span>
+                        </li>
+                        <div class="collapse abilities description-desc" id="description-1" data-parent="#description-list"><p class="pt-4 pr-4 pl-4 pb-0">Eggshell grenades are emptied eggshells carefully packed with various alchemical substances. Common grenade types include dust, flashpowder, noise, pepper, poison smoke, and vanishing smoke. To throw an eggshell grenade make a ranged attack roll. All eggshell grenades have a short range of 10 feet and a long range of 30 feet. <br><br>Naturally, eggshell grenades are very fragile and must be stowed carefully to avoid breakage. If a character carrying these items suffers damage from falling, an eggshell grenade is destroyed for every 5 hit points lost from the impact.<ul class="ml-3 pb-4 mr-3"><li class="internal-list"><b>Dust. (1 GB) </b>A creature hit by a dust grenade must make a successful Constitution save (DC 13) or become blinded until the end of its next turn. Even if the creature saves, it has disadvantage on its next attack roll. There is no effect if the grenade misses (though the grenade is ruined). Comes in a set of 5.</li><li class="internal-list"><b>Flashpowder. (5 GB) </b>A flashpowder grenade is effective only when thrown into a fire source, where it explodes in a brilliant flash of light. Any creature within 10 feet must make a successful Constitution save (DC 15) or become blinded until the end of its next turn. Even if creatures save, they have disadvantage on their next attack rolls. There is no effect if the grenade misses the fire (though the grenade is ruined). Comes in a set of 3.</li><li class="internal-list"><b>Noise. (1 GB) </b>On impact the bomb creates a short sound depending on what kind of noise bomb you throw. The shatter type creates a sound that imitates shattering glass, the whisper type sounds like indistinct dialogue, the scream type sounds like a quick fearful scream, and the thunder type releases a loud thundering boom. One of each type is included.</li><li class="internal-list"><b>Poison Smoke. (5 GB) </b>A poison smoke grenade is effective only when thrown into a fire source, where it bursts into a cloud of vile, stinking smoke. The cloud spreads to a radius of 15 feet from the fire source, and it has the effect of the stinking cloud spell. There is no effect if the grenade misses the fire (though the grenade is ruined). Comes in a set of 3.</li><li class="internal-list"><b>Vanishing Smoke. (5 UB) </b>On impact the bomb creates a 20-foot-radius sphere of fog centered on the point of impact. The sphere spreads around corners, and its area is heavily obscured. After 1 turn, the smoke spreads to 30 feet but is only lightly obscured as the fog slowly dissipates. After an additional turn, the fog is gone completely. A wind of moderate speed (at least 10 miles per hour) immediately disperses the smoke. Comes in a set of 3.</li></ul></p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  description" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#description-2" id="item-description-2">
+                            <span class="class-nav-item">Vial Belts</span>
+                        </li>
+                        <div class="collapse abilities description-desc" id="description-2" data-parent="#description-list"><p class="pt-4 pr-4 pl-4 pb-0"><i>Adventuring Gear (1 slot)</i><br><br>This belt protects vials safely from falls, tumbles, and general environmental hazards. It also makes more quickdraw inventory slots available. The vial belt takes 1 slot to equip and the items you house on this container do not add to your carry load.  A creature can only utilize one vial belt, but it allows a vial to be used for itself with a bonus action. A full action is still required to use a vial on another creation (such as feeding a potion to another character or applying poison to another character’s weapon).<ul class="ml-4 pb-4"><li class="internal-list"><b>2-Vial Belt: [1 CB.] </b>Adds 2 quickdraw slots for vials.</li><li class="internal-list"><b>3-Vial Belt: [2 CB.] </b>Adds 3 quickdraw slots for vials.</li><li class="internal-list"><b>5-Vial Belt: [3 CB.] </b>Adds 5 quickdraw slots for vials.</li></ul></p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  description" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#description-3" id="item-description-3">
+                            <span class="class-nav-item">Quickdraw Bandolier</span>
+                        </li>
+                        <div class="collapse abilities description-desc" id="description-3" data-parent="#description-list"><p class="pt-4 pr-4 pl-4 pb-0"><i>Adventuring Gear (1 slot)</i><br><br><b>[1 UB.]</b> This bandolier can house 5 throwing daggers, grenades, or similar tiny objects. The bandolier takes 1 slot to equip and the items you house on this container do not add to your carry load. You must still use the designated action economy to use the item you quickdraw.</p></div>
+                    </ul>
+
+                </div>
+                
+                
+
+                <div class="col d-flex flex-column w-75 mb-5 align-self-center" id="property-list">
+                    <!-- Armor -->
+                    <h2 class="text-center armor item-section">Armor & Shield Properties</h2>
+                    <ul class="pl-0 shadow armor item-section armor">
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-1" id="item-property-1">
+                            <span class="class-nav-item">Bashing</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-1" data-parent="#property-list"><p class="p-4">You may attack with a shield or component with the Bashing property as though it were a weapon, rolling the damage dice shown in the parenthesis.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-2" id="item-property-2">
+                            <span class="class-nav-item">Bulky</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-2" data-parent="#property-list"><p class="p-4">Bulky armor has a Strength score requirement of 10 or more. Bulky armor imposes disadvantage on Strength (Athletics) and Dexterity (Acrobatics) checks to swim, climb, run, and similar activities. These penalties can be avoided if your Strength score is at least 2 points higher than the armor’s Strength requirement. <br><br>This property also impedes your movement when standing from Prone. Add +1 to the Standing from Prone DC for each Bulky armor component you wear.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-3" id="item-property-3">
+                            <span class="class-nav-item">Conceal</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-3" data-parent="#property-list"><p class="p-4">Components with the Conceal property can hide and store as a quickdraw item a number of small weapons (such as throwing daggers) as listed in the parenthesis. These quickdraw items do not take up any additional inventory slots from you.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-4" id="item-property-4">
+                            <span class="class-nav-item">Damage Reduction (DR)</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-4" data-parent="#property-list"><p class="p-4">After damage from a successful hit is calculated and before soak and damage resistance (if any) is applied, reduce the damage taken by the amount of Damage Reduction. If you gain Damage Reduction from multiple sources to the same damage type, they stack together.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-5" id="item-property-5">
+                            <span class="class-nav-item">Deflect</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-5" data-parent="#property-list"><p class="p-4">As a reaction, you can use a component with the Deflect property to raise your AC by 1. After using the component in this way, it is damaged and requires 1 hour of work to repair by proficient work with an appropriate tool. For example, leather bracers require a leatherworker, and metal bracers require a blacksmith. Once it is repaired, it can be worn and used again.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-6" id="item-property-6">
+                            <span class="class-nav-item">Noisy</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-6" data-parent="#property-list"><p class="p-4">This type of armor reduces your ability to move quietly due to hard or metal components rubbing and striking against each other. When you wear Noisy armor, you suffer disadvantage on any Dexterity (Stealth) checks that you make to move silently. </p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-7" id="item-property-7">
+                            <span class="class-nav-item">Stealthy</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-7" data-parent="#property-list"><p class="p-4">Cloaks with the Stealthy property help quiet your movements. If you are wearing one and only one component with the Noisy property, the penalties are negated by Stealthy.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-8" id="item-property-8">
+                            <span class="class-nav-item">Soak</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-8" data-parent="#property-list"><p class="p-4">After damage is calculated and Damage Reduction is applied but before damage resistance (if any) is applied, for each 10 points of remaining damage, reduce the damage taken by 1.</p>
+                            <span class="d-flex flex-column "><h4 class="align-self-center">Soak Examples</h4>
+                            <table class="table table-striped table-bordered p-1 w-50 align-self-center"><tr><th class="text-center">Damage</th><th class="text-center">Soak</th></tr>
+                                <tr><td class="text-center">0-9</td><td class="text-center">0</td></tr>
+                                <tr><td class="text-center">10-19</td><td class="text-center">1</td></tr>
+                                <tr><td class="text-center">20-29</td><td class="text-center">2</td></tr>
+                                <tr><td class="text-center">...</td><td class="text-center">...</td></tr>
+
+                        </table></span>
+                        </div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-9" id="item-property-9">
+                            <span class="class-nav-item">Special (Wall Shield)</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-9" data-parent="#property-list"><p class="p-4">Even larger than a tower shield, a wall shield is a massive, door-sized shield with a set of imposing spikes set into the bottom edge, facing the ground. It is much more cumbersome to use and proves to be a bit less effective than a tower shield in normal melee combat.<br><br>The spikes along the bottom row serve to anchor the shield into the ground. As an action, you can slam the shield into the ground and brace yourself behind it. While anchored this way, a wall shield ceases to grant you a bonus to AC. Instead, it provides up to full cover for a Medium creature and half cover for a Large creature stationing itself behind the shield.</p></div>
+                    </ul>
+
+                    <!-- Melee Weapons -->
+                    
+
+                    <h2 style="display: none;" class="text-center melee-weapons item-section mt-5">Melee Properties</h2>
+                    <p style="display: none;" class="melee-weapons item-section"><i>You must have proficiency in a weapon before you can benefit from any special properties listed. Properties from the Player’s Handbook are listed here if there have been any changes made to them.</i></p>
+                    <ul style="display: none;" class="pl-0 shadow item-section melee-weapons">
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-1" id="item-property-1">
+                            <span class="class-nav-item">Beatdown</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-1" data-parent="#property-list"><p class="p-4">You can use one of your attacks to make a special unarmed attack beating down a defenseless target. If your target is restrained or is both grappled and prone, you may choose to beat it down with a special melee attack that deals additional damage of the same type as shown in the parenthesis.<br><br><b>Example: </b><i>Jax unleashes a powerful blow with her maul, knocking the bandit prone on the ground. Kal takes the opportunity to pummel the bandit, dealing 1d4 bludgeoning damage with his unarmed strike and an additional 1d4 bludgeoning damage because he is wearing armored gloves.</i></p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-2" id="item-property-2">
+                            <span class="class-nav-item">Bleed</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-2" data-parent="#property-list"><p class="p-4">Weapons with the Bleed property can inflict gaping wounds and cause profuse bleeding. The target loses an extra 1 hp at the start of its turns, or extra 2 hp if caused by a critical hit. This property does not stack.<br><br>To stop the excessive bleeding, a creature must be healed or a successful Medicine check (DC 15) must be performed. Objects, Constructs, Elementals, or creatures that do not bleed are immune to this effect.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-3" id="item-property-3">
+                            <span class="class-nav-item">Brutal</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-3" data-parent="#property-list"><p class="p-4">Weapons with the Brutal property deal devastating critical hits. When you score a critical hit, you add your ability modifier to the damage twice instead of once.<br><br><b>Example: </b><i>Kal aims his chakrams at the rock worm and rolls a natural 20. As per usual, he rolls his initial damage of 4 (1d6), adds the maximum damage for his weapon for the critical hit bonus (6) and adds his Dexterity modifier (+6). Because the chakrams have the Brutal property, he adds his Dexterity modifier again, bringing his total damage to 22 slashing damage to the rock worm.</i></p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-4" id="item-property-4">
+                            <span class="class-nav-item">Bypass</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-4" data-parent="#property-list"><p class="p-4">Flexible weapons with the Bypass property are unaffected by directly blocking the blow. These weapons ignore the AC bonus from shields. The target can still use the Raise Shield combat action to make your attack miss.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-5" id="item-property-5">
+                            <span class="class-nav-item">Double</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-5" data-parent="#property-list"><p class="p-4">This weapon has two striking heads on each side of its haft. When you take the attack action and make a two-handed attack with a double-sided weapon, you can use a bonus action to make a melee attack with the opposite end of the weapon. This attack uses the same ability modifier as the primary attack. The damage for this bonus attack is listed in parenthesis.<br><br><b>Example: </b><i>The Dervish is a double-bladed weapon. Using two hands to make an attack deals 2d4 slashing damage on a successful hit. Using a bonus action, the wielder can use the other end to make an attack and deal 1d4 slashing damage on a successful hit. Both of these attacks add the wielder’s ability modifier to the damage rolls.</i></p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-6" id="item-property-6">
+                            <span class="class-nav-item">Effective</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-6" data-parent="#property-list"><p class="p-4">When rolling for damage, roll one additional weapon die then remove the die with the lowest result.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-7" id="item-property-7">
+                            <span class="class-nav-item">Free-handed</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-7" data-parent="#property-list"><p class="p-4">This weapon or shield attaches to the arm, but the hand remains unoccupied. No inventory slots are used while this item is equipped since you are wearing it, but the item takes one minute to don and doff.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-8" id="item-property-8">
+                            <span class="class-nav-item">Fragile</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-8" data-parent="#property-list"><p class="p-4">Weapons with the Fragile property cannot withstand the rigors of combat for long. If you make an attack roll with a Fragile weapon but miss the target’s AC by 5 or more, the weapon breaks and cannot be used again.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-9" id="item-property-9">
+                            <span class="class-nav-item">Impact</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-9" data-parent="#property-list"><p class="p-4">Weapons with the Impact property can hit with a singularly boneshaking blow, stunning the target. When landing a critical hit or defeating the target’s AC by 10 or more, the creature becomes Stunned until the end of its next turn if it is no more than one size category larger than you.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-10" id="item-property-10">
+                            <span class="class-nav-item">Light - <i>Expanded</i></span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-10" data-parent="#property-list"><p class="p-4">A light weapon is small and easy to handle, making it ideal for use when fighting with two Weapons.<br><br><b>NEW: </b>The weapon is able to be used just as effectively while you are laying on the ground or while you are standing. When you are prone and attack with this weapon, you do not suffer disadvantage if you are proficient with the weapon.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-11" id="item-property-11">
+                            <span class="class-nav-item">Limit</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-11" data-parent="#property-list"><p class="p-4">Weapons with the Limit property impose disadvantage when not used in the specific way described in parenthesis, such as only or never on a mount, or only when stationary.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-12" id="item-property-12">
+                            <span class="class-nav-item">Mastery</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-12" data-parent="#property-list"><p class="p-4">Weapons with the Mastery property require focused training to utilize the ability listed in parentheses. To focus your training on a specific weapon, you must declare your intention to the GM, use the weapon as your primary weapon of choice, and spend downtime training until you reach your next level.<br><br>If multiple Masteries are listed, you unlock the features in numerical order, requiring focused training for each level of Mastery.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-13" id="item-property-13">
+                            <span class="class-nav-item">Massive</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-13" data-parent="#property-list"><p class="p-4">This weapon is incredibly large and heavy. When a creature wields this weapon, it reduces the number of attacks that creature can make with the Attack action by one, to a minimum of one. </p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-14" id="item-property-14">
+                            <span class="class-nav-item">Mounted</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-14" data-parent="#property-list"><p class="p-4">This weapon is normally used while attached to a tripod, wagon, or other bracing mount. While it is mounted, it can’t be moved. You can mount or unmount this weapon as an action. While it is unmounted and the creature wielding it is not prone, this weapon can only be used proficiently by a Medium or larger creature with a Strength score of at least 17.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-15" id="item-property-15">
+                            <span class="class-nav-item">Opportunistic</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-15" data-parent="#property-list"><p class="p-4">This weapon is great for striking back at opponents who threaten you. When using your reaction to make an opportunity attack with this weapon, you benefit from advantage to the attack roll.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-16" id="item-property-16">
+                            <span class="class-nav-item">Parry</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-16" data-parent="#property-list"><p class="p-4">While wielding this weapon and not wielding a shield, you gain a +1 to your AC against melee attacks. You can only gain the benefit of one weapon with this property at a time.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-17" id="item-property-17">
+                            <span class="class-nav-item">Reach</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-17" data-parent="#property-list"><p class="p-4">The weapon has an extended length. This weapon adds 5 feet to your Reach when you attack with it, and when determining your Reach for attacks of opportunity with it.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-18" id="item-property-18">
+                            <span class="class-nav-item">Returning</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-18" data-parent="#property-list"><p class="p-4">After you make a thrown attack using a weapon with the Returning property, it automatically returns to your hand at the end of the turn as long as you have a hand free and are proficient with it. Catching a weapon does not require an action or reaction, but you cannot catch it if you are currently unable to take reactions (such as if you are incapacitated or have already used your reaction). If you do not catch the weapon you threw, it lands in a random space within 10 feet of you. </p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-19" id="item-property-19">
+                            <span class="class-nav-item">Sharp</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-19" data-parent="#property-list"><p class="p-4">Sharp weapons can tear through defenses or otherwise leave a target more vulnerable. When landing a critical hit or beating a target’s AC by 10 or more, your attack lowers the creature’s AC is 2 until the end of its next turn.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-20" id="item-property-20">
+                            <span class="class-nav-item">Shield</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-20" data-parent="#property-list"><p class="p-4">This weapon is large enough or shaped in a certain way so that you can use it to protect yourself from damage. While wielding this weapon and not wielding a shield, you gain a +1 to your AC. You may only gain the benefit of one weapon with this property at a time. </p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-21" id="item-property-21">
+                            <span class="class-nav-item">Superheavy</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-21" data-parent="#property-list"><p class="p-4">This weapon is unusually large for its type. You must have a Strength score of at least 17 to proficiently wield a superheavy weapon. Creatures smaller than Medium size cannot wield a superheavy weapon regardless of their Strength score. This property also counts as the Heavy property.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-22" id="item-property-22">
+                            <span class="class-nav-item">Sweeping</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-22" data-parent="#property-list"><p class="p-4">The weapon makes attacks in broad, sweeping motions. You can use your bonus action to make one of your attacks into a special Sweeping attack. If there's another creature adjacent to both you and your target, and your attack roll would hit both of them, your target takes normal damage and the other creature takes 1d6 in damage (this damage is not modified by damage bonus modifiers or other abilities).<br><br>If there are multiple walls, friendly characters sized Medium or larger adjacent to your target, or other such obstructions adjacent to you, you cannot use this property.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-23" id="item-property-23">
+                            <span class="class-nav-item">Switch</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-23" data-parent="#property-list"><p class="p-4">This weapon has two forms. The damage and properties of its second form are listed in parentheses. You can use a bonus action to swap between these forms.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-24" id="item-property-24">
+                            <span class="class-nav-item">Thrown - <i>Expanded</i></span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-24" data-parent="#property-list"><p class="p-4">If a weapon has the thrown property, you can throw the weapon to make a ranged Attack.  If the weapon is a melee weapon, you use the same ability modifier for that Attack roll and damage roll that you would use for a melee Attack with the weapon. For example, if you throw a Handaxe, you use your Strength, but if you throw a Dagger, you can use either your Strength or your Dexterity, since the Dagger has the finesse property.<br><br><b>New: </b>Drawing a Thrown weapon is part of the attack, but you need a free hand. You may use your bonus action to recover any Thrown weapon within your reach. At the end of combat, you can recover all undamaged Thrown weapons by taking up to a minute to search the battlefield.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-25" id="item-property-25">
+                            <span class="class-nav-item">Vicious</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-25" data-parent="#property-list"><p class="p-4">If a weapon with the Vicious property deals damage, you may reroll any of the weapon dice if it rolls a value of 1. You must use the new value even if it is also a 1. If you have the Great Weapon Fighting style, the two rerolls stack to 1-3 instead.</p></div>
+                    </ul>
+
+                    <!-- Ranged Weapons -->
+                    <h2 style="display: none;" class="text-center ranged-weapons item-section mt-5">Ranged Properties</h2>
+                    <p style="display: none;" class="ranged-weapons item-section"><i>Proficiency is required to use any of the following properties. If a ranged weapon has a property that is not listed here, refer to Melee Properties of the same name.</i></p>
+                    <ul style="display: none;" class="pl-0 shadow item-section ranged-weapons">
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-1" id="item-property-1">
+                            <span class="class-nav-item">Loading -<i> Expanded</i></span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-1" data-parent="#property-list"><p class="p-4">Because of the time required to load this weapon, you can fire only one piece of ammunition from it before needing to reload. To reload, you must spend a number of attacks equal to the value in parenthesis.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-2" id="item-property-2">
+                            <span class="class-nav-item">Forceful</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-2" data-parent="#property-list"><p class="pt-4 pr-4 pl-4 pb-0">Ranged weapons with the Forceful property deal additional damage when you shoot from an advantageous position. The following conditions allow you to add a number of d4 of the same damage type up to the value shown in parenthesis.<ul class="ml-4 pb-4"><li  class="internal-list">Your target is within 15 feet of you.</li><li  class="internal-list">For each 3 points by which you beat the target’s AC.</li></ul></p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-3" id="item-property-3">
+                            <span class="class-nav-item">Point Blank</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-3" data-parent="#property-list"><p class="p-4">Ranged weapons with the Point Blank property allow for exact precision when pointing at nearby targets. Attacks with ranged weapons that have this property do not suffer disadvantage when made within 5 feet of a hostile creature.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-4" id="item-property-4">
+                            <span class="class-nav-item">Quick Reload</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-4" data-parent="#property-list"><p class="p-4">Weapons with the Quick Reload property can now ignore the Loading property listed.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-5" id="item-property-5">
+                            <span class="class-nav-item">Stock</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-5" data-parent="#property-list"><p class="p-4">Ranged weapons with the Stock property can improve your aim when set on firm ground.<br><br>If you lay prone and make a ranged attack with it, you can ignore disadvantage when shooting at long range, but you suffer disadvantage if you shoot at targets within close range.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-6" id="item-property-6">
+                            <span class="class-nav-item">Strength</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-6" data-parent="#property-list"><p class="p-4">Ranged weapons with the Strength property require raw strength to draw the string. You must have the minimum Strength score as shown in parenthesis in order to use them.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-7" id="item-property-7">
+                            <span class="class-nav-item">Velocity</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-7" data-parent="#property-list"><p class="p-4">When using weapons with the Velocity property, the target does not benefit from any Damage Reduction from armor. If you have two instances of Velocity for an attack, your attack also ignores Soak.</p></div>
+                    </ul>
+
+
+                    <!-- Mounts -->
+                    <h2 style="display: none;" class="text-center mounts item-section">Animal Description</h2>
+                    <ul style="display: none;" class="pl-0 shadow item-section mounts">
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-1" id="item-property-1">
+                            <span class="class-nav-item">Bulette</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-1" data-parent="#property-list"><p class="p-4">This creature also has a burrow speed of 8mph, but it must rest after an hour of burrowing. Without special equipment, it cannot burrow and carry inventory.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-2" id="item-property-2">
+                            <span class="class-nav-item">Cassowary</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-2" data-parent="#property-list"><p class="p-4">This is a flightless bird, but it can glide for 30 feet if it carries no more than half of its capacity.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-3" id="item-property-3">
+                            <span class="class-nav-item">Centipede, giant</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-3" data-parent="#property-list"><p class="p-4">This creature also has a burrow speed of 6mph, but it must rest after two hours of burrowing. Without special equipment, it cannot burrow and carry inventory.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-4" id="item-property-4">
+                            <span class="class-nav-item">Eagle, giant</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-4" data-parent="#property-list"><p class="p-4">This creature does not have a significant walking speed. It is capable of flight of up to 8mph, but because flying creatures do not have to navigate around terrain, they often must fly at a slower speed to keep pace with owners on the ground.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-5" id="item-property-5">
+                            <span class="class-nav-item">Sandworm, adolescent</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-5" data-parent="#property-list"><p class="p-4">This creature can burrow at a speed of 6mph, but it must rest every 12 miles of travel. It does not have a significant speed on the surface. Without special equipment, it cannot burrow and carry inventory.</p></div>
+
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between  property" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#property-6" id="item-property-6">
+                            <span class="class-nav-item">Vulture, giant</span>
+                        </li>
+                        <div class="collapse abilities property-desc" id="property-6" data-parent="#property-list"><p class="p-4">This creature does not have a significant walking speed. It is capable of flight of up to 8mph, but because flying creatures do not have to navigate around terrain, they often must fly at a slower speed to keep pace with owners on the ground.</p></div>
+                    </ul>
+
                 </div>
     </div>
 
     
 
     <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
-    <script>
-        function collapsibleBox(box){
-          let boxBody = box.parentNode.children[1];
-          if (boxBody.style.display == 'none') {
-            boxBody.style.display = 'block';
-          } else {
-            boxBody.style.display = 'none';
-          }
-        }
-    </script>
     <script src="../pergasha.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
