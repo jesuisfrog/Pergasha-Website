@@ -13,7 +13,7 @@
 
     <title>Rules - Pergasha</title>
 </head>
-<body>
+<body  data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 
 
     <header>
@@ -68,14 +68,63 @@
 
     </header>
 
-    <h1 class="text-center mt-5">RULES</h1>
-    <div class="row justify-content-center mb-5"><img class="" src="../assets/logos/WIP-logo.png" alt="Work in Progress"></div>
+    <div class="container-fluid">
+        <div class="row">
+          <nav class="col-sm-3 col-4 sticky-top align-self-start" id="myScrollspy">
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#section1">Section 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#section2">Section 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#section3">Section 3</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#section4">Section 4</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#section5">Section 5</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="col-sm-9 col-8">
+            <div id="section1">
+              <h1>Section 1</h1>
+              <p>Try to scroll this page and look at the menu while scrolling!</p>
+            </div>
+            <div id="section2">
+                <h1>Section 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!</p>
+              </div>
+              <div id="section3">
+                <h1>Section 3</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!</p>
+              </div>
+              <div id="section4">
+                <h1>Section 4</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!</p>
+              </div>
+              <div id="section5">
+                <h1>Section 5</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quasi obcaecati vel eum hic odit sapiente laboriosam fugiat eveniet veritatis recusandae nam a quos placeat, mollitia magni expedita vero modi!</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
     
     
 
     <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+    <script>
+        $('testrules').scrollspy({ target: '#navbar-example3' })
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
+
