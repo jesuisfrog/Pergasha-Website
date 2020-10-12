@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'AR JULIAN';
+    src: url('assets/fonts/ARJULIAN.eot');
+    src: url('assets/fonts/ARJULIAN.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/ARJULIAN.woff2') format('woff2'),
+        url('assets/fonts/ARJULIAN.woff') format('woff'),
+        url('assets/fonts/ARJULIAN.ttf') format('truetype'),
+        url('assets/fonts/ARJULIAN.svg#ARJULIAN') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
 /* General Rules Start*/
 body{
     background-color: white;
@@ -277,7 +293,7 @@ body{
     border-bottom: 2px solid #ca1b13;
 }
 
-#trained-abilities .trained, #trained-abilities .trained-desc, #property-list .property, #property-list .property-desc, #description-list .description, #description-list .description-desc{
+#trained-abilities .trained,#trained-abilities .trained-title, #trained-abilities .trained-desc, #property-list .property, #property-list .property-desc, #description-list .description, #description-list .description-desc{
     background-color: #fdf1dc ;
 }
 
@@ -369,7 +385,7 @@ body{
   }
 
 
-  #filters .btn{
+  .button-filters .btn{
       box-shadow: none!important;
   }
 
@@ -424,3 +440,28 @@ body{
     /* color: white; */
     transform: rotateY(180deg);
   } 
+
+  #location-container .location-title{
+      background-color: #383d41;
+      color: white;
+      font-size: 2rem;
+      font-family: 'AR JULIAN';
+      cursor: pointer;
+  }
+
+  #location-container .location-title:hover{
+    color: goldenrod;
+
+}
+
+  #location-container .card-body{
+      background-color: #d6d8db;
+  }
+
+  .arjulian{
+    font-family: 'AR JULIAN';
+  }
+
+  #description-list .description:hover, #property-list .property:hover, #trained-abilities .trained:hover{
+    background-color:rgba(0, 50, 50, 0.2)!important;
+  }

@@ -68,39 +68,58 @@
     </header>
 
     <div class="d-flex flex-column" id="character-container">   
-      <h2 class="text-center mb-1 mt-3">Characters</h2>
+      <h2 class="text-center mb-1 mt-3 arjulian">Characters</h2>
 
-      <!-- <div class="d-flex flex-column" id="filters"> -->
-        <span class="text-center mb-1 mt-1">Name</span>
-        <form class="form-inline  align-self-center mb-2">
-          <input class="form-control" type="search" placeholder="Name" aria-label="Search" id="name-filter">
+        <form class="form-inline  align-self-center mb-2 mt-4">
+          <input class="form-control" type="search" placeholder="Search by Name" aria-label="Search" id="name-filter">
         </form>
-        <div class="row justify-content-center align-self-center m-3 btn-group btn-group-toggle" id="filters">
+
+        <div class="row justify-content-center align-self-center m-3 btn-group btn-group-toggle button-filters">
           <button type="button" class="btn btn-primary btn-xs reset-btn " id="reset">Reset</button>
           <button type="button" class="btn btn-outline-dark btn-xs andOr-btn" id="and" data-toggle="button" aria-pressed="false">And</button>
           <button type="button" class="btn btn-outline-dark btn-xs andOr-btn active" id="or" data-toggle="button" aria-pressed="true">Or</button>
+        </div>
 
-          <div style="border-left: 3px solid red;"></div> 
-
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="cloud" data-toggle="button" aria-pressed="false">Cloud Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="fire" data-toggle="button" aria-pressed="false">Fire Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="gem" data-toggle="button" aria-pressed="false">Gem Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="ormican" data-toggle="button" aria-pressed="false">Ormican</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="sand" data-toggle="button" aria-pressed="false">Sand Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="stone" data-toggle="button" aria-pressed="false">Stone Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="storm" data-toggle="button" aria-pressed="false">Storm Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="tribless" data-toggle="button" aria-pressed="false">Tribeless</button>
-
+        <span class="text-center"><b>Race</b></span>
+        <div class="row justify-content-center align-self-center m-1 btn-group btn-group-toggle button-filters">
           <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="lizardfolk" data-toggle="button" aria-pressed="false">Lizardfolk</button>
           <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="pergashan" data-toggle="button" aria-pressed="false">Pergashan</button>
           <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="touched-kin" data-toggle="button" aria-pressed="false">Touched-kin</button>
           <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="other" data-toggle="button" aria-pressed="false">Other Race</button>
-
         </div>
- 
-  <div class="row justify-content-center " id="cards-container">
 
-    <div class="flip-card m-2 gem pergashan">
+        <span class="text-center mt-3"><b>Tribe</b></span>
+        <div class="row justify-content-center align-self-center m-1 btn-group btn-group-toggle button-filters">
+          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="cloud" data-toggle="button" aria-pressed="false">Cloud Tribe</button>
+          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="fire" data-toggle="button" aria-pressed="false">Fire Tribe</button>
+          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="gem" data-toggle="button" aria-pressed="false">Gem Tribe</button>
+          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="sand" data-toggle="button" aria-pressed="false">Sand Tribe</button>
+          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="stone" data-toggle="button" aria-pressed="false">Stone Tribe</button>
+          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="storm" data-toggle="button" aria-pressed="false">Storm Tribe</button>
+          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="tribeless" data-toggle="button" aria-pressed="false">Tribeless</button>
+        </div>
+        
+        <span class="text-center mt-3"><b>Organization</b></span>
+        <div class="row justify-content-center align-self-center m-1 btn-group btn-group-toggle button-filters">
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="bloodkeepers" data-toggle="button" aria-pressed="false">Bloodkeepers</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="council" data-toggle="button" aria-pressed="false">Council</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="delvers" data-toggle="button" aria-pressed="false">Delvers</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="drifters" data-toggle="button" aria-pressed="false">Drifters</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="hunters" data-toggle="button" aria-pressed="false">Hunters</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="inquisitors" data-toggle="button" aria-pressed="false">Inquisitors</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="nesters" data-toggle="button" aria-pressed="false">Nesters</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="ormicans" data-toggle="button" aria-pressed="false">Ormicans</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="rovers" data-toggle="button" aria-pressed="false">Rovers</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="seers" data-toggle="button" aria-pressed="false">Seers</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="chasers" data-toggle="button" aria-pressed="false">Storm Chasers</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="storykeepers" data-toggle="button" aria-pressed="false">Storykeepers</button>
+          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="whisperers" data-toggle="button" aria-pressed="false">Whisperers</button>
+        </div>
+
+ 
+  <div class="row justify-content-center mt-3" id="cards-container">
+
+    <div class="flip-card m-2 gem pergashan sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <img src="../assets/characters/eoni.png" style="height: 380px; width: 300px;" alt="Eoni">
@@ -117,13 +136,14 @@
       </div>
     </div> 
 
-    <div class="flip-card m-2 ormican touched-kin">
+    <div class="flip-card m-2 storm ormicans touched-kin sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <img src="../assets/characters/barashtu.png" style="height: 380px; width: 300px;" >
           <span class="character-name">Barashtu</span>
           <div class="text-center">
-            <span class="badge badge-secondary">Ormican</span>
+            <span class="badge badge-success">Ormican</span>
+            <span class="badge badge-secondary">Storm</span>
             <span class="badge badge-info">Touched-kin</span>
           </div>
         </div>
@@ -135,7 +155,7 @@
       </div>
     </div> 
 
-    <div class="flip-card m-2 sand touched-kin">
+    <div class="flip-card m-2 sand touched-kin sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <img src="../assets/characters/kalar.png" style="height: 380px; width: 300px;" >
@@ -148,15 +168,15 @@
         <div class="flip-card-back">
           <h4>Kalar</h4>
           <i>High Roaster</i>
-          <p class="p-1" style="font-size: 0.9rem;">Description/Bio</p>
+          <p class="p-1" style="font-size: 0.9rem;">A direfolk exploited for most of his life by his own family, Kalar dreams of becoming a renowned chef across Pergasha. His love for beasts of all kind pushes him to gather his own menagerie wherever he goes. </p>
         </div>
       </div>
     </div> 
 
-    <div class="flip-card m-2 sand touched-kin">
+    <div class="flip-card m-2 sand touched-kin sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="https://via.placeholder.com/380x300.png?text=Valar" style="height: 380px; width: 300px;" >
+          <img src="../assets/characters/valar.jpg" style="height: 380px; width: 300px;" >
           <span class="character-name">Valar</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary tribe-tag">Sand Tribe</span>
@@ -165,15 +185,16 @@
         </div>
         <div class="flip-card-back">
           <h4>Valar Nightwing</h4>
+          <i>Chicken</i>
           <p class="p-1" style="font-size: 0.9rem;">Description/Bio</p>
         </div>
       </div>
     </div>
 
-    <div class="flip-card m-2 tribeless Lizardfolk">
+    <div class="flip-card m-2 tribeless lizardfolk sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="https://via.placeholder.com/380x300.png?text=Jax" style="height: 380px; width: 300px;" >
+          <img src="../assets/characters/jax.jpg" style="height: 380px; width: 300px;" >
           <span class="character-name">Jax</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary">Tribeless</span>
@@ -188,13 +209,14 @@
       </div>
     </div> 
 
-    <div class="flip-card m-2 ormican touched-kin">
+    <div class="flip-card m-2 ormicans touched-kin rovers sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="https://via.placeholder.com/380x300.png?text=Jade" style="height: 380px; width: 300px;" >
+          <img src="../assets/characters/jade.jpg" style="height: 380px; width: 300px;" >
           <span class="character-name">Jade</span>
           <div class="character-tag text-center">
-            <span class="badge badge-secondary">Ormican</span>
+            <span class="badge badge-success">Ormicans</span>
+            <span class="badge badge-success">Rovers</span>
             <span class="badge badge-info">Touched-kin</span>
           </div>
         </div>
@@ -205,30 +227,278 @@
       </div>
     </div> 
 
-    <div class="flip-card m-2 TRIBE RACE">
+    <div class="flip-card m-2 cloud touched-kin council seers sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="https://via.placeholder.com/380x300.png?text=Character" style="height: 380px; width: 300px;" >
-          <span class="character-name">Name</span>
+          <img src="../assets/characters/fareyes.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Wum'pung</span>
           <div class="character-tag text-center">
-            <span class="badge badge-secondary">Tribe</span>
-            <span class="badge badge-info">Race</span>
+            <span class="badge badge-secondary">Cloud</span>
+            <span class="badge badge-success">Council</span>
+            <span class="badge badge-success">Seers</span>
+            <span class="badge badge-info">Touched-kin</span>
           </div>
         </div>
         <div class="flip-card-back">
-          <h4>Full Name</h4>
-          <i>Title(s)</i>
+          <h4>Wum'pung Fareyes</h4>
+          <i>High Seer</i>
           <p class="p-1" style="font-size: 0.9rem;">Description/Bio</p>
         </div>
       </div>
     </div> 
 
-    <!-- <div class="flip-card m-2 TRIBE RACE">
+    <div class="flip-card m-2 delvers touched-kin sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="https://via.placeholder.com/380x300.png?text=Character" style="height: 380px; width: 300px;" >
+          <img src="../assets/characters/muno.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Muno</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-success">Delvers</span>
+            <span class="badge badge-info">Touched-kin</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Muno</h4>
+          <p class="p-1" style="font-size: 0.9rem;">Eoni's prisoner, awaiting trial.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 delvers touched-kin sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/sashana.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Sashana</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-success">Delvers</span>
+            <span class="badge badge-info">Touched-kin</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Sashana</h4>
+          <p class="p-1" style="font-size: 0.9rem;">Eoni's prisoner, awaiting trial.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 delvers other sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/tukuk.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Tukuk</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-success">Delvers</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Tukuk</h4>
+          <p class="p-1" style="font-size: 0.9rem;">Eoni's prisoner, deceased. He was killed during an attack on Trik's caravan just before reaching the Conclave.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 other drifters sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/mimi.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Mimi</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-success">Drifters</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Mimi</h4>
+          <i>Furry Wife</i>
+          <p class="p-1" style="font-size: 0.9rem;">Trik's wife, she's a big Sunderball fan and seems to be a powerful telepath.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 other drifters sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/trik.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Trik</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-success">Drifters</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Trik</h4>
+          <i>Mysterium Hoarder</i>
+          <p class="p-1" style="font-size: 0.9rem;">Trik is a well known drifter, mostly due to his choice of transportation; Big Ben a gigantic female buffalo/Yak/Furry Cow that eats rocks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 fire pergashan sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/matilla.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Matilla</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-secondary">Fire</span>
+            <span class="badge badge-info">Pergashan</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Matilla tonuk</h4>
+          <p class="p-1" style="font-size: 0.9rem;">Ethy Tonuk's sister, she met the group during "The Search" when they saved Ethy and helped her as she was trapped after a rockslide.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 gem pergashan inquisitors sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/jurani.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Jurani</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-success">Inquisitors</span>
+            <span class="badge badge-secondary">Gem</span>
+            <span class="badge badge-info">Pergashan</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Jurani Vor-Dorin</h4>
+          <p class="p-1" style="font-size: 0.9rem;">Description/Bio</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 lizardfolk tribeless sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/hako.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Hako</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-secondary">Tribeless</span>
+            <span class="badge badge-info">Lizardfolk</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Hako Um Beeki</h4>
+          <p class="p-1" style="font-size: 0.9rem;">One of Rix's goons.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 lizardfolk tribeless sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/rix.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Rix</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-secondary">Tribeless</span>
+            <span class="badge badge-info">Lizardfolk</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Rix Saveio</h4>
+          <p class="p-1" style="font-size: 0.9rem;">Former contender for Jax's hand. Kind of a prick.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 nesters seers pergashan sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/avara.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Avara</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-success">Nesters</span>
+            <span class="badge badge-info">Pergashan</span>
+            <span class="badge badge-success">Seers</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Avara Sh'ar of Hightown</h4>
+          <p class="p-1" style="font-size: 0.9rem;">Seer to the Song of Hightown.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 nesters touched-kin council sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/chalise.png" style="height: 380px; width: 300px;" >
+          <span class="character-name">Chalise</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-success">Council</span>
+            <span class="badge badge-success">Nesters</span>
+            <span class="badge badge-info">Touched-kin</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Chalise Lightwing</h4>
+          <i>Song of Hightown</i>
+          <p class="p-1" style="font-size: 0.9rem;">Leader of Hightown, used to not be able to fly, obscessed with the ancient language.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 sand pergashan  sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/vina.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Vina</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-secondary">Sand</span>
+            <span class="badge badge-info">Pergashan</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Vina Vor-Koraq</h4>
+          <i>Sere</i>
+          <p class="p-1" style="font-size: 0.9rem;">Kalar's sponsor at the Conclave.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 storm pergashan council sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/xianetta.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Xianetta</span>
+          <div class="character-tag text-center">
+            <span class="badge badge-success">Council</span>
+            <span class="badge badge-secondary">Storm</span>
+            <span class="badge badge-info">Pergashan</span>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Xianetta Stormslayer Vor-Ettik</h4>
+          <i>Thrane</i>
+          <p class="p-1" style="font-size: 0.9rem;">Description/Bio</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card m-2 other sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/qwame.jpg" style="height: 380px; width: 300px;" >
+          <span class="character-name">Vi'Qwame</span>
+          <div class="character-tag text-center">
+            <!-- <span class="badge badge-success">Organization</span>
+            <span class="badge badge-secondary">Tribe</span>
+            <span class="badge badge-info">Race</span> -->
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Vi'Qwame</h4>
+          <p class="p-1" style="font-size: 0.9rem;">Strange individual encountered during "The Search". Seems to appear near places of power and to know a lot about them.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="flip-card m-2 TRIBE RACE sortme">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../assets/characters/" style="height: 380px; width: 300px;" >
           <span class="character-name">Name</span>
           <div class="character-tag text-center">
+            <span class="badge badge-success">Organization</span>
             <span class="badge badge-secondary">Tribe</span>
             <span class="badge badge-info">Race</span>
           </div>
@@ -239,11 +509,10 @@
           <p class="p-1" style="font-size: 0.9rem;">Description/Bio</p>
         </div>
       </div>
-    </div>  -->
+    </div> -->
+
 
   </div>
- 
-    <!-- </div> -->
     
     <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
 
@@ -251,8 +520,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script>
-
-
 
   $(document).ready(function() {
     var check = $(".btn-tag");
@@ -293,6 +560,14 @@
             }
           }
         });
+
+    $('.sortme').sort(function(a, b) {
+      if (a.getElementsByClassName('character-name')[0].innerText < b.getElementsByClassName('character-name')[0].innerText) {
+        return -1;
+      } else {
+        return 1;
+      }
+    }).appendTo('#cards-container');
 
     $('.reset-btn').click(function(eventObject){
         activeFilters = [];
