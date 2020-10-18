@@ -119,11 +119,37 @@ body{
     .class-left-container, #items-list{
       max-width: 100%!important;
     }
+
+    #rules-container #myScrollspy{
+        display: none!important;
+    }
+    #rules-container #ruleSelect{
+        display: inline-flex!important;
+    }
+
+    #rulesDisplay{
+        max-width: 100%!important;
+        flex: 1 0!important;
+    }
  }
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { 
+    #rules-container #myScrollspy{
+        font-size: 0.6rem;
+    }
+}
 
+@media (max-width: 1299.98px) { 
+    #rules-container #myScrollspy{
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1529.98px) { 
+    #rules-container #myScrollspy{
+        font-size: 0.8rem;
+    }
 }
 
 /* General Rules End*/
@@ -356,9 +382,19 @@ body{
     min-width: 350px;
 }
 
-.side-table td:empty::after{
+.side-table td:empty::after, .side-table-rules td:empty::after{
     content: "\00a0";
   }
+
+.side-table-rules{
+    border:1px solid #383d41;
+
+    max-width: 350px;
+    text-align: center;
+}
+
+
+  
 
   #myBtn {
     display: none; /* Hidden by default */
@@ -465,3 +501,20 @@ body{
   #description-list .description:hover, #property-list .property:hover, #trained-abilities .trained:hover{
     background-color:rgba(0, 50, 50, 0.2)!important;
   }
+
+
+  #rules-container .ruleBox{
+    border: 1px solid #383d41;
+    margin-bottom: 1rem;
+  }
+
+  #rules-container .ruleBoxTitle{
+    text-align: center;
+    color: white;
+    background-color: #383d41;
+}
+
+#rules-container .nav-pills .nav-link.active{
+    color: #fff;
+    background-color: #383d41;
+}

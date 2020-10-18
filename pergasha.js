@@ -1383,5 +1383,22 @@ function itemsPage(){
 //GLYPHS END
 
 //RULES START
+function rulesPage(){
+    // Scroll to top section
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50 ) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+        }
+    };
+
+    mybutton.addEventListener('click',topFunction)
+    // Scroll to top section
+}
 
 //RULES END

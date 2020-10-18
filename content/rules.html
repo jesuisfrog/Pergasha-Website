@@ -13,7 +13,7 @@
 
     <title>Rules - Pergasha</title>
 </head>
-<body  data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<body  data-spy="scroll" data-target="#myScrollspy" data-offset="1" onload="rulesPage()">
 
 
     <header>
@@ -68,43 +68,14 @@
 
     </header>
 
-    <div class="container-fluid">
+    <div class="container-fluid pr-5 pt-2" id="rules-container">
         <div class="row">
-          <nav class="nav nav-pills col-sm-3 col-4 sticky-top align-self-start" id="myScrollspy">
+          <nav class="nav nav-pills col-sm-2 col-4 sticky-top align-self-start" id="myScrollspy">
             <ol type="I" class="flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="#section1">Dreadful Options in Pergasha</a>
                 <!-- <ol type="a">
-                  <li>
-                    <a class="nav-link" href="#XXX">Character Customization</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#XXX">Character Advancement</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#XXX">Training Points</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#XXX">XXX</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#XXX">XXX</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#XXX">XXX</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#XXX">XXX</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#XXX">XXX</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#XXX">XXX</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#XXX">XXX</a>
-                  </li>
+
                   <li>
                     <a class="nav-link" href="#XXX">XXX</a>
                   </li>
@@ -141,13 +112,38 @@
                 <a class="nav-link" href="#section11">Skills</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#section12">Psionics</a>
+                <a class="nav-link" href="#section12">Feats</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section13">Psionics</a>
               </li>
             </ol>
           </nav>
-          <div class="col-sm-9 col-8">
-            <h2 class="text-center mb-1 mt-3 arjulian"></h2>
-            <div id="section1">
+          <div class="col-sm-10" id="rulesDisplay">
+              <h1 class="text-center mb-3 mt-3 arjulian">Rules</h1>
+              <div class="btn-group arjulian container-fluid d-none" id="ruleSelect">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Go To
+                </button>
+                <div class="dropdown-menu" style="font-size: 0.8rem;">
+                  <a  class="dropdown-item" href="#section1">Dreadful Options in Pergasha</a>
+                  <a  class="dropdown-item" href="#section2">Gaining Levels and Abilities</a>
+                  <a  class="dropdown-item" href="#section3">Inspiration Points & Cheating Fate</a>
+                  <a  class="dropdown-item" href="#section4">Wealth</a>
+                  <a  class="dropdown-item" href="#section5">Inventory Space</a>
+                  <a  class="dropdown-item" href="#section6">Combat</a>
+                  <a  class="dropdown-item" href="#section7">Injuries, Exhaustion & Death</a>
+                  <a  class="dropdown-item" href="#section8">Resting & Recovery</a>
+                  <a  class="dropdown-item" href="#section9">How Skills Work</a>
+                  <a  class="dropdown-item" href="#section10">Creating Your Character</a>
+                  <a  class="dropdown-item" href="#section11">Skills</a>
+                  <a  class="dropdown-item" href="#section12">Feats</a>
+                  <a  class="dropdown-item" href="#section13">Psionics</a>
+                </div>
+              </div>
+            
+            
+            <div class="p-2" id="section1">
               <h1 class="arjulian">Dreadful Options in Pergasha</h1>
               <h3 class="arjulian">Character Customization</h3>
               <p>This setting uses different creation rules. For example, your ability scores will generally be higher, you get a free feat and a “Brightness” feature at 1st level, you have built-in access to psionic abilities, the race options are robust and powerful, and you have greater customization. See for details.</p>
@@ -173,60 +169,1440 @@
               <p>The titans long ago had mastery of magic and the powers of the mind. While the magic and most of the technology tied to it is gone, psionic abilities have remained. You will have access to some amount of psionic power with options to gain more if you wish to pursue it. See <a href="psionics.html">Psionics</a> for details.</p>
               
             </div>
-            <div id="section2">
+            <div class="p-2" id="section2">
                 <h1 class="arjulian">Gaining Levels & Abilities</h1>
-                <h3 class="arjulian">XXXX</h3>
-                <p>XXXX</p>
+                <h3 class="arjulian">Milestones</h3>
+                <p>The party must earn Milestones to achieve the next level. Milestones are given to the party as a whole – all benefits are shared and everyone will level up as a group. After reaching six Milestones, the party must take a full rest to gain the benefits of leveling up. <br>Every level is divided into six Milestones, and the party earns Milestones through consistent role-playing, completing story arcs, major achievements, discovering lore in the world, and quest completion.  <br>	Notice that there is no mention of combat. Combat is knit into quests and the story and does not earn extra rewards (other than the fun factor). This method of reward is to prevent metagaming, seeking out purposeless combat, and choosing battle over role-playing through a conflict simply in hopes of gaining more experience points. The party also maintains unity because no one can race ahead in experience. </p>
+                <h3 class="arjulian">Learning New Abilities</h3>
+                <p>There are two primary ways to gain new proficiencies or abilities. You can spend Proficiency Points or Training Points if you have them when you reach a new level. This is represented by finding an instructor, school, or tomes to learn new feats, skills and languages. These are beyond the improvements gained through your class. There is no training in time or barter required to gain class improvements. <br>There are also rumors of spiritual repositories or ancient beings that may grant abilities to characters. How to find them and convince them to help you is a mystery for you to solve.</p>
+                <h3 class="arjulian">Weapon Mastery</h3>
+                <p>There are no special feats for weapons. Instead, many weapons have built-in combat abilities available to anyone who is proficient and spends effort to master it.<br>	To begin training with a weapon, you must inform the GM of your intentions, make a concerted effort to utilize this weapon as your primary in combat, and use downtime when available to train with the weapon. There is no XP or progress to track for mastery, but you need to spend most of a level with it. The GM will determine if enough time has been spent with a weapon to qualify mastery.<br>	If a weapon has multiple levels of mastery, each ability must be mastered one level at a time. If you acquire an improved version of a similar weapon (for example, a better light crossbow), you keep any masteries you have already acquired.<br>	Finding a trainer or learning with an ally who has already mastered the same weapon may decrease the length of time needed to master a weapon. </p>
+                <h3 class="arjulian">Multiclassing</h3>
+                <p>The GM needs to be informed in advance regarding multiclassing. You need to have a reasonable explanation as to how you acquire the skills and roleplay that in the level prior to you taking the new class. This means you cannot decide to multiclass at the moment you gain a new level – you need to plan ahead.  <br>	For example, if you are a 3rd level Rogue and you would like to take a level in Fighter, you must roleplay during this third level how you slowly acquire some of the necessary skills to become proficient in this new style of combat. You could get training from a fellow party member and spar during downtime or evenings at camp, read manuals on combat, and take notes while observing combat situations. </p>
               </div>
-              <div id="section3">
+              <div class="p-2" id="section3">
                 <h1 class="arjulian">Inspiration Points & Cheating Fate</h1>
-               
+                <h3 class="arjulian">Inspiration</h3>
+                <p>Inspiration Points are rewards for playing your character in a way that’s true to his or her personality traits, ideals, bonds, and flaws. They are also rewards for problem-solving or side quest completion, and you can gain Inspiration Points from camping. Finally, you can also earn Inspiration Points when you accept a Consequence from the GM when you roll a critical failure (or a natural 1 on a d20). <br>	You can have a total of 3 Inspiration Points. If you are at your maximum, you cannot gain more Inspiration Points. You also cannot instantly use one to avoid missing out on a reward. </p>
+                <div class="ruleBox">
+                  <h3 class="ruleBoxTitle arjulian p-2">Using Inspiration</h3>
+                  <p class="p-2">If you have inspiration, you can expend it to do one of the following:
+                    <ul>
+                      <li><b>Reroll: </b>After making a saving throw, skill check, or ability check, you may reroll the d20. You must keep the second result.</li>
+                      <li><b>Nudge: </b>After making an attack roll, you may add 1d4 to the total, potentially turning a miss into a hit.</li>
+                      <li><b>Interrupt: </b>If you have not taken your turn yet this round, you can steal the initiative and take the next turn. Your initiative score is unchanged for subsequent rounds.</li>
+                      <li><b>Reject: </b>If you are about to suffer a GM consequence due to rolling a critical failure, you can cancel it.</li>
+                    </ul>
+                  </p>
+                </div>
+
+                <h3 class="arjulian">Fate</h3>
+                <p>Even in the face of certain death in a land without magic, some are lucky enough to find a way to cheat fate to live to fight another day. <br>	Fate allows your character to survive what would otherwise be a certain death. If you would suffer a killing blow or fail your last death saving throw, you may instead spend Fate to cheat death in some fashion. <br>	Perhaps you were knocked unconscious, or the attack just wasn’t enough to finish you off, or maybe it was just a flesh wound. Discuss with the GM exactly how you managed to survive the ordeal. <br>	New characters join with Fate. You either have Fate or you do not, and you cannot spend your own Fate for another.</p>
+
+                <h5 class="arjulian">Spending Fate</h5>
+                <p>When you spend your Fate, you cannot act for the rest of the scene. Everyone—friend and foe alike—thinks you’re dead or otherwise not worth any attention. But you are immune to any further damage during the rest of the scene, regardless of whatever else happens around your unconscious body. <br>At the end of the scene—or whenever appropriate—you regain consciousness with 1 hit point.</p>
+                <h5 class="arjulian">Gaining Fate</h5>
+                <p>Fate is rare and precious. A new character starts with it, but beyond this, it can only be gained by facing and defeating the most dangerous monsters of the world, given at a place of power, or granted by a being of immense power. <br>	Fated creatures are significant threats to the party and are optional dangers. Defeating a fated monster rewards only 1 Fate, and the players must decide who among them is lucky enough to take it.</p>
               </div>
-              <div id="section4">
+              <div class="p-2" id="section4">
                 <h1 class="arjulian">Wealth</h1>
-               
+                <p><i>“This blade for the carcass. It looks a little lean, but it'll do.” <br>
+                  “Pah, that blade’s not even sharp enough to cut the meat. Besides…food’s gettin’ scarce.”<br>
+                  “But it has a sliver of psi-crystal. It’s no bigger than your babe’s nail, but it’s still got a charge innit.”<br>
+                  “For that, I’ll give you the meat and the babe!”</i><br>— A common exchange
+                </p>
+                <p>Pergasha does not mint coins and without magic, precious gems and metals like gold or platinum have diminished value. These materials are now only precious to artists, researchers, adventurers planning to cross the Chasm, or the extremely vain. <br>	Mysterious technology known as mysteriums and relics sometimes utilize these and other supplies, so they have value to the right person. However, mysteriums are widely unstable and thus are not used as a basis of power or wealth.</p>
+                <h3 class="arjulian">Trade</h3>
+                <p>	Instead, the economy is reliant on trade goods. Barter includes raw materials, crafted goods, livestock, services, food, spices, and psi-crystals, with the latter being of utmost value. A shard of charged psi-crystal can be worth more than a wagon of premium spices or weapons enough for a small militia. <br>	The few cities that exist sometimes trade in psi-crystals to help power valuable artifacts or individuals, but most people do not have the means to utilize such a resource. The weather and unpredictability of the bounty of gentler seasons makes the market shift regularly, but food and potable water are always valued. <br>	These uncertainties make it difficult to invest, plan, and accumulate wealth. For the most part, the people of Pergasha are less concerned about the status of wealth and more focused on survival, security, and empowering psionically-gifted tribe leaders with psi-crystals. </p>
+                <h3 class="arjulian">Drifters</h3>
+                <p>	Clever and enterprising individuals known as drifters have established clans of their own by reading the weather, the shifts in temperament between clans and tribes, and gambling as to what commodity will reign for the season. These wily folks travel between the few sedentary regions and the abundant nomadic groups, turning seemingly insignificant excess from one group into invaluable goods.</p>
+                <p class="text-center"><i>What is the value of an item?</i><br><b>However much someone else is willing to trade you for it.</b></p>
+                <h3 class="arjulian">Barter Points and Trade Goods</h3>
+                <p>Barter points are a meta way to quickly calculate wealth to use for simple trade. Goods of a similar value are grouped in categories to help organize your inventory. <br>	General items like gear you no longer use, simple gems, common spices, and crafting materials you intend to use as barter take up space and inventory slots. They are given a value in barter points within these categories: Common, Uncommon, Greater, and Premium Barter. <br><br><b>Common Barter (CB).</b> Common barter is often simple goods or materials like one pound of basic black pepper, a simple shiv, a crude but filling meal or ration. Depending on the needs of an area, a live chicken or a gallon of untreated water may also be considered common barter. <br><br><b>Uncommon Barter (UB).</b> Uncommon barter often involves goods or materials that require skilled labor, are more difficult to acquire or find, are less abundant, or are of greater importance to survival. Some examples are one pound of salt, a tiny collection of flawed gems, a basic dagger, a week of rations, a live goat or dog, a small wooden shield, a bolt of sturdy but rough fabric, treated hide or leather, raw metal ore, or simple tools or instruments.<br><br><b>Greater Barter (GB).</b> Greater barter are goods that are rare, require skill to produce, or great efforts to acquire. Some examples include a jar of turmeric, a small collection of clear gems, a quality weapon, hide or leather armor, a horse or similar pack animal, metal ingots or bars, a 2-wheeled cart, a bolt of quality fabric, and quality tools or instruments. <br><br><b>Premium Barter (PB).</b>Premium barter are goods, services, and materials that are extremely rare for the common person to own. Many skilled crafters or laborers were involved in the production, brave animal handlers of great talent captured creatures, and only the keenest and luckiest of seekers can find and risk venturing out to acquire these raw materials. Some examples include a small bundle of vanilla beans, fresh fruit, quality gems, pieces of heavy metal armor, a rare creature like an adolescent sand worm, a covered wagon, and a bolt of crystalline worm silk. <br>	Specialty trade goods like unusual spices, valuable gems, masterwork equipment, and ingredients harvested from rare creatures you should note so that you can negotiate the best trades for them in the future. <br>	Mysteriums can be categorized in a number of ways depending on their quality, use, and stability. Some mysteriums you may want to save for personal use while others are useful as barter for their raw materials. <br>	Relics and psi-crystals are in a league of their own and are never converted into barter points. Common people cannot afford to trade for these items. Instead, you will need to find major clan heads, tribal leaders, or perhaps a drifter. <br>	It’s important to remember that with a barter economy, values can fluctuate quickly, and a smooth talker can usually get a better trade.</p>
               </div>
-              <div id="section5">
+              <div class="p-2" id="section5">
                 <h1 class="arjulian">Inventory Space</h1>
-              
+                <p>Instead of trying to monitor how much weight you carry, you will use a slot-based inventory system. It helps with simplifying values, appreciating the bulk of items, and feeling the impact of your character’s physicality in a world without magic. </p>
+                <h3 class="arjulian">Slot-Based Inventory</h3>
+                <p>Item slots—abstract slots to represent storage capacity of containers and yourself—are used to manage inventory. The more slots you have, the more you can carry. Your size, strength, and armor influence the number of slots you have at your disposal. Gaining pack animals and being clever with storage containers will help you even further.</p>
+                <div class="ruleBox">
+                  <h3 class="ruleBoxTitle arjulian p-2">Determine Your Capacity</h3>
+                  <p class="p-2">Follow these steps to calculate your inventory capacity.
+                    <ul>
+                      <li>Determine your size</li>
+                      <li>Determine your strength</li>
+                      <li>Determine your armor bulk</li>
+                    </ul>
+                  </p>
+                </div>
+                <p>The Character Size chart below applies to player characters and any other creatures with appropriate anatomy to carry items. Beasts of burdens equipped with containers used for transportation work differently. See <a href="#transportation">Transportation</a> for more information.</p>
+                <h5 class="arjulian">Character Size</h5>
+                <table class="table-sm table table-striped table-responsive-sm text-center" style="max-width: 300px;">
+                  <thead  class="thead-dark">
+                    <th>Size</th>
+                    <th>Slots</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tiny</td>
+                      <td>9</td>
+                    </tr>
+                    <tr>
+                      <td>Small</td>
+                      <td>15</td>
+                    </tr>
+                    <tr>
+                      <td>Medium</td>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+                      <td>Large</td>
+                      <td>21</td>
+                    </tr>
+                    <tr>
+                      <td>Huge</td>
+                      <td>27</td>
+                    </tr>
+                    <tr>
+                      <td>Gargantuan</td>
+                      <td>39</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>Your Strength modifier adds or subtracts from your total inventory slots. Additionally, if your modifier is above 0 and your Strength score is an odd number, add 1 inventory slot to your total.</p>
+                <h5 class="arjulian">Strength Bonuses</h5>
+                <div class="row ml-1">
+                  <div class="col-xs-4">
+                    <table class="table-sm table table-striped table-responsive-sm side-table-rules">
+                      <thead  class="thead-dark">
+                        <th>Score</th>
+                        <th>Slots</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>2-3</td>
+                          <td>-4</td>
+                        </tr>
+                        <tr>
+                          <td>4-5</td>
+                          <td>-3</td>
+                        </tr>
+                        <tr>
+                          <td>6-7</td>
+                          <td>-2</td>
+                        </tr>
+                        <tr>
+                          <td>8-9</td>
+                          <td>-1</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-xs-4">
+                    <table class="table-sm table table-striped table-responsive-sm side-table-rules">
+                      <thead  class="thead-dark">
+                        <th>Score</th>
+                        <th>Slots</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>10-11</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>12</td>
+                          <td>+1</td>
+                        </tr>
+                        <tr>
+                          <td>13-14</td>
+                          <td>+2</td>
+                        </tr>
+                        <tr>
+                          <td>15-16</td>
+                          <td>+3</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-xs-4">
+                    <table class="table-sm table table-striped table-responsive-sm side-table-rules">
+                      <thead  class="thead-dark">
+                        <th>Score</th>
+                        <th>Slots</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>17-18</td>
+                          <td>+4</td>
+                        </tr>
+                        <tr>
+                          <td>19-20</td>
+                          <td>+5</td>
+                        </tr>
+                        <tr>
+                          <td>21-22</td>
+                          <td>+6</td>
+                        </tr>
+                        <tr>
+                          <td>23-24</td>
+                          <td>+7</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="ruleBox">
+                  <h3 class="ruleBoxTitle p-2">Examples of Calculating Inventory Slots</h3>
+                  <p class="p-2">Crash, a Storm Pergashan, is a Large-sized creature (<b>21</b> slots) with a Strength ability score of 19 (+4 modifier, +1 for an odd-numbered Strength score, for a total of <b>+5</b> slots). He can carry 26 slots of inventory. He wears a Dense Padded Coat underlay (<b>2</b> slots), a Hide Coat mesolay (<b>2</b> slots) and a Plastron Shirt overlay (<b>2</b> slots), using a total of 6 slots for his armor, leaving him <b>20</b> slots for additional gear.<br><br>	Kree, a Harpy Touched Kin, is a Medium-sized creature (<b>18</b> slots) with a Strength ability score of 9 (<b>-1</b> slot). She can carry up to 17 slots of equipment. She wears a Hemp Quilted Shirt underlay (<b>1</b> slot), Direthread Coat mesolay (<b>1</b> slot), and Boiled Leather overlay (<b>1</b> slot), using 3 slots for her armor, and leaving her <b>14</b> slots for additional gear.</p>
+                </div>
+                
+                <h3 class="arjulian">Free to Carry</h3>
+                <p>You can freely carry one ration box, one waterskin, and one purse or pouch. These do not require inventory slots and can store food, water, and personal effects or tiny barter.
+                  <ul>
+                    <li><b>Ration box. </b>Up to five basic food rations. This is appropriately sized to your character.</li>
+                    <li><b>Waterskin. </b>Up to five drink rations. This is appropriately sized to your character.</li>
+                    <li><b>Purse/Pouch. </b>A small collection of tiny items such as 5 gemstones.</li>
+                  </ul>
+                  Additionally, gear marked as free-handed or worn items such as clothing, boots, and hats do not occupy any inventory space unless you unequip and store them. Only armor, because of bulk, affect inventory slots. However, any items on your character can be affected by NPCs and monsters regardless of inventory slot usage.
+                </p>
+                <h3 class="arjulian">Interacting with the Inventory</h3>
+                <p>You must draw an item from your inventory before you can use it. During your turn, you may use your one free object interaction with your inventory to:
+                  <ul>
+                    <li>Add/sheathe one item (or collection of tiny items).</li>
+                    <li>Remove/draw one item (or collection of tiny items).</li>
+                  </ul>
+                  To make a second change to your inventory during the same turn or to interact with another character’s inventory, you make take the Use an Object action.
+                </p>
+                <h3 class="arjulian">Encumbrance</h3>
+                <p>When you carry more than your capacity allows, you are encumbered. Depending on how much you burden yourself and for how long, you will suffer different levels of discomfort. <br>	If you are encumbered for more than 4 hours, you will require two times the amount of food and water for the day, or as determined by the GM.</p>
+                <h5 class="arjulian">Degrees of Encumbrance</h5>
+                <table class="table-sm table table-striped table-responsive-sm">
+                  <thead class="thead-dark">
+                    <th class="text-center">Load</th>
+                    <th class="text-center">Excess Slots</th>
+                    <th>Effects</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Light</td>
+                      <td class="text-center">1</td>
+                      <td>No negative effect</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Medium</td>
+                      <td class="text-center">2</td>
+                      <td>Speed decreased by 10ft. Max Dexterity bonus to AC = +3. Disadvantage on Ability checks using Strength, Dexterity and Connstitution</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Heavy</td>
+                      <td class="text-center">3</td>
+                      <td>Speed is halved. Max Dexterity bonus to AC = +1. Disadvantage on all rolls.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3 class="arjulian">Item Sizes</h3>
+                <p>Item size is measured in slots which describes the space required to stow or the bulkiness of an item within your inventory. Items generally fall into one of four categories: tiny, small, medium, large. </p>
+                <h5 class="arjulian">Size Category Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm" style="max-width: 800px;">
+                  <thead class="thead-dark">
+                    <th>Size</th>
+                    <th>Description</th>
+                    <th class="text-center">Slots</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tiny</td>
+                      <td>Smaller than a hand. Can hold many in one hand.</td>
+                      <td class="text-center">0.2</td>
+                    </tr>
+                    <tr>
+                      <td>Small</td>
+                      <td>Up to a handspan (about 9 inches). Held comfortably with one hand.</td>
+                      <td class="text-center">1</td>
+                    </tr>
+                    <tr>
+                      <td>Medium</td>
+                      <td>Up to an arms-length (about 2 feet). Held with one hand.</td>
+                      <td class="text-center">2</td>
+                    </tr>
+                    <tr>
+                      <td>Large</td>
+                      <td>Longer than an arm or bulky. REquires one or two hands to hold.</td>
+                      <td class="text-center">3</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3 class="arjulian">Stacking Items</h3>
+                <p>You can store up to 5 tiny items (for example 5 gemstones) in a single item slot.</p>
+                <h3 class="arjulian">Extra-Large Items</h3>
+                <p>Some items are extra-large—a big water barrel, a titan’s blade, a massive stone boulder. Sizing for these items are in multiples of 3 slots—6, 9, 12, etc.</p>
+                <h3 class="arjulian">Item Mass</h3>
+                <p>An item’s bulk may adjust the required slots for storage. If you ever run across special categories of items, refer to the following table.</p>
+                <h5 class="arjulian">Adjustments for Bulk</h5>
+                <table class="table-sm table table-striped table-responsive-sm">
+                  <thead class="thead-dark">
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th class="text-center">Slots</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Light</td>
+                      <td>Very light for its size. Can hold several in hand if the size allows. Includes all weapons with Light property.</td>
+                      <td class="text-center">-1</td>
+                    </tr>
+                    <tr>
+                      <td>Normal</td>
+                      <td>Easy to carry. Nothing unusual about it.</td>
+                      <td class="text-center">—</td>
+                    </tr>
+                    <tr>
+                      <td>Heavy</td>
+                      <td>Heavy or bulky. Medium or Large creature requires two hands to carry. Includes all weapons and shields with Heavy property</td>
+                      <td class="text-center">+1</td>
+                    </tr>
+                    <tr>
+                      <td>Superheavy</td>
+                      <td>Extremely awkward and bulky. Includes all weapons and shields with Superheavy property.</td>
+                      <td class="text-center">+2</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3 class="arjulian" id="transportation">Transportation</h3>
+                <p>Vehicles—mules, carts, ships, trains—store items in the same way as characters: using item slots. Vehicles generally come in four sizes—anything larger is assumed to have as many slots as it needs.</p>
+                <h5 class="arjulian">Transport Capacity</h5>
+                <table class="table-sm table table-striped table-responsive-sm" style="max-width: 600px;">
+                  <thead class="thead-dark">
+                    <th>Size</th>
+                    <th>Examples</th>
+                    <th class="text-center">Slots</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Small</td>
+                      <td>Mule, Horse, Donkey, Wheelbarrow</td>
+                      <td class="text-center">18</td>
+                    </tr>
+                    <tr>
+                      <td>Medium</td>
+                      <td>Cart (2 wheels), Chariot</td>
+                      <td class="text-center">32</td>
+                    </tr>
+                    <tr>
+                      <td>Large</td>
+                      <td>Wagon (4 wheels), Carriage, Boat</td>
+                      <td class="text-center">64</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>A vehicle's storage capacity may be divided into separate compartments. A mule, for example, may carry two 9-slot bags, while a cart has a single 32-slot space.</p>
+                <h3 class="arjulian">Chests, Crates & Barrels</h3>
+                <p>Some items can only safely be transported in bulk within storage containers—chests, crates, and barrels. These containers hold a number of slots equal to their size:
+                  <ul>
+                    <li>A small chest fills 1 slot and holds 1 item slot.</li>
+                    <li>A large crate fills 3 slots and holds 3 item slots.</li>
+                    <li>An xx-large barrel fills 9 slots and holds 9 item slots.</li>
+                  </ul>
+                </p>
+                <h3 class="arjulian">Quickdraw</h3>
+                <p>You may nominate any 3 items in your inventory as quickdraw items. These can be drawn/removed from the inventory as a free object interaction as normal. However, any non-quickdraw items can only be accessed using a full action. It is important to consider your inventory carefully, but there are special containers available that add to your quickdraw slots. You can rearrange your inventory and change quickdraw items outside of combat.</p>
               </div>
-              <div id="section6">
+              <div class="p-2" id="section6">
                 <h1 class="arjulian">Combat</h1>
-              
+                <h3 class="arjulian">Expanded Conditions</h3>
+                <h5 class="arjulian">Grappled</h5>
+                <ul>
+                  <li><b>NEW:</b> Attacks targeting the grappled creature are at disadvantage unless a Light or Natural weapon is used.</li>
+                  <li><b>NEW:</b> A grappled creature has disadvantage to attack creatures that are not grappling it.</li>
+                </ul>
+                <h5 class="arjulian">Rising from Prone</h5>
+                <p>Rising from a throw or fall is a difficult thing in the heat of battle. It takes training and skill to do so very quickly and even more so when faced with an aggressive adversary. <br>	You must spend half your movement to stand from prone. When threatened, you can attempt to stand up by making a Dexterity (Acrobatics) or Strength (Athletics) skill check at DC 10 + 2 for each enemy within their reach with you. Failure provokes an attack of opportunity reaction from all opponents within reach. If any opportunity attack roll beats your AC by 10 or more, you remain prone.</p>
+                <h5 class="arjulian">Susceptible (NEW)</h5>
+                <p>Susceptibility is lesser variant of Vulnerability. Creatures susceptible to a damage type take extra damage from that damage type. Susceptibility has damage type and a value (typically 5) or a die size. For example, if a creature has Fire Susceptibility 1d10, then any time it takes fire damage, it takes an extra 1d10 fire damage.</p>
+                <h3 class="arjulian">Combat Actions</h3>
+                <p>Combat Actions are common martial techniques available to anyone of any class. When you use your action to Attack, you can choose to use one Combat Action until the start of your next turn. <br>To use a Combat Action, your weapon must have one of the properties listed next to its name, and you must be proficient with it.</p>
+                <h5 class="arjulian">Aim (Ranged)</h5>
+                <p>Before you make an attack with a ranged weapon that you are proficient with, you can choose to use your bonus action to aim. You gain a +2 bonus to your next attack. This bonus can only be applied once per attack action.</p>
+                <h5 class="arjulian">Body-Shield</h5>
+                <p>While a creature is grappled by you, you may use half your movement to make an opposed grapple check against that creature in order to position it in such a way that it shields you from one or more hostile creatures that you are aware of. If the creature is of your size it provides half cover (+2 AC) or if the creature is one size larger than yourself, threequarters cover (+5 AC). <br>	If the grappled creature is stunned, paralyzed or unconscious, the DC for the Strength (Athletics) check is 12.</p>
+                <h5 class="arjulian">Charge</h5>
+                <p>When you move at least 20 feet towards a target, you may declare a charge attack as an action. You must have a clear path towards your target, and nothing should hinder your path (such as difficult terrain or obstacles). If you finish your movement within reach of your target, you may use your action to follow it with one of these options: 
+                  <ul>
+                    <li><b>Strike. </b>You may make a single melee attack with advantage. The attack deals additional damage equal to the distance you charged divided by 5, up to your Strength or Constitution modifier (your choice, minimum of 1). If you are riding a mounted animal that provides the movement instead of you, you may use its Strength or Constitution instead your own.</li>
+                    <li><b>Slam. </b>You may perform the Shove action with advantage. If you succeed, the creature is shoved twice the normal distance, or shoved as normal then knocked prone. You may choose to move up to five feet in the direction you are shoving your target. If you fail, you provoke an attack of opportunity from your target.</li>
+                    <li><b>Tackle. </b>You may make a single Grapple attempt with advantage. If the Grapple fails, you provoke an attack of opportunity from your target and are knocked prone. If you succeed, both you and your opponent are knocked prone and your target is subjected to the Grappled condition.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Climb onto a Bigger Creature</h5>
+                <p>If one creature wants to jump onto another creature, it can do so by grappling. A small or Medium creature has little chance of making a successful grapple against a Huge or Gargantuan creature, however, unless psionics has granted the grappler supernatural might. <br>	As an alternative, a suitably large opponent can be treated as terrain for the purpose of jumping onto its back or clinging to a limb. After making any ability checks necessary to get into position and onto the larger creature, the smaller creature uses its action to make a Strength (Athletics) or Dexterity (Acrobatics) check contested by the target's Dexterity (Acrobatics) check. If it wins the contest, the smaller creature successfully moves into the target creature's space, the smaller creature moves with the target and has advantage on attack rolls against it. <br>	The smaller creature can move around within the larger creature's space, treating the space as difficult terrain. The larger creature's ability to attack the smaller creature depends on the smaller creature's location and is left to your discretion. The larger creature can dislodge the smaller creature as an action—knocking it off, scraping it against a wall, or grabbing and throwing it—by making a Strength (Athletics) check contested by the smaller creature's Strength (Athletics) or Dexterity (Acrobatics) check. The smaller creature chooses which ability to use.</p>
+                <h5 class="arjulian">Feint (Light or Finesse)</h5>
+                <p>Before you make an attack with a light or finesse melee weapon that you are proficient with, you can choose to use half your movement to perform a feint and fake out your opponent. <br>	Make a Charisma (Deception) check contested by the target's Wisdom (Insight). If you succeed, you have advantage on that attack.</p>
+                <h5 class="arjulian">Flanking</h5>
+                <p>When a creature and at least one of its allies are adjacent to an enemy and on opposite sides or corners of the enemy's space, they flank that enemy, and each of them has +2 on melee attack rolls against that enemy. <br>	When in doubt about whether two creatures flank an enemy on a grid, trace an imaginary line between the centers of the creatures' spaces. If the line passes through opposite sides or corners of the enemy's space, the enemy is flanked. <br>	If a creature is Huge or larger, flanking can only occur if at least half of the squares on opposing sides are being threatened. </p>
+                <h5 class="arjulian">Overrun</h5>
+                <p>When a creature tries to move through a hostile creature's space, the mover can try to force its way through by overrunning the hostile creature. As an action or a bonus action, the mover makes a Strength (Athletics) check contested by the hostile creature's Strength (Athletics) check. The creature attempting the overrun has advantage on this check if it is larger than the hostile creature, or disadvantage if it is smaller. If the mover wins the contest, it can move through the hostile creature's space once this turn.</p>
+                <h5 class="arjulian">Power Attack (Heavy)</h5>
+                <p>Before you make an attack with a heavy melee weapon that you are proficient with, you can choose to take a -5 penalty to the attack roll and attempt to put more of your raw strength behind a blow that deals extra damage. If the attack hits, you add 2 + your Strength modifier (minimum 1) to the attack's damage.</p>
+                <h5 class="arjulian">Raise Shield</h5>
+                <p>If you are wielding a shield and you are hit by an attack roll that is equal to or only one greater than your AC, you may use your reaction to interpose your shield between yourself and the attack. The attack deals you no damage, but your shield is damaged in the process. It suffers a -1 penalty to its AC each time you block in this fashion. If your shield's AC reaches 0, it is destroyed.</p>
+                <h5 class="arjulian">Shove</h5>
+                <p>Using the Attack action, you can make a special melee attack to shove a creature, either to knock it prone or push it away from you. If you’re able to make multiple attacks with the Attack action, this attack replaces one of them. <br>	The target of your shove must be no more than one size larger than you, and it must be within your reach. You make a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). You succeed automatically if the target is incapacitated. If you succeed, you either knock the target prone or push it 5 feet away from you.</p>
+                <h3 class="arjulian">Critical Failure & Consequences</h3>
+                <p>	When you roll a 1 on a d20 during combat, you not only may fail in your attack but also you may suffer some other Consequence as determined by the GM. You may use an Inspiration Point to cancel a consequence. However, if you accept the consequence, you receive an Inspiration Point. You cannot receive an Inspiration Point if you are at your maximum.</p>
+                <div class="ruleBox">
+                  <h3 class="ruleBoxTitle arjulian p-2">Examples of Consequences</h3>
+                  <p class="p-2">Depending on the situation, consequences range from harmless to painful. Here are some examples:
+                    <ul>
+                      <li>While grappling your foe, your pants split open. Everyone sees, everyone laughs.</li>
+                      <li>Your wild swing sends your axe flying out of your hand. Hope you have a back-up or else you’ll need to fetch it.</li>
+                      <li>Your clumsy strike weakens your defense. Your foe gets advantage on its next attack against you.</li>
+                    </ul>
+                  </p>
+                </div>
+                <h3 class="arjulian">Critical Hits</h3>
+                <p>The other side of the coin is that when you roll a natural 20, you succeed. Rolling a natural 20 or a critical hit for an attack roll maximizes the extra damage dice applicable for the attack. The extra damage dice include the weapon’s damage, sneak attack damage, and any abilities that are triggered before the attack roll is made (for example, paying Psi Points for bonus damage). Any abilities that you trigger as a reaction or result of a successful hit are rolled normally.</p>
+                <div class="ruleBox">
+                  <h3 class="ruleBoxTitle arjulian p-2">Critical Hit Example</h3>
+                  <p class="p-2"><i>Nika the rogue spends 1 Psi Point and uses her bonus action to evoke the psionic power Brute Strike. For her action, she attacks her target from her hidden position with advantage. She rolls a natural 20, giving her extra damage from her dagger, her sneak attack, and her Brute Strike. She rolls the base damage of 2 (1d4 from her dagger) + 4 (1d6 from sneak attack) + 5 (1d8 from Brute Strike) for a total of <b>11</b> base damage. Then she adds her critical hit bonus damage which is the maximum value of all those dice: 4 (dagger) + 6 (sneak attack) + 8 (Brute Strike), for a total of <b>18</b>. She adds her Dexterity modifier bonus of <b>4</b>, for a grand total of <b>33</b> damage.</i></p>
+                </div>
               </div>
-              <div id="section7">
+              <div class="p-2" id="section7">
                 <h1 class="arjulian">Injuries, Exhaustion & Death</h1>
-              
+                <h3 class="arjulian">Bloodied</h3>
+                <p>Your health is your most precious resource and, as an adventurer, keeping hold of it is not an easy task. A character is considered bloodied when they have lost half of their hit points—when bloodied, they have taken a cut or bruise. <br>	Some monsters may react differently to you when you are bloodied—becoming frenzied or blood-thirsty—while others may have an easier time detecting you by scent. <br>	If you are bloodied, it’s a little harder to recover stamina. While bloodied, you must use a bandage, healer’s kit, or similar first-aid to spend Hit Dice and recover hit points when resting.</p>
+                <h3 class="arjulian">Exhaustion</h3>
+                <p>Some special abilities and environmental hazards, such as starvation and the long-term effects of freezing or scorching temperatures, can lead to a special condition called exhaustion. This condition covers all effects from casual exhaustion to life drain and is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect’s description. <br>For each level of exhaustion you have, any psionic abilities require 1 extra Psi Point to activate, including Talents. If you have 4 or more levels of exhaustion, you must take a full rest to recover. Long rests can only help recover the first 3 levels of exhaustion, as greater comfort and focused care are required.</p>
+                <h5 class="arjulian">Expanded Exhaustion Effects</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered">
+                  <thead class="thead-dark">
+                    <th class="text-center">Level</th>
+                    <th>Effect</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td>Disadvantage on Strength and Dexterity Ability and Skill checks. You cannot perform the Dash action.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">2</td>
+                      <td>Disadvantage on all Ability and Skill checks. Your speed is halved.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">3</td>
+                      <td>Disadvantage on Attack rolls and Saving Throws. Rolling a 1 on attack rolls exhausts 1 Hit Die.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">4</td>
+                      <td>You can only take an actioon or a bonus action during your turn, and you cannot take reactions. You can concentrate on one thing only, such as a psionic ability or enemy target, and ignore all else. Your are limited to simple mental tasks.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">5</td>
+                      <td>Hit point maximum reduced by half. Speed reduced to 5 feet. You cannot use abilities requiring Concentration.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">6</td>
+                      <td>You are Dying. Any additional Exhaustion counts as two failed death saves.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3 class="arjulian">Knocking a Creature Out</h3>
+                <p>Sometimes an attacker wants to incapacitate a foe, rather than deal a killing blow. When an attacker reduces a creature to 0 hit points with a melee attack, the attacker can knock the creature out. The attacker can make this choice the instant the damage is dealt. The creature falls unconscious and is stable.</p>
+                <h3 class="arjulian">Dying</h3>
+                <p>When you drop to 0 hit points and start dying, you gain one level of exhaustion that comes into effect immediately when you are stabilized. You cannot gain more than one level of exhaustion due to dropping to 0 hit points in the same combat. This exhaustion lingers until you properly rest and recover, or an ability lifts it from you.</p>
+                <h3 class="arjulian">Stabilizing a Dying Character</h3>
+                <p>Whenever you start your turn with 0 hit points, you must make a special saving throw, called a death saving throw, to determine whether you creep closer to death or hang onto life. <br>	When performing a Death Save, you must meet or exceed a DC with a d20 roll. An ally can attempt a DC 10 Wisdom (Medicine) check to help stabilize you. If your ally uses a healer’s kit or similar equipment, they have advantage on the roll. A success on that roll lowers your DC as shown below, while a critical success stabilizes you immediately. <br>	After you are stabilized, you suffer one level of exhaustion. If you roll a natural 20 on a Death Save, you are stabilized, suffer one level of exhaustion, and awaken with 1 + your Constitution modifier in hit points (minimum 1). You recover 1 failed Death Save when you take a long rest. </p>
+                <h5 class="arjulian">Death Saves</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 600px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">DC</th>
+                    <th>Situation</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">12</td>
+                      <td>Victim makes Death Saves alone without help.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">10</td>
+                      <td>Victim receives non-proficient Medicine check.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">8</td>
+                      <td>Victim receives proficient Medicine check.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">-1</td>
+                      <td>For each +2 Constitution modifier of the victim.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">+1</td>
+                      <td>For each -1 Constitution modifier of the victim.</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                <p>On your third successful Death Save, you are stabilized. If you roll a 1 on the d20, it counts as two failures. You are instantly stabilized if you recover hit points or are healed through a special ability. <br><br><b>Damage at 0 Hit Points.</b>	 If you take any damage while you have 0 hit points, you suffer a death saving throw failure. If the damage is from a critical hit, you suffer two failures instead. If the damage equals or exceeds your hit point maximum, you suffer instant death.</p>
+                <h3 class="arjulian">Death</h3>
+                <p>In a land without magic, there is no recourse for death. Pergasha is a dangerous place, and even the most epic adventurer can meet an untimely demise. All things must come to an end, and your character is unfortunately no exception. <br>	Hopefully you fought a good fight and left the world a little less dark than when you first joined it. And you can be sure that your body won’t go to waste in Pergasha. <br><br><i>The desert always reclaims its grains of sand.</i></p>
+                <h3 class="arjulian">Funerals</h3>
+                <p>A hero deserves a proper send-off. If your party is able to recover your body, bury it, and throw an appropriately lavish funeral (at least 1 common barter for each of your character levels per person), they can gain one boon from you from beyond the grave. Each character gains 1 Inspiration Point for commemorating you and your memory well, and the party gains 1 Milestone.</p>
+                <h3 class="arjulian">Your Will</h3>
+                <p>You can leave a will behind to confirm the heirs to your property. This can be arranged in retrospect with the GM after the character's death if necessary. You can will your property to your new character, the party (with limitations), or to NPCs in your backstory. The reading of the will usually takes place at your funeral, or before the introduction of your new character. <br>This might be the last opportunity for your character to say any final words, so make the most of it.</p>
               </div>
-              <div id="section8">
+              <div class="p-2" id="section8">
                 <h1 class="arjulian">Resting & Recovery</h1>
-              
+                <p>Even the stoutest of heroes need rest to recover from injury and avoid exhaustion. This section defines different rest periods, what can be done during each period, recovery options, camping and downtime activities.</p>
+                <h3 class="arjulian">Breather</h3>
+                <p>Taking a breather is a short period of rest that is <b>at least 5 minutes long</b> done after strenuous activity. During this time, you may rest, slake your thirst and hunger, rearrange equipment that is easily accessible, or tend to simple sounds. <br>	During a breather, you regain your Constitution modifier in hit points (minimum 0). If you have a wound, you may use a healer’s kit or similar item to dress it. If you use class, racial, or psionic abilities that heal during a breather, you recover 1 additional hit point.</p>
+                <h3 class="arjulian">Short Rest</h3>
+                <p>A short rest is a period of downtime,<b> at least 1 hour long</b>, during which you do nothing more strenuous than light activity like eating, drinking, meditating, and tending to wounds. <br>	You can spend 1 Hit Die at the end of a short rest for recovery, gaining that roll plus your Constitution modifier (minimum 0) in hit points. If you are bloodied, you must use a healer’s kit to heal with Hit Dice. Alternatively, you regain your Constitution modifier in hit points (minimum 1) if you do not use any Hit Die to recover. If you use class, racial, or psionic abilities to heal during a short rest, you gain 2 additional hit points. <br>	You may eat 1 ration of food or water to remove a level of exhaustion if you have exactly one level of exhaustion affecting you.<br>	You cannot benefit from more than two short rests in a 24-hour period, and you must have at least 1 hit point at the start of the rest to gain its benefits.</p>
+                <h3 class="arjulian">Long Rest</h3>
+                <p>A long rest is a period of extended downtime that is <b>at least 8 hours long</b> during which a character sleeps for at least 6 hours and performs no more than 2 hours of light activity such as camp activities, reading, talking, eating, or standing watch. If the rest is interrupted by a period of strenuous activity such as combat, 1 hour of walking, or similar adventuring activities, you must begin the rest again to gain any benefits. <br>	During a long rest, you must consume at least 1 food and 1 water ration. If you cannot provide both, you gain one level of exhaustion. Providing both forms of sustenance removes one level of exhaustion and 1 failed death save from you. If you sleep in medium or heavy armor, you cannot reduce any levels of Exhaustion or failed death saves during rest.<br>	At the end of a long rest, you recover your Constitution modifier in hit points (minimum 1). If you use any racial, class, or psionic abilities to heal, you gain 3 extra hit points. Also, you can roll any number of Hit Die to heal for the value you roll plus your Constitution modifier for each die (minimum 0). If you are bloodied, you must use a healer’s kit to heal with Hit Dice.<br>	You also regain your Constitution modifier in Hit Die (minimum 1) as well as twice your Intelligence modifier in Psi Points (minimum 1).<br>	You cannot benefit from more than one long rest in a 24-hour period, and you must have at least 1 hit point at the start of the rest to gain its benefits.</p>
+                <h3 class="arjulian">Full Rest</h3>
+                <p>A full rest is a period of downtime,<b> at least 24 hours long</b>, during which you sleep for at least 6 hours and perform light work (such as camp activities) for no more than 2 hours. A full rest cannot be attempted without comfortable accommodations, while sleeping on the hard ground, or while wearing armor. You must be in a safe location or sanctuary where you do not feel the need to keep watch or constantly be on guard. <br>	You must consume at least 1 ration of food and 2 rations of water during your rest. If you do not provide both, you cannot remove any levels of Exhaustion or failed death saves. Proper sustenance and rest will recover up to 2 levels of Exhaustion and reset all failed death saves. <br>	At the end of a full rest, you recover all lost hit points, spent Hit Dice, and Psi points. Any racial, class, or psionic abilities also reset, and any mysteriums that can recharge do so. If you have no Inspiration Points, you gain 1.</p>
+                <h3 class="arjulian">Setting Camp</h3>
+                <p>Setting up camp allows prolonged periods of rest, greater comfort, or time and ability to perform more complicated tasks. The party must find a secure site, start a campfire, prepare tents or sleeping arrangements, and secure animals, vehicles, or cargo.</p>
+                <div class="ruleBox">
+                  <h3 class="arjulian ruleBoxTitle p-2">Basics to Camp</h3>
+                  <p class="p-2">To properly set up camp, the following steps should be performed.
+                    <ul>
+                      <li><b>Make Camp: </b>Do Survival checks see how well you set up. The more successes, the better the site.</li>
+                      <li><b>Organize the Lookout: </b>Lookouts oversee camp defense by watching for threats.</li>
+                      <li><b>Camp Activities: </b>Party members who are not on Lookout duty can perform one primary camp-related activity in addition to any other basic long rest activities.</li>
+                      <li><b>Sleep: </b>Attempt to sleep and recover.</li>
+                      <li><b>Pack: </b>Clear your site, perhaps disguise your presence, and continue your journey.</li>
+                    </ul>
+                  </p>
+                </div>
+                <h4 class="arjulian">Making Camp</h4>
+                <p>To make camp, each party member must roll a Wisdom (Survival) ability check against a <i>Camping Check</i> target DC (see the Camping Check DC table for examples) as they try to help set up the campsite. The GM makes the final determination for the DC based on the conditions of the area.  <br>	Party members with proficiency in Animal Handling, Nature, and/or Builder’s Tools may be able to use these skills instead of Survival to assist with camp set up tasks. However, at least one party member must make a Survival check. <br>	The more successes the party has, the more thoroughly they prepare the final campsite—making it easier to defend, rest, and perform other camp activities. Refer to the Camp Set Up Results. <br>	If anyone makes an Exceptional Success (succeeding by 10 or more than the DC), they can offset one failure. This can only occur once when making camp. Any additional exceptional successes earn the individual an Inspiration Point. If there are no failures, the entire party gains an Inspiration Point when there is at least one exceptional success.</p>
+                <h5 class="arjulian">Camping Check DC</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 600px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">DC</th>
+                    <th>Description</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">10</td>
+                      <td>Safe site is easy to find. Weather is clear.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">15</td>
+                      <td>Safe site requires effort to find. The weather is poor.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">20</td>
+                      <td>Safe site is difficult to find. The weather is terrible.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian">Camp Set Up Results</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 700px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Failures</th>
+                    <th>Description</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">0</td>
+                      <td>A perfect campsite. Activity checks are DC5.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td>A decent campsite with one glaring flaw. Activity checks are DC10.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">2+</td>
+                      <td>A shoddy campsite just barely fit for purpose. Activity checks are DC15.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian">Camping Gear</h5>
+                <p>It’s difficult to set up camp in most of the desert wastes without supplies. If you lack appropriate camping equipment such as a bedroll or tent, roll your Survival check with disadvantage. You may ignore this rule if you have expertise in Survival. <br>	Some equipment, such as a two-person tent, may count as camping gear for multiple people if they’re willing to share. Alternatively, psionic abilities may supplement or replace the need for specific gear.</p>
+                <h4 class="arjulian">Lookout</h4>
+                <p>Lacking any camp defense is risky—and stupid. The lookout oversees security and watches for potential threats so that others can rest. <br>	If you are the lookout, roll an Intelligence (Survival) check to see how well you secure camp against potential dangers. If you have any tools, equipment, trained pets, or abilities that may help, you may roll your check with advantage. <br>	Being on lookout takes focus. If you are on lookout duty, you cannot join in any camp activities besides eating, drinking, and sleeping.
+                <ul>
+                  <li><b>Exceptional Success: </b>Gain an Inspiration Point.</li>
+                  <li><b>Success: </b>You noted weak spots in the camp’s defense and secured them. </li>
+                  <li><b>Failure: </b>You did not find gaps in camp’s security. You have disadvantage on Perception checks against any would-be intruders while camping.</li>
+                </ul></p>
+                <h5 class="arjulian">Ambushed</h5>
+                <p>A warm campfire and the smell of delicious, hot food can attract attention out in the dark wilds—from cruel bandits, to hungry bears, to bloodthirsty cultists. If you let your guard down, you might find both your sleep and your life cut surprisingly short. <br>	If an intruder approaches, the lookout rolls a Wisdom (Perception) check against the intruder's Stealth:
+                <ul>
+                  <li><b>Success:</b> The lookout detects the intruders and may rouse the party with enough time for people to don light armor.</li>
+                  <li><b>Failure:</b> The lookout—and the rest of the party—are caught off-guard and surprised.</li>
+                </ul></p>
+                <h5 class="arjulian">False Alarms</h5>
+                <p>It’s easy to worry about every shadowed movement and every distant noise in the dark. <br>	Occasionally, the GM may ask the lookout to make a Wisdom (Insight) roll to detect a false alarm:
+                <ul>
+                  <li><b>Success: </b>The lookout realizes that it’s just a false alarm and doesn’t rouse the party.</li>
+                  <li><b>Failure: </b>The lookout wakes the party unnecessarily. Their sleep is disturbed for the rest of the night.</li>
+                </ul></p>
+                <h4 class="arjulian">Camp Activities</h4>
+                <p>While camping, you can perform one primary activity (in addition to the normal basic activities) before you sleep. Below are listed some example activities—if an activity is not covered here, discuss it with the GM</p>
+                <h5 class="arjulian">Cook Food</h5>
+                <p>If you are proficient with Cook’s Utensils or in Wisdom (Survival) and have adequate supplies, you can prepare a meal for the group. This requires the use of a campfire and cooking tools. You may attempt one of the following activities provided you have the appropriate proficiency and supplies:
+                  <ul>
+                    <li><b>Create Rations: </b>During a long rest, you slow-cook and preserve some fresh ingredients—usually meat or grains—to create 1d6 + 1 new, basic food rations that can be preserved. (Proficiency: Cook’s Utensils)</li>
+                    <li><b>Stretch Rations: </b>While camping during a long rest, you thin out some basic rations into a simple meal, feeding two people for each ration you cook provided that you have sufficient food and supplies. If cooked successfully, everyone who eats gains 1d4 + 1 hit points. A creature can only recover hit points from this type of meal once per day. (Proficiency: Cook’s Utensils)</li>
+                    <li><b>Cook a Hot Meal: </b>You cook a hot meal for everyone, using one ration (or ration substitute) per person. If cooked successfully, everyone who eats the hot meal regains 1 spent Hit Die. A creature can only regain Hit Die from a hot meal once per day. (Proficiencies: Survival or Cook’s Utensils)</li>
+                  </ul>
+                  Before you serve the meal, roll your Cook’s Utensils or a Wisdom (Survival) check to see how well you prepared everything. Meals spoil after an hour, losing any restorative properties.
+                  <ul>
+                    <li><b>Exceptional Success: </b>The meal is extraordinary and recovers an extra Hit Die to each creature that eats the meal.</li>
+                    <li><b>Success: </b>The meal is well made.</li>
+                    <li><b>Failure: </b>You spoiled the meal and wasted the ingredients. No one can eat your cooking and gain any restorative properties.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Brew Drinks</h5>
+                <p>If you are proficient with Brewer’s Supplies or Wisdom (Survival) and have the right tools, you can prepare drinks for the group. This requires a campfire and brewing supplies such as a pot. You may attempt one of the following activities provided you have the appropriate proficiency and supplies:
+                  <ul>
+                    <li><b>Create Potable Water: </b>Your knowledge of brewing enables you to purify water that would otherwise be undrinkable. As part of a long rest, you can purify up to 6 rations of water, or 1 ration as part of a short rest. (Proficiency: Brewer’s Supplies)</li>
+                    <li><b>Brew a Restorative: </b>As part of a short rest or camping activities, you turn some potable water into a tasty, hot drink.  You use one ration of water to make 5 portions that must be enjoyed immediately. Everyone who drinks a fresh restorative regains 1 spent Hit Die. A creature can only benefit from a brewed restorative once per day. (Proficiency: Brewer’s Supplies)</li>
+                    <li><b>Brew a Balm: </b>With a few herbs you turn some basic water rations into a delicious, soothing drink—one ration per two drinks. Everyone who drinks a fresh balm gains 1d4 + 1 hit points. A creature can only benefit from a balm once per day. (Proficiency: Survival or Brewer’s Supplies)</li>
+                  </ul>
+                  Before you serve the drinks, roll your Brewer’s Supplies or a Wisdom (Survival) check to see how well you prepared everything. Your brews lose their restorative properties after an hour.
+                  <ul>
+                    <li><b>Exceptional Success: </b>The balms are of superior quality and everyone who drinks gains 1d6+1 hit points.</li>
+                    <li><b>Success: </b>The drinks are well made.</li>
+                    <li><b>Failure: </b>You spoiled the brew and wasted the ingredients—no one can stomach your drinks.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Forage and Gather</h5>
+                <p>
+                  Foraging for supplies and food is a crucial part of survival. Not all areas are equally generous in their bounty, but a clever survivalist will know how to make the most of what it available. Knowledge in Nature, Herbalism, or Survival is necessary to find useful—and safe—supplies in the wild. 
+                  <ul>
+                    <li><b>Exceptional Success: </b>You gather enough supplies to feed or cook a meal for three medium creatures.</li>
+                    <li><b>Success: </b>You gather enough supplies to feed or cook a meal for two medium creatures.</li>
+                    <li><b>Failure: </b>You are unable to find anything safe or useful.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Play Music</h5>
+                <p>
+                  If you know how to play an instrument, you can attempt to play some music for the group. Roll a Charisma or Dexterity (Performance) check to see how well you play.
+                  <ul>
+                    <li><b>Exceptional Success: </b>Your performance was amazing. Choose two party members other than yourself or the lookout—those characters gain a point of inspiration. </li>
+                    <li><b>Success: </b>You perform well and inspire one of your allies. Choose a party member other than yourself or the lookout—that character gains a point of inspiration.</li>
+                    <li><b>Failure: </b>You made an embarrassing mistake. </li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Tell Story</h5>
+                <p>
+                  Everyone likes to hear a good story. If you are proficient in Mysteriums, History, Psionics, are literate and carrying an interesting text, or have the Skald feat—you can attempt to tell a captivating story to the group. Roll a Charisma (Performance) check.
+                  <ul>
+                    <li><b>Exceptional Success: </b>Your story moves the soul. Choose two party members other than yourself or the lookout—those characters gain a point of inspiration. </li>
+                    <li><b>Success: </b>Your story is well told and inspires an ally. Choose a party member other than yourself or the lookout—that character gains a point of inspiration.</li>
+                    <li><b>Failure: </b>You made an embarrassing mistake.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Tinker with an Item</h5>
+                <p>
+                  Sometimes, you find unusual items that have no clear purpose. If you are proficient in Mysteriums, you can attempt to piece together the capabilities of mysteriums and oddities. Roll a Mysterium (Intelligence) check.
+                  <ul>
+                    <li><b>Exceptional Success: </b>You can understand the usage of two items. </li>
+                    <li><b>Success: </b>You can understand the usage of one item.</li>
+                    <li><b>Failure: </b>Oops! The gadget triggers harmlessly, giving you a slight hint about what it may do.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Relax or Meditate</h5>
+                <p>
+                  If you prefer to spend some time alone—meditating, painting, whittling, watching the stars—you can do so. Roll a Wisdom ability check to see if you can unwind.
+                  <ul>
+                    <li><b>Exceptional Success: </b>Your mind is refreshed, and your spirit inspired. Gain a point of inspiration and your Intelligence modifier in Psi Points. </li>
+                    <li><b>Success: </b>You feel inspired by your seclusion—gain a point of inspiration or your Intelligence modifier in Psi Points.</li>
+                    <li><b>Failure: </b>You couldn’t relax as something—or someone—was irritating you too much.</li>
+                  </ul>
+                </p>
+                <h4 class="arjulian">Sleeping</h4>
+                <p>
+                  Sometimes rest is the best medicine. When you attempt to sleep, make a sleeping check (Constitution check) against the Camping Check DC. If you are sleeping in a bedroll, tent, or other comfortable arrangement, you roll with advantage. On the other hand, if you are wearing armor, you roll with disadvantage. <br> 	Even though the lookout is on active guard duty, they can still make a sleeping check. They roll with disadvantage because it is hard to feel fully refreshed with split sleep or after a night on watch.
+                  <ul>
+                    <li><b>Success: </b>Your sleep was deep and undisrupted. Regain 1 spent Hit Die in addition to other long rest benefits.</li>
+                    <li><b>Failure: </b>You were restless. You still gain the usual long rest benefits.</li>
+                    <li><b>Critical Failure: </b>You cannot regain any levels of exhaustion regardless of other long rest benefits.</li>
+                  </ul>
+                </p>
+                <h4 class="arjulian">Packing Up</h4>
+                <p>Once you decide to continue your journey, it is time to pack up your campsite. The amount of time it takes depends on the size and permanency of your camp and whether you need to disguise your presence.</p>
               </div>
-              <div id="section9">
+              <div class="p-2" id="section9">
                 <h1 class="arjulian">How Skills Work</h1>
-              
+                <p><i>Less rolling, more playing, higher stakes.</i><br><br>In general, when there are no consequences for failure, a task is deemed impossible to fail, or there are no stressors (such as time) to prevent success, skill checks will not be rolled. Your success is assumed. See more in Passive Knowledge Checks below. <br>	However, on some occasions, you may decide you’d like to add flavor, pizzazz, or humor to an action or scene. You may opt to roll for these situations. <br>	When rolls are made, you can be sure they are important!</p>
+                <h3 class="arjulian">Passive Knowledge</h3>
+                <p>All knowledge checks (History, Nature, Psionics, Mysterium) will be based on a flat value. The value is equal to <b>10 + your Proficiency bonus + your Intelligence modifier</b>. Bonuses will be given situationally to those who have specialized knowledge due to backstories. Knowledge checks using this flat value will be used to determine what lore or facts a character knows. This is to represent the knowledge already known and stored in memory. <br>	Passive knowledge scores will also be used when trying to ascertain known lore in relation to other skills that are not normally knowledge-type skills. For example, blacksmithing requires physical strength, so crafting with these tools requires a skill check. The bonus to the roll is your Proficiency bonus + Strength modifier. However, to determine what you know about blacksmithing or to gauge how well a weapon was made will be a passive knowledge check using your <b>Intelligence</b> instead of Strength. <br>	Knowledge check rolls will be used in cases of research, training, crafting, or other creative uses of the skill. Also, rolls may be made when there are outside stressors or risk upon failure. </p>
+                <h3 class="arjulian">Exceptional Success</h3>
+                <p>Some abilities or checks may refer to <i>Exceptional Success</i>. Unless specified otherwise, an exceptional success is when you succeed at an ability or skill check by 10 or more than the DC. Not all checks will have results or benefits for exceptional successes, and these are separate from critical successes. </p>
+                <h3 class="arjulian">Critical Fails and Successes</h3>
+                <p>When you roll a natural 1 when performing a skill check, you fail. You may suffer a Consequence from the GM if the risk of failure is significant but failing is usually punishment enough. <br>	Rolling a natural 20 almost always means success, but there may be some singularly difficult tasks that cannot be completed with a natural 20 alone. This is a rare situation and will generally be announced in advance of the roll by the GM. For most other skill checks, a natural 20 means you succeed and may gain a boon or additional bonus from doing so.</p>
+                <h3 class="arjulian">Help</h3>
+                <p>You can take the <i>Help</i> action to grant advantage to an ally if you are proficient in the skill, tool, or another skill or tool that can feasibly be used to assist. For example, if someone is attempting to use Athletics to push a large boulder, your proficiency with Builder’s Tools can be the basis to help your ally. You may roll one of the two dice for advantage or have your ally roll both. You ally adds their normal bonuses to the highest die roll. <br>	When providing Help to an ally when not in turn order allows more flexibility – the character with the highest bonus may be the one to roll advantage and add bonuses. There may be exceptions if it is critical that a particular individual perform a roll. <br>	Once someone has Helped an ally on a check, it generally cannot be attempted again. </p>
+                <h3 class="arjulian">Teamwork</h3>
+                <p>In most cases, you cannot roll multiple attempts for the same action. Instead, you can work with allies to make one attempt as successful as possible. <br>	Anyone with a relevant skill or ability may help you attempt something—the first person grants you advantage via the Help action, and every additional person grants you a +1 bonus. If the roll fails, however, everyone involved is liable for the consequences. <br>	Bonuses granted may differ if your allies have abilities that specify such. If an ally grants bonuses through these abilities, they do not give the teamwork bonus. An ally that used the Skald feat to grant bonuses to a skill check cannot give the teamwork bonus for that specific skill check.</p>
               </div>
-              <div id="section10">
+              <div class="p-2" id="section10">
                 <h1 class="arjulian">Creating Your Character</h1>
-              
+                <p>This campaign uses homebrew rules for creating characters including unique races with greater customization. There are no “backgrounds” to select – instead, you may develop your own backstory, traits, quirks, bonds and flaws. Background features are replaced with a “Brightness” feature, a free feat at 1st level, and psionic abilities. Follow the process below and work with the GM for clarity.</p>
+                <div class="ruleBox">
+                  <h3 class="ruleBoxTitle arjulian p-2">Creation Process in a Nutshell</h3>
+                  <p class="p-2">Follow these steps for character creation. Each step has further descriptions in the following sections.
+                    <ul>
+                      <li>Roll an Ability Score to contribute to the party array.</li>
+                      <li>Roll a d6 to select a Brightness Feature.</li>
+                      <li>Select your Race and take proficiencies if given.</li>
+                      <li>Select your Class and take proficiencies given.</li>
+                      <li>Select any three proficiencies instead of preset Backgrounds.</li>
+                      <li>All characters receive one Feat at 1st level.</li>
+                      <li>Spend Proficiency Points.</li>
+                      <li>Select one Psionic Discipline.</li>
+                      <li>Select your starting gear.</li>
+                    </ul>
+                  </p>
+                </div>
+                <h3 class="arjulian">Ability Scores</h3>
+                <p>Traditionally, players can use point buy or roll for ability scores. Surviving in the harsh environment of Pergasha is incredibly difficult at best and being a heroic individual impossible without a little extra help. <br>	The party will create an array together that the GM can adjust to be at an appropriate power level for the campaign. This not only avoids situations where one player feels particularly lackluster because of unlucky rolling but also having a player be the one-hero show. With all players sharing an array, there is still room for variability and customization with the additional options explained in the next sections.</p>
+                <h4 class="arjulian">Party Array</h4>
+                <p>Each player will <b>roll 4d6</b> once and drop the lowest value. The sum of the remaining 3 dice will contribute to a single ability score. The GM will fill in values if any are missing. These values will create the ability score array that all players will use towards creating characters. <br><br><i>The final array is subject to GM balancing and approval.</i></p>
+                <h4 class="arjulian">Score Adjustments</h4>
+                <p>Players may adjust the final array by subtracting up to a max of <b>2 ability points</b> and adding them elsewhere. Each point may be subtracted from and added to different scores.</p>
+                <h3 class="arjulian">Brightness Feature</h3>
+                <p>Particularly talented individuals are thought to be blessed and are sometimes called “Brightness” or have the title, “of the Light.” Every player gains one and only one Brightness feature by rolling a d6 and referring to the following table. Alternatively, cards can be made so that there are no duplicate Brightness Features in a party.</p>
+                <h5 class="arjulian">Brightness Features</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 500px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">d6</th>
+                    <th>Result</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td>Sturdy: +1 Hit Point per level</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">2</td>
+                      <td>Trained: one Training Point</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">3</td>
+                      <td>Proficient: 1d4 proficiency points</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">4</td>
+                      <td>Empowered: +1 Psi Point per level</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">5</td>
+                      <td>Talented: one Psionic Talent</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">6</td>
+                      <td>Skilled: one Feat</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <ul>
+                  <li><b>Sturdy: </b>You gain 1 additional Hit Point per level. This ability can stack with other features or feats that add bonus Hit Points (like Toughness).</li>
+                  <li><b>Trained: </b>You gain one Training Point. Training Points are meta-currency that allow you to enhance your psionic abilities or purchase feats. See Training Points for details.</li>
+                  <li><b>Proficient: </b>Gain 1d4 Proficiency Points to use towards skills, tools, languages, or feats. See Proficiency Points for details.</li>
+                  <li><b>Empowered: </b>You gain 1 additional Psi Point per level. Psi Points are used to activate psionic abilities.</li>
+                  <li><b>Talented: </b>Select one Psionic Talent. </li>
+                  <li><b>Skilled: </b>Select one Feat. Subject to GM’s approval.</li>
+                </ul>
+                <h3 class="arjulian">Races</h3>
+                <p>After the Sundering and centuries of war, there was little left for the smaller races, so only Pergashans, Touched Kin, and Lizardfolk are available. Pergashans are descendants of giants that once ruled the deserts and invaded distant lands. They are the dominating culture and society and carry the powers of their ancestors in their blood. <br>	Touched Kin are people deformed and twisted by the inexplicable energy from the Sundering Storms that pass through Pergasha without warning. They can be the offspring of Pergashans, Lizardfolk, or other smaller races. However, they are considered their own race because Touched Kin can reproduce and pass on their traits to their offspring. <br>The Lizardfolk of Pergasha are unique amongst their kind Beyond the Chasm as they have evolved to survive the chaotic region over millennia. They have also been affected by the Sundering just as much as the other races of the desert wastes. <br><br>See detailed information in <a href="races.html">Races</a>.</p>
+                <h3 class="arjulian">Classes</h3>
+                <p>Pergasha is a land where magic does not exist, so classes like bards, sorcerers, and wizards cannot function. The classes and archetypes available in this setting are listed below. For more information about changes to published material and homebrew content, see <a href="classes.html">Classes</a>. <br>To add complexity to a non-magic world, you also will have access to psionic features that are beyond your class options. To learn more, see <a href="psionics.html">Psionics</a>.</p>
+                <div class="ruleBox">
+                  <h3 class="arjulian p-2 ruleBoxTitle">Classes and Archetypes</h3>
+                  <ul>
+                    <li><b>Barbarian: </b>Ancestral Guardian, Battlerager, Beast, Berserker, Totem Warrior, Primeval Warrior</li>
+                    <li><b>Fighter: </b>Battle Master, Brute, Cavalier, Champion, Psi Knight, Sharpshooter, Warcaller</li>
+                    <li><b>Monk: </b>Drunken Master, Kensei, Long Death, Open Hand, Soul Knife</li>
+                    <li><b>Ranger: </b>Dervish, Doppelkin Master, Slayer</li>
+                    <li><b>Rogue: </b>Assassin, Inquisitive, Psi Assassin, Scout</li>
+                  </ul>
+                </div>
+                <h3 class="arjulian">Backstory vs Background</h3>
+                <p>Pergasha does not use premade Backgrounds as listed in the PHB and other published material. However, this does not mean your character’s background is unimportant. In fact, your backstory is critical as it explains who you are, how you do what you do, and where you plan to go. <br>	As you craft your backstory, decide your place in Pergasha. It is important to have driving personality traits, flaws, and goals as a character. Decide these for yourself or with the help of the GM. If you wish to use existing backgrounds to give you inspiration, you may do so, but you do not get any features or items from the backgrounds as written.<br>	Pergasha lacks magic, but the very air is still filled with otherworldly powers and spirits, and the sands hide ancient technology. Instead of background features, every character in Pergasha has a psionic taint, and as with all heroes, a powerful soul that attracts power to it. All characters use psionics and Training Points—a unique meta-currency—to access more powers as they progress, making them far more than your average folktale hero brandishing a sword.</p>
+                <h3 class="arjulian">Proficiencies</h3>
+                <p><b>At creation, you gain 3 proficiencies to assign as you wish.</b><br>You can customize your proficiencies in skills, tools, and languages. Proficiencies are no longer determined by race, class, and backgrounds, but you may gain extra proficiencies from your race and class selections. <br>	Regardless of your selections, all characters begin with three proficiencies and there are no restrictions on which you select. You can select any skill, tool, or language proficiency that makes sense for your character. These proficiencies are in addition to what you gain from your class selection and purchases via Proficiency Points (see below), which are determined by your mental ability scores.</p>
+                <h4 class="arjulian">Proficiency Points</h4>
+                <div class="ruleBox">
+                  <h5 class="ruleBoxTitle arjulian p-2">Proficiency Points at Character Creation</h5>
+                  <p class="text-center p-2">You gain Proficiency Points equal to: 3 + <b>half</b> the sum of your <b>Intelligence modifier + Wisdom modifier + Charisma modifier</b>.</p>
+                </div>
+                <p>When creating a character, you gain Proficiency Points equal to half the sum of your Intelligence, Wisdom, and Charisma modifiers (minimum of 0) rounded up. You also gain Proficiency Point when you get an Ability Score Improvement (ASI) regardless of whether you increase an ability score or take a feat. <br>	Proficiency Points can be used to purchase skill, tool, and language proficiencies in addition to feats. The costs are listed on the table below.  <br>	You can spend your points at character creation or save them for a more expensive benefit at another point in time. All purchases are final and you cannot return benefits for Proficiency Points. Each time you level your character, you can spend any saved points.</p>
+                <h5 class="arjulian">Proficiency Costs</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 500px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Benefit</th>
+                    <th class="text-center">Cost</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Skill</td>
+                      <td class="text-center">2</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Language (or literacy)</td>
+                      <td class="text-center">1</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Tool</td>
+                      <td class="text-center">1</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Double proficiency for a proficient Skill</td>
+                      <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Double proficiency for a proficient Tool</td>
+                      <td class="text-center">1</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Feat</td>
+                      <td class="text-center">4</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3 class="arjulian">Feats</h3>
+                <p><b>At creation, you gain 1 feat of your choice.</b><br>You begin with one feat at 1st level. Feats must be approved by the GM. Some published feats are prohibited, and there are unique additions to this campaign. See <a href="feats.html">Feats</a> for more details.</p>
+                <h3 class="arjulian">Psionics</h3>
+                <p><b>At creation, you gain access to 1 Psionic Discipline of your choice. You also have 1 + your Intelligence modifier in Psi Points.</b><br>All players have access to psionics regardless of their race or class selections. Pergasha lost magic but psionics filled the void and nearly all sentient life became infused with it.<br>	You begin with one discipline of your choice and 1 + your Intelligence modifier in Psi Points at 1st level. You use Psi Points to trigger effects available from the discipline you choose. See <a href="psionics.html">Psionics</a> for a full progression chart and more information</p>
+                <h3 class="arjulian">Starting Gear</h3>
+                <h4 class="arjulian">General</h4>
+                <p>Every new character receives the following items:
+                  <ul>
+                    <li><b>1 tool or instrument</b> with which you are proficient. Refer to <a href="items.html">Items</a> for slots required.</li>
+                    <li><b>2 shivs.</b>	You can decide what materials they are made from, but they have base stats (0.4 slots).</li>
+                    <li><b>Backpack </b>that holds up to 8 slots. The backpack itself takes no slots to wear. This is a container that helps you organize your gear.</li>
+                    <li><b>Belt </b>that holds up to 3 slots. Again, this is a container that you can use to organize. For example, you can attach a sheathed sword that is up to 3 slots on this belt.</li>
+                    <li><b>1 Ration Box </b>containing 5 food rations. These 5 rations and the box are free to carry. Extra rations you acquire will use slots (1 ration = 0.2 slots).</li>
+                    <li><b>1 Waterskin </b>holding 5 water rations. Your first waterskin and its rations of water are <i>free to carry</i>. Additional waterskins and water carried will use slots (1 full waterskin holds 5 rations and together they require 1 slot). </li>
+                    <li><b>Firestarter kit </b>includes waste patties or similar tinder and small bow to create friction (1 slot). </li>
+                    <li><b>Hemp Rope</b>,50 feet (1 slot). If you do not want rope, you can exchange it for adventuring gear of equal or lesser barter value.</li>
+                    <li><b>Bedroll. </b>A bedroll helps you <a href="#section8">rest properly</a> (2 slots). If you do not want a bedroll, you can exchange it for adventuring gear or equal or lesser barter value.</li>
+                    <li><b>Traveler’s clothing. </b>Clothing you wear generally does not require any slots. If you acquire more clothes and must store them, they will use slots (1 slot). </li>
+                  </ul>
+                </p>
+                <h4 class="arjulian">Barbarian</h4>
+                <p>
+                  <ul>
+                    <li><b>Armor.</b> 1 UB towards armor underlay. You may use this towards weapons if you do not want an underlay. You may not keep unused UB.</li>
+                    <li><b>Weapons.</b> 12 UB towards weapons. In addition, you also have 4 javelins. You may not keep unused UB.</li>
+                  </ul>
+                </p>
+                <h4 class="arjulian">Fighter</h4>
+                <p>
+                  <ul>
+                    <li><b>Armor.</b> 12 UB towards armor. You may use any unused points towards weapons. You may not keep unused UB.</li>
+                    <li><b>Weapons.</b> 15 UB towards weapons. You may not keep unused UB.</li>
+                  </ul>
+                </p>
+                <h4 class="arjulian">Monk</h4>
+                <p>
+                  <ul>
+                    <li><b>Armor.</b> 1 UB towards armor underlay. You may use this towards weapons if you do not want an underlay. You may not keep unused UB.</li>
+                    <li><b>Weapons.</b> 7 UB towards weapons. You may not keep unused UB.</li>
+                  </ul>
+                </p>
+                <h4 class="arjulian">Ranger</h4>
+                <p>
+                  <ul>
+                    <li><b>Armor.</b> 8 UB towards armor. You may use any unused points towards weapons. You may not keep unused UB.</li>
+                    <li><b>Weapons.</b> 16 UB towards weapons. You may not keep unused UB.</li>
+                  </ul>
+                </p>
+                <h4 class="arjulian">Rogue</h4>
+                <p>
+                  <ul>
+                    <li><b>Armor.</b> 4 UB towards armor. You may use any unused points towards weapons. You may not keep unused UB.</li>
+                    <li><b>Weapons.</b> 11 UB towards weapons. You may not keep unused UB.</li>
+                  </ul>
+                </p>
               </div>
-              <div id="section11">
+              <div class="p-2" id="section11">
                 <h1 class="arjulian">Skills</h1>
-              
+                <p>Character creation in this campaign allows for players to customize their proficiencies in skills, tools, and languages. Refer to the following sections for proficiencies and descriptions.</p>
+                <h3 class="arjulian">Skill Proficiencies</h3>
+                <p>Listed here are available skills and their associated ability scores. Arcana and Religion have been replaced with Psionics and Mysteriums.  <br>	An important distinction for knowledge-based skills is that there are few tomes and even fewer libraries in Pergasha. After the Sundering, knowledge is primarily passed down via oral tradition, telepathically, and through visual arts.</p>
+                <h5 class="arjulian">Abilities and Associated Skills</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 700px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Ability</th>
+                    <th>Skills</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Strength</td>
+                      <td>Athletics</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Dexterity</td>
+                      <td>Acrobatics, Sleight of Hand, Stealth</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Intelligence</td>
+                      <td>History, Investigation, Mysteriums, Nature, Psionics</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Wisdom</td>
+                      <td>Animal Handling, Insight, Medicine, Perception, Survival</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Charisma</td>
+                      <td>Deception, Intimidation, Performance, Persuasion</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h4 class="arjulian">New Skills Descriptions</h4>
+                <h5 class="arjulian">Mysteriums</h5>
+                <p>Your Intelligence (Mysteriums) check measures your ability to recall lore about mysteriums, relics, devices, known areas where caches have been found, and common or known uses of these items. This skill also can assist in understanding how a mysterium or relic may work and its possible effects or function.</p>
+                <h5 class="arjulian">Psionics</h5>
+                <p>Your Intelligence (Psionics) check measures your ability to recall lore about psionic powers, psi-crystals and derivative materials, psionic orders, and creatures with psionic abilities.</p>
+
+                <h3 class="arjulian">Tool Proficiencies</h3>
+                <p>The following kits and tools are available in this setting. Certain projects are difficult to complete in nomadic society, so the very few masters that exist are often hermits that find safety in cliff dwellings or underground. Many clan and tribe leaders have invested in creating mobile stations.
+                  <ul>
+                    <li><a href="#artist">Artist's Supplies</a></li>
+                    <li><a href="#brewer">Brewer's Supplies</a></li>
+                    <li><a href="#builder">Builder's Tools</a></li>
+                    <li><a href="#cook">Cook's Utensils</a></li>
+                    <li><a href="#harvester">Harvester's Tools</a></li>
+                    <li><a href="#herbalism">Herbalism Kit</a></li>
+                    <li><a href="#jeweler">Jeweler's Tools</a></li>
+                    <li><a href="#leatherworker">Leatherworker's Tools</a></li>
+                    <li><a href="#musical">Musical Instrument</a></li>
+                    <li><a href="#poisoner">Poisoner's Kit</a></li>
+                    <li><a href="#smith">Smith's Tools</a></li>
+                    <li><a href="#thieves">Thieves' Tools</a></li>
+                    <li><a href="#tinker">Tinker's Tools</a></li>
+                  </ul>
+                </p>
+                <h4 class="arjulian">Tool Descriptions</h4>
+                <p>These special tools include the items needed to pursue a craft or trade. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>
+                <h5 class="arjulian" id="artist">Artist’s Supplies</h5>
+                <p>
+                  <i>Artisan's tools</i><br><br>	Proficiency with artist's supplies represents your ability to paint, draw, or sculpt. You also acquire an understanding of art history, which can aid you in examining works of art. Mastery in a craft is respected in Pergasha and despite the hardships of living in such a desolate place, people still seek beauty. The most accomplished artists often find themselves as respected history keepers as their work helps pass down information since most people are illiterate.
+                  <ul>
+                    <li><b>Components. </b>Artist's supplies include an easel, canvas, paints, brushes, charcoal sticks, a palette, a whittling set, and up to 5 pounds of clay if you desire it.</li>
+                    <li><b>History, Religion. </b>Your expertise aids you in uncovering lore of any sort that is attached to a work of art such as the origins of a strange mural found underground or secret meanings hidden in artwork.</li>
+                    <li><b>Investigation, Perception. </b>When you inspect a painting or a similar work of visual art, your knowledge of the practices behind creating it can grant you additional insight.</li>
+                    <li><b>Painting, Drawing and Sculpting. </b>As part of a short or long rest, you can produce a simple work of art. Although your work might lack precision, you can capture an image or a scene, or make a quick copy of a piece of art you saw. If you use clay, you may require additional time or resources to finalize the art.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Artist’s Supplies Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 600px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Paint an accurate portrait</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Whittling a small statuette</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Creating a small sculpture</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Create a painting with a hidden message</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="brewer">Brewer’s Supplies</h5>
+                <p><i>Artisan's tools</i><br><br>	Brewing is the art of crafting fermented beverages. Not only does brewery create alcoholic beverages, but the process of brewing purifies water. Fermentation takes weeks to complete but only a few hours of work for the crafter. Pergashan economy relies almost exclusively on barter, making brewed drinks an important trade good. An expert brewer has the potential of crafting drinks with interesting side effects by using unique spices and even psi-crystals or their biproducts.
+                  <ul>
+                    <li><b>Components. </b>Brewer's supplies include a large glass jug, a quantity of hops, a siphon, and several feet of tubing.</li>
+                    <li><b>Medicine. </b>This tool proficiency grants additional insight when you treat anyone suffering from alcohol poisoning or when you can use alcohol to dull pain.</li>
+                    <li><b>Mysteriums. </b>This tool proficiency grants additional insight when trying to understand possible effects of certain ingestible mysteriums.</li>
+                    <li><b>Persuasion. </b>A stiff drink can help soften the hardest heart. Your proficiency with brewer's supplies can help you ply someone with drink, giving them just enough alcohol to mellow their mood.</li>
+                    <li><b>Create Potable Water. </b>Your knowledge of brewing enables you to purify water that would otherwise be undrinkable. As part of a long rest, you can purify up to 6 rations of water, or 1 ration as part of a short rest.</li>
+                    <li><b>Brew a Restorative. </b>As part of a short rest or camping activities, you turn some potable water into a tasty, hot drink.  You use one ration of water to make 5 portions that must be enjoyed immediately. Everyone who drinks a fresh restorative regains 1 spent Hit Die. A creature can only benefit from a brewed restorative once per day.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Brewer’s Supplies Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 500px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Detect poison or impurities in a drink</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Identify alcohol</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Ignore effects of alcohol</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="builder">Builder’s Tools</h5>
+                <p><i>Artisan's tools</i><br><br>	Pergasha is a land of transient nomads. Very rarely are large, permanent structures built or maintained, but there are some regions where people make the attempt. This kit is a combination of rudimentary carpentry and masonry tools. A builder can build a simple house, a shack, a wooden cabinet, or similar items out of wood, rough or shaped stone, and even bricks given enough time.
+                 <ul>
+                    <li><b>Components. </b>Builder’s tools include a saw, hammer with nails, hatchet, square, ruler, chisel, trowel, plane, and an adze.</li>
+                    <li><b>History. </b>This tool proficiency aids you in identifying the use and the origin of wood or stone buildings, structures, or large objects.</li>
+                    <li><b>Investigation. </b>You gain additional insight when inspecting areas within structures because you know tricks of construction that can conceal areas from discovery.</li>
+                    <li><b>Perception. </b>You can spot irregularities in hand-built walls or floors, making it easier to find trap doors and secret passages.</li>
+                    <li><b>Demolition. </b>Your knowledge of building allows you to spot weak points in hand-built walls. You deal double damage to such structures with your weapon attacks.</li>
+                    <li><b>Fortify. </b>With 1 minute of work and raw materials, you can make a door or window harder to force open. Increase the DC needed to open it by 5.</li>
+                    <li><b>Temporary Shelter. </b>While setting up camp, you can construct a lean-to or a similar shelter to keep your group dry and in the shade for the duration of the rest. Because it was fashioned quickly from whatever wood or stone was available, the shelter collapses 1d3 days after being assembled.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Builder’s Tools Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 500px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Build a simple woodem structure</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Chisel a small hole in a stone wall</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Find a weak point in a stone wall</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Design a complex wooden structure</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Find a weak point in a wooden wall</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Pry apart a door</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="cook">Cook’s Utensils</h5>
+                <p><i>Artisan's tools</i><br><br>	Adventuring is a hard life. With a cook along on the journey, your meals will be much better than the typical mix of hardtack and dried fruit. Surprisingly, there are a number of unusual ingredients to be found in the desert that can grant different effects to those brave enough to eat them.
+                  <ul>
+                    <li><b>Components. </b>Cook's utensils include a metal pot, knives, forks, a stirring spoon, and a ladle.</li>
+                    <li><b>Medicine. </b>When administering treatment, you can transform medicine that is bitter or sour into a pleasing concoction.</li>
+                    <li><b>Survival. </b>When foraging for food, you can make do with ingredients you scavenge that others would be unable to transform into nourishing meals.</li>
+                    <li><b>Create Rations. </b>During a long rest, you slow-cook and preserve some fresh ingredients—usually meat or grains—to create 1d6 + 1 new, basic food rations that can be preserved. </li>
+                    <li><b>Stretch Rations. </b>While camping during a long rest, you thin out some basic rations into a simple meal, feeding two people for each ration you cook provided that you have sufficient food and supplies. If cooked successfully, everyone who eats gains 1d4 + 1 hit points. A creature can only heal hit points from this type of meal once per day.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Cook's Utensils Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 500px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Create or duplicate a typical meal</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Spot poison or impurities in food</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Create a gourmet meal</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="harvester">Harvester’s Tools</h5>
+                <p><i>Artisan’s Tools</i><br><br>	Leatherworkers, poisoners, exotic chefs, and healers all share a commonality: they all require the work of a good harvester. Quality hide, preserved poison sacs, cuts of meat from rare creatures, and important reagents only found on horns or in the bones of beasts come from the steady hand and labor of a harvester. Harvesters either go out into the world with adventurers to find these ingredients or they purchase carcasses, but the fresher the kill, the better the quality. A good harvester can make a fine living, and their work is valued by many despite its grisly nature.
+                  <ul>
+                    <li><b>Components. </b>Harvester’s tools contain a set of slender fillet and skinning knives, a bone cutter, tongs, gloves, vials, salt, twine, drying racks, wax coated paper, and burlap wrapping fabric.</li>
+                    <li><b>Nature. </b>You can use your knowledge of harvesting to help you identify useful components from creatures. You can also gauge where to find creatures that likely have components you require.</li>
+                    <li><b>Psionics. </b>You can use your harvesting skills to understand and find useful components from psionic creatures.</li>
+                    <li><b>Survival. </b>You can make the most of a carcass and get creative with a variety of uses.</li>
+                    <li><b>Harvesting. </b>You can collect useful components such as hide, bones, muscle, sinew, glands, teeth, claws, and organs from the body of a creature. These components make excellent barter to the right buyer. Example DCs are below, but depending on the creature, the condition of the carcass, and your work environment, these values can change. </li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Harvester's Tools Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 600px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Harvest simple components — teeth, claws, meat</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Harvest larger components — hide, pelt, bones</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Harvest delicate components — organs or glands</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="herbalism">Herbalism Kit</h5>
+                <p><i>Artisan’s Tools</i><br><br>	This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing. <br>	Proficiency with an herbalism kit allows you to identify plants and safely collect their useful elements.
+
+                  <ul>
+                    <li><b>Components. </b>An herbalism kit includes pouches to store herbs, clippers and leather gloves for collecting plants, a mortar and pestle, and several glass jars.</li>
+                    <li><b>Identify Plants. </b>You can identify most plants with a quick inspection of their appearance and smell.</li>
+                    <li><b>Investigation. </b>When you inspect an area overgrown with plants, your proficiency can help you pick out details and clues that others might miss.</li>
+                    <li><b>Medicine. </b>Your mastery of herbalism improves your ability to treat illnesses and wounds by augmenting your methods of care with medicinal plants. Any healing you administer gives an extra 1 hit point in recovery.</li>
+                    <li><b>Mysteriums. </b>Your knowledge of the nature and uses of herbs can add insight or help identify effects of ingestible mysteriums that have with plant components or ingredients.</li>
+                    <li><b>Nature and Survival. </b>When you travel in the wild, your skill in herbalism makes it easier to identify plants and spot sources of food that others might overlook.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Herbalism Kit Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 400px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Find plants</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Identify poison</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="jeweler">Jeweler’s Tools</h5>
+                <p><i>Artisan’s Tools</i><br><br>	Training with jeweler's tools includes the basic techniques needed to beautify gems. It also gives you expertise in identifying precious stones and possibly insight into psi-crystals and other odd gems.
+
+                  <ul>
+                    <li><b>Components. </b>Jeweler's tools consist of a small saw and hammer, files, pliers, and tweezers.</li>
+                    <li><b>Investigation. </b>When you inspect jeweled objects, your proficiency with jeweler's tools aids you in picking out clues they might hold.</li>
+                    <li><b>Identify Gems. </b>You can identify gems and determine their value at a glance.</li>
+                    <li><b>Psionics. </b>Your understanding of gems can help you gauge the value, strength, or quality of psi-crystals. This insight proves handy when you make Psionics checks related to gems or gem-encrusted items.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Jeweler's Tools Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 500px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Modify a gem's appearance</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Gauge a psi-crystal</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Determine a gem's history</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="leatherworker">Leatherworker’s Tools</h5>
+                <p><i>Artisan’s Tools</i><br><br>	Knowledge of leatherworking extends to lore concerning animal hides and their properties. It also confers knowledge of leather armor and similar goods. 
+
+                  <ul>
+                    <li><b>Components. </b>Leatherworker's tools include a knife, a small mallet, an edger, a hole punch, thread, and leather scraps.</li>
+                    <li><b>Nature. </b>You can use your knowledge of leatherworking to gauge the possible utility of a creature’s hide.</li>
+                    <li><b>Investigation. </b>You gain added insight when studying leather items or clues related to them, as you draw on your knowledge of leather to pick out details that others would overlook.</li>
+                    <li><b>Identify Hides. </b>When looking at a hide or a leather item, you can determine the source of the leather and any special techniques used to treat it. For example, you can spot the difference between leather crafted using dwarven methods and leather crafted using giant methods.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Leatherworker's Tools Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 500px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Modify a leather item's appearance</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Crafting a basic leather armor</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Determine a leather item's history</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="musical">Musical Instrument</h5>
+                <p><i>Instrument</i><br><br>	Proficiency with a musical instrument indicates you are familiar with the techniques used to play it. You also have knowledge of some songs commonly performed with that instrument. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. Each type of musical instrument requires a separate proficiency. <br><br><b>Instruments available: </b>Buzuq, Drum, Dulcimer, Ney (Reed Flute), Horn, Lute, Kisar (Lyre), Oud, Pan Flute, Qanun (Zither), Rebab, Shawm
+
+                  <ul>
+                    <li><b>History. </b>Your expertise aids you in recalling lore as much of history is passed through an oral tradition with the storyteller often accompanied by music.</li>
+                    <li><b>Performance. </b>Your ability to put on a good show is improved when you incorporate an instrument into your act.</li>
+                    <li><b>Play Music. </b>While camping during a short rest, you can play music for others. Doing well grants one party member other than yourself a point of inspiration.</li>
+                    <li><b>Compose a Tune. </b>As part of a long rest, you can compose a new tune and lyrics for your instrument. You might use this ability to impress a noble or spread scandalous rumors with a catchy tune.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Musical Instrument Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 400px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Identify a tune</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Improvise a tune</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="poisoner">Poisoner’s Kit</h5>
+                <p><i>Artisan’s Tools</i><br><br>A poisoner's kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons. <br>	Additionally, the Crafting and Harvesting Poison rules require the use of a poisoner's kit. <br>	A poisoner's kit is a favored resource for thieves, assassins, and others who engage in skulduggery. It allows you to apply poisons and create them from various materials. Your knowledge of poisons also helps you treat them.
+
+                  <ul>
+                    <li><b>Components. </b>A poisoner's kit includes glass vials, a mortar and pestle, chemicals, and a glass stirring rod.</li>
+                    <li><b>History. </b>Your training with poisons can help you when you try to recall facts about infamous poisonings.</li>
+                    <li><b>Investigation, Perception. </b>Your knowledge of poisons has taught you to handle those substances carefully, giving you an edge when you inspect poisoned objects or try to extract clues from events that involve poison.</li>
+                    <li><b>Medicine. </b>When you treat the victim of a poison, your knowledge grants you added insight into how to provide the best care to your patient.</li>
+                    <li><b>Nature, Survival. </b>Working with poisons enables you to acquire lore about which plants and animals are poisonous.</li>
+                    <li><b>Handle Poison. </b>Your proficiency allows you to handle and apply a poison without risk of exposing yourself to its effects. Also, anytime you do poison damage to a creature, you add +1 point of poison damage.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Poisoner’s Kit Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 500px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Spot a poisoned object</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Determine poisons affecting a creature</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Determine the effects of a poison</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="smith">Smith’s Tools</h5>
+                <p><i>Artisan’s Tools</i><br><br>	Smith's tools allow you to work metal, heating it to alter its shape, repair damage, or work raw ingots into useful items.
+
+                  <ul>
+                    <li><b>Components. </b>Smith's tools include hammers, tongs, charcoal, rags, and a whetstone.</li>
+                    <li><b>History. </b>Your expertise lends you additional insight when examining metal objects, such as weapons.</li>
+                    <li><b>Investigation. </b>You can spot clues and make deductions that others might overlook when an investigation involves armor, weapons, or other metalwork.</li>
+                    <li><b>Repair. </b>With access to your tools and an open flame hot enough to make metal pliable, you can restore 10 hit points to a damaged metal object for each hour of work.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Smith's Tools Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 500px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Sharpen a dull blade</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Repair a suit of armor</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Sunder a metal object</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Crafting a basic metal object</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Crafting a quality metal object</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="thieves">Thieves’ Tools</h5>
+                <p><i>Artisan’s Tools</i><br><br>	This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks. <br>	Perhaps the most common tools used by adventurers, thieves' tools are designed for picking locks and foiling traps. Proficiency with the tools also grants you a general knowledge of traps and locks.
+
+                  <ul>
+                    <li><b>Components. </b>Thieves' tools include a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers.</li>
+                    <li><b>History. </b>Your knowledge of traps grants you insight when answering questions about locations that are renowned for their traps.</li>
+                    <li><b>Investigation and Perception. </b>You gain additional insight when looking for traps, because you have learned a variety of common signs that betray their presence.</li>
+                    <li><b>Set a Trap. </b>Just as you can disable traps, you can also set them. As part of a short rest, you can create a trap using items you have on hand. The total of your check becomes the DC for someone else's attempt to discover or disable the trap. The trap deals damage appropriate to the materials used in crafting it (such as poison or a weapon) or damage equal to half the total of your check, whichever the DM deems appropriate.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Thieves’ Tools Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 400px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Pick a lock</td>
+                      <td class="text-center">Varies</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Disable a trap</td>
+                      <td class="text-center">Varies</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+                <h5 class="arjulian" id="tinker">Tinker's Tools</h5>
+                <p><i>Artisan’s Tools</i><br><br>	A set of tinker's tools is designed to enable you to repair many mundane objects and understand the inner workings of mechanical devices. Though you cannot manufacture much with tinker's tools, you can mend torn clothes, sharpen a worn sword, and patch a tattered suit of chain mail. Also, you can put together basic mechanical devices.
+
+                  <ul>
+                    <li><b>Components. </b>Tinker's tools include a variety of hand tools, thread, needles, a whetstone, scraps of cloth and leather, and a small pot of glue.</li>
+                    <li><b>History. </b>You can determine the age and origin of objects, even if you have only a few pieces remaining from the original.</li>
+                    <li><b>Investigation. </b>When you inspect a damaged object, you gain knowledge of how it was damaged and how long ago.</li>
+                    <li><b>Mysteriums. </b>You can gain insight into understanding mysteriums that have moving parts or mechanisms.</li>
+                    <li><b>Repair. </b>You can restore 10 hit points to a damaged object for each hour of work. For any object, you need access to the raw materials required to repair it. For metal objects, you need access to an open flame hot enough to make the metal pliable.</li>
+                  </ul>
+                </p>
+                <h5 class="arjulian">Tinker's Tools Activity Examples</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 500px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Activity</th>
+                    <th class="text-center">DC</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Temporarily repair a disabled device</td>
+                      <td class="text-center">10</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Repair an item in half the time</td>
+                      <td class="text-center">15</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Improvise a temporary item using scraps</td>
+                      <td class="text-center">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3 class="arjulian">Language Proficiencies</h3>
+                <p>With the loss of magic, prevalence of telepathic communication, and mass destruction of cities and libraries, most people in Pergasha are illiterate. Knowledge is passed through storytelling, telepathic bonds, and art. It is incredibly rare to find someone who reads and writes, but they are considered wise and important individuals who are both protected and hunted. <br><br> 	You must spend 1 Proficiency Point to become literate in a language you already speak. At character creation, you can only be literate in Pergashan.</p>
+                <h5 class="arjulian">Available Languages</h5>
+                <table class="table-sm table table-striped table-responsive-sm table-bordered" style="max-width: 1000px;">
+                  <thead class="thead-dark">
+                    <th class="text-center">Language</th>
+                    <th>Typical Speakers</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">Pergashan (Common)</td>
+                      <td>All</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Dwarvish</td>
+                      <td>Mals</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Giant</td>
+                      <td>Pergashans, Kin, Giants</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Draconic</td>
+                      <td>Lizardfolk, sages of mystics and history</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Primordial</td>
+                      <td>Kin with an elemental influence, Amalgamates with an elemental influence, Titans</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div id="section12">
+              <div class="p-2" id="section12">
+                <h1 class="arjulian">Feats</h1>
+                <p>At character creation, you receive one feat. You can also purchase feats using Proficiency Points, Training Points, or elect to take a feat instead of an ability score increase at 4th, 8th, 12th, 16th, and 19th levels. See <a href="feats.html">Feats</a> for the list of available feats in Pergasha.</p>
+              </div>
+              <div class="p-2" id="section13">
                 <h1 class="arjulian">Psionics</h1>
-              
+                <p><i>“Breathe in slowly, exhale, and breathe again. As your lungs open to draw air, so too does the mind open to pull in reality. And as the lungs make the air useful for the body, the mind molds reality to suit one’s needs.”</i><br>— Kalia, Lizardfolk Mystic
+                </p>
+                <p>Psionics is the power of the mind over matter and reality. If the mind believes, reality is changed, and in Pergasha, the minds of all sentient creatures have been touched by this ability. When magic was taken from the desert, the psionic web strengthened, connecting the consciousness of the ancestral entities, spirits of nature, and the very will of the land. <br>	Practitioners of psionics understand that reality is neither fixed nor objective, but phenomenical and intersubjective, and that a powerful mind can battle the current consensus of reality and impose its own. This requires physical training and mental prowess, and in most cases, the will and intelligence needed to do so are rare. Something about the nature of the Sundering has given the denizens of Pergasha a measure of innate ability. <br>Psionics are the powers of the awakened mind, a transcendental state of being in which awesome feats that defy the physical and magical rules are possible. The power of the mind alters the reality in its core, imposing its will to change the laws of reality and shaping it to their whims. While changing objective reality to subjective desires is complicated and difficult, most people in Pergasha can shift some aspect in their favor for brief moments. Only the most experienced mystic adepts become masters who slowly, painstakingly deceive reality. When they progress in their illumination, they can achieve more daunting effects effortlessly, shaping reality at their whim.</p>
+                <h3 class="arjulian">Boundaries</h3>
+                <p>Psionics draw power directly of your conscious mind, so your mind has to be sharp and sound to use them. You can’t use any of your psionic powers if you have some condition that prevents you from thinking clearly such as charmed, frightened, incapacitated, poisoned, or stunned. Also, if you are enduring great physical pain, the GM may rule that you lack the mind to access your psionic abilities. Finally, you must expend an extra Psi Point to use an ability for each level of exhaustion you have. <br>	Nevertheless, physical bounds that normally restrict other casters, such as simple physical paralysis, being restrained or held in a grapple, do not impede a psionic character to use its powers. However, you can’t use effects that require sight if you are blinded. <br>	The nature of psionics means it is often difficult to ascertain who or what is targeting you. For this reason, no one gains advantage on psionic attacks for being hidden or surprising targets. </p>
+                <h3 class="arjulian">Psionics and Rage</h3>
+                <p>	If you are a Barbarian and enter Rage, you lack the mental acuity to use psionic powers that require concentration and finesse, and you cannot switch your psionic focus. While raging, you can activate abilities from disciplines that do not require concentration so long as they are from the Immortal Order. The physical nature of that order is compatible with the state of mind of a raging individual. Psionic Talents and disciplines from orders outside of the Immortal Order cannot be used while you are raging. However, you can maintain your rage by attacking enemies with psionic abilities within the Immortal Order.</p>
+                <h3 class="arjulian">Psi Points</h3>
+                <p>You have an internal pool of mental energy that can be used to fuel effects. This energy is represented by Psi Points. Each psionic discipline describes several effects that you can create by spending a certain number of Psi Points on them. A psionic talent does not require any expenditure of Psi Points, and you can use them without any limit besides normal exhaustion.</p>
+                <h3 class="arjulian">Psychic Limit</h3>
+                <p>Your mind, powerful as it is, isn’t omnipotent…yet. You have a hard limit in which you can warp the reality consensus. This limit is represented by the maximum number of Psi Points you can spend to activate effects of psionic disciplines in a single turn. This limit includes your action, bonus action, and reaction and is based on your character level, as shown in the Psi Limit column of the Progression Chart. <br><br>	For example, as a 3rd-level character, you can spend no more than 3 Psi Points on a discipline each time you use it, independently of how many Psi Points you have. If you spend 2 points to use an action, you have 1 point left that you may spend for a bonus action or a reaction later. Budget your points wisely.</p>
+                <h3 class="arjulian">Psychic Focus</h3>
+                <p>You can focus your subconscious mind into one discipline you know to draw passive benefits from it. These benefits vary from discipline to discipline, and you can only focus on one discipline at a time until you have the Psionic Mastery feature. Your psychic focus ends when you are <i>incapacitated, frightened, charmed</i> or<i> stunned</i>, when you change your focus to another, or when you elect to do so. Some features or abilities may require for your focus to be relinquished in order to activate them. <br>	You choose your psychic focus when you finish a long rest and may shift it later as an action. You can only shift your focus once per short rest, to a maximum of three shifts each day.</p>
+                <h3 class="arjulian">Psionic Mastery</h3>
+                <p>At 11th level, your mastery over your psionic energy allows you to push your mind beyond its normal limits. Choose a discipline you know. All the benefits of its psychic focus are permanent to you and don’t count against your psychic focus limit. This enables you to choose another discipline you know to have as your psychic focus and still gain its benefits. <br>You also gain that discipline’s Mastery effects, described in each discipline. You must be able to afford the Psi Point cost if there is one. As normal, a Mastery focus still ends when you are <i>incapacitated, frightened, charmed</i> or<i> stunned</i>. <br>	You gain a second Mastery when you reach the 20th level. When you reach 17th level, you gain the Mastery Improvement feature which removes the Concentration tag on any effects of your Mastery discipline, if applicable.</p>
+                <h3 class="arjulian">Psionic Disciplines and Talents</h3>
+                <p>Psionic talents and disciplines are the heart of a mystic’s craft. They are the mental exercises and psionic formulae used to forge will into tangible effects. <br> 	Psionic disciplines were each discovered by different orders and tend to reflect their creators’ specialties. You can learn any discipline regardless of its associated order although you will benefit from using disciplines from orders that align with your base class and its primary ability score.<br>	Psionics draw power directly of your conscious mind, so your mind has to be sharp and sound to use them. You can’t use any of your psionic disciplines or talents if you have some condition that alters your mind such as <i>charmed, frightened, incapacitated, poisoned</i> or<i> stunned</i>. Being under mental stress, such as with a temporary madness, can also weirdly interact with your psionics, provoking strange effects, and for each Exhaustion level you have, your Talent’s Psi Points cost increases by 1. <br><br>See <a href="psionics.html">Psionics</a> for a detailled list of Disciplines and Talents.</p>
+                <h4 class="arjulian">Using a Discipline</h4>
+                <p>Each psionic discipline has several ways you can use it and all contained in its description. The discipline specifies the type of action and number of psi points it requires. It also details whether you must concentrate on its effects, how many targets it affects, what saving throws it requires, and so on. <br><br>	The following sections go into more detail on using a discipline. </p>
+                <h5 class="arjulian">Psychic Focus</h5>
+                <p>The Psychic Focus section of a discipline describes the benefit you gain when you choose that discipline for your psychic focus. You can only have one focus active at a time, but a focus does not require concentration as other discipline effects may.</p>
+                <h5 class="arjulian">Power Options and Psi Points</h5>
+                <p>A discipline provides different powers to activate with your Psi Points. Each power has a name, and the Psi Point cost of that option appears in parentheses after its name. You must spend that number of Psi Points to use that option while abiding by your psi limit. If you don’t have enough Psi Points left, or the cost is above your Psi limit, you can’t use the option. <br>	Some options show a range of Psi Points rather than a specific cost. To use that option, you must spend a number of points within that range while still abiding by your Psi limit. Some options let you spend additional Psi Points to increase an effect’s potency. Again, you must abide by your Psi limit, and you must spend all the points when you first use the discipline; you can’t decide to spend additional points once you see the discipline in action. <br>	Each option notes specific information about its effect, including any action required to use it and its range. </p>
+                <h5 class="arjulian">Components</h5>
+                <p>Disciplines don’t require the components that many spells require. Using a discipline requires no spoken words, gestures, or materials. The power of psionics comes from the mind. </p>
+                <h5 class="arjulian">Duration</h5>
+                <p>An effect option in a discipline specifies how long its effect lasts. <br><br><b>Instantaneous. </b>If no duration is specified, the effect of the option is instantaneous.<br><br><b>Concentration. </b>Some options require concentration to maintain their effects. This requirement is noted with “conc.” after the option’s psi point cost. The “conc.” notation is followed by the maximum duration of the concentration. For example, if an option says “conc., 1 min.,” you can concentrate on its effect for up to 1 minute. Concentrating on a discipline follows the same rules as concentrating on a spell. This rule means you can’t concentrate on two disciplines at the same time. (See chapter 10, “Spellcasting,” in the <i>Player’s Handbook</i> for how concentration works.)</p>
+                <h5 class="arjulian">Targets and Areas of Effect</h5>
+                <p>Psionic disciplines use the same rules as spells for determining targets and areas of effect, as presented in chapter 10, “Spellcasting,” of the <i>Player’s Handbook</i>. </p>
+                <h5 class="arjulian">Saving Throws and Attack Rolls</h5>
+                <p>If a discipline requires a saving throw, it specifies the type of save and the results of a successful or failed saving throw. The DC for any ability is 8 + your proficiency modifier + the modifier to the applicable ability score.  <br>	Some disciplines require you to make an attack roll to determine whether the discipline’s effect hits its target. The attack roll uses the ability determined by the discipline’s order. <br>	The discipline’s category determines which ability score is applicable. When more than one ability score is listed, you select which score you will use.
+                <ul>
+                  <li><b>Avatar: </b>Charisma or Intelligence</li>
+                  <li><b>Awakened: </b>Intelligence</li>
+                  <li><b>Far Hand: </b>Dexterity or Intelligence</li>
+                  <li><b>Immortal: </b>Strength or Constitution</li>
+                  <li><b>Nomad: </b>Intelligence or Wisdom </li>
+                </ul></p>
+                <h5 class="arjulian">Combining Psionic Effects</h5>
+                <p>The effects of different psionic disciplines add together while the durations of the disciplines overlap. Likewise, different options from a psionic discipline combine if they are active at the same time. However, a specific option from a psionic discipline doesn’t combine with itself if the option is used multiple times. Instead, the most potent effect—usually dependent on how many Psi Points were used to create the effect— applies while the durations of the effects overlap.</p>
+                <h4 class="arjulian">Using a Talent</h4>
+                <p>Psionic talents are minor abilities that require psionic aptitude but don’t drain your reservoir of psionic power. Talents are similar to disciplines and use the same rules, but with three important exceptions:
+                  <ul>
+                    <li>You can never use your psychic focus on a talent.</li>
+                    <li>Talents don’t require you to spend Psi Points to use them.</li>
+                    <li>Talents aren’t linked to Mystic Orders.</li>
+                  </ul>
+                  The DC for any talent is 8 + your proficiency modifier + your Intelligence modifier. 
+                </p>
               </div>
           </div>
         </div>
       </div>
 
     </div>
-    
+    <button id="myBtn" title="Go to top">↑</button>
     
 
     <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+    <script src="../pergasha.js"></script>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
