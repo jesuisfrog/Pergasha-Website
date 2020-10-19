@@ -1,4 +1,94 @@
+//"Login"
+var currentPath = window.location.pathname;
+var currentPage  = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+
+if(!sessionStorage.getItem("login")){
+    sessionStorage.setItem("login", "false");
+}
+if(sessionStorage.getItem("login") == "true"){
+    $('#logoutbtn').removeClass('d-none');
+    $('#notlogged').addClass('d-none');
+}else if(sessionStorage.getItem("login") == "false"){
+    $('#logoutbtn').addClass('d-none');
+    $('#notlogged').removeClass('d-none');
+}
+
+$( document ).ready(function() {
+
     
+    $.ajaxSetup({beforeSend: function(xhr){
+        if (xhr.overrideMimeType)
+        {
+          xhr.overrideMimeType("application/json");
+        }
+      }
+      });
+    
+    $('#logoutbtn').click(function(){
+        sessionStorage.setItem("login", "false");
+        localStorage.setItem("login", "false")
+        $('#logoutbtn').addClass('d-none');
+        $('#notlogged').removeClass('d-none');
+        if (currentPage == "glyphs.html") {
+            $('#glyph-list').hide();
+            $('#glyphnotlogged').children().show();
+        } else if (currentPage == "characters.html") {
+            $('.logged-in-character').hide();
+            $('.not-logged-in-character').show();
+        }
+    });
+    
+      $('#loginbtn').click(function(){
+        let username = $('#username').val();
+        let pwd = $('#pwd').val();
+        let remember = $('#remember');
+        if (currentPage == "pergasha.html") {
+            $.getJSON('login.json', function (data) {
+                if (username == data.username && pwd == data.pwd) {
+                        $('#logoutbtn').removeClass('d-none');
+                        $('#notlogged').addClass('d-none');
+                        sessionStorage.setItem("login", "true");
+                }else{
+                    alert('Invalid Login Credentials');
+                }
+            });  
+        } else {
+            $.getJSON('../login.json', function (data) {
+                if (username == data.username && pwd == data.pwd) {
+                        $('#logoutbtn').removeClass('d-none');
+                        $('#notlogged').addClass('d-none');
+                        sessionStorage.setItem("login", "true");
+                        if (currentPage == "glyphs.html") {
+                            $('#glyph-list').show();
+                            $('#glyphnotlogged').children().hide();
+                        } else if (currentPage == "characters.html") {
+                            $('.logged-in-character').show();
+                            $('.not-logged-in-character').hide();
+                        }
+                }else{
+                    alert('Invalid Login Credentials');
+                }
+            });  
+        }
+      });
+      
+    $('#showPwd').click(function(){
+        var x = document.getElementById("pwd");
+        if (x.type === "password") {
+            x.type = "text";
+        } else if(x.type === "text") {
+            x.type = "password";
+        }
+    });
+});
+
+
+
+
+//"Login"
+
+
+
 function scrollFunction() {
     if ((document.body.scrollTop > 50 &&  window.screen.width > 770)|| (document.documentElement.scrollTop > 50 &&  window.screen.width > 770)) {
     mybutton.style.display = "block";
@@ -1272,12 +1362,6 @@ function featPage() {
 }
 //FEATS END
 
-//TRAINING START
-// function trainingPage() {
-
-// }
-//TRAINING END
-
 //PSIONICS START
 function psionicsPage(){
 
@@ -1370,16 +1454,18 @@ function itemsPage(){
 }
 //ITEMS END
 
-//LOCATIONS START
-
-//LOCATIONS END
-
-//NPCS START
-
-//NPCS END
-
 //GLYPHS START
+function glyphsPage(){
+    if(sessionStorage.getItem("login") == "true"){
+        $('#glyph-list').show();
+        $('#glyphnotlogged').children().hide();
+    }else if(sessionStorage.getItem("login") == "false"){
+        $('#glyph-list').hide();
+        $('#glyphnotlogged').children().show();
+    }
 
+    // glyphnotlogged
+}
 //GLYPHS END
 
 //RULES START
@@ -1402,3 +1488,16 @@ function rulesPage(){
 }
 
 //RULES END
+
+//CHARACTERS START 
+function charactersPage(){
+    if(sessionStorage.getItem("login") == "true"){
+        $('.logged-in-character').show();
+        $('.not-logged-in-character').hide();
+    }else if(sessionStorage.getItem("login") == "false"){
+        $('.logged-in-character').hide();
+        $('.not-logged-in-character').show();
+    }
+    
+}
+//CHARACTERS END

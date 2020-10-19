@@ -33,6 +33,15 @@ body{
     height: 59px;
 }
 
+#show-pwd-label{
+    font-size: 0.8rem;
+    color: white;
+}
+
+.login-input{
+    max-width: 150px;
+}
+
 .table-header{
     background-color: #fdf1dc!important;
 }
@@ -517,4 +526,11 @@ body{
 #rules-container .nav-pills .nav-link.active{
     color: #fff;
     background-color: #383d41;
+}
+
+#cards-container .flip-card-front .centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

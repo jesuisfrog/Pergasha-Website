@@ -12,12 +12,12 @@
 
     <title>Characters - Pergasha</title>
 </head>
-<body>
+<body onload="charactersPage()">
 
 
     <header>
 
-        <nav class="navbar navbar-dark navbar-expand-lg">
+        <nav class="navbar navbar-dark navbar-expand-xl">
             <div class="navbar-brand  mr-4">
                 <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
             </div>
@@ -25,7 +25,7 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="../pergasha.html">Home</a>
                 </li>
@@ -58,10 +58,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="rules.html">Rules</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="admin.html">Admin</a>
-                </li> -->
             </ul>
+            <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
+                <div class="d-none" id="notlogged">
+                    <form class="form-inline">
+                        <div class="form-group form-group-sm">
+                            <input type="text" class="form-control form-control-sm mr-sm-2 login-input" id="username" placeholder="Username">
+                            <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd" placeholder="Password">
+                            <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
+                        </div>
+                    </form>
+                    <input type="checkbox" id="showPwd" class="mr-1"  autocomplete="off"><span id="show-pwd-label">Show Password</span> 
+                </div>
             </div>
           </nav>
 
@@ -118,11 +126,14 @@
 
  
   <div class="row justify-content-center mt-3" id="cards-container">
+    <h2 class="arjulian" id="noresult" style="display: none;">The party hasn't met any character matching your search.</h2>
 
     <div class="flip-card m-2 gem pergashan sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/eoni.jpg" style="height: 380px; width: 300px;" alt="Eoni">
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Eoni">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/eoni.jpg" style="display: none; height: 380px; width: 300px;" alt="Eoni">
           <span class="character-name">Eoni</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary tribe-tag">Gem Tribe</span>
@@ -139,7 +150,9 @@
     <div class="flip-card m-2 storm ormicans touched-kin sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/barashtu.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Barashtu">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/barashtu.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Barashtu</span>
           <div class="text-center">
             <span class="badge badge-success">Ormican</span>
@@ -158,7 +171,9 @@
     <div class="flip-card m-2 sand touched-kin sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/kalar.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Kalar">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/kalar.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Kalar</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary tribe-tag">Sand Tribe</span>
@@ -176,7 +191,9 @@
     <div class="flip-card m-2 sand touched-kin sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/valar-emp.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Valar">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/valar-emp.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Valar</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary tribe-tag">Sand Tribe</span>
@@ -194,7 +211,9 @@
     <div class="flip-card m-2 tribeless lizardfolk sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/jax-emp.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jax">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/jax-emp.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Jax</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary">Tribeless</span>
@@ -212,7 +231,9 @@
     <div class="flip-card m-2 ormicans touched-kin rovers sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/jade.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jade">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/jade.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Jade</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Ormicans</span>
@@ -230,7 +251,9 @@
     <div class="flip-card m-2 cloud touched-kin council seers sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/fareyes.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Wum'pung">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/fareyes.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Wum'pung</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary">Cloud</span>
@@ -250,7 +273,9 @@
     <div class="flip-card m-2 delvers touched-kin sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/muno.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Muno">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/muno.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Muno</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Delvers</span>
@@ -267,7 +292,9 @@
     <div class="flip-card m-2 delvers touched-kin sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/sashana.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Sashana">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/sashana.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Sashana</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Delvers</span>
@@ -284,7 +311,9 @@
     <div class="flip-card m-2 delvers other sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/tukuk.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Tukuk">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/tukuk.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Tukuk</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Delvers</span>
@@ -300,7 +329,9 @@
     <div class="flip-card m-2 other drifters sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/mimi.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Mimi">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/mimi.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Mimi</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Drifters</span>
@@ -317,7 +348,9 @@
     <div class="flip-card m-2 other drifters sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/trik.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Trik">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/trik.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Trik</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Drifters</span>
@@ -334,7 +367,9 @@
     <div class="flip-card m-2 fire pergashan sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/matilla.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Matilla">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/matilla.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Matilla</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary">Fire</span>
@@ -351,7 +386,9 @@
     <div class="flip-card m-2 gem pergashan inquisitors sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/jurani.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jurani">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/jurani.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Jurani</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Inquisitors</span>
@@ -369,7 +406,9 @@
     <div class="flip-card m-2 lizardfolk tribeless sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/hako.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Hako">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/hako.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Hako</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary">Tribeless</span>
@@ -386,7 +425,9 @@
     <div class="flip-card m-2 lizardfolk tribeless sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/rix.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Rix">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/rix.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Rix</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary">Tribeless</span>
@@ -403,7 +444,9 @@
     <div class="flip-card m-2 nesters seers pergashan sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/avara.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Avara">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/avara.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Avara</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Nesters</span>
@@ -421,7 +464,9 @@
     <div class="flip-card m-2 nesters touched-kin council sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/chalise.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Chalise">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/chalise.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Chalise</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Council</span>
@@ -440,7 +485,9 @@
     <div class="flip-card m-2 sand pergashan  sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/vina.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Vina">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/vina.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Vina</span>
           <div class="character-tag text-center">
             <span class="badge badge-secondary">Sand</span>
@@ -458,7 +505,9 @@
     <div class="flip-card m-2 storm pergashan council sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/xianetta.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Xianetta">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/xianetta.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Xianetta</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Council</span>
@@ -477,7 +526,9 @@
     <div class="flip-card m-2 other sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/qwame.jpg" style="height: 380px; width: 300px;" >
+          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Vi'Qwame">
+          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+          <img class="logged-in-character" src="../assets/characters/qwame.jpg" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Vi'Qwame</span>
           <div class="character-tag text-center">
             <!-- <span class="badge badge-success">Organization</span>
@@ -495,7 +546,7 @@
     <!-- <div class="flip-card m-2 TRIBE RACE sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="../assets/characters/" style="height: 380px; width: 300px;" >
+          <img src="../assets/characters/" style="display: none; height: 380px; width: 300px;" >
           <span class="character-name">Name</span>
           <div class="character-tag text-center">
             <span class="badge badge-success">Organization</span>
@@ -510,15 +561,17 @@
         </div>
       </div>
     </div> -->
+    
 
 
   </div>
     
     <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="../pergasha.js"></script>
     <script>
 
   $(document).ready(function() {
@@ -596,7 +649,6 @@
             } else if (eventObject.target.id == 'and') {
               for (const card of cards) {
                 let filterCheck = true;
-                console.log(activeFilters);
                 activeFilters.forEach(filter =>{
                   if (!card.className.includes(filter.slice(1))) {
                     filterCheck = false;
@@ -611,9 +663,14 @@
                 $(filter).show(); 
               });
             } 
+            if($('.flip-card:visible').length == 0){
+              $('#noresult').show();
+            }else{
+              $('#noresult').hide();
+            }; 
     });
 
-    check.click(function(eventObject){
+    check.click(function(eventObject){ 
       cards.hide();        
       var filter = "." + eventObject.target.id;
       
@@ -641,7 +698,12 @@
         activeFilters.forEach(filter => {
           $(filter).show(); 
         });
-      }   
+      }
+      if($('.flip-card:visible').length == 0){
+        $('#noresult').show();
+      }else{
+        $('#noresult').hide();
+      };   
     });
   });
 
