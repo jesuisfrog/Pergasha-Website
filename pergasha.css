@@ -129,6 +129,10 @@ body{
       max-width: 100%!important;
     }
 
+    
+ }
+
+ @media (max-width: 1072.98px) { 
     #rules-container #myScrollspy{
         display: none!important;
     }
@@ -140,7 +144,7 @@ body{
         max-width: 100%!important;
         flex: 1 0!important;
     }
- }
+}
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { 
@@ -517,6 +521,7 @@ body{
     margin-bottom: 1rem;
   }
 
+
   #rules-container .ruleBoxTitle{
     text-align: center;
     color: white;
@@ -533,4 +538,8 @@ body{
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#rules-container .section-title{
+    color: #ca1b13;
 }
