@@ -76,75 +76,83 @@
     <div class="container-fluid d-flex flex-column " id="class-container">
 
       <div class="row mt-5 mb-5 flex-wrap justify-content-center container-fluid" id="class-container-top">
-        <ul class="list-group col  align-self-start accordion mb-5 class-left-container" id="class-selection">
-          <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#barbarian-archetypes" id="barbarian">
-            <span class="nav-link class-nav-item text-reset" id="barbarian-name">Barbarian</span>
-            <span class="badge badge-secondary badge-pill" id="barbarian-pill">6</span>
-          </li>
-          <div class="collapse archetypes" id="barbarian-archetypes" data-parent="#class-selection">
-            <ul class="list-group flex-column">
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="ancestral-guardian-archetype">Ancestral Guardian</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="battlerager-archetype">Battlerager</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="beast-archetype">Beast</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="berserker-archetype">Berserker</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="primal-warrior-archetype">Primal Warrior</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="totem-warrior-archetype">Totem Warrior</li>
-              </ul>
-          </div>
-          
-          <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#fighter-archetypes" id="fighter">
-            <span class="nav-link class-nav-item text-reset" id="fighter-name">Fighter</span>
-            <span class="badge badge-secondary badge-pill" id="fighter-pill">7</span>           
-          </li>
-          <div class="collapse archetypes" id="fighter-archetypes" data-parent="#class-selection">
-            <ul class="list-group flex-column">
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="battle-master-archetype">Battle Master</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="brute-archetype">Brute</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="cavalier-archetype">Cavalier</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="champion-archetype">Champion</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="psi-knight-archetype">Psi Knight</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="sharpshooter-archetype">Sharpshooter</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="warcaller-archetype">Warcaller</li>
-              </ul>
-          </div>
-          <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#monk-archetypes" id="monk">
-            <span class="nav-link class-nav-item text-reset" id="monk-name">Monk</span>
-            <span class="badge badge-secondary badge-pill" id="monkipill">5</span>
-          </li>
-          <div class="collapse archetypes" id="monk-archetypes" data-parent="#class-selection">
-            <ul class="list-group flex-column">
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="drunken-master-archetype">Drunken Master</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="kensei-archetype">Kensei</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="long-death-archetype">Long Death</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="open-hand-archetype">Open Hand</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="soul-knife-archetype">Soul Knife</li>
-              </ul>
-          </div>
-          <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ranger-archetypes" id="ranger">
-            <span class="nav-link class-nav-item text-reset" id="ranger-name">Ranger</span>
-            <span class="badge badge-secondary badge-pill" id="ranger-pill">3</span>
-          </li>
-          <div class="collapse archetypes" id="ranger-archetypes" data-parent="#class-selection">
-            <ul class="list-group flex-column">
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="dervish-archetype">Dervish</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="doppelkin-archetype">Doppelkin Master</li>
-                <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="slayer-archetype">Slayer</li>
-              </ul>
-          </div>
-          <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#rogue-archetypes" id="rogue">
-            <span class="nav-link class-nav-item text-reset" id="rogue-name">Rogue</span>
-            <span class="badge badge-secondary badge-pill" id="rogue-pill">4</span>
+        <div class="col class-left-container">
+          <ul class="list-group align-self-start accordion mb-5" id="class-selection">
+            <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#barbarian-archetypes" id="barbarian" onclick="resetCoreFeaturesButton()">
+              <span class="nav-link class-nav-item text-reset" id="barbarian-name">Barbarian</span>
+              <span class="badge badge-secondary badge-pill" id="barbarian-pill">6</span>
             </li>
-            <div class="collapse archetypes" data-parent="#class-selection" id="rogue-archetypes">
+            <div class="collapse archetypes" id="barbarian-archetypes" data-parent="#class-selection">
               <ul class="list-group flex-column">
-                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="assassin-archetype">Assassin</li>
-                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="inquisitive-archetype">Inquisitive</li>
-                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="psi-assassin-archetype">Psi Assassin</li>
-                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="scout-archetype">Scout</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="ancestral-guardian-archetype" onclick="resetCoreFeaturesButton()">Ancestral Guardian</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="battlerager-archetype" onclick="resetCoreFeaturesButton()">Battlerager</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="beast-archetype" onclick="resetCoreFeaturesButton()">Beast</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="berserker-archetype" onclick="resetCoreFeaturesButton()">Berserker</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="primal-warrior-archetype" onclick="resetCoreFeaturesButton()">Primal Warrior</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="totem-warrior-archetype" onclick="resetCoreFeaturesButton()">Totem Warrior</li>
                 </ul>
             </div>
+            
+            <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#fighter-archetypes" id="fighter" onclick="resetCoreFeaturesButton()">
+              <span class="nav-link class-nav-item text-reset" id="fighter-name">Fighter</span>
+              <span class="badge badge-secondary badge-pill" id="fighter-pill">7</span>           
+            </li>
+            <div class="collapse archetypes" id="fighter-archetypes" data-parent="#class-selection">
+              <ul class="list-group flex-column">
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="battle-master-archetype" onclick="resetCoreFeaturesButton()">Battle Master</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="brute-archetype" onclick="resetCoreFeaturesButton()">Brute</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="cavalier-archetype" onclick="resetCoreFeaturesButton()">Cavalier</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="champion-archetype" onclick="resetCoreFeaturesButton()">Champion</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="psi-knight-archetype" onclick="resetCoreFeaturesButton()">Psi Knight</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="sharpshooter-archetype" onclick="resetCoreFeaturesButton()">Sharpshooter</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="warcaller-archetype" onclick="resetCoreFeaturesButton()">Warcaller</li>
+                </ul>
+            </div>
+            <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#monk-archetypes" id="monk" onclick="resetCoreFeaturesButton()">
+              <span class="nav-link class-nav-item text-reset" id="monk-name">Monk</span>
+              <span class="badge badge-secondary badge-pill" id="monkipill">5</span>
+            </li>
+            <div class="collapse archetypes" id="monk-archetypes" data-parent="#class-selection">
+              <ul class="list-group flex-column">
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="drunken-master-archetype" onclick="resetCoreFeaturesButton()">Drunken Master</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="kensei-archetype" onclick="resetCoreFeaturesButton()">Kensei</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="long-death-archetype" onclick="resetCoreFeaturesButton()">Long Death</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="open-hand-archetype" onclick="resetCoreFeaturesButton()">Open Hand</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="soul-knife-archetype" onclick="resetCoreFeaturesButton()">Soul Knife</li>
+                </ul>
+            </div>
+            <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#ranger-archetypes" id="ranger" onclick="resetCoreFeaturesButton()">
+              <span class="nav-link class-nav-item text-reset" id="ranger-name">Ranger</span>
+              <span class="badge badge-secondary badge-pill" id="ranger-pill">3</span>
+            </li>
+            <div class="collapse archetypes" id="ranger-archetypes" data-parent="#class-selection">
+              <ul class="list-group flex-column">
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="dervish-archetype" onclick="resetCoreFeaturesButton()">Dervish</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="doppelkin-archetype" onclick="resetCoreFeaturesButton()">Doppelkin Master</li>
+                  <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="slayer-archetype" onclick="resetCoreFeaturesButton()">Slayer</li>
+                </ul>
+            </div>
+            <li class="list-group-item list-group-item-action list-group-item-secondary d-flex justify-content-between align-items-center nav-item" data-toggle="collapse" role="button" aria-expanded="false"  data-target="#rogue-archetypes" id="rogue" onclick="resetCoreFeaturesButton()">
+              <span class="nav-link class-nav-item text-reset" id="rogue-name">Rogue</span>
+              <span class="badge badge-secondary badge-pill" id="rogue-pill">4</span>
+              </li>
+              <div class="collapse archetypes" data-parent="#class-selection" id="rogue-archetypes">
+                <ul class="list-group flex-column">
+                    <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="assassin-archetype" onclick="resetCoreFeaturesButton()">Assassin</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="inquisitive-archetype" onclick="resetCoreFeaturesButton()">Inquisitive</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="psi-assassin-archetype" onclick="resetCoreFeaturesButton()">Psi Assassin</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary nav-item" role="button" id="scout-archetype" onclick="resetCoreFeaturesButton()">Scout</li>
+                  </ul>
+              </div>
+            
+          </ul>
+  
+          <div class="text-center">
+            <button type="button" class="btn btn-outline-secondary text-center mb-2 align-self-center" onclick="toggleCoreFeatures()" id="coreFeatureToggle" style="box-shadow: none;">Hide Core Features</button>
+          </div>
           
-        </ul>
+        </div>
+        
         
         <div class="col class-right-container">
           <table class="table-sm table-striped shadow w-100" id="class-table">
@@ -332,7 +340,10 @@
         
       </div>
 
+      
+
       <div class="row mb-5 flex-wrap justify-content-center container-fluid" id="class-container-bottom">
+
         <div class="col mb-5  class-left-container">
           <table class="shadow" id="prof-box">
               <tbody>
@@ -367,13 +378,15 @@
               </tbody>
           </table>
         </div>
-        <div class="col class-right-container" id="">
-          <table class="shadow" id="class-feature-table">
+
+        <div class="col class-right-container">
+          <table class="shadow w-100" id="class-feature-table">
             <tr>
               <th class="class-border" colspan="6"></th>
             </tr>
+            <tr class="text-center" style="display: none;" id="coreHidden"><td><i>The core class features are currently hidden.</i></td></tr>
             <tbody id="class-feature-body">
-              
+
             </tbody>  
             <tr>
               <th class="class-border border-0" colspan="6"></th>
@@ -401,6 +414,41 @@
             section.style.display = "none"
         } else {
             section.style.display = "block"
+        }
+    }
+
+    function resetCoreFeaturesButton(){
+      var button = document.getElementById('coreFeatureToggle');
+      var disclaimer = document.getElementById('coreHidden');
+      if (button.innerText.includes('Show Core Features')) {
+            disclaimer.style.display = "none";
+            button.innerText = 'Hide Core Features';
+        }
+    }
+
+    function toggleCoreFeatures() {
+        var core = document.getElementsByClassName('coreFeature');
+        var button = document.getElementById('coreFeatureToggle');
+        var toggle = false;
+        var disclaimer = document.getElementById('coreHidden');
+        console.log(disclaimer);
+        if (button.innerText.includes('Hide Core Features')) {
+            toggle = true;
+            button.innerText = 'Show Core Features';
+        } else {
+            toggle = false;
+            button.innerText = 'Hide Core Features';
+        }
+        if (toggle) {
+          disclaimer.style.display = "table-row";
+          for (let index = 0; index < core.length; index++) {
+            core[index].style.display = "none"
+          }
+        } else {
+          disclaimer.style.display = "none";
+          for (let index = 0; index < core.length; index++) {
+            core[index].style.display = "block"
+          }
         }
     }
 
