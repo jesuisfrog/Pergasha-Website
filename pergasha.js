@@ -192,21 +192,23 @@ function classPage() {
                 '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="guided">Guided by the Spirits</span><p>Your ancestral spirits guide you in battle and help you foresee danger. You may use a bonus action to receive momentary insights to improve your odds of success. For the next minute, whenever you make an attack roll, a saving throw, or an ability check, you roll a d4 and add it to the total. Once you use this ability, you cannot do so again until you complete a long rest.</p></td></tr>',
                 // Vengeful Ancestors
                 '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="vengefulAncestors">Vengeful Ancestors</span><p>Your ancestral spirits grow powerful enough to retaliate. When you use your Spirit Shield to reduce the damage of an attack, the attacker takes an amount of psychic damage equal to the damage that your Spirit Shield prevents.</p></td></tr>']
-        },{
-            archetypeName: "<a href='#battlerager'>Path of the Battlerager</a>",
-            archetypeFeatures: ["<a href='#battleragerArmor'>Battlerager Armor</a>","<a href='#recklessAbandon'>Reckless Abandon</a>","<a href='#battleragerCharge'>Battlerager Charge</a>","<a href='#spikedRetribution'>Spiked Retribution</a>"],
-            archetypeFeaturesDesc: [
-                // Battlerager
-                '<tr><td><span class="class-feature-title class-feature-archetype" id="battlerager">Path of the Battlerager</span><p>Battleragers barbarians specialize in wearing bulky, spiked armor and throwing themselves into combat, striking with their body itself and giving themselves over to the fury of battle.</p></td></tr>',
-                // Battlerager Armor
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="battleragerArmor">Battlerager Armor</span><p>When you choose this path at 3rd level, you gain the ability to use spiked armor as a weapon.</p><p>While you are wearing spiked armor and are raging, you can use a bonus action to make one melee weapon attack with your armor spikes at a target within 5 feet of you. If the attack hits, the spikes deal 1d4 piercing damage. You use your Strength modifier for the attack and damage rolls.</p><p>Additionally, when you use the Attack action to grapple a creature, the target takes 3 piercing damage if your grapple check succeeds.</p></td></tr>',
-                // Reckless Abandon
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="recklessAbandon">Reckless Abandon</span><p>Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish if any of them are left when your rage ends.</p></td></tr>',
-                // Battlerager Charge
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="battleragerCharge">Battlerager Charge</span><p>Beginning at 10th level, you can take the Dash action as a bonus action while you are raging.</p></td></tr>',
-                // Spiked Retribution
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="spikedRetribution">Spiked Retribution</span><p>Starting at 14th level, when a creature within 5 feet of you hits you with a melee attack, the attacker takes 3 piercing damage if you are raging, aren\'t incapacitated, and are wearing spiked armor.</p></td></tr>']
-        },{ 
+        }
+        // ,{
+        //     archetypeName: "<a href='#battlerager'>Path of the Battlerager</a>",
+        //     archetypeFeatures: ["<a href='#battleragerArmor'>Battlerager Armor</a>","<a href='#recklessAbandon'>Reckless Abandon</a>","<a href='#battleragerCharge'>Battlerager Charge</a>","<a href='#spikedRetribution'>Spiked Retribution</a>"],
+        //     archetypeFeaturesDesc: [
+        //         // Battlerager
+        //         '<tr><td><span class="class-feature-title class-feature-archetype" id="battlerager">Path of the Battlerager</span><p>Battleragers barbarians specialize in wearing bulky, spiked armor and throwing themselves into combat, striking with their body itself and giving themselves over to the fury of battle.</p></td></tr>',
+        //         // Battlerager Armor
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="battleragerArmor">Battlerager Armor</span><p>When you choose this path at 3rd level, you gain the ability to use spiked armor as a weapon.</p><p>While you are wearing spiked armor and are raging, you can use a bonus action to make one melee weapon attack with your armor spikes at a target within 5 feet of you. If the attack hits, the spikes deal 1d4 piercing damage. You use your Strength modifier for the attack and damage rolls.</p><p>Additionally, when you use the Attack action to grapple a creature, the target takes 3 piercing damage if your grapple check succeeds.</p></td></tr>',
+        //         // Reckless Abandon
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="recklessAbandon">Reckless Abandon</span><p>Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish if any of them are left when your rage ends.</p></td></tr>',
+        //         // Battlerager Charge
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="battleragerCharge">Battlerager Charge</span><p>Beginning at 10th level, you can take the Dash action as a bonus action while you are raging.</p></td></tr>',
+        //         // Spiked Retribution
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="spikedRetribution">Spiked Retribution</span><p>Starting at 14th level, when a creature within 5 feet of you hits you with a melee attack, the attacker takes 3 piercing damage if you are raging, aren\'t incapacitated, and are wearing spiked armor.</p></td></tr>']
+        // }
+        ,{ 
             archetypeName: "<a href='#beast'>Path of the Beast</a>",
             archetypeFeatures: ["<a href='#formBeast'>Form of the Beast</a>","<a href='#bestialSoul'>Bestial Soul</a>","<a href='#infectiousFury'>Infectious Fury</a>","<a href='#hunt'>Call the Hunt</a>"],
             archetypeFeaturesDesc: [
@@ -220,21 +222,23 @@ function classPage() {
                 '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="infectiousFury">Infectious Fury</span><p>Your natural weapons become infused with your rabid fury. While you are raging and hit a target with your natural weapon, the target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the two effects (your choice):</p><ul><li>The target must use its reaction to make a melee attack against another creature of your choice that you can see.</li><li>Target takes 2d12 psychic damage. You can use this feature a number of times equal to your Constitution modifier (a minimum of once).</li></ul><p>You regain all expended uses when you finish a long rest.</p></td></tr>',
                 //Call of the Hunt
                 '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="hunt">Call the Hunt</span><p></p>The beast within grows so powerful that you can spread its ferocity to your allies. When you enter your rage, you can choose a number of willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature).<p>Until your rage ends, the chosen creatures gain the Reckless Attack feature and you have advantage on saving throws against being frightened. You also gain 5 temporary hit points for each creature that accepts the benefit. You can use this feature a number of times equal to your Constitutionmodifier (a minimum of once). You regain all expended uses when you finish a long rest.</p></td></tr>']
-        },{
-            archetypeName: "<a href='#berserker'>Path of the Berserker</a>",
-            archetypeFeatures: ["<a href='#frenzy'>Frenzy</a>","<a href='#mindlessRage'>Mindless Rage</a>","<a href='#intimidatingPresence'>Intimidating Presence</a>","<a href='#retaliation'>Retaliation</a>"],
-            archetypeFeaturesDesc: [
-                // Berserker
-                '<tr><td><span class="class-feature-title class-feature-archetype" id="berserker">Path of the Berserker</span><p>For some barbarians, rage is a means to an end—that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker\'s rage, you thrill in the chaos of battle, heedless of your own health or well-being.</p></td></tr>',
-                // Frenzy
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="frenzy">Frenzy</span><p>Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion.</p></td></tr>',
-                // Mindless Rage
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="mindlessRage">Mindless Rage</span><p>Beginning at 6th level, you can\'t be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.</p></td></tr>',
-                // Intimidating Presence
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="intimidatingPresence">Intimidating Presence</span><p>Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.</p><p>If the creature succeeds on its saving throw, you can\'t use this feature on that creature again for 24 hours.</p></td></tr>',
-                // Retaliation
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="retaliation">Retaliation</span><p>Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature.</p></td></tr>']
-        },{
+        }
+        // ,{
+        //     archetypeName: "<a href='#berserker'>Path of the Berserker</a>",
+        //     archetypeFeatures: ["<a href='#frenzy'>Frenzy</a>","<a href='#mindlessRage'>Mindless Rage</a>","<a href='#intimidatingPresence'>Intimidating Presence</a>","<a href='#retaliation'>Retaliation</a>"],
+        //     archetypeFeaturesDesc: [
+        //         // Berserker
+        //         '<tr><td><span class="class-feature-title class-feature-archetype" id="berserker">Path of the Berserker</span><p>For some barbarians, rage is a means to an end—that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker\'s rage, you thrill in the chaos of battle, heedless of your own health or well-being.</p></td></tr>',
+        //         // Frenzy
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="frenzy">Frenzy</span><p>Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion.</p></td></tr>',
+        //         // Mindless Rage
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="mindlessRage">Mindless Rage</span><p>Beginning at 6th level, you can\'t be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.</p></td></tr>',
+        //         // Intimidating Presence
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="intimidatingPresence">Intimidating Presence</span><p>Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.</p><p>If the creature succeeds on its saving throw, you can\'t use this feature on that creature again for 24 hours.</p></td></tr>',
+        //         // Retaliation
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="retaliation">Retaliation</span><p>Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature.</p></td></tr>']
+        // }
+        ,{
             archetypeName: "<a href='#primalWarrior'>Path of the Primal Warrior</a>",
             archetypeFeatures: ["<a href='#brutalAttack'>Brutal Attack</a>","<a href='#brutality'>Brutality</a>","<a href='#brutalities'>Brutalities</a>","<a href='#animalInstincts'>Animal Instincts</a>","<a href='#robustConstitution'>Robust Constitution</a>","<a href='#colossalWeapon'>Colossal Weapon Master</a>"],
             archetypeFeaturesDesc: [
@@ -691,21 +695,23 @@ function classPage() {
                 '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="bond">Greater Bond</span><p>Your companion can now take on a Huge form, gaining more inventory space with its size increase. In addition, your bond has grown so powerful with your companion that you can try to save one another from disaster. If your doppelkin is about to drop to 0 hit points, you can use your reaction and expend 1 Hit Die to have it drop to 1 hit point instead. Alternatively, if you are about to drop to 0 hit points, your doppelkin will use its reaction and expend 1 Hit Die if it has any left to have you drop to 1 hit point instead.</p></td></tr>',
                 //Superior Doppelkin
                 '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="superior">Superior Doppelkin</span><p>When you use a bonus action to command the doppelkin to make a special attack with an adaptation, it can also make one weapon attack.</p></td></tr>']
-        },{
-            archetypeName: "<a href='#slayer'>Slayer</a>",
-            archetypeFeatures: ["<a href='#superiority'>Martial Superiority</a>","<a href='#mind'>Slayer’s Mind</a>","<a href='#defense'>Slayer’s Defense</a>","<a href='#counter'>Slayer's Counter</a>"],
-            archetypeFeaturesDesc: [
-                //Slayer
-                '<tr><td><span class="class-feature-title class-feature-archetype" id="slayer">Slayer</span><p>You have dedicated yourself to hunting down the worst of that the wastes have to offer. You are a bulwark between the remnants of civilization that remain and the terrors of the wilderness. As you walk the Slayer’s path, you have honed your martial prowess to become the ultimate defender of the balance between people and the natural order.</p></td></tr>',
-                //Martial Superiority
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="superiority">Martial Superiority</span><p>You learn <i>maneuvers</i> that are fueled by special dice called <i>superiority dice</i>.</p><p><b>Maneuvers.</b> You learn two maneuvers of your choice, which are chosen from the list of maneuvers available to fighters with the Battle Master archetype. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack.</p><p>You learn one additional maneuver of your choice at 7th, 11th, and 15th levels. Each time you learn a new maneuver, you can also replace one maneuver you know with a different one.</p><p><b>Superiority Dice.</b> You have 2 superiority dice, which are d8s. A superiority die is expended when you use it. You regain all your expended superiority dice when you finish a short or long rest.</p><p>You gain an additional superiority die at 7th, 11th, and 15th levels.</p><p><b>Saving Throws.</b> Some of your maneuvers require your target to make a saving throw to resist the maneuver\'s effects.</p><p class="text-center"><b>Maneuver Saving Throw DC</b> = 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice)</p></td></tr>',
-                //Slayer's Mind
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="mind">Slayer’s Mind</span><p>You gain extra resilience against your prey\'s assaults on your mind and body. Whenever the target of your marked quarry forces you to make a saving throw and whenever you make an ability check to escape that target\'s grapple, add 1d6 to your roll.</p></td></tr>',
-                //Slayer's Defense
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="defense">Slayer’s Defense</span><p>Choose one of the following options</p><p><b>Evasion.</b> You can nimbly dodge out of the way of certain area effects, such as a duneworm’s acid spray or an exploding mysterium. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p><p><b>Stand Against the Tide.</b> When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice</p><p><b>Uncanny Dodge. </b>When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack\'s damage against you.</p></td></tr>',
-                //Slayer's Counter
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="counter">Slayer\'s Counter</span><p>You gain the ability to counterattack when your prey tries to sabotage you. If the target of your marked quarry forces you to make a saving throw, you can use your reaction to make one weapon attack against the quarry. You make this attack immediately before making the saving throw. If your attack hits, your save automatically succeeds in addition to the attack\'s normal effects</p></td></tr>']
-        }]
+        }
+        // ,{
+        //     archetypeName: "<a href='#slayer'>Slayer</a>",
+        //     archetypeFeatures: ["<a href='#superiority'>Martial Superiority</a>","<a href='#mind'>Slayer’s Mind</a>","<a href='#defense'>Slayer’s Defense</a>","<a href='#counter'>Slayer's Counter</a>"],
+        //     archetypeFeaturesDesc: [
+        //         //Slayer
+        //         '<tr><td><span class="class-feature-title class-feature-archetype" id="slayer">Slayer</span><p>You have dedicated yourself to hunting down the worst of that the wastes have to offer. You are a bulwark between the remnants of civilization that remain and the terrors of the wilderness. As you walk the Slayer’s path, you have honed your martial prowess to become the ultimate defender of the balance between people and the natural order.</p></td></tr>',
+        //         //Martial Superiority
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="superiority">Martial Superiority</span><p>You learn <i>maneuvers</i> that are fueled by special dice called <i>superiority dice</i>.</p><p><b>Maneuvers.</b> You learn two maneuvers of your choice, which are chosen from the list of maneuvers available to fighters with the Battle Master archetype. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack.</p><p>You learn one additional maneuver of your choice at 7th, 11th, and 15th levels. Each time you learn a new maneuver, you can also replace one maneuver you know with a different one.</p><p><b>Superiority Dice.</b> You have 2 superiority dice, which are d8s. A superiority die is expended when you use it. You regain all your expended superiority dice when you finish a short or long rest.</p><p>You gain an additional superiority die at 7th, 11th, and 15th levels.</p><p><b>Saving Throws.</b> Some of your maneuvers require your target to make a saving throw to resist the maneuver\'s effects.</p><p class="text-center"><b>Maneuver Saving Throw DC</b> = 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice)</p></td></tr>',
+        //         //Slayer's Mind
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="mind">Slayer’s Mind</span><p>You gain extra resilience against your prey\'s assaults on your mind and body. Whenever the target of your marked quarry forces you to make a saving throw and whenever you make an ability check to escape that target\'s grapple, add 1d6 to your roll.</p></td></tr>',
+        //         //Slayer's Defense
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="defense">Slayer’s Defense</span><p>Choose one of the following options</p><p><b>Evasion.</b> You can nimbly dodge out of the way of certain area effects, such as a duneworm’s acid spray or an exploding mysterium. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p><p><b>Stand Against the Tide.</b> When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice</p><p><b>Uncanny Dodge. </b>When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack\'s damage against you.</p></td></tr>',
+        //         //Slayer's Counter
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="counter">Slayer\'s Counter</span><p>You gain the ability to counterattack when your prey tries to sabotage you. If the target of your marked quarry forces you to make a saving throw, you can use your reaction to make one weapon attack against the quarry. You make this attack immediately before making the saving throw. If your attack hits, your save automatically succeeds in addition to the attack\'s normal effects</p></td></tr>']
+        // }
+    ]
     };
 
     var rogue = {
@@ -899,7 +905,7 @@ function classPage() {
 
         
         let classSelected = classToDisplay;
-        if (classSelected == null) {
+        if (classSelected == null || classSelected == "slayer-archetype") {
             classSelected = 'barbarian'
         }
         let archetypeTag = document.getElementsByClassName('coreFeature');
@@ -1041,9 +1047,38 @@ function classPage() {
 
 
                 break;
-            case 'battlerager-archetype':
+            // case 'battlerager-archetype':
 
-                baseClassDisplay(barbarian, 'battlerager-archetype');
+            //     baseClassDisplay(barbarian, 'battlerager-archetype');
+
+            //     //Class Table
+            //     classTable.rows[5].cells[2].innerHTML = barbarian.archetypes[1].archetypeName + ', ' +  barbarian.archetypes[1].archetypeFeatures[0];
+            //     classTable.rows[8].cells[2].innerHTML = barbarian.archetypes[1].archetypeFeatures[1];
+            //     classTable.rows[12].cells[2].innerHTML = barbarian.archetypes[1].archetypeFeatures[2];
+            //     classTable.rows[16].cells[2].innerHTML = barbarian.archetypes[1].archetypeFeatures[3];
+
+
+            //     //Feature description
+            //     classFeatureDisplay = '';
+            //     featureIndex = 0;
+            //     barbarian.featuresDesc.forEach(feature => {
+            //         classFeatureDisplay += feature;
+            //         if (feature.includes('>Primal Path<')){
+            //             classFeatureDisplay += barbarian.archetypes[1].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //             classFeatureDisplay += barbarian.archetypes[1].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //         }else if (feature.includes('>Path Feature<')) {
+            //             classFeatureDisplay += barbarian.archetypes[1].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //         }
+            //     });
+            //     classFeatures.innerHTML = classFeatureDisplay;
+                
+            //     break;
+            case 'beast-archetype':
+
+                baseClassDisplay(barbarian, 'beast-archetype');
 
                 //Class Table
                 classTable.rows[5].cells[2].innerHTML = barbarian.archetypes[1].archetypeName + ', ' +  barbarian.archetypes[1].archetypeFeatures[0];
@@ -1068,73 +1103,44 @@ function classPage() {
                     }
                 });
                 classFeatures.innerHTML = classFeatureDisplay;
-                
-                break;
-            case 'beast-archetype':
-
-                baseClassDisplay(barbarian, 'beast-archetype');
-
-                //Class Table
-                classTable.rows[5].cells[2].innerHTML = barbarian.archetypes[2].archetypeName + ', ' +  barbarian.archetypes[2].archetypeFeatures[0];
-                classTable.rows[8].cells[2].innerHTML = barbarian.archetypes[2].archetypeFeatures[1];
-                classTable.rows[12].cells[2].innerHTML = barbarian.archetypes[2].archetypeFeatures[2];
-                classTable.rows[16].cells[2].innerHTML = barbarian.archetypes[2].archetypeFeatures[3];
-
-
-                //Feature description
-                classFeatureDisplay = '';
-                featureIndex = 0;
-                barbarian.featuresDesc.forEach(feature => {
-                    classFeatureDisplay += feature;
-                    if (feature.includes('>Primal Path<')){
-                        classFeatureDisplay += barbarian.archetypes[2].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                        classFeatureDisplay += barbarian.archetypes[2].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                    }else if (feature.includes('>Path Feature<')) {
-                        classFeatureDisplay += barbarian.archetypes[2].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                    }
-                });
-                classFeatures.innerHTML = classFeatureDisplay;
             break;
-            case 'berserker-archetype':
+            // case 'berserker-archetype':
 
-                baseClassDisplay(barbarian, 'berserker-archetype');
+            //     baseClassDisplay(barbarian, 'berserker-archetype');
 
-                //Class Table
-                classTable.rows[5].cells[2].innerHTML = barbarian.archetypes[3].archetypeName + ', ' +  barbarian.archetypes[3].archetypeFeatures[0];
-                classTable.rows[8].cells[2].innerHTML = barbarian.archetypes[3].archetypeFeatures[1];
-                classTable.rows[12].cells[2].innerHTML = barbarian.archetypes[3].archetypeFeatures[2];
-                classTable.rows[16].cells[2].innerHTML = barbarian.archetypes[3].archetypeFeatures[3];
+            //     //Class Table
+            //     classTable.rows[5].cells[2].innerHTML = barbarian.archetypes[3].archetypeName + ', ' +  barbarian.archetypes[3].archetypeFeatures[0];
+            //     classTable.rows[8].cells[2].innerHTML = barbarian.archetypes[3].archetypeFeatures[1];
+            //     classTable.rows[12].cells[2].innerHTML = barbarian.archetypes[3].archetypeFeatures[2];
+            //     classTable.rows[16].cells[2].innerHTML = barbarian.archetypes[3].archetypeFeatures[3];
 
 
-                //Feature description
-                classFeatureDisplay = '';
-                featureIndex = 0;
-                barbarian.featuresDesc.forEach(feature => {
-                    classFeatureDisplay += feature;
-                    if (feature.includes('>Primal Path<')){
-                        classFeatureDisplay += barbarian.archetypes[3].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                        classFeatureDisplay += barbarian.archetypes[3].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                    }else if (feature.includes('>Path Feature<')) {
-                        classFeatureDisplay += barbarian.archetypes[3].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                    }
-                });
-                classFeatures.innerHTML = classFeatureDisplay;
-            break;
+            //     //Feature description
+            //     classFeatureDisplay = '';
+            //     featureIndex = 0;
+            //     barbarian.featuresDesc.forEach(feature => {
+            //         classFeatureDisplay += feature;
+            //         if (feature.includes('>Primal Path<')){
+            //             classFeatureDisplay += barbarian.archetypes[3].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //             classFeatureDisplay += barbarian.archetypes[3].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //         }else if (feature.includes('>Path Feature<')) {
+            //             classFeatureDisplay += barbarian.archetypes[3].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //         }
+            //     });
+            //     classFeatures.innerHTML = classFeatureDisplay;
+            // break;
             case 'primal-warrior-archetype':
 
                 baseClassDisplay(barbarian, 'primal-warrior-archetype');
 
                 //Class Table
-                classTable.rows[5].cells[2].innerHTML = barbarian.archetypes[4].archetypeName + ', ' +  barbarian.archetypes[4].archetypeFeatures[0] + ', ' +  barbarian.archetypes[4].archetypeFeatures[1] + ', ' + barbarian.archetypes[4].archetypeFeatures[2];
-                classTable.rows[8].cells[2].innerHTML = barbarian.archetypes[4].archetypeFeatures[3];
-                classTable.rows[12].cells[2].innerHTML = barbarian.archetypes[4].archetypeFeatures[4];
-                classTable.rows[16].cells[2].innerHTML = barbarian.archetypes[4].archetypeFeatures[5];
+                classTable.rows[5].cells[2].innerHTML = barbarian.archetypes[2].archetypeName + ', ' +  barbarian.archetypes[2].archetypeFeatures[0] + ', ' +  barbarian.archetypes[2].archetypeFeatures[1] + ', ' + barbarian.archetypes[2].archetypeFeatures[2];
+                classTable.rows[8].cells[2].innerHTML = barbarian.archetypes[2].archetypeFeatures[3];
+                classTable.rows[12].cells[2].innerHTML = barbarian.archetypes[2].archetypeFeatures[4];
+                classTable.rows[16].cells[2].innerHTML = barbarian.archetypes[2].archetypeFeatures[5];
 
 
                 //Feature description
@@ -1143,16 +1149,16 @@ function classPage() {
                 barbarian.featuresDesc.forEach(feature => {
                     classFeatureDisplay += feature;
                     if (feature.includes('>Primal Path<')){
-                        classFeatureDisplay += barbarian.archetypes[4].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += barbarian.archetypes[2].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
-                        classFeatureDisplay += barbarian.archetypes[4].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += barbarian.archetypes[2].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
-                        classFeatureDisplay += barbarian.archetypes[4].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += barbarian.archetypes[2].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
-                        classFeatureDisplay += barbarian.archetypes[4].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += barbarian.archetypes[2].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
                     }else if (feature.includes('>Path Feature<')) {
-                        classFeatureDisplay += barbarian.archetypes[4].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += barbarian.archetypes[2].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
                     }
                 });
@@ -1164,10 +1170,10 @@ function classPage() {
 
 
                 //Class Table
-                classTable.rows[5].cells[2].innerHTML = barbarian.archetypes[5].archetypeName + ', ' +  barbarian.archetypes[5].archetypeFeatures[0] + ', ' +  barbarian.archetypes[5].archetypeFeatures[1];
-                classTable.rows[8].cells[2].innerHTML = barbarian.archetypes[5].archetypeFeatures[2];
-                classTable.rows[12].cells[2].innerHTML = barbarian.archetypes[5].archetypeFeatures[3];
-                classTable.rows[16].cells[2].innerHTML = barbarian.archetypes[5].archetypeFeatures[4];
+                classTable.rows[5].cells[2].innerHTML = barbarian.archetypes[3].archetypeName + ', ' +  barbarian.archetypes[3].archetypeFeatures[0] + ', ' +  barbarian.archetypes[3].archetypeFeatures[1];
+                classTable.rows[8].cells[2].innerHTML = barbarian.archetypes[3].archetypeFeatures[2];
+                classTable.rows[12].cells[2].innerHTML = barbarian.archetypes[3].archetypeFeatures[3];
+                classTable.rows[16].cells[2].innerHTML = barbarian.archetypes[3].archetypeFeatures[4];
 
 
                 //Feature description
@@ -1176,14 +1182,14 @@ function classPage() {
                 barbarian.featuresDesc.forEach(feature => {
                     classFeatureDisplay += feature;
                     if (feature.includes('>Primal Path<')){
-                        classFeatureDisplay += barbarian.archetypes[5].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += barbarian.archetypes[3].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
-                        classFeatureDisplay += barbarian.archetypes[5].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += barbarian.archetypes[3].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
-                        classFeatureDisplay += barbarian.archetypes[5].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += barbarian.archetypes[3].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
                     }else if (feature.includes('>Path Feature<')) {
-                        classFeatureDisplay += barbarian.archetypes[5].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += barbarian.archetypes[3].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
                     }
                 });
@@ -1617,34 +1623,34 @@ function classPage() {
                 });
                 classFeatures.innerHTML = classFeatureDisplay;
                 break;
-            case 'slayer-archetype':
+            // case 'slayer-archetype':
 
-                baseClassDisplay(ranger, 'slayer-archetype');
-                //Class Table
-                classTable.rows[5].cells[2].innerHTML = ranger.archetypes[2].archetypeName + ', ' + ranger.archetypes[2].archetypeFeatures[0];
-                classTable.rows[9].cells[2].innerHTML = ranger.archetypes[2].archetypeFeatures[1];
-                classTable.rows[13].cells[2].innerHTML = ranger.archetypes[2].archetypeFeatures[2];
-                classTable.rows[17].cells[2].innerHTML = ranger.archetypes[2].archetypeFeatures[3];
+            //     baseClassDisplay(ranger, 'slayer-archetype');
+            //     //Class Table
+            //     classTable.rows[5].cells[2].innerHTML = ranger.archetypes[2].archetypeName + ', ' + ranger.archetypes[2].archetypeFeatures[0];
+            //     classTable.rows[9].cells[2].innerHTML = ranger.archetypes[2].archetypeFeatures[1];
+            //     classTable.rows[13].cells[2].innerHTML = ranger.archetypes[2].archetypeFeatures[2];
+            //     classTable.rows[17].cells[2].innerHTML = ranger.archetypes[2].archetypeFeatures[3];
             
             
-                //Feature description
-                classFeatureDisplay = '';
-                featureIndex = 0;
-                ranger.featuresDesc.forEach(feature => {
-                    classFeatureDisplay += feature;
-                    if (feature.includes('>Ranger Archetype<')){
-                        classFeatureDisplay += ranger.archetypes[2].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                        classFeatureDisplay += ranger.archetypes[2].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
+            //     //Feature description
+            //     classFeatureDisplay = '';
+            //     featureIndex = 0;
+            //     ranger.featuresDesc.forEach(feature => {
+            //         classFeatureDisplay += feature;
+            //         if (feature.includes('>Ranger Archetype<')){
+            //             classFeatureDisplay += ranger.archetypes[2].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //             classFeatureDisplay += ranger.archetypes[2].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
 
-                    }else if (feature.includes('>Ranger Archetype Feature<')) {
-                        classFeatureDisplay += ranger.archetypes[2].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                    }
-                });
-                classFeatures.innerHTML = classFeatureDisplay;
-                break;
+            //         }else if (feature.includes('>Ranger Archetype Feature<')) {
+            //             classFeatureDisplay += ranger.archetypes[2].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //         }
+            //     });
+            //     classFeatures.innerHTML = classFeatureDisplay;
+            //     break;
 
 
         ///////Rogue Archetypes        
