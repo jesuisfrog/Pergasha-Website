@@ -377,43 +377,46 @@ function classPage() {
                 '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="devastating">Devastating Critical</span><p>Starting at 15th level, when you score a critical hit with a weapon attack, you gain a bonus to that weapon\'s damage roll equal to your level in this class.</p></td></tr>',
                 // Survivor
                 '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="survivor">Survivor</span><p>At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns in combat, you regain hit points equal to 5 + your Constitution modifier (minimum of 1 hit point). You don\'t gain this benefit if you have 0 hit points or if you have more than half of your hit points left.</p></td></tr>']
-        },{
-            archetypeName: "<a href='#cavalier'>Cavalier</a>",
-            archetypeFeatures: ["<a href='#bonprof'>Bonus Proficiency</a>","<a href='#saddle'>Born to the Saddle</a>","<a href='#unwaveringMark'>Unwavering Mark</a>","<a href='#wardingManeuvers'>Warding Maneuver</a>","<a href='#holdLine'>Hold the Line</a>","<a href='#ferocious'>Ferocious Charger</a>","<a href='#vigilant'>Vigilant Defender</a>"],
-            archetypeFeaturesDesc: [
-                // Cavalier
-                '<tr><td><span class="class-feature-title class-feature-archetype" id="cavalier">Cavalier</span><p>The archetypal Cavalier excels at mounted combat. Usually born among the nobility and raised at court, a Cavalier is equally at home leading a cavalry charge or exchanging repartee at a state dinner. Cavaliers also learn how to guard those in their charge from harm, often serving as the protectors of their superiors and of the weak. Compelled to right wrongs or earn prestige, many of these fighters leave their lives of comfort to embark on glorious adventure.</p></td></tr>',
-                // Bonus Proficiency
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="bonprof">Bonus Proficiency</span><p>When you choose this archetype at 3rd level, you gain proficiency in one of the following skills of your choice: Animal Handling, History, Insight, Performance, or Persuasion. Alternatively, you learn one language of your choice.</p></td></tr>',
-                // Born to the Saddle
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="saddle">Born to the Saddle</span><p>Starting at 3rd level, your mastery as a rider becomes apparent. You have advantage on saving throws made to avoid falling off your mount. If you fall off your mount and descend no more than 10 feet, you can land on your feet if you\'re not incapacitated.</p><p>Finally, mounting or dismounting a creature costs you only 5 feet of movement, rather than half your speed.</p></td></tr>',
-                // Unwavering Mark
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="unwaveringMark">Unwavering Mark</span><p>Starting at 3rd level, you can menace your foes, foiling their attacks and punishing them for harming others. When you hit a creature with a melee weapon attack, you can mark the creature until the end of your next turn. This effect ends early if you are incapacitated or you die, or if someone else marks the creature.</p><p>While it is within 5 feet of you, a creature marked by you has disadvantage on any attack roll that doesn\'t target you.</p><p>In addition, if a creature marked by you deals damage to anyone other than you, you can make a special melee weapon attack against the marked creature as a bonus action on your next turn. You have advantage on the attack roll, and if it hits, the attack\'s weapon deals extra damage to the target equal to half your fighter level.</p><p>Regardless of the number of creatures you mark, you can make this special attack a number of times equal to your Strength modifier (minimum of once), and you regain all expended uses of it when you finish a long rest.</p></td></tr>',
-                // Warding Maneuver
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="wardingManeuvers">Warding Maneuver</span><p>At 7th level, you learn to fend off strikes directed at you, your mount, or other creatures nearby. If you or a creature you can see within 5 feet of you is hit by an attack, you can roll 1d8 as a reaction if you\'re wielding a melee weapon or a shield. Roll the die, and add the number rolled to the target\'s AC against that attack. If the attack still hits, the target has resistance against the attack\'s damage.</p><p>You can use this feature a number of times equal to your Constitution modifier (minimum of once), and you regain all expended uses of it when you finish a long rest.</p></td></tr>',
-                // Hold the Line
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="holdLine">Hold the Line</span><p>At 10th level, you become a master of locking down your enemies. Creatures provoke an opportunity attack from you when they move 5 feet or more while within your reach, and if you hit a creature with an opportunity attack, the target\'s speed is reduced to 0 until the end of the current turn.</p></td></tr>',
-                // Ferocious Charger
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="ferocious">Ferocious Charger</span><p>Starting at 15th level, you can run down your foes, whether you\'re mounted or not. If you move at least 10 feet in a straight line right before attacking a creature and you hit it with the attack, that target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be knocked prone. You can use this feature only once on each of your turns.</p></td></tr>',
-                // Vigilant Defender
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="vigilant">Vigilant Defender</span><p>Starting at 18th level, you respond to danger with extraordinary vigilance. In combat, you get a special reaction that you can take once on every creature\'s turn, except your turn. You can use this special reaction only to make an opportunity attack, and you can\'t use it on the same turn that you take your normal reaction.</p></td></tr>']
-        },{
-            archetypeName: "<a href='#champion'>Champion</a>",
-            archetypeFeatures: ["<a href='#improveCrit'>Improved Critical</a>","<a href='#remarkAth'>Remarkable Athlete</a>","<a href='#addFstyle'>Additional Fighting Style</a>","<a href='#supCrit'>Superior Critical</a>","<a href='#survivor'>Survivor</a>"],
-            archetypeFeaturesDesc: [
-                // Champion
-                '<tr><td><span class="class-feature-title class-feature-archetype" id="champion">Champion</span><p>The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.</p></td></tr>',
-                // Improved Critical
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="improveCrit">Improved Critical</span><p>Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20.</p></td></tr>',
-                // Remarkable Athlete
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="remarkAth">Remarkable Athlete</span><p>Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn\'t already use your proficiency bonus.</p><p>In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier.</p></td></tr>',
-                // Additional Fighting Style
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="addFstyle">Additional Fighting Style</span><p>At 10th level, you can choose a second option from the Fighting Style class feature.</p></td></tr>',
-                // Superior Critical
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="supCrit">Superior Critical</span><p>Starting at 15th level, your weapon attacks score a critical hit on a roll of 18-20.</p></td></tr>',
-                // Survivor
-                '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="survivor">Survivor</span><p>At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don\'t gain this benefit if you have 0 hit points.</p></td></tr>']
-        },{
+        }
+        // ,{
+        //     archetypeName: "<a href='#cavalier'>Cavalier</a>",
+        //     archetypeFeatures: ["<a href='#bonprof'>Bonus Proficiency</a>","<a href='#saddle'>Born to the Saddle</a>","<a href='#unwaveringMark'>Unwavering Mark</a>","<a href='#wardingManeuvers'>Warding Maneuver</a>","<a href='#holdLine'>Hold the Line</a>","<a href='#ferocious'>Ferocious Charger</a>","<a href='#vigilant'>Vigilant Defender</a>"],
+        //     archetypeFeaturesDesc: [
+        //         // Cavalier
+        //         '<tr><td><span class="class-feature-title class-feature-archetype" id="cavalier">Cavalier</span><p>The archetypal Cavalier excels at mounted combat. Usually born among the nobility and raised at court, a Cavalier is equally at home leading a cavalry charge or exchanging repartee at a state dinner. Cavaliers also learn how to guard those in their charge from harm, often serving as the protectors of their superiors and of the weak. Compelled to right wrongs or earn prestige, many of these fighters leave their lives of comfort to embark on glorious adventure.</p></td></tr>',
+        //         // Bonus Proficiency
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="bonprof">Bonus Proficiency</span><p>When you choose this archetype at 3rd level, you gain proficiency in one of the following skills of your choice: Animal Handling, History, Insight, Performance, or Persuasion. Alternatively, you learn one language of your choice.</p></td></tr>',
+        //         // Born to the Saddle
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="saddle">Born to the Saddle</span><p>Starting at 3rd level, your mastery as a rider becomes apparent. You have advantage on saving throws made to avoid falling off your mount. If you fall off your mount and descend no more than 10 feet, you can land on your feet if you\'re not incapacitated.</p><p>Finally, mounting or dismounting a creature costs you only 5 feet of movement, rather than half your speed.</p></td></tr>',
+        //         // Unwavering Mark
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="unwaveringMark">Unwavering Mark</span><p>Starting at 3rd level, you can menace your foes, foiling their attacks and punishing them for harming others. When you hit a creature with a melee weapon attack, you can mark the creature until the end of your next turn. This effect ends early if you are incapacitated or you die, or if someone else marks the creature.</p><p>While it is within 5 feet of you, a creature marked by you has disadvantage on any attack roll that doesn\'t target you.</p><p>In addition, if a creature marked by you deals damage to anyone other than you, you can make a special melee weapon attack against the marked creature as a bonus action on your next turn. You have advantage on the attack roll, and if it hits, the attack\'s weapon deals extra damage to the target equal to half your fighter level.</p><p>Regardless of the number of creatures you mark, you can make this special attack a number of times equal to your Strength modifier (minimum of once), and you regain all expended uses of it when you finish a long rest.</p></td></tr>',
+        //         // Warding Maneuver
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="wardingManeuvers">Warding Maneuver</span><p>At 7th level, you learn to fend off strikes directed at you, your mount, or other creatures nearby. If you or a creature you can see within 5 feet of you is hit by an attack, you can roll 1d8 as a reaction if you\'re wielding a melee weapon or a shield. Roll the die, and add the number rolled to the target\'s AC against that attack. If the attack still hits, the target has resistance against the attack\'s damage.</p><p>You can use this feature a number of times equal to your Constitution modifier (minimum of once), and you regain all expended uses of it when you finish a long rest.</p></td></tr>',
+        //         // Hold the Line
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="holdLine">Hold the Line</span><p>At 10th level, you become a master of locking down your enemies. Creatures provoke an opportunity attack from you when they move 5 feet or more while within your reach, and if you hit a creature with an opportunity attack, the target\'s speed is reduced to 0 until the end of the current turn.</p></td></tr>',
+        //         // Ferocious Charger
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="ferocious">Ferocious Charger</span><p>Starting at 15th level, you can run down your foes, whether you\'re mounted or not. If you move at least 10 feet in a straight line right before attacking a creature and you hit it with the attack, that target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be knocked prone. You can use this feature only once on each of your turns.</p></td></tr>',
+        //         // Vigilant Defender
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="vigilant">Vigilant Defender</span><p>Starting at 18th level, you respond to danger with extraordinary vigilance. In combat, you get a special reaction that you can take once on every creature\'s turn, except your turn. You can use this special reaction only to make an opportunity attack, and you can\'t use it on the same turn that you take your normal reaction.</p></td></tr>']
+        // }
+        // ,{
+        //     archetypeName: "<a href='#champion'>Champion</a>",
+        //     archetypeFeatures: ["<a href='#improveCrit'>Improved Critical</a>","<a href='#remarkAth'>Remarkable Athlete</a>","<a href='#addFstyle'>Additional Fighting Style</a>","<a href='#supCrit'>Superior Critical</a>","<a href='#survivor'>Survivor</a>"],
+        //     archetypeFeaturesDesc: [
+        //         // Champion
+        //         '<tr><td><span class="class-feature-title class-feature-archetype" id="champion">Champion</span><p>The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.</p></td></tr>',
+        //         // Improved Critical
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="improveCrit">Improved Critical</span><p>Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20.</p></td></tr>',
+        //         // Remarkable Athlete
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="remarkAth">Remarkable Athlete</span><p>Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn\'t already use your proficiency bonus.</p><p>In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier.</p></td></tr>',
+        //         // Additional Fighting Style
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="addFstyle">Additional Fighting Style</span><p>At 10th level, you can choose a second option from the Fighting Style class feature.</p></td></tr>',
+        //         // Superior Critical
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="supCrit">Superior Critical</span><p>Starting at 15th level, your weapon attacks score a critical hit on a roll of 18-20.</p></td></tr>',
+        //         // Survivor
+        //         '<tr><td><span class="class-feature-subtitle class-feature-archetype" id="survivor">Survivor</span><p>At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don\'t gain this benefit if you have 0 hit points.</p></td></tr>']
+        // }
+        ,{
             archetypeName: "<a href='#psiK'>Psi Knight</a>",
             archetypeFeatures: ["<a href='#psionicPower'>Psionic Power</a>", "<a href='#tkAdt'>Telekinetic Adept</a>", "<a href='#psiEnhancedMeta'>Psi-Enhanced Metabolism</a>","<a href='#bulwark'>Bulwark of Force</a>","<a href='#tkMaster'>Telekinetic Master</a>"],
             archetypeFeaturesDesc: [
@@ -1273,15 +1276,75 @@ function classPage() {
                 classFeatures.innerHTML = classFeatureDisplay;
 
                 break;
-            case 'cavalier-archetype':
+            // case 'cavalier-archetype':
 
-                baseClassDisplay(fighter, 'cavalier-archetype');
+            //     baseClassDisplay(fighter, 'cavalier-archetype');
+            //     //Class Table
+            //     classTable.rows[5].cells[2].innerHTML = fighter.archetypes[2].archetypeName + ", " + fighter.archetypes[2].archetypeFeatures[0] + ", " + fighter.archetypes[2].archetypeFeatures[1] + ", " + fighter.archetypes[2].archetypeFeatures[2];
+            //     classTable.rows[9].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[3];
+            //     classTable.rows[12].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[4];
+            //     classTable.rows[17].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[5];
+            //     classTable.rows[20].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[6];
+            
+            
+            //     //Feature description
+            //     classFeatureDisplay = '';
+            //     featureIndex = 0;
+            //     fighter.featuresDesc.forEach(feature => {
+            //         classFeatureDisplay += feature;
+            //         if (feature.includes('>Martial Archetype<')){
+            //             classFeatureDisplay += fighter.archetypes[2].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //             classFeatureDisplay += fighter.archetypes[2].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //             classFeatureDisplay += fighter.archetypes[2].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //             classFeatureDisplay += fighter.archetypes[2].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //         }else if (feature.includes('>Martial Archetype Feature<')) {
+            //             classFeatureDisplay += fighter.archetypes[2].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //         }
+            //     });
+            //     classFeatures.innerHTML = classFeatureDisplay;
+            //     break;
+            // case 'champion-archetype':
+
+            //     baseClassDisplay(fighter, 'champion-archetype');
+            //     //Class Table
+            //     classTable.rows[5].cells[2].innerHTML = fighter.archetypes[3].archetypeName + ", " + fighter.archetypes[3].archetypeFeatures[0];
+            //     classTable.rows[9].cells[2].innerHTML = fighter.archetypes[3].archetypeFeatures[1];
+            //     classTable.rows[12].cells[2].innerHTML = fighter.archetypes[3].archetypeFeatures[2];
+            //     classTable.rows[17].cells[2].innerHTML = fighter.archetypes[3].archetypeFeatures[3];
+            //     classTable.rows[20].cells[2].innerHTML = fighter.archetypes[3].archetypeFeatures[4];
+            
+            
+            //     //Feature description
+            //     classFeatureDisplay = '';
+            //     featureIndex = 0;
+            //     fighter.featuresDesc.forEach(feature => {
+            //         classFeatureDisplay += feature;
+            //         if (feature.includes('>Martial Archetype<')){
+            //             classFeatureDisplay += fighter.archetypes[3].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //             classFeatureDisplay += fighter.archetypes[3].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //         }else if (feature.includes('>Martial Archetype Feature<')) {
+            //             classFeatureDisplay += fighter.archetypes[3].archetypeFeaturesDesc[featureIndex];
+            //             featureIndex++;
+            //         }
+            //     });
+            //     classFeatures.innerHTML = classFeatureDisplay;
+            //     break;
+            case 'psi-knight-archetype':
+
+                baseClassDisplay(fighter, 'psi-knight-archetype');
                 //Class Table
-                classTable.rows[5].cells[2].innerHTML = fighter.archetypes[2].archetypeName + ", " + fighter.archetypes[2].archetypeFeatures[0] + ", " + fighter.archetypes[2].archetypeFeatures[1] + ", " + fighter.archetypes[2].archetypeFeatures[2];
-                classTable.rows[9].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[3];
-                classTable.rows[12].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[4];
-                classTable.rows[17].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[5];
-                classTable.rows[20].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[6];
+                classTable.rows[5].cells[2].innerHTML = fighter.archetypes[2].archetypeName + ", " + fighter.archetypes[2].archetypeFeatures[0];
+                classTable.rows[9].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[1];
+                classTable.rows[12].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[2];
+                classTable.rows[17].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[3];
+                classTable.rows[20].cells[2].innerHTML = fighter.archetypes[2].archetypeFeatures[4];
             
             
                 //Feature description
@@ -1294,10 +1357,6 @@ function classPage() {
                         featureIndex++;
                         classFeatureDisplay += fighter.archetypes[2].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
-                        classFeatureDisplay += fighter.archetypes[2].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                        classFeatureDisplay += fighter.archetypes[2].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
                     }else if (feature.includes('>Martial Archetype Feature<')) {
                         classFeatureDisplay += fighter.archetypes[2].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
@@ -1305,11 +1364,11 @@ function classPage() {
                 });
                 classFeatures.innerHTML = classFeatureDisplay;
                 break;
-            case 'champion-archetype':
+            case 'sharpshooter-archetype':
 
-                baseClassDisplay(fighter, 'champion-archetype');
+                baseClassDisplay(fighter, 'sharpshooter-archetype');
                 //Class Table
-                classTable.rows[5].cells[2].innerHTML = fighter.archetypes[3].archetypeName + ", " + fighter.archetypes[3].archetypeFeatures[0];
+                classTable.rows[5].cells[2].innerHTML = fighter.archetypes[3].archetypeName + ', ' +  fighter.archetypes[3].archetypeFeatures[0];;
                 classTable.rows[9].cells[2].innerHTML = fighter.archetypes[3].archetypeFeatures[1];
                 classTable.rows[12].cells[2].innerHTML = fighter.archetypes[3].archetypeFeatures[2];
                 classTable.rows[17].cells[2].innerHTML = fighter.archetypes[3].archetypeFeatures[3];
@@ -1333,71 +1392,15 @@ function classPage() {
                 });
                 classFeatures.innerHTML = classFeatureDisplay;
                 break;
-            case 'psi-knight-archetype':
-
-                baseClassDisplay(fighter, 'psi-knight-archetype');
-                //Class Table
-                classTable.rows[5].cells[2].innerHTML = fighter.archetypes[4].archetypeName + ", " + fighter.archetypes[4].archetypeFeatures[0];
-                classTable.rows[9].cells[2].innerHTML = fighter.archetypes[4].archetypeFeatures[1];
-                classTable.rows[12].cells[2].innerHTML = fighter.archetypes[4].archetypeFeatures[2];
-                classTable.rows[17].cells[2].innerHTML = fighter.archetypes[4].archetypeFeatures[3];
-                classTable.rows[20].cells[2].innerHTML = fighter.archetypes[4].archetypeFeatures[4];
-            
-            
-                //Feature description
-                classFeatureDisplay = '';
-                featureIndex = 0;
-                fighter.featuresDesc.forEach(feature => {
-                    classFeatureDisplay += feature;
-                    if (feature.includes('>Martial Archetype<')){
-                        classFeatureDisplay += fighter.archetypes[4].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                        classFeatureDisplay += fighter.archetypes[4].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                    }else if (feature.includes('>Martial Archetype Feature<')) {
-                        classFeatureDisplay += fighter.archetypes[4].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                    }
-                });
-                classFeatures.innerHTML = classFeatureDisplay;
-                break;
-            case 'sharpshooter-archetype':
-
-                baseClassDisplay(fighter, 'sharpshooter-archetype');
-                //Class Table
-                classTable.rows[5].cells[2].innerHTML = fighter.archetypes[5].archetypeName + ', ' +  fighter.archetypes[5].archetypeFeatures[0];;
-                classTable.rows[9].cells[2].innerHTML = fighter.archetypes[5].archetypeFeatures[1];
-                classTable.rows[12].cells[2].innerHTML = fighter.archetypes[5].archetypeFeatures[2];
-                classTable.rows[17].cells[2].innerHTML = fighter.archetypes[5].archetypeFeatures[3];
-                classTable.rows[20].cells[2].innerHTML = fighter.archetypes[5].archetypeFeatures[4];
-            
-            
-                //Feature description
-                classFeatureDisplay = '';
-                featureIndex = 0;
-                fighter.featuresDesc.forEach(feature => {
-                    classFeatureDisplay += feature;
-                    if (feature.includes('>Martial Archetype<')){
-                        classFeatureDisplay += fighter.archetypes[5].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                        classFeatureDisplay += fighter.archetypes[5].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                    }else if (feature.includes('>Martial Archetype Feature<')) {
-                        classFeatureDisplay += fighter.archetypes[5].archetypeFeaturesDesc[featureIndex];
-                        featureIndex++;
-                    }
-                });
-                classFeatures.innerHTML = classFeatureDisplay;
-                break;
             case 'warcaller-archetype':
 
                 baseClassDisplay(fighter, 'warcaller-archetype');
                 //Class Table
-                classTable.rows[5].cells[2].innerHTML = fighter.archetypes[6].archetypeName  + ", " + fighter.archetypes[6].archetypeFeatures[0] + ", " + fighter.archetypes[6].archetypeFeatures[1];
-                classTable.rows[9].cells[2].innerHTML = fighter.archetypes[6].archetypeFeatures[2];
-                classTable.rows[12].cells[2].innerHTML = fighter.archetypes[6].archetypeFeatures[3];
-                classTable.rows[17].cells[2].innerHTML = fighter.archetypes[6].archetypeFeatures[4];
-                classTable.rows[20].cells[2].innerHTML = fighter.archetypes[6].archetypeFeatures[5];
+                classTable.rows[5].cells[2].innerHTML = fighter.archetypes[4].archetypeName  + ", " + fighter.archetypes[4].archetypeFeatures[0] + ", " + fighter.archetypes[4].archetypeFeatures[1];
+                classTable.rows[9].cells[2].innerHTML = fighter.archetypes[4].archetypeFeatures[2];
+                classTable.rows[12].cells[2].innerHTML = fighter.archetypes[4].archetypeFeatures[3];
+                classTable.rows[17].cells[2].innerHTML = fighter.archetypes[4].archetypeFeatures[4];
+                classTable.rows[20].cells[2].innerHTML = fighter.archetypes[4].archetypeFeatures[5];
             
             
                 //Feature description
@@ -1406,14 +1409,14 @@ function classPage() {
                 fighter.featuresDesc.forEach(feature => {
                     classFeatureDisplay += feature;
                     if (feature.includes('>Martial Archetype<')){
-                        classFeatureDisplay += fighter.archetypes[6].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += fighter.archetypes[4].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
-                        classFeatureDisplay += fighter.archetypes[6].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += fighter.archetypes[4].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
-                        classFeatureDisplay += fighter.archetypes[6].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += fighter.archetypes[4].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
                     }else if (feature.includes('>Martial Archetype Feature<')) {
-                        classFeatureDisplay += fighter.archetypes[6].archetypeFeaturesDesc[featureIndex];
+                        classFeatureDisplay += fighter.archetypes[4].archetypeFeaturesDesc[featureIndex];
                         featureIndex++;
                     }
                 });
@@ -1857,9 +1860,9 @@ function featPage() {
     
     '<div class="shadow feat-box rounded  border border-secondary strength-filter dexterity-filter"><span class="feat-title p-2">Athlete</span><p>You have undergone extensive physical training to gain the following benefits:</p><ul><li>Increase your Strength or Dexterity by 1, to a maximum of 20.</li><li>When you are prone, standing up uses only 5 feet of your movement. Also, attacks made against you when you stand must now defeat your AC by 15 points (rather than 10) in order to keep you from standing.</li><li>Climbing does not cost you extra movement. You can make a running long jump or a running high jump after moving only 5 feet on foot, rather than 10 feet.</li></ul></div>',
     
-    '<div class="shadow feat-box rounded  border border-secondary intelligence-filter charisma-filter psionics-filter"><span class="feat-title p-2">Avatar Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Avatar.</p><ul><li>Increase your Charisma or Intelligence score by 1, to a maximum of 20.</li><li>When you use an ability that has a Psi Point cost from the Order of the Avatar, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline of this order, you can take a bonus action to recoverhit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
+    '<div class="shadow feat-box rounded  border border-secondary intelligence-filter charisma-filter psionics-filter"><span class="feat-title p-2">Avatar Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Avatar.</p><ul><li>Increase your Charisma or Intelligence score by 1, to a maximum of 20.</li><li>When you use an ability that has a Psi Point cost from the Order of the Avatar, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline of this order, you can recover hit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
     
-    '<div class="shadow feat-box rounded  border border-secondary intelligence-filter psionics-filter"><span class="feat-title p-2">Awakened Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Awakened.</p><ul><li>Increase your Intelligence score by 1, to a maximum of 20. </li><li>When you use an ability that has a Psi Point cost from the Order of the Awakened, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline from the Order of the Awakened, you can take a bonus action to recover hit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
+    '<div class="shadow feat-box rounded  border border-secondary intelligence-filter psionics-filter"><span class="feat-title p-2">Awakened Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Awakened.</p><ul><li>Increase your Intelligence score by 1, to a maximum of 20. </li><li>When you use an ability that has a Psi Point cost from the Order of the Awakened, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline from the Order of the Awakened, you can recover hit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
     
     '<div class="shadow feat-box rounded  border border-secondary strength-filter"><span class="feat-title p-2">Brawny</span><p>You become stronger, gaining the following benefits:</p><ul><li>Increase your Strength score by 1, to a maximum of 20.</li><li>You gain proficiency in the Athletics skill. If you are already proficient in the skill, you add double your proficiency bonus to checks you make with it.</li><li>You count as if you were one size larger for the purpose of determining your carrying capacity.</li></ul></div>',
     
@@ -1881,13 +1884,13 @@ function featPage() {
     
     '<div class="shadow feat-box rounded  border border-secondary psionics-filter"><span class="feat-title p-2">Energized</span><p>Your body and mind are brimming with psionic energy. You gain Psi Points equal to your proficiency bonus and they scale with it. Your Psi Limit also increases by 1.</p></div>',
     
-    '<div class="shadow feat-box rounded  border border-secondary dexterity-filter intelligence-filter psionics-filter"><span class="feat-title p-2">Far Hand Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Far Hand.</p><ul><li>Increase your Dexterity or Intelligence score by 1, to a maximum of 20.</li><li>When you use an ability that has a Psi Point cost from the Order of the Far Hand, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline from the Order of the Far Hand, you can take a bonus action to recover hit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
+    '<div class="shadow feat-box rounded  border border-secondary dexterity-filter intelligence-filter psionics-filter"><span class="feat-title p-2">Far Hand Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Far Hand.</p><ul><li>Increase your Dexterity or Intelligence score by 1, to a maximum of 20.</li><li>When you use an ability that has a Psi Point cost from the Order of the Far Hand, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline from the Order of the Far Hand, you can recover hit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
     
     '<div class="shadow feat-box rounded  border border-secondary"><span class="feat-title p-2">Healing Hands</span><p>You are an able healer and can mend wounds quickly to help your allies get back into the fray. You gain the following benefits:</p><ul><li>When you use a healer’s kit to stabilize a dying creature, that creature also regains 1 hit point.</li><li>You can help up to five allies (including yourself) during a breather by adding a minor herbal refresher to water. Anyone using a water ration during the breather can recover your proficiency modifier in hit points in addition to the regular healing permitted.</li><li>You can use a healer’s kit to help up to five allies (and yourself) during a long rest. Anyone using Hit Die to recover during the long rest can reroll any 1’s or 2’s on their Hit Die.</li></ul></div>',
     
     '<div class="shadow feat-box rounded  border border-secondary strength-filter"><span class="feat-title p-2">Heavily Armored<span class="feat-prerequisites">Prerequisites: Proficiency with medium armor</span></span><p>You have trained to master the use of heavy armor, gaining the following benefits:</p><ul><li>Increase your Strength score by 1, to a maximum of 20.</li><li>You gain proficiency with heavy armor.</li></ul></div>',
     
-    '<div class="shadow feat-box rounded  border border-secondary strength-filter constitution-filter psionics-filter"><span class="feat-title p-2">Immortal Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Immortal.</p><ul><li>Increase your Strength or Constitution score by 1, to a maximum of 20.</li><li>When you use an ability that has a Psi Point cost from the Order of the Immortal, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline from the Order of the Immortal, you can take a bonus action to recover hit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
+    '<div class="shadow feat-box rounded  border border-secondary strength-filter constitution-filter psionics-filter"><span class="feat-title p-2">Immortal Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Immortal.</p><ul><li>Increase your Strength or Constitution score by 1, to a maximum of 20.</li><li>When you use an ability that has a Psi Point cost from the Order of the Immortal, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline from the Order of the Immortal, you can recover hit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
     
     '<div class="shadow feat-box rounded  border border-secondary"><span class="feat-title p-2">Inspiring Leader<span class="feat-prerequisites">Prerequisites: Charisma 13 or higher</span></span><p>You can spend 10 minutes inspiring your companions, shoring up their resolve to fight. When you do so, choose up to six friendly creatures (which can include yourself) within 30 feet of you who can see or hear you and who can understand you. Each creature can gain temporary hit points equal to your level + your Charisma modifier. A creature can\'t gain temporary hit points from this feat again until it has finished a short or long rest.</p></div>',
     
@@ -1903,7 +1906,7 @@ function featPage() {
     
     '<div class="shadow feat-box rounded  border border-secondary"><span class="feat-title p-2">Mysterium Adept</span><p>You have learned a little something about mysteriums and have gained some additional facility with their use. You gain the following benefits:</p><ul><li>You can bear one additional mysterium beyond the standard limit of three, and thus carry a total of four mysteriums before risking a roll on the Mysterium Danger Table.</li><li>When you use a mysterium, you can try to use it in such a fashion that it doesn’t burn out, though doing so is dangerous. When you use a mysterium in this fashion, roll 1d20. On a roll of 10 or higher, you succeed, and the cypher remains available to be used again. Otherwise you fail, and the cypher burns out as normal. In addition to burning out, it detonates and deals half psychic and half force damage to you (no save to avoid the damage) according to the mysterium’s rarity: common 9 (2d8); uncommon 18 (4d8); rare 27 (6d8); very rare 36 (8d8).</li></ul></div>',
     
-    '<div class="shadow feat-box rounded  border border-secondary intelligence-filter wisdom-filter psionics-filter"><span class="feat-title p-2">Nomad Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Nomad.</p><ul><li>Increase your Intelligence or Wisdom score by 1, to a maximum of 20.</li><li>When you use an ability that has a Psi Point cost from the Order of the Nomad, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline from the Order of the Nomad, you can take a bonus action to recover hit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
+    '<div class="shadow feat-box rounded  border border-secondary intelligence-filter wisdom-filter psionics-filter"><span class="feat-title p-2">Nomad Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Nomad.</p><ul><li>Increase your Intelligence or Wisdom score by 1, to a maximum of 20.</li><li>When you use an ability that has a Psi Point cost from the Order of the Nomad, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline from the Order of the Nomad, you can recover hit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
     
     '<div class="shadow feat-box rounded  border border-secondary intelligence-filter wisdom-filter"><span class="feat-title p-2">Observant</span><p>Quick to notice details of your environment, you gain the following benefits:</p><ul><li>Increase your Intelligence or Wisdom by 1, to a maximum of 20.</li><li>If you can see a creature\'s mouth while it is speaking a language you understand, you can interpret what it\'s saying by reading its lips.</li><li>You have a +5 bonus to your passive Wisdom (Perception) and passive Intelligence (Investigation) scores.</li></ul></div>',
 
