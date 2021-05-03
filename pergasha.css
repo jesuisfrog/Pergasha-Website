@@ -72,7 +72,7 @@ body{
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 769px) {
-    #trained-abilities, #race-tabDesc, #feat-display-section, #items-display-section{
+    #trained-abilities, #race-tabDesc, #feat-display-section, #items-display-section, #infusion-tabDesc{
         flex-basis: auto;
     }
     
@@ -308,12 +308,12 @@ body{
 }
 
 
-/*race*/
-#race-list-container{
+/*race & infusions*/
+#race-list-container, #infusion-list-container{
     max-width: 300px;
 }
 
-#race-tabDesc{
+#race-tabDesc, #infusion-tabDesc{
     min-width: 350px;
 }
 
@@ -324,7 +324,7 @@ body{
         min-width: 350px;
 }
 
-#trained-abilities{
+#trained-abilities, .infusion-powers{
     min-width: 350px;
 }
 
@@ -332,16 +332,16 @@ body{
     border-bottom: 2px solid #ca1b13;
 }
 
-#trained-abilities .trained,#trained-abilities .trained-title, #trained-abilities .trained-desc, #property-list .property, #property-list .property-desc, #description-list .description, #description-list .description-desc{
+#trained-abilities .trained,#trained-abilities .trained-title, #trained-abilities .trained-desc, #property-list .property, #property-list .property-desc, #description-list .description, #description-list .description-desc, .infusion-powers .infusion-desc, .infusion-powers .infusion{
     background-color: #fdf1dc ;
 }
 
 #trained-abilities li:not(.internal-list):nth-of-type(2n), #trained-abilities ul div:nth-of-type(2n+1),
-#property-list li:not(.internal-list):nth-of-type(2n), #property-list ul div:nth-of-type(2n+1), #description-list li:not(.internal-list):nth-of-type(2n), #description-list ul div:nth-of-type(2n+1){
+#property-list li:not(.internal-list):nth-of-type(2n), #property-list ul div:nth-of-type(2n+1), #description-list li:not(.internal-list):nth-of-type(2n), #description-list ul div:nth-of-type(2n+1), .infusion-powers li:not(.internal-list):nth-of-type(2n), .infusion-powers ul div:nth-of-type(2n+1){
     background-color: rgba(0,0,0,.05);
 }
 
-#trained-abilities div, #property-list  div, #description-list  div{
+#trained-abilities div, #property-list  div, #description-list  div, .infusion-powers div{
     border: 1px solid rgba(0,0,0,.125);
 }
 /*psionics*/

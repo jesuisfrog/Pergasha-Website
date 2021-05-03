@@ -1851,6 +1851,39 @@ function racePage() {
 }
 //RACES END
 
+//INFUSIONS
+function infusionPage() {
+    var infusionSelection = document.getElementById('infusion-list');
+    var infusionOptions = infusionSelection.getElementsByTagName('a');
+    var currentInfusion = sessionStorage.getItem("currentInfusion");
+
+    
+    function refreshedInfusionFilter(filter) {
+        var filterToActivate = document.getElementById(filter);
+        if (filter != null) {
+            var filtered = document.getElementById(filter.slice(0, filter.indexOf('-list')));
+            filtered.classList.toggle("show");
+            filtered.classList.toggle("active");     
+            filterToActivate.classList.toggle("active");   
+        }else{
+            document.getElementById('aerofusion-infusion').classList.toggle("active");
+            document.getElementById('aerofusion-infusion').classList.toggle("show");
+            document.getElementById('aerofusion-infusion-list').classList.toggle("active");
+        }
+      }
+
+
+    for (let infusion of infusionOptions) {
+        infusion.addEventListener('click', ()=>{
+            var selectedFilter = event.target.getAttribute('id');
+            sessionStorage.setItem("currentInfusion", selectedFilter);
+        });
+    }
+
+    refreshedInfusionFilter(currentInfusion);
+      
+}
+
 //FEATS START
 function featPage() {
 
