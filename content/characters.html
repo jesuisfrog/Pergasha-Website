@@ -1,1078 +1,1227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="../pergasha.css">
-    <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico"/>
+    <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico" />
 
     <title>Characters - Pergasha</title>
-</head>
-<body onload="charactersPage()">
+  </head>
+
+  <body onload="charactersPage()">
 
 
     <header>
 
-        <nav class="navbar navbar-dark navbar-expand-xl">
-            <div class="navbar-brand  mr-4">
-                <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../pergasha.html">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Player Options
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="classes.html">Classes</a>
-                      <a class="dropdown-item" href="races.html">Races</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="feats.html">Feats</a>
-                      <a class="dropdown-item" href="infusions.html">Infusions</a>
-                      <a class="dropdown-item" href="training.html">Training</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="psionics.html">Psionics</a>
-                </li>
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      References
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="characters.html">Characters</a>
-                      <a class="dropdown-item" href="glyphs.html">Glyphs</a>
-                      <a class="dropdown-item" href="items.html">Items</a>
-                      <a class="dropdown-item" href="locations.html">Locations</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rules.html">Rules</a>
-                </li>
-            </ul>
-            <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
-                <div class="d-none" id="notlogged">
-                    <form class="form-inline">
-                        <div class="form-group form-group-sm">
-                            <input type="text" class="form-control form-control-sm mr-sm-2 login-input" id="username" placeholder="Username">
-                            <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd" placeholder="Password">
-                            <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
-                        </div>
-                    </form>
-                    <input type="checkbox" id="showPwd" class="mr-1"  autocomplete="off"><span id="show-pwd-label">Show Password</span> 
-                </div>
-            </div>
-          </nav>
+      <nav class="navbar navbar-dark navbar-expand-xl">
+        <div class="navbar-brand  mr-4">
+          <a href="../pergasha.html">
+            <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../pergasha.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Player Options
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="classes.html">Classes</a>
+                <a class="dropdown-item" href="races.html">Races</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="feats.html">Feats</a>
+                <a class="dropdown-item" href="infusions.html">Infusions</a>
+                <a class="dropdown-item" href="training.html">Training</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="psionics.html">Psionics</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                References
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="characters.html">Characters</a>
+                <a class="dropdown-item" href="glyphs.html">Glyphs</a>
+                <a class="dropdown-item" href="items.html">Items</a>
+                <a class="dropdown-item" href="locations.html">Locations</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rules.html">Rules</a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
+          <div class="d-none" id="notlogged">
+            <form class="form-inline">
+              <div class="form-group form-group-sm">
+                <input type="text" class="form-control form-control-sm mr-sm-2 login-input" id="username"
+                  placeholder="Username">
+                <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd"
+                  placeholder="Password">
+                <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
+              </div>
+            </form>
+            <input type="checkbox" id="showPwd" class="mr-1" autocomplete="off"><span id="show-pwd-label">Show
+              Password</span>
+          </div>
+        </div>
+      </nav>
 
     </header>
 
-    <div class="d-flex flex-column" id="character-container">   
+    <div class="d-flex flex-column" id="character-container">
       <h2 class="text-center mb-1 mt-3 arjulian">Characters</h2>
 
-        <form class="form-inline  align-self-center mb-2 mt-4">
-          <input class="form-control" type="search" placeholder="Search by Name" aria-label="Search" id="name-filter">
-        </form>
+      <form class="form-inline  align-self-center mb-2 mt-4">
+        <input class="form-control" type="search" placeholder="Search by Name" aria-label="Search" id="name-filter">
+      </form>
 
-        <div class="row justify-content-center align-self-center m-3 btn-group btn-group-toggle button-filters">
-          <button type="button" class="btn btn-primary btn-xs reset-btn " id="reset">Reset</button>
-          <button type="button" class="btn btn-outline-dark btn-xs andOr-btn" id="and" data-toggle="button" aria-pressed="false">And</button>
-          <button type="button" class="btn btn-outline-dark btn-xs andOr-btn active" id="or" data-toggle="button" aria-pressed="true">Or</button>
-        </div>
+      <div class="row justify-content-center align-self-center m-3 btn-group btn-group-toggle button-filters">
+        <button type="button" class="btn btn-primary btn-xs reset-btn " id="reset">Reset</button>
+        <button type="button" class="btn btn-outline-dark btn-xs andOr-btn" id="and" data-toggle="button"
+          aria-pressed="false">And</button>
+        <button type="button" class="btn btn-outline-dark btn-xs andOr-btn active" id="or" data-toggle="button"
+          aria-pressed="true">Or</button>
+      </div>
 
-        <span class="text-center"><b>Race</b></span>
-        <div class="row justify-content-center align-self-center m-1 btn-group btn-group-toggle button-filters">
-          <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="lizardfolk" data-toggle="button" aria-pressed="false">Lizardfolk</button>
-          <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="pergashan" data-toggle="button" aria-pressed="false">Pergashan</button>
-          <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="touched-kin" data-toggle="button" aria-pressed="false">Touched-kin</button>
-          <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="other" data-toggle="button" aria-pressed="false">Other Race</button>
-        </div>
+      <span class="text-center"><b>Race</b></span>
+      <div class="row justify-content-center align-self-center m-1 btn-group btn-group-toggle button-filters">
+        <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="lizardfolk" data-toggle="button"
+          aria-pressed="false">Lizardfolk</button>
+        <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="pergashan" data-toggle="button"
+          aria-pressed="false">Pergashan</button>
+        <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="touched-kin" data-toggle="button"
+          aria-pressed="false">Touched-kin</button>
+        <button type="button" class="btn btn-outline-info btn-xs btn-tag " id="other" data-toggle="button"
+          aria-pressed="false">Other Race</button>
+      </div>
 
-        <span class="text-center mt-3"><b>Tribe</b></span>
-        <div class="row justify-content-center align-self-center m-1 btn-group btn-group-toggle button-filters">
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="cloud" data-toggle="button" aria-pressed="false">Cloud Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="fire" data-toggle="button" aria-pressed="false">Fire Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="gem" data-toggle="button" aria-pressed="false">Gem Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="sand" data-toggle="button" aria-pressed="false">Sand Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="stone" data-toggle="button" aria-pressed="false">Stone Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="storm" data-toggle="button" aria-pressed="false">Storm Tribe</button>
-          <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="tribeless" data-toggle="button" aria-pressed="false">Tribeless</button>
-        </div>
-        
-        <span class="text-center mt-3"><b>Organization</b></span>
-        <div class="row justify-content-center align-self-center m-1 btn-group btn-group-toggle button-filters">
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="bloodkeepers" data-toggle="button" aria-pressed="false">Bloodkeepers</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="council" data-toggle="button" aria-pressed="false">Council</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="delvers" data-toggle="button" aria-pressed="false">Delvers</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="drifters" data-toggle="button" aria-pressed="false">Drifters</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="hexes" data-toggle="button" aria-pressed="false">Hexes</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="hunters" data-toggle="button" aria-pressed="false">Hunters</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="inquisitors" data-toggle="button" aria-pressed="false">Inquisitors</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="nesters" data-toggle="button" aria-pressed="false">Nesters</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="ormicans" data-toggle="button" aria-pressed="false">Ormicans</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="rovers" data-toggle="button" aria-pressed="false">Rovers</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="seers" data-toggle="button" aria-pressed="false">Seers</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="chasers" data-toggle="button" aria-pressed="false">Storm Chasers</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="storykeepers" data-toggle="button" aria-pressed="false">Storykeepers</button>
-          <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="whisperers" data-toggle="button" aria-pressed="false">Whisperers</button>
-        </div>
+      <span class="text-center mt-3"><b>Tribe</b></span>
+      <div class="row justify-content-center align-self-center m-1 btn-group btn-group-toggle button-filters">
+        <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="cloud" data-toggle="button"
+          aria-pressed="false">Cloud Tribe</button>
+        <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="fire" data-toggle="button"
+          aria-pressed="false">Fire Tribe</button>
+        <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="gem" data-toggle="button"
+          aria-pressed="false">Gem Tribe</button>
+        <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="sand" data-toggle="button"
+          aria-pressed="false">Sand Tribe</button>
+        <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="stone" data-toggle="button"
+          aria-pressed="false">Stone Tribe</button>
+        <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="storm" data-toggle="button"
+          aria-pressed="false">Storm Tribe</button>
+        <button type="button" class="btn btn-outline-secondary btn-xs btn-tag " id="tribeless" data-toggle="button"
+          aria-pressed="false">Tribeless</button>
+      </div>
 
- 
-  <div class="row justify-content-center mt-3" id="cards-container">
-    <h2 class="arjulian" id="noresult" style="display: none;">The party hasn't met any character matching your search.</h2>
+      <span class="text-center mt-3"><b>Organization</b></span>
+      <div class="row justify-content-center align-self-center m-1 btn-group btn-group-toggle button-filters">
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="bloodkeepers" data-toggle="button"
+          aria-pressed="false">Bloodkeepers</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="council" data-toggle="button"
+          aria-pressed="false">Council</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="delvers" data-toggle="button"
+          aria-pressed="false">Delvers</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="drifters" data-toggle="button"
+          aria-pressed="false">Drifters</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="hexes" data-toggle="button"
+          aria-pressed="false">Hexes</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="hunters" data-toggle="button"
+          aria-pressed="false">Hunters</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="inquisitors" data-toggle="button"
+          aria-pressed="false">Inquisitors</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="nesters" data-toggle="button"
+          aria-pressed="false">Nesters</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="ormicans" data-toggle="button"
+          aria-pressed="false">Ormicans</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="rovers" data-toggle="button"
+          aria-pressed="false">Rovers</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="seers" data-toggle="button"
+          aria-pressed="false">Seers</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="chasers" data-toggle="button"
+          aria-pressed="false">Storm Chasers</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="storykeepers" data-toggle="button"
+          aria-pressed="false">Storykeepers</button>
+        <button type="button" class="btn btn-outline-success btn-xs btn-tag " id="whisperers" data-toggle="button"
+          aria-pressed="false">Whisperers</button>
+      </div>
 
-    <div class="flip-card m-2 gem pergashan hexes delvers sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Eoni">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/eoni.jpg" style="display: none; height: 380px; width: 300px;" alt="Eoni">
-          <span class="character-name">Eoni</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Delvers</span>
-            <span class="badge badge-secondary tribe-tag">Gem Tribe</span>
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info race-tag">Pergashan</span>
+
+      <div class="row justify-content-center mt-3" id="cards-container">
+        <h2 class="arjulian" id="noresult" style="display: none;">The party hasn't met any character matching your
+          search.</h2>
+
+        <div class="flip-card m-2 gem pergashan hexes delvers sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Eoni">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/eoni.jpg"
+                style="display: none; height: 380px; width: 300px;" alt="Eoni">
+              <span class="character-name">Eoni</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Delvers</span>
+                <span class="badge badge-secondary tribe-tag">Gem Tribe</span>
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info race-tag">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Eoni Nycis</h4>
+              <i>Artisan Monk </i>
+              <p class="p-1" style="font-size: 18px;">Eoni is a quiet, contemplative monk on a mission. She brought
+                prisoners on board Big Ben to bring to the Conclave but during the journey has found herself tied to an
+                unusual mix of individuals. In particular, she now is Valar’s sponsor in his venture to seek
+                independence from his clan. She has slowly opened herself to the others as truth about her sister comes
+                to light. </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Eoni Nycis</h4>
-          <i>Artisan Monk </i>
-          <p class="p-1" style="font-size: 18px;">Eoni is a quiet, contemplative monk on a mission. She brought prisoners on board Big Ben to bring to the Conclave but during the journey has found herself tied to an unusual mix of individuals. In particular, she now is Valar’s sponsor in his venture to seek independence from his clan. She has slowly opened herself to the others as truth about her sister comes to light. </p>
-        </div>
-      </div>
-    </div> 
 
-    <div class="flip-card m-2 storm ormicans hexes touched-kin sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Barashtu">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/barashtu.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Barashtu</span>
-          <div class="text-center">
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-success">Ormican</span>
-            <span class="badge badge-secondary">Storm Tribe</span>
-            <span class="badge badge-info">Touched-kin</span>
+        <div class="flip-card m-2 storm ormicans hexes touched-kin sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Barashtu">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/barashtu.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Barashtu</span>
+              <div class="text-center">
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-success">Ormican</span>
+                <span class="badge badge-secondary">Storm Tribe</span>
+                <span class="badge badge-info">Touched-kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Barashtu-kal-ammi</h4>
+              <i>High Skald</i>
+              <p class="p-1" style="font-size: 18px;">A well-traveled storyteller and hunter of lost secrets from the
+                fallen empire that once inhabited these lands, Barashtu is an individual filled with knowledge. They are
+                also an incredibly powerful psionic, capable of many feats due to the psicrystal shards that glitter
+                across their body. Their long history of travels has left plenty of secrets, though, and the depth of
+                their involvement with the Ormicans is yet to be revealed...</p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Barashtu-kal-ammi</h4>
-          <i>High Skald</i>
-          <p class="p-1" style="font-size: 18px;">A well-traveled storyteller and hunter of lost secrets from the fallen empire that once inhabited these lands, Barashtu is an individual filled with knowledge. They are also an incredibly powerful psionic, capable of many feats due to the psicrystal shards that glitter across their body. Their long history of travels has left plenty of secrets, though, and the depth of their involvement with the Ormicans is yet to be revealed...</p>
-        </div>
-      </div>
-    </div> 
 
-    <div class="flip-card m-2 sand touched-kin hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Kalar">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/kalar.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Kalar</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-secondary tribe-tag">Sand Tribe</span>
-            <span class="badge badge-info race-tag">Touched-kin</span>
+        <div class="flip-card m-2 sand touched-kin hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Kalar">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/kalar.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Kalar</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-secondary tribe-tag">Sand Tribe</span>
+                <span class="badge badge-info race-tag">Touched-kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Kalar</h4>
+              <i>High Roaster</i>
+              <p class="p-1" style="font-size: 18px;">A direfolk exploited for most of his life by his own family, Kalar
+                dreams of becoming a renowned chef across Pergasha. His love for beasts of all kind pushes him to gather
+                his own menagerie wherever he goes. </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Kalar</h4>
-          <i>High Roaster</i>
-          <p class="p-1" style="font-size: 18px;">A direfolk exploited for most of his life by his own family, Kalar dreams of becoming a renowned chef across Pergasha. His love for beasts of all kind pushes him to gather his own menagerie wherever he goes. </p>
-        </div>
-      </div>
-    </div> 
 
-    <div class="flip-card m-2 sand touched-kin hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Valar">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/valar-emp.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Valar</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-secondary tribe-tag">Sand Tribe</span>
-            <span class="badge badge-info race-tag">Touched-kin</span>
+        <div class="flip-card m-2 sand touched-kin hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Valar">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/valar-emp.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Valar</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-secondary tribe-tag">Sand Tribe</span>
+                <span class="badge badge-info race-tag">Touched-kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Valar Nightwing</h4>
+              <i>Loyal Brother </i>
+              <p class="p-1" style="font-size: 18px;">Valar has a musical aura that sways the hearts and minds of those
+                around him. He feels deeply and has a well of power within him, but he is still naïve to the world. He
+                has grown, though, and with this burgeoning confidence, who knows what he will accomplish or what songs
+                he will create? </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Valar Nightwing</h4>
-          <i>Loyal Brother </i>
-          <p class="p-1" style="font-size: 18px;">Valar has a musical aura that sways the hearts and minds of those around him. He feels deeply and has a well of power within him, but he is still naïve to the world. He has grown, though, and with this burgeoning confidence, who knows what he will accomplish or what songs he will create? </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 tribeless lizardfolk hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jax">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/jax-emp.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Jax</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info">Lizardfolk</span>
-            <span class="badge badge-secondary">Tribeless</span>
+        <div class="flip-card m-2 tribeless lizardfolk hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jax">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/jax-emp.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Jax</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info">Lizardfolk</span>
+                <span class="badge badge-secondary">Tribeless</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Jaxzulas "Jax" Khal</h4>
+              <i style="font-size: 18px;">Future Chieftess of the Rising Fang Tribe </i>
+              <p class="p-1" style="font-size: 16px;">Inspired by Bara's stories told in her youth, Jax grew up with a
+                spirit of adventure that, in spite of her family's best efforts, never truly left her. Upon a second
+                encounter with Bara, and the fateful howling from a distant wolf, she left the world and
+                responsibilities of her tribe behind in search of adventure. Despite the near-constant wonder and
+                amazement to be found in the realm outside the Broken Fingers, she has quickly learned that death looms
+                around every corner and not everything is as it appears to be...</p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Jaxzulas "Jax" Khal</h4>
-          <i style="font-size: 18px;">Future Chieftess of the Rising Fang Tribe </i>
-          <p class="p-1" style="font-size: 16px;">Inspired by Bara's stories told in her youth, Jax grew up with a spirit of adventure that, in spite of her family's best efforts, never truly left her. Upon a second encounter with Bara, and the fateful howling from a distant wolf, she left the world and responsibilities of her tribe behind in search of adventure. Despite the near-constant wonder and amazement to be found in the realm outside the Broken Fingers, she has quickly learned that death looms around every corner and not everything is as it appears to be...</p>
-        </div>
-      </div>
-    </div> 
 
-    <div class="flip-card m-2 ormicans touched-kin tribeless rovers sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jade">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/jade.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Jade</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Ormicans</span>
-            <span class="badge badge-success">Rovers</span>
-            <span class="badge badge-info">Touched-kin</span>
-            <span class="badge badge-secondary">Tribeless</span>
+        <div class="flip-card m-2 ormicans touched-kin tribeless rovers sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jade">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/jade.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Jade</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Ormicans</span>
+                <span class="badge badge-success">Rovers</span>
+                <span class="badge badge-info">Touched-kin</span>
+                <span class="badge badge-secondary">Tribeless</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Jade</h4>
+              <i>Barashtu’s Once-Companion </i>
+              <p class="p-1" style="font-size: 18px;">This Crowned Kin is quietly observant, mysterious, and slow to
+                trust. She shares a unique bond with Barashtu, but her full story is kept hidden behind her sharp eyes.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Jade</h4>
-          <i>Barashtu’s Once-Companion </i>
-          <p class="p-1" style="font-size: 18px;">This Crowned Kin is quietly observant, mysterious, and slow to trust. She shares a unique bond with Barashtu, but her full story is kept hidden behind her sharp eyes. </p>
-        </div>
-      </div>
-    </div> 
 
-    <div class="flip-card m-2 cloud touched-kin council seers sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Wum'pung">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/fareyes.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Wum'pung</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-secondary">Cloud Tribe</span>
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-success">Seers</span>
-            <span class="badge badge-info">Touched-kin</span>
+        <div class="flip-card m-2 cloud touched-kin council seers sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Wum'pung">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/fareyes.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Wum'pung</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-secondary">Cloud Tribe</span>
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-success">Seers</span>
+                <span class="badge badge-info">Touched-kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Wum'pung Fareyes</h4>
+              <i>High Seer</i>
+              <p class="p-1" style="font-size: 18px;">Old, blind, and a heavy smoker, this quirky Direfolk serves on the
+                Council. He was born to the Cloud Tribe but his Sight has elevated him beyond tribal concerns. Vina
+                Vor-Koraq introduced the party to Wum’pung at the Conclave after Kalar won the title of High Roaster.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Wum'pung Fareyes</h4>
-          <i>High Seer</i>
-          <p class="p-1" style="font-size: 18px;">Old, blind, and a heavy smoker, this quirky Direfolk serves on the Council. He was born to the Cloud Tribe but his Sight has elevated him beyond tribal concerns. Vina Vor-Koraq introduced the party to Wum’pung at the Conclave after Kalar won the title of High Roaster. </p>
-        </div>
-      </div>
-    </div> 
 
-    <div class="flip-card m-2 delvers touched-kin sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Muno">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/muno.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Muno</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Delvers</span>
-            <span class="badge badge-info">Touched-kin</span>
+        <div class="flip-card m-2 delvers touched-kin sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Muno">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/muno.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Muno</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Delvers</span>
+                <span class="badge badge-info">Touched-kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Muno</h4>
+              <i>Delver Prisoner </i>
+              <p class="p-1" style="font-size: 18px;">This Direfolk was captured along with two others for a serious
+                crime. They were transported to the Conclave on Big Ben and await trial. He seemed fearful after an
+                attack left one of the prisoners dead. </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Muno</h4>
-          <i>Delver Prisoner </i>
-          <p class="p-1" style="font-size: 18px;">This Direfolk was captured along with two others for a serious crime. They were transported to the Conclave on Big Ben and await trial. He seemed fearful after an attack left one of the prisoners dead. </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 delvers touched-kin sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Sashana">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/sashana.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Sashana</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Delvers</span>
-            <span class="badge badge-info">Touched-kin</span>
+        <div class="flip-card m-2 delvers touched-kin sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Sashana">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/sashana.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Sashana</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Delvers</span>
+                <span class="badge badge-info">Touched-kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Sashana</h4>
+              <i>Delver Prisoner </i>
+              <p class="p-1" style="font-size: 18px;">This scarred female Touched-Kin was captured with two others for a
+                serious crime. They were transported to the Conclave on Big Ben and await trial. Despite mysteriums and
+                devices to restrict their ability to interact, this woman smirked knowingly after an attack left one of
+                the prisoners dead.</p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Sashana</h4>
-          <i>Delver Prisoner </i>
-          <p class="p-1" style="font-size: 18px;">This scarred female Touched-Kin was captured with two others for a serious crime. They were transported to the Conclave on Big Ben and await trial. Despite mysteriums and devices to restrict their ability to interact, this woman smirked knowingly after an attack left one of the prisoners dead.</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 delvers touched-kin sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Tukuk">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/tukuk.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Tukuk</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Delvers</span>
-            <span class="badge badge-info">Touched-kin</span>
+        <div class="flip-card m-2 delvers touched-kin sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Tukuk">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/tukuk.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Tukuk</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Delvers</span>
+                <span class="badge badge-info">Touched-kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Tukuk</h4>
+              <i>Delver Prisoner, Deceased </i>
+              <p class="p-1" style="font-size: 18px;">This freakish, insectoid Touched-Kin was captured with two others
+                for a serious crime. They were transported to the Conclave on Big Ben and await trial. It twitched and
+                behaved erratically, but little is known of this individual since it was killed in an attack on Big Ben.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Tukuk</h4>
-          <i>Delver Prisoner, Deceased </i>
-          <p class="p-1" style="font-size: 18px;">This freakish, insectoid Touched-Kin was captured with two others for a serious crime. They were transported to the Conclave on Big Ben and await trial. It twitched and behaved erratically, but little is known of this individual since it was killed in an attack on Big Ben. </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 touched-kin drifters sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Mimi">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/mimi.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Mimi</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Drifters</span>
-            <span class="badge badge-info">Touched-kin</span>
+        <div class="flip-card m-2 touched-kin drifters sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Mimi">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/mimi.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Mimi</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Drifters</span>
+                <span class="badge badge-info">Touched-kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Mimi</h4>
+              <i>A Drifter’s Wife </i>
+              <p class="p-1" style="font-size: 18px;">Mimi is a rare Touched Kin that has vulpine features, has a
+                mysterium-tinkered arm, and seems to be a powerful telepath. She obsesses over Sunderball while she
+                travels with her Drifter husband, Trik, aboard an unfathomably massive desert buffalo named Big Ben.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Mimi</h4>
-          <i>A Drifter’s Wife </i>
-          <p class="p-1" style="font-size: 18px;">Mimi is a rare Touched Kin that has vulpine features, has a mysterium-tinkered arm, and seems to be a powerful telepath. She obsesses over Sunderball while she travels with her Drifter husband, Trik, aboard an unfathomably massive desert buffalo named Big Ben.  </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 drifters touched-kin sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Trik">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/trik.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Trik</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Drifters</span>
-            <span class="badge badge-info">Touched-kin</span>
+        <div class="flip-card m-2 drifters touched-kin sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Trik">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/trik.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Trik</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Drifters</span>
+                <span class="badge badge-info">Touched-kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Trik</h4>
+              <i>Drifter Extraordinaire</i>
+              <p class="p-1" style="font-size: 18px;">A famous drifter, mysterium collector, and retired warrior with a
+                mysterium-made leg, Trik has done much with his life. He leads one of the largest trade caravans and
+                knows many important individuals. Despite his success, he is friendly and generous. He is an unusual
+                Touched-Kin that could almost be mistaken for a miniature Lizardfolk. The only thing he adores more than
+                his beloved gargantuan mount, Big Ben, is his snarky wife Mimi. </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Trik</h4>
-          <i>Drifter Extraordinaire</i>
-          <p class="p-1" style="font-size: 18px;">A famous drifter, mysterium collector, and retired warrior with a mysterium-made leg, Trik has done much with his life. He leads one of the largest trade caravans and knows many important individuals. Despite his success, he is friendly and generous. He is an unusual Touched-Kin that could almost be mistaken for a miniature Lizardfolk. The only thing he adores more than his beloved gargantuan mount, Big Ben, is his snarky wife Mimi.  </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 fire pergashan sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Tonuk+Twins">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/matilla.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Matilla & Ethy</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-secondary">Fire Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 fire pergashan sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Tonuk+Twins">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/matilla.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Matilla & Ethy</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-secondary">Fire Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Matilla & Ethy Tonuk</h4>
+              <i>Fire Pergashan Twins </i>
+              <p class="p-1" style="font-size: 16px;">Ethy was gravely injured during The Search when she was not only
+                struck by lightning during a Sundering Storm but also crushed by boulders. She was separated from the
+                rest of her herd and, not wanting to shame herself and her family, asked for death. <br><br> Matilla is
+                an unusually irreverent Pergashan who was trapped behind a rockslide. For her and her sister’s rescue,
+                she is grateful and promised to repay the group should they meet again. </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Matilla & Ethy Tonuk</h4>
-          <i>Fire Pergashan Twins </i>
-          <p class="p-1" style="font-size: 16px;">Ethy was gravely injured during The Search when she was not only struck by lightning during a Sundering Storm but also crushed by boulders. She was separated from the rest of her herd and, not wanting to shame herself and her family, asked for death. <br><br> Matilla is an unusually irreverent Pergashan who was trapped behind a rockslide. For her and her sister’s rescue, she is grateful and promised to repay the group should they meet again. </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 gem pergashan inquisitors sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jurani">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/jurani.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Jurani</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Inquisitors</span>
-            <span class="badge badge-secondary">Gem Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 gem pergashan inquisitors sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jurani">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/jurani.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Jurani</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Inquisitors</span>
+                <span class="badge badge-secondary">Gem Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Jurani Vor-Dorin</h4>
+              <i>High Inquisitor Apprentice </i>
+              <p class="p-1" style="font-size: 18px;">Inquisitor Vor-Dorin is a solemn, formal Gem Pergashan that Eoni
+                met while turning over prisoners to the Privy Council. </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Jurani Vor-Dorin</h4>
-          <i>High Inquisitor Apprentice </i>
-          <p class="p-1" style="font-size: 18px;">Inquisitor Vor-Dorin is a solemn, formal Gem Pergashan that Eoni met while turning over prisoners to the Privy Council.  </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 lizardfolk tribeless sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Hako">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/hako.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Hako</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-info">Lizardfolk</span>
-            <span class="badge badge-secondary">Tribeless</span>
+        <div class="flip-card m-2 lizardfolk tribeless sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Hako">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/hako.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Hako</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-info">Lizardfolk</span>
+                <span class="badge badge-secondary">Tribeless</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Hako Um Beeki</h4>
+              <i>Former weapon-bearer to Rix Saveio </i>
+              <p class="p-1" style="font-size: 18px;">This strong, quiet Lizardfolk was never far from Rix’s side. He
+                used to follow Rix's commands but was never deliberately cruel. He did nothing when Rix was attacked and
+                left the conclave to return to the Broken Fingers.</p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Hako Um Beeki</h4>
-          <i>Former weapon-bearer to Rix Saveio </i>
-          <p class="p-1" style="font-size: 18px;">This strong, quiet Lizardfolk was never far from Rix’s side. He used to follow Rix's commands but was never deliberately cruel. He did nothing when Rix was attacked and left the conclave to return to the Broken Fingers.</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 lizardfolk tribeless sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Rix">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/rix.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Rix</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-info">Lizardfolk</span>
-            <span class="badge badge-secondary">Tribeless</span>
+        <div class="flip-card m-2 lizardfolk tribeless sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Rix">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/rix.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Rix</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-info">Lizardfolk</span>
+                <span class="badge badge-secondary">Tribeless</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Rix Saveio</h4>
+              <i>Spurned Suitor, Deceased </i>
+              <p class="p-1" style="font-size: 18px;">It was revealed that Rix, a powerful Lizardfolk expected to become
+                the leader of his clan, was once Jax’s suitor. He was brusque and belittled Jax openly, clearly still
+                angry at the outcome of their courtship as he believes he was cheated. Rix was killed by Elziss and his
+                sunderball team during the Conclave.</p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Rix Saveio</h4>
-          <i>Spurned Suitor, Deceased </i>
-          <p class="p-1" style="font-size: 18px;">It was revealed that Rix, a powerful Lizardfolk expected to become the leader of his clan, was once Jax’s suitor. He was brusque and belittled Jax openly, clearly still angry at the outcome of their courtship as he believes he was cheated. Rix was killed by Elziss and his sunderball team during the Conclave.</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 nesters seers pergashan sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Avara">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/avara.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Avara</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Nesters</span>
-            <span class="badge badge-info">Pergashan</span>
-            <span class="badge badge-success">Seers</span>
+        <div class="flip-card m-2 nesters seers pergashan sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Avara">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/avara.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Avara</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Nesters</span>
+                <span class="badge badge-info">Pergashan</span>
+                <span class="badge badge-success">Seers</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Avara Sha'ar of Hightown</h4>
+              <i>Seer</i>
+              <p class="p-1" style="font-size: 18px;">Avara is a blind Sand Pergashan who serves as Seer to the Song of
+                Hightown. She seems to be able to control her visions more than the average Seer, making her a powerful
+                ally to the Song. Avara’s demeanor can be haughty at times, but she is protective of the Song and serves
+                her interests. She assists the Song in her search for information regarding glyphs from an ancient,
+                unknown language that recently have been making appearances across Pergasha. </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Avara Sha'ar of Hightown</h4>
-          <i>Seer</i>
-          <p class="p-1" style="font-size: 18px;">Avara is a blind Sand Pergashan who serves as Seer to the Song of Hightown. She seems to be able to control her visions more than the average Seer, making her a powerful ally to the Song. Avara’s demeanor can be haughty at times, but she is protective of the Song and serves her interests. She assists the Song in her search for information regarding glyphs from an ancient, unknown language that recently have been making appearances across Pergasha. </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 nesters touched-kin council sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Chalise">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/chalise.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Chalise</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-success">Nesters</span>
-            <span class="badge badge-info">Touched-kin</span>
+        <div class="flip-card m-2 nesters touched-kin council sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Chalise">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/chalise.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Chalise</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-success">Nesters</span>
+                <span class="badge badge-info">Touched-kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Chalise Lightwing</h4>
+              <i>Song of Hightown</i>
+              <p class="p-1" style="font-size: 18px;">As Song of Hightown, Chalise rules over the growing and beautiful
+                canopy city in mesas of The Nest. This Feathered Kin was born mute and after a bad accident, was unable
+                to fly. Somehow, she found a way to fly and gained a voice after her Proving. Chalise told the party
+                that her Proven name, like Eoni’s, was in the form of glyphs and not sound. She is notoriously
+                good-humored with a deep interest in ancient glyphs and languages. </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Chalise Lightwing</h4>
-          <i>Song of Hightown</i>
-          <p class="p-1" style="font-size: 18px;">As Song of Hightown, Chalise rules over the growing and beautiful canopy city in mesas of The Nest. This Feathered Kin was born mute and after a bad accident, was unable to fly. Somehow, she found a way to fly and gained a voice after her Proving. Chalise told the party that her Proven name, like Eoni’s, was in the form of glyphs and not sound. She is notoriously good-humored with a deep interest in ancient glyphs and languages. </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 sand pergashan  sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Vina">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/vina.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Vina</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-secondary">Sand Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 sand pergashan  sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Vina">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/vina.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Vina</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-secondary">Sand Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Vina Vor-Koraq</h4>
+              <i>Sere of the Sand Falcons, Deceased </i>
+              <p class="p-1" style="font-size: 18px;">Vina is a kind-hearted but influential Sand Sere who has agreed to
+                sponsor and assist Kalar in his venture for independence. She is a friend of Trik and fellow Drifter,
+                and Valar observed Vina at the Conclave markets. Her generosity and respectful behavior were surprising.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Vina Vor-Koraq</h4>
-          <i>Sere of the Sand Falcons, Deceased </i>
-          <p class="p-1" style="font-size: 18px;">Vina is a kind-hearted but influential Sand Sere who has agreed to sponsor and assist Kalar in his venture for independence. She is a friend of Trik and fellow Drifter, and Valar observed Vina at the Conclave markets. Her generosity and respectful behavior were surprising. </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 storm pergashan council sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Xianetta">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/xianetta.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Xianetta</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-secondary">Storm Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 storm pergashan council sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Xianetta">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/xianetta.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Xianetta</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-secondary">Storm Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Xianetta Stormslayer Vor-Ettik</h4>
+              <i>Thrane of the Storm Tribe </i>
+              <p class="p-1" style="font-size: 18px;">Xianetta is a regal Pergashan who is acquaintances with Vina
+                Vor-Koraq. She was socializing with Vina, Wum’pung, and others at the Conclave. </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Xianetta Stormslayer Vor-Ettik</h4>
-          <i>Thrane of the Storm Tribe </i>
-          <p class="p-1" style="font-size: 18px;">Xianetta is a regal Pergashan who is acquaintances with Vina Vor-Koraq. She was socializing with Vina, Wum’pung, and others at the Conclave. </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 other sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Vi'Qwame">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/qwame.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Vi'Qwame</span>
-          <div class="character-tag text-center">
-            <!-- <span class="badge badge-success">Organization</span>
+        <div class="flip-card m-2 other sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Vi'Qwame">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/qwame.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Vi'Qwame</span>
+              <div class="character-tag text-center">
+                <!-- <span class="badge badge-success">Organization</span>
             <span class="badge badge-secondary">Tribe</span>
             <span class="badge badge-info">Race</span> -->
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Vi'Qwame</h4>
+              <i>Mysterious Trainer </i>
+              <p class="p-1" style="font-size: 18px;">An enigmatic, jolly wanderer was first encountered during The
+                Search. He claims that he appears near places of power and has a great deal of knowledge about them,
+                among other talents. If you see Vi’Qwame, prepare for confusing answers and bizarre tests of your worth.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Vi'Qwame</h4>
-          <i>Mysterious Trainer </i>
-          <p class="p-1" style="font-size: 18px;">An enigmatic, jolly wanderer was first encountered during The Search. He claims that he appears near places of power and has a great deal of knowledge about them, among other talents. If you see Vi’Qwame, prepare for confusing answers and bizarre tests of your worth. </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 gem pergashan sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Nara">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/nara.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Nara</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-secondary">Gem Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 gem pergashan sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Nara">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/nara.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Nara</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-secondary">Gem Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Nara Nycis</h4>
+              <i>Lost Twin </i>
+              <p class="p-1" style="font-size: 18px;">Nara is Eoni’s beautiful, lost twin sister. Eoni was certain that
+                her sister was dead, and her body used as psi-crystals. She sought revenge and justice for Nara, but
+                during The Search, Eoni learned that Nara may not be dead after all. </p>
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Nara Nycis</h4>
-          <i>Lost Twin </i>
-          <p class="p-1" style="font-size: 18px;">Nara is Eoni’s beautiful, lost twin sister. Eoni was certain that her sister was dead, and her body used as psi-crystals. She sought revenge and justice for Nara, but during The Search, Eoni learned that Nara may not be dead after all.  </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 cloud pergashan hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Ama">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/ama.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Ama</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-secondary">Cloud Tribe</span>
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 cloud pergashan hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Ama">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/ama.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Ama</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-secondary">Cloud Tribe</span>
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Ama</h4>
+              <i>Ballers Hex Member</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Ama</h4>
-          <i>Ballers Hex Member</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 gem pergashan hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Adara">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/adara.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Adara</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-secondary">Gem Tribe</span>
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 gem pergashan hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Adara">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/adara.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Adara</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-secondary">Gem Tribe</span>
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Adara</h4>
+              <i>Hex Member, Deceased</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Adara</h4>
-          <i>Hex Member, Deceased</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 storm pergashan council inquisitors sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Akima">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/akima.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Akima</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-success">Inquisitors</span>
-            <span class="badge badge-secondary">Storm Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 storm pergashan council inquisitors sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Akima">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/akima.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Akima</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-success">Inquisitors</span>
+                <span class="badge badge-secondary">Storm Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Akima Stormdreamer Vor-Vartak</h4>
+              <i>High Inquisitor</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Akima Stormdreamer Vor-Vartak</h4>
-          <i>High Inquisitor</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 sand touched-kin sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Duh+and+Wain">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/duhwain.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Duh and Wain</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-secondary">Sand Tribe</span>
-            <span class="badge badge-info">Touched-Kin</span>
+        <div class="flip-card m-2 sand touched-kin sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Duh+and+Wain">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/duhwain.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Duh and Wain</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-secondary">Sand Tribe</span>
+                <span class="badge badge-info">Touched-Kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Duh and Wain</h4>
+              <i>"The Boulders" Son of Jon</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Duh and Wain</h4>
-          <i>"The Boulders" Son of Jon</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 lizardfolk tribeless sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Elziss">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/elziss.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Elziss</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-info">Lizardfolk</span>
-            <span class="badge badge-secondary">Tribeless</span>
+        <div class="flip-card m-2 lizardfolk tribeless sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Elziss">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/elziss.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Elziss</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-info">Lizardfolk</span>
+                <span class="badge badge-secondary">Tribeless</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Elziss Longtail</h4>
+              <i>Jax's Promised Mate</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Elziss Longtail</h4>
-          <i>Jax's Promised Mate</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 storm pergashan chasers hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Hran">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/hran.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Hran</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info">Pergashan</span>
-            <span class="badge badge-success">Storm Chasers</span>
-            <span class="badge badge-secondary">Storm Tribe</span>
+        <div class="flip-card m-2 storm pergashan chasers hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Hran">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/hran.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Hran</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info">Pergashan</span>
+                <span class="badge badge-success">Storm Chasers</span>
+                <span class="badge badge-secondary">Storm Tribe</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Hran</h4>
+              <i>Hex Member, Deceased</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Hran</h4>
-          <i>Hex Member, Deceased</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 sand pergashan council storykeepers sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Izad">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/izad.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Izad</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-info">Pergashan</span>
-            <span class="badge badge-secondary">Sand Tribe</span>
-            <span class="badge badge-success">Storykeepers</span>
+        <div class="flip-card m-2 sand pergashan council storykeepers sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Izad">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/izad.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Izad</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-info">Pergashan</span>
+                <span class="badge badge-secondary">Sand Tribe</span>
+                <span class="badge badge-success">Storykeepers</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Izad Of Many Words Vor-Ghazi</h4>
+              <i>High Storykeeper</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Izad Of Many Words Vor-Ghazi</h4>
-          <i>High Storykeeper</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 storm hexes pergashan chasers sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Kadenevala">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/kadenevala.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Kadenevala</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info">Pergashan</span>
-            <span class="badge badge-success">Storm Chasers</span>
-            <span class="badge badge-secondary">Storm Tribe</span>
+        <div class="flip-card m-2 storm hexes pergashan chasers sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Kadenevala">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/kadenevala.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Kadenevala</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info">Pergashan</span>
+                <span class="badge badge-success">Storm Chasers</span>
+                <span class="badge badge-secondary">Storm Tribe</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Kadenevala Thunderbolt Vor-Saika</h4>
+              <i>Hex Member, Deceased</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Kadenevala Thunderbolt Vor-Saika</h4>
-          <i>Hex Member, Deceased</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 gem pergashan council sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Kinari">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/kinari.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Kinari</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-secondary">Gem Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 gem pergashan council sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Kinari">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/kinari.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Kinari</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-secondary">Gem Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Kinari Gilda Vor-Tunik</h4>
+              <i>Thrane of the Gem Tribe</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Kinari Gilda Vor-Tunik</h4>
-          <i>Thrane of the Gem Tribe</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 sand pergashan sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jicette">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/jicette.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Jicette</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-info">Pergashan</span>
-            <span class="badge badge-secondary">Sand Tribe</span>
+        <div class="flip-card m-2 sand pergashan sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jicette">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/jicette.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Jicette</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-info">Pergashan</span>
+                <span class="badge badge-secondary">Sand Tribe</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Jicette Vor-Jorin</h4>
+              <i>The Exiled, Deceased</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Jicette Vor-Jorin</h4>
-          <i>The Exiled, Deceased</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 stone pergashan hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jum">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/jum.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Jum</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info">Pergashan</span>
-            <span class="badge badge-secondary">Stone Tribe</span>
+        <div class="flip-card m-2 stone pergashan hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Jum">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/jum.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Jum</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info">Pergashan</span>
+                <span class="badge badge-secondary">Stone Tribe</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Jum</h4>
+              <i>Ballers Hex Member</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Jum</h4>
-          <i>Ballers Hex Member</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 cloud pergashan council sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Nimm">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/nimm.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Nimm</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-secondary">Cloud Tribe</span>
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 cloud pergashan council sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Nimm">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/nimm.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Nimm</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-secondary">Cloud Tribe</span>
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Nimm Shaar Vor-Sylpha</h4>
+              <i>Thrane of the Cloud Tribe</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Nimm Shaar Vor-Sylpha</h4>
-          <i>Thrane of the Cloud Tribe</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 stone touched-kin council bloodkeepers sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Papa+Rukook">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/rukook.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Papa Rukook</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Bloodkeepers</span>
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-secondary">Stone Tribe</span>
-            <span class="badge badge-info">Touched-Kin</span>
+        <div class="flip-card m-2 stone touched-kin council bloodkeepers sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Papa+Rukook">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/rukook.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Papa Rukook</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Bloodkeepers</span>
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-secondary">Stone Tribe</span>
+                <span class="badge badge-info">Touched-Kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Papa Rukook and Tiny Kook</h4>
+              <i>High Bloodkeeper</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Papa Rukook and Tiny Kook</h4>
-          <i>High Bloodkeeper</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 sand touched-kin sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Pet">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/pet.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Pet</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-secondary">Sand Tribe</span>
-            <span class="badge badge-info">Touched-Kin</span>
+        <div class="flip-card m-2 sand touched-kin sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Pet">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/pet.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Pet</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-secondary">Sand Tribe</span>
+                <span class="badge badge-info">Touched-Kin</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Pet</h4>
+              <i>Child of Jicette</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Pet</h4>
-          <i>Child of Jicette</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 gem pergashan council whisperers sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Runa">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/runa.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Runa</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-secondary">Gem Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
-            <span class="badge badge-success">Whisperers</span>
+        <div class="flip-card m-2 gem pergashan council whisperers sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Runa">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/runa.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Runa</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-secondary">Gem Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+                <span class="badge badge-success">Whisperers</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Runa Thistledown Vor-Uldani</h4>
+              <i>High Whisperer</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Runa Thistledown Vor-Uldani</h4>
-          <i>High Whisperer</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 storm pergashan chasers hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Tirona">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/tirona.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Tirona</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info">Pergashan</span>
-            <span class="badge badge-success">Storm Chasers</span>
-            <span class="badge badge-secondary">Storm Tribe</span>
+        <div class="flip-card m-2 storm pergashan chasers hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Tirona">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/tirona.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Tirona</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info">Pergashan</span>
+                <span class="badge badge-success">Storm Chasers</span>
+                <span class="badge badge-secondary">Storm Tribe</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Tirona</h4>
+              <i>Hex Member, Deceased</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Tirona</h4>
-          <i>Hex Member, Deceased</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 fire pergashan council sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Tyranik">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/tyranik.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Tyranik</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-secondary">Fire Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 fire pergashan council sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Tyranik">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/tyranik.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Tyranik</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-secondary">Fire Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Tyranik The Tall Vor-Hunn</h4>
+              <i>Thrane of the Fire Tribe</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Tyranik The Tall Vor-Hunn</h4>
-          <i>Thrane of the Fire Tribe</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 sand pergashan council sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Vasila">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/vasila.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Vasila</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-secondary">Sand Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 sand pergashan council sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Vasila">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/vasila.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Vasila</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-secondary">Sand Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Vasila Mica Vor-Qa'ra</h4>
+              <i>Thrane of the Sand Tribe</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Vasila Mica Vor-Qa'ra</h4>
-          <i>Thrane of the Sand Tribe</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 fire pergashan drifters sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Weiz">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/weiz.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Weiz</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Drifters</span>
-            <span class="badge badge-secondary">Fire Tribe</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 fire pergashan drifters sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Weiz">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/weiz.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Weiz</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Drifters</span>
+                <span class="badge badge-secondary">Fire Tribe</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Weiz</h4>
+              <i>Trik's Rival</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Weiz</h4>
-          <i>Trik's Rival</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 fire pergashan hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Engar">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/engar.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Engar</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-secondary">Fire Tribe</span>
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info">Pergashan</span>
+        <div class="flip-card m-2 fire pergashan hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Engar">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/engar.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Engar</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-secondary">Fire Tribe</span>
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info">Pergashan</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Engar</h4>
+              <i>Ballers Hex Member</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Engar</h4>
-          <i>Ballers Hex Member</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 storm pergashan hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Kord">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/kord.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Kord</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info">Pergashan</span>
-            <span class="badge badge-secondary">Storm Tribe</span>
+        <div class="flip-card m-2 storm pergashan hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Kord">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/kord.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Kord</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info">Pergashan</span>
+                <span class="badge badge-secondary">Storm Tribe</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Kord</h4>
+              <i>Ballers Hex Member</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Kord</h4>
-          <i>Ballers Hex Member</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 sand pergashan hexes sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Vin">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/vin.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Vin</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Hexes</span>
-            <span class="badge badge-info">Pergashan</span>
-            <span class="badge badge-secondary">Sand Tribe</span>
+        <div class="flip-card m-2 sand pergashan hexes sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Vin">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/vin.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Vin</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Hexes</span>
+                <span class="badge badge-info">Pergashan</span>
+                <span class="badge badge-secondary">Sand Tribe</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Vin</h4>
+              <i>Ballers Hex Member</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Vin</h4>
-          <i>Ballers Hex Member</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <div class="flip-card m-2 lizardfolk tribeless council sortme">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Xif'ax">
-          <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
-          <img class="logged-in-character" src="../assets/characters/xif.jpg" style="display: none; height: 380px; width: 300px;" >
-          <span class="character-name">Xif'ax</span>
-          <div class="character-tag text-center">
-            <span class="badge badge-success">Council</span>
-            <span class="badge badge-info">Lizardfolk</span>
-            <span class="badge badge-secondary">Tribeless</span>
+        <div class="flip-card m-2 lizardfolk tribeless council sortme">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=Xif'ax">
+              <div class="centered arjulian not-logged-in-character">Log in to view character art</div>
+              <img class="logged-in-character" src="../assets/characters/xif.jpg"
+                style="display: none; height: 380px; width: 300px;">
+              <span class="character-name">Xif'ax</span>
+              <div class="character-tag text-center">
+                <span class="badge badge-success">Council</span>
+                <span class="badge badge-info">Lizardfolk</span>
+                <span class="badge badge-secondary">Tribeless</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h4>Xif'ax the Sharp</h4>
+              <i>Lizardfolk Elder</i>
+              <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
+            </div>
           </div>
         </div>
-        <div class="flip-card-back">
-          <h4>Xif'ax the Sharp</h4>
-          <i>Lizardfolk Elder</i>
-          <!-- <p class="p-1" style="font-size: 18px;">Info</p> -->
-        </div>
-      </div>
-    </div>
 
-    <!-- <div class="flip-card m-2 TRIBE RACE sortme">
+        <!-- <div class="flip-card m-2 TRIBE RACE sortme">
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <img class="not-logged-in-character" src="https://via.placeholder.com/300x380?text=XXXX">
@@ -1092,95 +1241,100 @@
         </div>
       </div>
     </div> -->
-    
 
 
-  </div>
-    
-    <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="../pergasha.js"></script>
-    <script>
+      </div>
 
-  $(document).ready(function() {
-    var check = $(".btn-tag");
-    var cards = $('.flip-card');
-    var andOrBtn = $('.andOr-btn');
-    var activeFilters = [];
+      <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
 
-    $("#name-filter").on("keyup", function() {
-          var visibleCards = $('.flip-card:visible .character-name');
-          var value = $(this).val().toLowerCase();
-          if (!$(this).val()) {
-            cards.hide();        
-            if (activeFilters.length == 0) {
-              cards.show();
-            } else if ($('#and').hasClass('active')) {
-              for (const card of cards) {
-                let filterCheck = true;
-                console.log(activeFilters);
-                activeFilters.forEach(filter =>{
-                  if (!card.className.includes(filter.slice(1))) {
-                    filterCheck = false;
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+      <script src="../pergasha.js"></script>
+      <script>
+
+        $(document).ready(function () {
+          var check = $(".btn-tag");
+          var cards = $('.flip-card');
+          var andOrBtn = $('.andOr-btn');
+          var activeFilters = [];
+
+          $("#name-filter").on("keyup", function () {
+            var visibleCards = $('.flip-card:visible .character-name');
+            var value = $(this).val().toLowerCase();
+            if (!$(this).val()) {
+              cards.hide();
+              if (activeFilters.length == 0) {
+                cards.show();
+              } else if ($('#and').hasClass('active')) {
+                for (const card of cards) {
+                  let filterCheck = true;
+                  console.log(activeFilters);
+                  activeFilters.forEach(filter => {
+                    if (!card.className.includes(filter.slice(1))) {
+                      filterCheck = false;
+                    }
+                  });
+                  if (filterCheck) {
+                    $(card).show();
                   }
-                });
-                if (filterCheck) {
-                  $(card).show();
                 }
+              } else {
+                activeFilters.forEach(filter => {
+                  $(filter).show();
+                });
               }
             } else {
-              activeFilters.forEach(filter => {
-                $(filter).show(); 
-              });
-            } 
-          } else {
-            for (const card of visibleCards) {
-              if (!($(card).text().toLowerCase().indexOf(value) > -1)) {
-              $(card.parentNode.parentNode.parentNode).hide();
+              for (const card of visibleCards) {
+                if (!($(card).text().toLowerCase().indexOf(value) > -1)) {
+                  $(card.parentNode.parentNode.parentNode).hide();
+                }
               }
             }
-          }
-        });
+          });
 
-    $('.sortme').sort(function(a, b) {
-      if (a.getElementsByClassName('character-name')[0].innerText < b.getElementsByClassName('character-name')[0].innerText) {
-        return -1;
-      } else {
-        return 1;
-      }
-    }).appendTo('#cards-container');
+          $('.sortme').sort(function (a, b) {
+            if (a.getElementsByClassName('character-name')[0].innerText < b.getElementsByClassName('character-name')[0].innerText) {
+              return -1;
+            } else {
+              return 1;
+            }
+          }).appendTo('#cards-container');
 
-    $('.reset-btn').click(function(eventObject){
-        activeFilters = [];
-        for (const btn of check) {
-          if (btn.className.includes('active')) {
-            $(btn).toggleClass('active');
-          }
-        }
-        if (!$('#or').hasClass('active')) {
-          $('#or').toggleClass('active');
-          $('#and').removeClass('active');
-        }
-        $('#name-filter').val("");
-        cards.show();
-    });
+          $('.reset-btn').click(function (eventObject) {
+            activeFilters = [];
+            for (const btn of check) {
+              if (btn.className.includes('active')) {
+                $(btn).toggleClass('active');
+              }
+            }
+            if (!$('#or').hasClass('active')) {
+              $('#or').toggleClass('active');
+              $('#and').removeClass('active');
+            }
+            $('#name-filter').val("");
+            cards.show();
+          });
 
-    andOrBtn.click(function(eventObject){
-      for (const btn of andOrBtn) {
-        if(btn.className.includes('active')) {
-            $(btn).toggleClass('active');
-          } 
-      }
-            cards.hide();        
+          andOrBtn.click(function (eventObject) {
+            for (const btn of andOrBtn) {
+              if (btn.className.includes('active')) {
+                $(btn).toggleClass('active');
+              }
+            }
+            cards.hide();
             if (activeFilters.length == 0) {
               cards.show();
             } else if (eventObject.target.id == 'and') {
               for (const card of cards) {
                 let filterCheck = true;
-                activeFilters.forEach(filter =>{
+                activeFilters.forEach(filter => {
                   if (!card.className.includes(filter.slice(1))) {
                     filterCheck = false;
                   }
@@ -1191,53 +1345,54 @@
               }
             } else {
               activeFilters.forEach(filter => {
-                $(filter).show(); 
+                $(filter).show();
               });
-            } 
-            if($('.flip-card:visible').length == 0){
-              $('#noresult').show();
-            }else{
-              $('#noresult').hide();
-            }; 
-    });
-
-    check.click(function(eventObject){ 
-      cards.hide();        
-      var filter = "." + eventObject.target.id;
-      
-      if (eventObject.target.className.includes('active')) {
-        activeFilters.splice(activeFilters.indexOf(filter), 1);
-      } else {
-        activeFilters.push(filter);
-      }
-
-      if (activeFilters.length == 0) {
-        cards.show();
-      } else if ($('#and').hasClass('active')) {
-        for (const card of cards) {
-          let filterCheck = true;
-          activeFilters.forEach(filter =>{
-            if (!card.className.includes(filter.slice(1))) {
-              filterCheck = false;
             }
+            if ($('.flip-card:visible').length == 0) {
+              $('#noresult').show();
+            } else {
+              $('#noresult').hide();
+            };
           });
-          if (filterCheck) {
-            $(card).show();
-          }
-        }
-      } else {
-        activeFilters.forEach(filter => {
-          $(filter).show(); 
-        });
-      }
-      if($('.flip-card:visible').length == 0){
-        $('#noresult').show();
-      }else{
-        $('#noresult').hide();
-      };   
-    });
-  });
 
-    </script>
-</body>
+          check.click(function (eventObject) {
+            cards.hide();
+            var filter = "." + eventObject.target.id;
+
+            if (eventObject.target.className.includes('active')) {
+              activeFilters.splice(activeFilters.indexOf(filter), 1);
+            } else {
+              activeFilters.push(filter);
+            }
+
+            if (activeFilters.length == 0) {
+              cards.show();
+            } else if ($('#and').hasClass('active')) {
+              for (const card of cards) {
+                let filterCheck = true;
+                activeFilters.forEach(filter => {
+                  if (!card.className.includes(filter.slice(1))) {
+                    filterCheck = false;
+                  }
+                });
+                if (filterCheck) {
+                  $(card).show();
+                }
+              }
+            } else {
+              activeFilters.forEach(filter => {
+                $(filter).show();
+              });
+            }
+            if ($('.flip-card:visible').length == 0) {
+              $('#noresult').show();
+            } else {
+              $('#noresult').hide();
+            };
+          });
+        });
+
+      </script>
+  </body>
+
 </html>

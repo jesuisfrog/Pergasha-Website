@@ -1,149 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../pergasha.css">
-    <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico"/>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Races - Pergasha</title>
-</head>
-<body onload="racePage()">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="../pergasha.css">
+        <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico" />
+
+        <title>Races - Pergasha</title>
+    </head>
+
+    <body onload="racePage()">
 
 
-    <header>
+        <header>
 
-        <nav class="navbar navbar-dark navbar-expand-xl">
-            <div class="navbar-brand  mr-4">
-                <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../pergasha.html">Home</a>
-                </li>
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Player Options
+            <nav class="navbar navbar-dark navbar-expand-xl">
+                <div class="navbar-brand  mr-4">
+                    <a href="../pergasha.html">
+                        <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="classes.html">Classes</a>
-                      <a class="dropdown-item" href="races.html">Races</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="feats.html">Feats</a>
-                      <a class="dropdown-item" href="infusions.html">Infusions</a>
-                      <a class="dropdown-item" href="training.html">Training</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pergasha.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Player Options
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="classes.html">Classes</a>
+                                <a class="dropdown-item" href="races.html">Races</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="feats.html">Feats</a>
+                                <a class="dropdown-item" href="infusions.html">Infusions</a>
+                                <a class="dropdown-item" href="training.html">Training</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="psionics.html">Psionics</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                References
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="characters.html">Characters</a>
+                                <a class="dropdown-item" href="glyphs.html">Glyphs</a>
+                                <a class="dropdown-item" href="items.html">Items</a>
+                                <a class="dropdown-item" href="locations.html">Locations</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rules.html">Rules</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
+                    <div class="d-none" id="notlogged">
+                        <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                                <input type="text" class="form-control form-control-sm mr-sm-2 login-input"
+                                    id="username" placeholder="Username">
+                                <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd"
+                                    placeholder="Password">
+                                <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
+                            </div>
+                        </form>
+                        <input type="checkbox" id="showPwd" class="mr-1" autocomplete="off"><span
+                            id="show-pwd-label">Show Password</span>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="psionics.html">Psionics</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      References
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="characters.html">Characters</a>
-                        <a class="dropdown-item" href="glyphs.html">Glyphs</a>
-                        <a class="dropdown-item" href="items.html">Items</a>
-                        <a class="dropdown-item" href="locations.html">Locations</a>
-                      </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rules.html">Rules</a>
-                </li>
-            </ul>
-            <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
-                <div class="d-none" id="notlogged">
-                    <form class="form-inline">
-                        <div class="form-group form-group-sm">
-                            <input type="text" class="form-control form-control-sm mr-sm-2 login-input" id="username" placeholder="Username">
-                            <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd" placeholder="Password">
-                            <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
-                        </div>
-                    </form>
-                    <input type="checkbox" id="showPwd" class="mr-1"  autocomplete="off"><span id="show-pwd-label">Show Password</span> 
+                </div>
+            </nav>
+
+        </header>
+
+        <div class="row mt-5 mb-5 flex-wrap justify-content-center container-fluid" id="race-container">
+            <div class="col mb-5" id="race-list-container">
+                <div class="list-group " id="race-list" role="tablist">
+                    <a class="list-group-item list-group-item-action list-group-item-secondary"
+                        id="cloud-pergashan-list" data-toggle="list" href="#cloud-pergashan" role="tab"
+                        aria-controls="cloud-pergashan">Cloud Pergashan</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary" id="fire-pergashan-list"
+                        data-toggle="list" href="#fire-pergashan" role="tab" aria-controls="fire-pergashan">Fire
+                        Pergashan</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary" id="gem-pergashan-list"
+                        data-toggle="list" href="#gem-pergashan" role="tab" aria-controls="gem-pergashan">Gem
+                        Pergashan</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary" id="sand-pergashan-list"
+                        data-toggle="list" href="#sand-pergashan" role="tab" aria-controls="sand-pergashan">Sand
+                        Pergashan</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary"
+                        id="stone-pergashan-list" data-toggle="list" href="#stone-pergashan" role="tab"
+                        aria-controls="stone-pergashan">Stone Pergashan</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary"
+                        id="storm-pergashan-list" data-toggle="list" href="#storm-pergashan" role="tab"
+                        aria-controls="storm-pergashan">Storm Pergashan</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary" id="crowned-list"
+                        data-toggle="list" href="#crowned" role="tab" aria-controls="crowned">Crowned Touched-Kin</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary" id="direfolk-list"
+                        data-toggle="list" href="#direfolk" role="tab" aria-controls="direfolk">Direfolk Touched-Kin</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary" id="feathered-list"
+                        data-toggle="list" href="#feathered" role="tab" aria-controls="feathered">Feathered
+                        Touched-Kin</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary" id="spiderling-list"
+                        data-toggle="list" href="#spiderling" role="tab" aria-controls="spiderling">Spiderling
+                        Touched-Kin</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary" id="twisted-list"
+                        data-toggle="list" href="#twisted" role="tab" aria-controls="twisted">Twisted Touched-Kin</a>
+                    <a class="list-group-item list-group-item-action list-group-item-secondary" id="lizardfolk-list"
+                        data-toggle="list" href="#lizardfolk" role="tab" aria-controls="lizardfolk">Pergashan
+                        Lizardfolk</a>
                 </div>
             </div>
-          </nav>
 
-    </header>
 
-    <div class="row mt-5 mb-5 flex-wrap justify-content-center container-fluid" id="race-container">
-        <div class="col mb-5" id="race-list-container">
-            <div class="list-group " id="race-list" role="tablist">
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="cloud-pergashan-list" data-toggle="list" href="#cloud-pergashan" role="tab" aria-controls="cloud-pergashan">Cloud Pergashan</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="fire-pergashan-list" data-toggle="list" href="#fire-pergashan" role="tab" aria-controls="fire-pergashan">Fire Pergashan</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="gem-pergashan-list" data-toggle="list" href="#gem-pergashan" role="tab" aria-controls="gem-pergashan">Gem Pergashan</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="sand-pergashan-list" data-toggle="list" href="#sand-pergashan" role="tab" aria-controls="sand-pergashan">Sand Pergashan</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="stone-pergashan-list" data-toggle="list" href="#stone-pergashan" role="tab" aria-controls="stone-pergashan">Stone Pergashan</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="storm-pergashan-list" data-toggle="list" href="#storm-pergashan" role="tab" aria-controls="storm-pergashan">Storm Pergashan</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="crowned-list" data-toggle="list" href="#crowned" role="tab" aria-controls="crowned">Crowned Touched-Kin</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="direfolk-list" data-toggle="list" href="#direfolk" role="tab" aria-controls="direfolk">Direfolk Touched-Kin</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="feathered-list" data-toggle="list" href="#feathered" role="tab" aria-controls="feathered">Feathered Touched-Kin</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="spiderling-list" data-toggle="list" href="#spiderling" role="tab" aria-controls="spiderling">Spiderling Touched-Kin</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="twisted-list" data-toggle="list" href="#twisted" role="tab" aria-controls="twisted">Twisted Touched-Kin</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary" id="lizardfolk-list" data-toggle="list" href="#lizardfolk" role="tab" aria-controls="lizardfolk">Pergashan Lizardfolk</a>
-            </div>
-          </div>
-
-        
-        <div class="tab-content col " id="race-tabDesc">
+            <div class="tab-content col " id="race-tabDesc">
                 <!-- PERGASHAN -->
-                <table class="table-sm shadow race-table tab-pane fade"  id="cloud-pergashan" role="tabpanel" aria-labelledby="cloud-pergashan-list">
+                <table class="table-sm shadow race-table tab-pane fade" id="cloud-pergashan" role="tabpanel"
+                    aria-labelledby="cloud-pergashan-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Pergashan Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one other ability score increases by 2. Also, select one ability score and increase its cap to 22.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is 130 years, but some (especially from the Sand Tribe) have been known to live for nearly 200 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so they lean towards lawful. They value fairness but also strength, and survival is paramount so the weak are culled when necessary. This pushes Pergashan society towards neutrality.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and 550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm Tribe). Your size is Large.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed. </i></b>Your base walking speed is 35 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages. </i></b>You can speak Pergashan (Common).
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select one skill or tool proficiency.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the powers of the mind thanks to their ancestors. Select one Psionic Talent.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders. Using an attack action, you may throw an appropriately sized rock up to 50 feet away, dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are proficient with this thrown improvised weapon.
-                        </td></tr>
-                        <tr><th class="race-table-title">Cloud Tribe Traits</th></tr>
+                        <tr>
+                            <th class="race-table-title">Pergashan Traits</th>
+                        </tr>
                         <tr>
                             <td>
-                                <b><i>Light-Footed.</i> </b>Your movement speed increases by 5 feet and your jump distance is doubled.
+                                <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one
+                                other ability score increases by 2. Also, select one ability score and increase its cap
+                                to 22.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>The Wind is With You.</i> </b>Any ranged or thrown weapon attack you make deals an extra 2 weapon damage. Additionally, when you successfully hit with a ranged or thrown weapon, your target must make a Strength saving throw or fall prone as a gust of wind makes an impact through the projectile. Your target must be your size or smaller to knock a creature prone with this ability. The DC for this ability is 8 + your proficiency bonus + your Constitution modifier.
+                                <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is
+                                130 years, but some (especially from the Sand Tribe) have been known to live for nearly
+                                200 years.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Dulling Mist.</i> </b>The blood of Cloud Giants run through your veins, granting you an unusual aura that slows a weapon strike as it hits your body. After you have been hit by an attack, you may use your reaction and roll 1 Hit Die + your Constitution modifier to reduce the incoming damage by that amount.
+                                <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so
+                                they lean towards lawful. They value fairness but also strength, and survival is
+                                paramount so the weak are culled when necessary. This pushes Pergashan society towards
+                                neutrality.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and
+                                550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm
+                                Tribe). Your size is Large.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed. </i></b>Your base walking speed is 35 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages. </i></b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select
+                                one skill or tool proficiency.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the
+                                powers of the mind thanks to their ancestors. Select one Psionic Talent.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders.
+                                Using an attack action, you may throw an appropriately sized rock up to 50 feet away,
+                                dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are
+                                proficient with this thrown improvised weapon.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="race-table-title">Cloud Tribe Traits</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Light-Footed.</i> </b>Your movement speed increases by 5 feet and your jump
+                                distance is doubled.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>The Wind is With You.</i> </b>Any ranged or thrown weapon attack you make deals an
+                                extra 2 weapon damage. Additionally, when you successfully hit with a ranged or thrown
+                                weapon, your target must make a Strength saving throw or fall prone as a gust of wind
+                                makes an impact through the projectile. Your target must be your size or smaller to
+                                knock a creature prone with this ability. The DC for this ability is 8 + your
+                                proficiency bonus + your Constitution modifier.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Dulling Mist.</i> </b>The blood of Cloud Giants run through your veins, granting
+                                you an unusual aura that slows a weapon strike as it hits your body. After you have been
+                                hit by an attack, you may use your reaction and roll 1 Hit Die + your Constitution
+                                modifier to reduce the incoming damage by that amount.
                             </td>
                         </tr>
                         <tr>
@@ -152,109 +230,204 @@
                     </tbody>
                 </table>
 
-                <table class="table-sm shadow race-table tab-pane fade" id="fire-pergashan" role="tabpanel" aria-labelledby="fire-pergashan-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="fire-pergashan" role="tabpanel"
+                    aria-labelledby="fire-pergashan-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Pergashan Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one other ability score increases by 2. Also, select one ability score and increase its cap to 22.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is 130 years, but some (especially from the Sand Tribe) have been known to live for nearly 200 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so they lean towards lawful. They value fairness but also strength, and survival is paramount so the weak are culled when necessary. This pushes Pergashan society towards neutrality.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and 550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm Tribe). Your size is Large.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed. </i></b>Your base walking speed is 35 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages. </i></b>You can speak Pergashan (Common).
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select one skill or tool proficiency.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the powers of the mind thanks to their ancestors. Select one Psionic Talent.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders. Using an attack action, you may throw an appropriately sized rock up to 50 feet away, dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are proficient with this thrown improvised weapon.
-                        </td></tr>
+                        <tr>
+                            <th class="race-table-title">Pergashan Traits</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one
+                                other ability score increases by 2. Also, select one ability score and increase its cap
+                                to 22.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is
+                                130 years, but some (especially from the Sand Tribe) have been known to live for nearly
+                                200 years.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so
+                                they lean towards lawful. They value fairness but also strength, and survival is
+                                paramount so the weak are culled when necessary. This pushes Pergashan society towards
+                                neutrality.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and
+                                550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm
+                                Tribe). Your size is Large.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed. </i></b>Your base walking speed is 35 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages. </i></b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select
+                                one skill or tool proficiency.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the
+                                powers of the mind thanks to their ancestors. Select one Psionic Talent.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders.
+                                Using an attack action, you may throw an appropriately sized rock up to 50 feet away,
+                                dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are
+                                proficient with this thrown improvised weapon.
+                            </td>
+                        </tr>
                         <tr>
                             <th class="race-table-title">Fire Tribe Traits</th>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Heavily Armored.</i> </b>You are proficient in wearing heavy armor and using shields.
+                                <b><i>Heavily Armored.</i> </b>You are proficient in wearing heavy armor and using
+                                shields.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Inner Fire.</i> </b>You have fire resistance and gain the Minor Pyrokinesis talent <i>(see below)</i>.
+                                <b><i>Inner Fire.</i> </b>You have fire resistance and gain the Minor Pyrokinesis talent
+                                <i>(see below)</i>.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Firebrand.</i> </b>You can send out your inner fire down a weapon, heating it with a blue-hot flame for an instant. After striking an enemy with a melee weapon, you may use your reaction and roll 1 Hit Die + your Constitution modifier and deal this amount of fire damage to your target.
+                                <b><i>Firebrand.</i> </b>You can send out your inner fire down a weapon, heating it with
+                                a blue-hot flame for an instant. After striking an enemy with a melee weapon, you may
+                                use your reaction and roll 1 Hit Die + your Constitution modifier and deal this amount
+                                of fire damage to your target.
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <div style="color: #ca1b13;"><b>Minor Pyrokinesis</b></div>
                                 <div><i>Psionic Talent [racial]</i></div>
-                                <ul class="pt-2" style="list-style-type:none;"><li><b>Evoking Time: </b>1 action to 1 minute (see below)</li><li><b>Range: </b>30 feet</li><li><b>Duration: </b>Special</li><li>Your body burns unnaturally hot. You can focus this inner fire for 1 minute to ignite flammable material or an object, light a torch, or start a small fire. You must touch what you wish to ignite, and your inner fire cannot melt metal or produce light from your body.<br> Additionally, you use your affinity to affect fire in the following ways: <ul><li><b>Grow. </b>You can spend an action to expand flame within range up to 5 feet in one direction, provided that wood or other fuel is present in the new location. </li><li><b>Snuff. </b>You can use an action to extinguish flame within range in a 5-foot cube.</li><li><b>Extend. </b>You can spend 1 minute to slow a fire to burn fuel more efficiently. You double the life of a fire in a 5-foot cube. The duration is based on the fuel.</li></ul></li></ul>
+                                <ul class="pt-2" style="list-style-type:none;">
+                                    <li><b>Evoking Time: </b>1 action to 1 minute (see below)</li>
+                                    <li><b>Range: </b>30 feet</li>
+                                    <li><b>Duration: </b>Special</li>
+                                    <li>Your body burns unnaturally hot. You can focus this inner fire for 1 minute to
+                                        ignite flammable material or an object, light a torch, or start a small fire.
+                                        You must touch what you wish to ignite, and your inner fire cannot melt metal or
+                                        produce light from your body.<br> Additionally, you use your affinity to affect
+                                        fire in the following ways: <ul>
+                                            <li><b>Grow. </b>You can spend an action to expand flame within range up to
+                                                5 feet in one direction, provided that wood or other fuel is present in
+                                                the new location. </li>
+                                            <li><b>Snuff. </b>You can use an action to extinguish flame within range in
+                                                a 5-foot cube.</li>
+                                            <li><b>Extend. </b>You can spend 1 minute to slow a fire to burn fuel more
+                                                efficiently. You double the life of a fire in a 5-foot cube. The
+                                                duration is based on the fuel.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </td>
                         </tr>
                         <tr>
-                        <th class="class-border border-0" colspan="10"></th>
+                            <th class="class-border border-0" colspan="10"></th>
                         </tr>
                     </tbody>
                 </table>
 
-                <table class="table-sm shadow race-table tab-pane fade" id="gem-pergashan" role="tabpanel" aria-labelledby="gem-pergashan-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="gem-pergashan" role="tabpanel"
+                    aria-labelledby="gem-pergashan-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Pergashan Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one other ability score increases by 2. Also, select one ability score and increase its cap to 22.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is 130 years, but some (especially from the Sand Tribe) have been known to live for nearly 200 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so they lean towards lawful. They value fairness but also strength, and survival is paramount so the weak are culled when necessary. This pushes Pergashan society towards neutrality.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and 550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm Tribe). Your size is Large.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed. </i></b>Your base walking speed is 35 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages. </i></b>You can speak Pergashan (Common).
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select one skill or tool proficiency.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the powers of the mind thanks to their ancestors. Select one Psionic Talent.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders. Using an attack action, you may throw an appropriately sized rock up to 50 feet away, dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are proficient with this thrown improvised weapon.
-                        </td></tr>
+                        <tr>
+                            <th class="race-table-title">Pergashan Traits</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one
+                                other ability score increases by 2. Also, select one ability score and increase its cap
+                                to 22.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is
+                                130 years, but some (especially from the Sand Tribe) have been known to live for nearly
+                                200 years.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so
+                                they lean towards lawful. They value fairness but also strength, and survival is
+                                paramount so the weak are culled when necessary. This pushes Pergashan society towards
+                                neutrality.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and
+                                550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm
+                                Tribe). Your size is Large.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed. </i></b>Your base walking speed is 35 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages. </i></b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select
+                                one skill or tool proficiency.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the
+                                powers of the mind thanks to their ancestors. Select one Psionic Talent.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders.
+                                Using an attack action, you may throw an appropriately sized rock up to 50 feet away,
+                                dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are
+                                proficient with this thrown improvised weapon.
+                            </td>
+                        </tr>
                         <tr>
                             <th class="race-table-title">Gem Tribe Traits</th>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Literacy.</i> </b>What little writing exists has been preserved underground. People from your tribe have literacy in Pergashan.
+                                <b><i>Literacy.</i> </b>What little writing exists has been preserved underground.
+                                People from your tribe have literacy in Pergashan.
                             </td>
                         </tr>
                         <tr>
@@ -264,7 +437,10 @@
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Psionic Empowerment.</i> </b>You know an additional Psionic Talent of your choice. Once you reach 3rd level, you can select a Tier I benefit from the list provided. Once you reach 5th level, you also gain a Tier II benefit. You cannot change your tier selections, so choose wisely.
+                                <b><i>Psionic Empowerment.</i> </b>You know an additional Psionic Talent of your choice.
+                                Once you reach 3rd level, you can select a Tier I benefit from the list provided. Once
+                                you reach 5th level, you also gain a Tier II benefit. You cannot change your tier
+                                selections, so choose wisely.
                             </td>
                         </tr>
                         <tr>
@@ -273,12 +449,24 @@
                         <tr>
                             <td>
                                 <ul>
-                                    <li><b>Avatar of Battle: </b>Your inherent psionic abilities keep your allies sharp-minded and on their toes. Allies within 30 feet of you gain +2 to their initiative score.</li>
-                                    <li><b>Psychokinesis: </b>You are naturally gifted in telekinesis. You gain the Far Hand talent. You can move twice as much weight with the talent, and you can leave objects suspended in mid-air from one round to another without them falling to the ground. You can also use skills or tools in which youhave proficiency with your telekinesis instead of your hands, changing Dexterity for Intelligence. You still need the proper tools available to use.</li>
-                                    <li><b>Immortal Endurance: </b>Your mind can influence your body, and your body can enhance your mind. When you take a short rest, you regain your Constitution modifier in Psi Points. Also, you can break your focus until your next short rest to reduce any incoming damage by half.</li>
-                                    <li><b>Nomad’s Knowledge: </b>The minds of those who came before you share some of their secrets with you. Select one skill proficiency and a language or expertise in a skill in which you are already proficient.</li>
+                                    <li><b>Avatar of Battle: </b>Your inherent psionic abilities keep your allies
+                                        sharp-minded and on their toes. Allies within 30 feet of you gain +2 to their
+                                        initiative score.</li>
+                                    <li><b>Psychokinesis: </b>You are naturally gifted in telekinesis. You gain the Far
+                                        Hand talent. You can move twice as much weight with the talent, and you can
+                                        leave objects suspended in mid-air from one round to another without them
+                                        falling to the ground. You can also use skills or tools in which youhave
+                                        proficiency with your telekinesis instead of your hands, changing Dexterity for
+                                        Intelligence. You still need the proper tools available to use.</li>
+                                    <li><b>Immortal Endurance: </b>Your mind can influence your body, and your body can
+                                        enhance your mind. When you take a short rest, you regain your Constitution
+                                        modifier in Psi Points. Also, you can break your focus until your next short
+                                        rest to reduce any incoming damage by half.</li>
+                                    <li><b>Nomad’s Knowledge: </b>The minds of those who came before you share some of
+                                        their secrets with you. Select one skill proficiency and a language or expertise
+                                        in a skill in which you are already proficient.</li>
                                 </ul>
-                            </td>   
+                            </td>
                         </tr>
                         <tr>
                             <th style="font-size: 1.3rem;">Tier II</th>
@@ -286,10 +474,25 @@
                         <tr>
                             <td>
                                 <ul>
-                                    <li><b>Avatar of Healing: </b>Your psionic powers lend aid to the minds of your allies. You may use an action and expend 1 Hit Die to heal up to your Intelligence modifier of allies (including yourself) within 30 feet of you that you can see. Roll 1 Hit Die + your Constitution modifier to heal each ally for that amount. Once you use this ability, you cannot do so again until after you take a long rest.</li>
-                                    <li><b>Weightless: </b>Using the power of your mind, you can convince your body that it is weightless. As an action, you can levitate up to 20 feet from a solid surface and remain there with concentration. You can only move by pushing or pulling against a surface or fixed object, but you can end your levitation at any time you want and fall softly to the ground.</li>
-                                    <li><b>Immortal Body: </b>Your psionic energy grants you extraordinary fortitude. At the start of each of your turns, you gain temporary hit points equal to your Intelligence modifier (minimum of 0) if you have at least 1 hit point.</li>
-                                    <li><b>Nomad’s Journey: </b>You gain the ability to use your psionic powers to transport your body a short distance in an instant. You may use a bonus action and expend one Hit Die to teleport yourself up to your movement speed. You must have line of sight to this location, the space cannot be occupied, and the space must be able to accommodate you.</li>
+                                    <li><b>Avatar of Healing: </b>Your psionic powers lend aid to the minds of your
+                                        allies. You may use an action and expend 1 Hit Die to heal up to your
+                                        Intelligence modifier of allies (including yourself) within 30 feet of you that
+                                        you can see. Roll 1 Hit Die + your Constitution modifier to heal each ally for
+                                        that amount. Once you use this ability, you cannot do so again until after you
+                                        take a long rest.</li>
+                                    <li><b>Weightless: </b>Using the power of your mind, you can convince your body that
+                                        it is weightless. As an action, you can levitate up to 20 feet from a solid
+                                        surface and remain there with concentration. You can only move by pushing or
+                                        pulling against a surface or fixed object, but you can end your levitation at
+                                        any time you want and fall softly to the ground.</li>
+                                    <li><b>Immortal Body: </b>Your psionic energy grants you extraordinary fortitude. At
+                                        the start of each of your turns, you gain temporary hit points equal to your
+                                        Intelligence modifier (minimum of 0) if you have at least 1 hit point.</li>
+                                    <li><b>Nomad’s Journey: </b>You gain the ability to use your psionic powers to
+                                        transport your body a short distance in an instant. You may use a bonus action
+                                        and expend one Hit Die to teleport yourself up to your movement speed. You must
+                                        have line of sight to this location, the space cannot be occupied, and the space
+                                        must be able to accommodate you.</li>
                                 </ul>
                             </td>
                         </tr>
@@ -299,67 +502,132 @@
                     </tbody>
                 </table>
 
-                <table class="table-sm shadow race-table tab-pane fade" id="sand-pergashan" role="tabpanel" aria-labelledby="sand-pergashan-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="sand-pergashan" role="tabpanel"
+                    aria-labelledby="sand-pergashan-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Pergashan Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one other ability score increases by 2. Also, select one ability score and increase its cap to 22.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is 130 years, but some (especially from the Sand Tribe) have been known to live for nearly 200 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so they lean towards lawful. They value fairness but also strength, and survival is paramount so the weak are culled when necessary. This pushes Pergashan society towards neutrality.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and 550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm Tribe). Your size is Large.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed. </i></b>Your base walking speed is 35 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages. </i></b>You can speak Pergashan (Common).
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select one skill or tool proficiency.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the powers of the mind thanks to their ancestors. Select one Psionic Talent.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders. Using an attack action, you may throw an appropriately sized rock up to 50 feet away, dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are proficient with this thrown improvised weapon.
-                        </td></tr>
+                        <tr>
+                            <th class="race-table-title">Pergashan Traits</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one
+                                other ability score increases by 2. Also, select one ability score and increase its cap
+                                to 22.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is
+                                130 years, but some (especially from the Sand Tribe) have been known to live for nearly
+                                200 years.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so
+                                they lean towards lawful. They value fairness but also strength, and survival is
+                                paramount so the weak are culled when necessary. This pushes Pergashan society towards
+                                neutrality.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and
+                                550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm
+                                Tribe). Your size is Large.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed. </i></b>Your base walking speed is 35 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages. </i></b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select
+                                one skill or tool proficiency.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the
+                                powers of the mind thanks to their ancestors. Select one Psionic Talent.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders.
+                                Using an attack action, you may throw an appropriately sized rock up to 50 feet away,
+                                dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are
+                                proficient with this thrown improvised weapon.
+                            </td>
+                        </tr>
                         <tr>
                             <th class="race-table-title">Sand Tribe Traits</th>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Darkvision.</i> </b>Your unusual eyes grant you superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+                                <b><i>Darkvision.</i> </b>Your unusual eyes grant you superior vision in dark and dim
+                                conditions. You can see in dim light within 60 feet of you as if it were bright light,
+                                and in darkness as if it were dim light. You can’t discern color in darkness, only
+                                shades of gray.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Survivalist.</i> </b>When in sandy environments, your movements do not suffer from difficult terrain. You also have expertise in Survival.
+                                <b><i>Survivalist.</i> </b>When in sandy environments, your movements do not suffer from
+                                difficult terrain. You also have expertise in Survival.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Desiccate. </i></b>Your touch can desiccate a creature, plant, or an applicable material of water. You may use an action to make a melee touch attack. On a hit, deal 1 Hit Die + your Constitution modifier in necrotic damage to your target and heal yourself for the same amount as your desert aura transfers life-giving water to your body.<br>&nbsp;&nbsp;&nbsp;&nbsp; When you successfully desiccate a target, you also fulfill your water needs for the day regardless of the amount of damage dealt. This ability is also useful in the instant drying of meats for making rations. Once you use this ability, you cannot do so again until you complete a short rest.
+                                <b><i>Desiccate. </i></b>Your touch can desiccate a creature, plant, or an applicable
+                                material of water. You may use an action to make a melee touch attack. On a hit, deal 1
+                                Hit Die + your Constitution modifier in necrotic damage to your target and heal yourself
+                                for the same amount as your desert aura transfers life-giving water to your
+                                body.<br>&nbsp;&nbsp;&nbsp;&nbsp; When you successfully desiccate a target, you also
+                                fulfill your water needs for the day regardless of the amount of damage dealt. This
+                                ability is also useful in the instant drying of meats for making rations. Once you use
+                                this ability, you cannot do so again until you complete a short rest.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Sandshaper. </i></b>Your kind is imbued with the ability to use telekinesis to manipulate desert sands. You gain the Sandshaping talent <i>(see below)</i>.
+                                <b><i>Sandshaper. </i></b>Your kind is imbued with the ability to use telekinesis to
+                                manipulate desert sands. You gain the Sandshaping talent <i>(see below)</i>.
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <div style="color: #ca1b13;"><b>Sandshaping</b></div>
                                 <div><i>Psionic Talent [racial]</i></div>
-                                <ul class="pt-2" style="list-style-type:none;"><li><b>Evoking Time: </b>1 action</li><li><b>Range: </b>30 feet</li><li><b>Duration: </b>Instantaneous to 1 minute (see below</li><li>You choose a portion of sand that you can see within range and fits within a 5-foot cube. You manipulate it in one of the following ways: <ul><li><b>Move. </b>If you target an area of loose sand, you can instantaneously excavate it, move it along the ground, and deposit it up to 5 feet away. This movement doesn’t have enough force to cause damage. </li><li><b>Flurry. </b>You can toss sand into the air and stir up a small flurry in a 5-foot area within range. Any creature in or that passes through the area of a flurry suffers disadvantage on their next attack. The flurry remains for 1 minute, and you can use an action to move the flurry. If you create another flurry, any existing flurries dissipate. Sand Pergashans are immune to the effects of these small flurries.</li></ul></li></ul>
+                                <ul class="pt-2" style="list-style-type:none;">
+                                    <li><b>Evoking Time: </b>1 action</li>
+                                    <li><b>Range: </b>30 feet</li>
+                                    <li><b>Duration: </b>Instantaneous to 1 minute (see below</li>
+                                    <li>You choose a portion of sand that you can see within range and fits within a
+                                        5-foot cube. You manipulate it in one of the following ways: <ul>
+                                            <li><b>Move. </b>If you target an area of loose sand, you can
+                                                instantaneously excavate it, move it along the ground, and deposit it up
+                                                to 5 feet away. This movement doesn’t have enough force to cause damage.
+                                            </li>
+                                            <li><b>Flurry. </b>You can toss sand into the air and stir up a small flurry
+                                                in a 5-foot area within range. Any creature in or that passes through
+                                                the area of a flurry suffers disadvantage on their next attack. The
+                                                flurry remains for 1 minute, and you can use an action to move the
+                                                flurry. If you create another flurry, any existing flurries dissipate.
+                                                Sand Pergashans are immune to the effects of these small flurries.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </td>
                         </tr>
                         <tr>
@@ -368,225 +636,382 @@
                     </tbody>
                 </table>
 
-                <table class="table-sm shadow race-table tab-pane fade" id="stone-pergashan" role="tabpanel" aria-labelledby="stone-pergashan-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="stone-pergashan" role="tabpanel"
+                    aria-labelledby="stone-pergashan-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Pergashan Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one other ability score increases by 2. Also, select one ability score and increase its cap to 22.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is 130 years, but some (especially from the Sand Tribe) have been known to live for nearly 200 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so they lean towards lawful. They value fairness but also strength, and survival is paramount so the weak are culled when necessary. This pushes Pergashan society towards neutrality.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and 550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm Tribe). Your size is Large.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed. </i></b>Your base walking speed is 35 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages. </i></b>You can speak Pergashan (Common).
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select one skill or tool proficiency.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the powers of the mind thanks to their ancestors. Select one Psionic Talent.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders. Using an attack action, you may throw an appropriately sized rock up to 50 feet away, dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are proficient with this thrown improvised weapon.
-                        </td></tr>
+                        <tr>
+                            <th class="race-table-title">Pergashan Traits</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one
+                                other ability score increases by 2. Also, select one ability score and increase its cap
+                                to 22.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is
+                                130 years, but some (especially from the Sand Tribe) have been known to live for nearly
+                                200 years.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so
+                                they lean towards lawful. They value fairness but also strength, and survival is
+                                paramount so the weak are culled when necessary. This pushes Pergashan society towards
+                                neutrality.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and
+                                550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm
+                                Tribe). Your size is Large.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed. </i></b>Your base walking speed is 35 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages. </i></b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select
+                                one skill or tool proficiency.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the
+                                powers of the mind thanks to their ancestors. Select one Psionic Talent.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders.
+                                Using an attack action, you may throw an appropriately sized rock up to 50 feet away,
+                                dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are
+                                proficient with this thrown improvised weapon.
+                            </td>
+                        </tr>
                         <tr>
                             <th class="race-table-title">Stone Tribe Traits</th>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Literacy.</i> </b>What little writing exists has been preserved underground. People from your tribe have literacy in Pergashan.
+                                <b><i>Literacy.</i> </b>What little writing exists has been preserved underground.
+                                People from your tribe have literacy in Pergashan.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Vibrant Vision.</i> </b>Thanks to your Stone Giant blood, you have superior, full-color vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.
+                                <b><i>Vibrant Vision.</i> </b>Thanks to your Stone Giant blood, you have superior,
+                                full-color vision in dark and dim conditions. You can see in dim light within 60 feet of
+                                you as if it were bright light, and in darkness as if it were dim light.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Inspired.</i> </b>The songs of your ancestors run through your veins, granting you the ability to call upon them for guidance. Once per long rest, you may gain Advantage on one skill check, ability check, or saving throw. You must declare that you are using this ability before you roll.
+                                <b><i>Inspired.</i> </b>The songs of your ancestors run through your veins, granting you
+                                the ability to call upon them for guidance. Once per long rest, you may gain Advantage
+                                on one skill check, ability check, or saving throw. You must declare that you are using
+                                this ability before you roll.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Pummel.</i> </b>Your attacks can pack a surprisingly powerful blow. When you hit a creature with a weapon that does bludgeoning damage, you may make your target roll a Strength saving throw or be pushed back 5 feet in a direction of your choice. You can push back a creature up to one size category larger than yourself or smaller. The DC for this save is equal to 8 + your proficiency bonus + your Constitution modifier. 
+                                <b><i>Pummel.</i> </b>Your attacks can pack a surprisingly powerful blow. When you hit a
+                                creature with a weapon that does bludgeoning damage, you may make your target roll a
+                                Strength saving throw or be pushed back 5 feet in a direction of your choice. You can
+                                push back a creature up to one size category larger than yourself or smaller. The DC for
+                                this save is equal to 8 + your proficiency bonus + your Constitution modifier.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Try Again.</i> </b>When you would be hit with an attack, you may use your reaction and expend 1 Hit Die to add your Constitution modifier to your AC until the start of your next turn.
+                                <b><i>Try Again.</i> </b>When you would be hit with an attack, you may use your reaction
+                                and expend 1 Hit Die to add your Constitution modifier to your AC until the start of
+                                your next turn.
                             </td>
                         </tr>
                         <tr>
-                        <th class="class-border border-0" colspan="10"></th>
+                            <th class="class-border border-0" colspan="10"></th>
                         </tr>
                     </tbody>
                 </table>
 
-                <table class="table-sm shadow race-table tab-pane fade" id="storm-pergashan" role="tabpanel" aria-labelledby="storm-pergashan-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="storm-pergashan" role="tabpanel"
+                    aria-labelledby="storm-pergashan-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Pergashan Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one other ability score increases by 2. Also, select one ability score and increase its cap to 22.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is 130 years, but some (especially from the Sand Tribe) have been known to live for nearly 200 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so they lean towards lawful. They value fairness but also strength, and survival is paramount so the weak are culled when necessary. This pushes Pergashan society towards neutrality.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and 550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm Tribe). Your size is Large.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed. </i></b>Your base walking speed is 35 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages. </i></b>You can speak Pergashan (Common).
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select one skill or tool proficiency.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the powers of the mind thanks to their ancestors. Select one Psionic Talent.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders. Using an attack action, you may throw an appropriately sized rock up to 50 feet away, dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are proficient with this thrown improvised weapon.
-                        </td></tr>
+                        <tr>
+                            <th class="race-table-title">Pergashan Traits</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Ability score increase.</i></b> Your Constitution score increases by 2, and one
+                                other ability score increases by 2. Also, select one ability score and increase its cap
+                                to 22.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Age. </i></b>A Pergashan reaches adulthood by 24 years. The average lifespan is
+                                130 years, but some (especially from the Sand Tribe) have been known to live for nearly
+                                200 years.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Alignment. </i></b>Pergashan society values order and takes promises seriously, so
+                                they lean towards lawful. They value fairness but also strength, and survival is
+                                paramount so the weak are culled when necessary. This pushes Pergashan society towards
+                                neutrality.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size. </i></b>Pergashans are between 8 and 12 feet tall and weigh between 350 and
+                                550 pounds, but some have grown to nearly 14 feet tall (especially those from the Storm
+                                Tribe). Your size is Large.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed. </i></b>Your base walking speed is 35 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages. </i></b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Skilled. </i></b>Pergashans expect everyone to be useful and productive. Select
+                                one skill or tool proficiency.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Psionic Acumen. </i></b>Pergashans have a natural affinity for accessing the
+                                powers of the mind thanks to their ancestors. Select one Psionic Talent.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Mighty Toss. </i></b>Pergashan children grow strong by playing with boulders.
+                                Using an attack action, you may throw an appropriately sized rock up to 50 feet away,
+                                dealing 1d10 + your Strength modifier in bludgeoning damage to a target. You are
+                                proficient with this thrown improvised weapon.
+                            </td>
+                        </tr>
                         <tr>
                             <th class="race-table-title">Storm Tribe Traits</th>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Quasi-Amphibious. </i></b>You can breathe air and when underwater, you can hold your breath for one hour before needing to return to the surface. Your vision is unimpeded under water because of special membranes that deploy to protect your eyes.
+                                <b><i>Quasi-Amphibious. </i></b>You can breathe air and when underwater, you can hold
+                                your breath for one hour before needing to return to the surface. Your vision is
+                                unimpeded under water because of special membranes that deploy to protect your eyes.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Grounded. </i></b>You have resistance to lightning damage. Also, you may use a bonus action to expend your natural electrical charge into the ground around you. Once per short rest, all creatures in a 10-foot radius around you are briefly electrified and have disadvantage on their attacks until the start of your next turn. If you trigger this effect in water, the range extends to 20 feet.
+                                <b><i>Grounded. </i></b>You have resistance to lightning damage. Also, you may use a
+                                bonus action to expend your natural electrical charge into the ground around you. Once
+                                per short rest, all creatures in a 10-foot radius around you are briefly electrified and
+                                have disadvantage on their attacks until the start of your next turn. If you trigger
+                                this effect in water, the range extends to 20 feet.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Recharge. </i></b>You may use an action and expend 1 Hit Die to use a depleted mysterium once. 
+                                <b><i>Recharge. </i></b>You may use an action and expend 1 Hit Die to use a depleted
+                                mysterium once.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Zap. </i></b>Your ancestral ties grants you a static charge over your body that you can send out to defend yourself. When you are hit by a melee attack, you may use your reaction and roll 1 Hit Die + your Constitution modifier  and deal this amount of lightning damage to your attacker.
+                                <b><i>Zap. </i></b>Your ancestral ties grants you a static charge over your body that
+                                you can send out to defend yourself. When you are hit by a melee attack, you may use
+                                your reaction and roll 1 Hit Die + your Constitution modifier and deal this amount of
+                                lightning damage to your attacker.
                             </td>
                         </tr>
                         <tr>
-                        <th class="class-border border-0" colspan="10"></th>
+                            <th class="class-border border-0" colspan="10"></th>
                         </tr>
                     </tbody>
                 </table>
                 <!-- TOUCHED-KIN -->
-                <table class="table-sm shadow race-table tab-pane fade" id="crowned" role="tabpanel" aria-labelledby="crowned-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="crowned" role="tabpanel"
+                    aria-labelledby="crowned-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Touched-Kin Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2 points may be assigned to a single score. Also, select one ability score. That score now has a cap of 22.                            
-                        </td></tr>
-                        <tr><td>
-                            <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are good, evil, or something in-between rests entirely on their upbringing and the space society makes (or doesn’t make) for them.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350. Your size is Medium.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages.</i> </b>You can speak Pergashan (Common).
-                        </td></tr>
                         <tr>
-                            <td>
-                                <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the Sundering Sands, and you were born with an incredible skill. Select one skill or tool proficiency. You have expertise in that proficiency.
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="race-table-title">Crowned  Traits</th>
+                            <th class="race-table-title">Touched-Kin Traits</th>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Telepathy.</i> </b>You have the Telepathy talent. The range of this talent increases to 60 feet at 5th, 90 feet at 11th, and 120 feet at 17th level.
+                                <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2
+                                points may be assigned to a single score. Also, select one ability score. That score now
+                                has a cap of 22.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Psionic Finesse.</i> </b>You are naturally attuned to a segment of the psionic spectrum. Select one of the following Psionic Orders: Avatar, Awakened, Far Hand, Immortal, and Nomad.<br>&nbsp;&nbsp;  Whenever you use Psi Points for a discipline of this order, your cost decreases by 1 (minimum of 1 point is always spent). You must still abide by your Psi Limit for points spent. 
+                                <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Psionic Acumen.</i> </b>You can channel psionic power. Select one Psionic Talent. In addition, you add your Intelligence Modifier to damage rolls for any Psionic Talents you use (minimum 0).
+                                <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms
+                                and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are
+                                good, evil, or something in-between rests entirely on their upbringing and the space
+                                society makes (or doesn’t make) for them.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Manifestation.</i> </b>There are many powers tapped within psicrystals, and you have access to some of these in your own body. Once per short rest, you may use a bonus action to trigger one of the following manifestations: Amplify, Reflect, and Psistep (see below). Once you trigger a manifestation, it is active for one minute and does not require concentration. You can only have one manifestation active at a time. 
+                                <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350.
+                                Your size is Medium.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages.</i> </b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the
+                                Sundering Sands, and you were born with an incredible skill. Select one skill or tool
+                                proficiency. You have expertise in that proficiency.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="race-table-title">Crowned Traits</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Telepathy.</i> </b>You have the Telepathy talent. The range of this talent
+                                increases to 60 feet at 5th, 90 feet at 11th, and 120 feet at 17th level.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Psionic Finesse.</i> </b>You are naturally attuned to a segment of the psionic
+                                spectrum. Select one of the following Psionic Orders: Avatar, Awakened, Far Hand,
+                                Immortal, and Nomad.<br>&nbsp;&nbsp; Whenever you use Psi Points for a discipline of
+                                this order, your cost decreases by 1 (minimum of 1 point is always spent). You must
+                                still abide by your Psi Limit for points spent.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Psionic Acumen.</i> </b>You can channel psionic power. Select one Psionic Talent.
+                                In addition, you add your Intelligence Modifier to damage rolls for any Psionic Talents
+                                you use (minimum 0).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Manifestation.</i> </b>There are many powers tapped within psicrystals, and you
+                                have access to some of these in your own body. Once per short rest, you may use a bonus
+                                action to trigger one of the following manifestations: Amplify, Reflect, and Psistep
+                                (see below). Once you trigger a manifestation, it is active for one minute and does not
+                                require concentration. You can only have one manifestation active at a time.
                                 <ul>
-                                    <li><b>Amplify: </b>Your attacks with weapons or your unarmed strike deal additional psychic damage to your foes equal to your Intelligence modifier when you use your reaction to trigger this effect. You must be proficient with the weapon.</li>
-                                    <li><b>Reflect: </b>You bounce back the pain others inflict upon you. Whenever you are hit with a melee weapon or natural attack by a creature that you can see, you can use your reaction to reflect psychic damage back to them equal to your Intelligence modifier.</li>
-                                    <li><b>Psistep: </b>Your movement speed increases by 10 feet. Also, whenever you are hit with an attack, you can use your reaction to instantly transport yourself to a location up to 15 feet away.</li>
+                                    <li><b>Amplify: </b>Your attacks with weapons or your unarmed strike deal additional
+                                        psychic damage to your foes equal to your Intelligence modifier when you use
+                                        your reaction to trigger this effect. You must be proficient with the weapon.
+                                    </li>
+                                    <li><b>Reflect: </b>You bounce back the pain others inflict upon you. Whenever you
+                                        are hit with a melee weapon or natural attack by a creature that you can see,
+                                        you can use your reaction to reflect psychic damage back to them equal to your
+                                        Intelligence modifier.</li>
+                                    <li><b>Psistep: </b>Your movement speed increases by 10 feet. Also, whenever you are
+                                        hit with an attack, you can use your reaction to instantly transport yourself to
+                                        a location up to 15 feet away.</li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
-                        <th class="class-border border-0" colspan="10"></th>
+                            <th class="class-border border-0" colspan="10"></th>
                         </tr>
                     </tbody>
                 </table>
 
-                <table class="table-sm shadow race-table tab-pane fade" id="direfolk" role="tabpanel" aria-labelledby="direfolk-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="direfolk" role="tabpanel"
+                    aria-labelledby="direfolk-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Touched-Kin Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2 points may be assigned to a single score. Also, select one ability score. That score now has a cap of 22.                            
-                        </td></tr>
-                        <tr><td>
-                            <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are good, evil, or something in-between rests entirely on their upbringing and the space society makes (or doesn’t make) for them.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350. Your size is Medium.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages.</i> </b>You can speak Pergashan (Common).
-                        </td></tr>
+                        <tr>
+                            <th class="race-table-title">Touched-Kin Traits</th>
+                        </tr>
                         <tr>
                             <td>
-                                <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the Sundering Sands, and you were born with an incredible skill. Select one skill or tool proficiency. You have expertise in that proficiency.
+                                <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2
+                                points may be assigned to a single score. Also, select one ability score. That score now
+                                has a cap of 22.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms
+                                and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are
+                                good, evil, or something in-between rests entirely on their upbringing and the space
+                                society makes (or doesn’t make) for them.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350.
+                                Your size is Medium.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages.</i> </b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the
+                                Sundering Sands, and you were born with an incredible skill. Select one skill or tool
+                                proficiency. You have expertise in that proficiency.
                             </td>
                         </tr>
                         <tr>
@@ -594,66 +1019,116 @@
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Raw Material.</i> </b>You can shed your outer covering to create raw materials. Shedding is a tiring process requiring comfortable surroundings and no interruptions. After a full rest, you shed the equivalent of 2 square yards of fabric worth 1 uncommon barter.<br>&nbsp;&nbsp;&nbsp;&nbsp;  This material is similar to sheets of translucent hide that can be stored flat like fabric, ground down into 2 pounds of powder, or boiled into 1 pound of adhesive. The powder form of this material can be combined with an adhesive and pressed to create a product similar to wood. It takes 2 pounds of powder and 1 pound of adhesive to make a 5x5 foot panel 1- inch thick.
+                                <b><i>Raw Material.</i> </b>You can shed your outer covering to create raw materials.
+                                Shedding is a tiring process requiring comfortable surroundings and no interruptions.
+                                After a full rest, you shed the equivalent of 2 square yards of fabric worth 1 uncommon
+                                barter.<br>&nbsp;&nbsp;&nbsp;&nbsp; This material is similar to sheets of translucent
+                                hide that can be stored flat like fabric, ground down into 2 pounds of powder, or boiled
+                                into 1 pound of adhesive. The powder form of this material can be combined with an
+                                adhesive and pressed to create a product similar to wood. It takes 2 pounds of powder
+                                and 1 pound of adhesive to make a 5x5 foot panel 1- inch thick.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Do You Spice?</i> </b>Once per long rest, you can sand off some of your thick skin to use as a spice to flavor food. Every individual has a unique flavor profile that can shift slightly with diet, mood, and age. Additionally, you may expend 1 Hit Die to enhance freshly cooked food with your spice. As long as there is enough food, up to 10 creatures can regain hit points equal to your Constitution modifier. A creature can only benefit from this feature once per long rest.
+                                <b><i>Do You Spice?</i> </b>Once per long rest, you can sand off some of your thick skin
+                                to use as a spice to flavor food. Every individual has a unique flavor profile that can
+                                shift slightly with diet, mood, and age. Additionally, you may expend 1 Hit Die to
+                                enhance freshly cooked food with your spice. As long as there is enough food, up to 10
+                                creatures can regain hit points equal to your Constitution modifier. A creature can only
+                                benefit from this feature once per long rest.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Dire Growth.</i> </b>You can manipulate the bones and keratin within your body. As a bonus action, you activate one of thefollowing abilities for one minute. Once you use this feature, you can’t use it again until you finish a short rest.
+                                <b><i>Dire Growth.</i> </b>You can manipulate the bones and keratin within your body. As
+                                a bonus action, you activate one of thefollowing abilities for one minute. Once you use
+                                this feature, you can’t use it again until you finish a short rest.
                                 <ul>
-                                    <li><b>Tail: </b>You sprout a prehensile tail from your spine that you can use like a third limb. This limb can wield a one-handed item such as a melee weapon, thrown weapon or shield with which you are proficient. If you use an Attack action, you may make a free attack with your armed tail. This tail cannot help wield a two-handed weapon or aim with ranged weapons.</li>
-                                    <li><b>Thick Skin: </b>You grow a chitinous layer over your body. You gain damage reduction equal to your proficiency modifier. If you benefit from damage reduction from another feature, they do not stack and only the highest benefit applies.</li>
-                                </ul>   
+                                    <li><b>Tail: </b>You sprout a prehensile tail from your spine that you can use like
+                                        a third limb. This limb can wield a one-handed item such as a melee weapon,
+                                        thrown weapon or shield with which you are proficient. If you use an Attack
+                                        action, you may make a free attack with your armed tail. This tail cannot help
+                                        wield a two-handed weapon or aim with ranged weapons.</li>
+                                    <li><b>Thick Skin: </b>You grow a chitinous layer over your body. You gain damage
+                                        reduction equal to your proficiency modifier. If you benefit from damage
+                                        reduction from another feature, they do not stack and only the highest benefit
+                                        applies.</li>
+                                </ul>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Bone Knuckles.</i> </b>Your fists are covered with bony plates. Your unarmed strike deals bludgeoning damage 1d6 + your Constitution modifier, and you are proficient with this attack.<br>&nbsp;&nbsp;&nbsp;&nbsp; If your unarmed strike has a higher dice roll than this feature, you can instead add bludgeoning damage to each successful strike equal to half of your Constitution modifier (minimum of +1).
+                                <b><i>Bone Knuckles.</i> </b>Your fists are covered with bony plates. Your unarmed
+                                strike deals bludgeoning damage 1d6 + your Constitution modifier, and you are proficient
+                                with this attack.<br>&nbsp;&nbsp;&nbsp;&nbsp; If your unarmed strike has a higher dice
+                                roll than this feature, you can instead add bludgeoning damage to each successful strike
+                                equal to half of your Constitution modifier (minimum of +1).
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Bone Shards.</i> </b>You can shoot out a piercing shard from your body. Your bone shards have a range of 30/60 feet and deals piercing damage equal to 1d6 + your Constitution modifier. You are proficient with this ranged attack. 
+                                <b><i>Bone Shards.</i> </b>You can shoot out a piercing shard from your body. Your bone
+                                shards have a range of 30/60 feet and deals piercing damage equal to 1d6 + your
+                                Constitution modifier. You are proficient with this ranged attack.
                             </td>
                         </tr>
                         <tr>
-                        <th class="class-border border-0" colspan="10"></th>
+                            <th class="class-border border-0" colspan="10"></th>
                         </tr>
                     </tbody>
                 </table>
 
-                <table class="table-sm shadow race-table tab-pane fade" id="feathered" role="tabpanel" aria-labelledby="feathered-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="feathered" role="tabpanel"
+                    aria-labelledby="feathered-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Touched-Kin Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2 points may be assigned to a single score. Also, select one ability score. That score now has a cap of 22.                            
-                        </td></tr>
-                        <tr><td>
-                            <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are good, evil, or something in-between rests entirely on their upbringing and the space society makes (or doesn’t make) for them.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350. Your size is Medium.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages.</i> </b>You can speak Pergashan (Common).
-                        </td></tr>
+                        <tr>
+                            <th class="race-table-title">Touched-Kin Traits</th>
+                        </tr>
                         <tr>
                             <td>
-                                <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the Sundering Sands, and you were born with an incredible skill. Select one skill or tool proficiency. You have expertise in that proficiency.
+                                <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2
+                                points may be assigned to a single score. Also, select one ability score. That score now
+                                has a cap of 22.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms
+                                and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are
+                                good, evil, or something in-between rests entirely on their upbringing and the space
+                                society makes (or doesn’t make) for them.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350.
+                                Your size is Medium.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages.</i> </b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the
+                                Sundering Sands, and you were born with an incredible skill. Select one skill or tool
+                                proficiency. You have expertise in that proficiency.
                             </td>
                         </tr>
                         <tr>
@@ -661,58 +1136,106 @@
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Clipped Wings.</i> </b>You have wings and are feathered, but your twisted nature makes it impossible to fly for long periods. Once per short rest, you can fly for 1 minute at the same rate as your walking speed. You cannot be encumbered or exhausted to use this ability. You can also glide from a height easily, preventing you from taking falling damage so long as you are conscious and unencumbered.<br>&nbsp; &nbsp;  In addition, any ally within 120 feet that can see you while you are flying has advantage on initiative rolls. 
+                                <b><i>Clipped Wings.</i> </b>You have wings and are feathered, but your twisted nature
+                                makes it impossible to fly for long periods. Once per short rest, you can fly for 1
+                                minute at the same rate as your walking speed. You cannot be encumbered or exhausted to
+                                use this ability. You can also glide from a height easily, preventing you from taking
+                                falling damage so long as you are conscious and unencumbered.<br>&nbsp; &nbsp; In
+                                addition, any ally within 120 feet that can see you while you are flying has advantage
+                                on initiative rolls.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Song of Speed.</i> </b>You project an awe-inspiring aura that keeps your allies ready for action. While you are not incapacitated, any ally within 30 feet of you who you can see can take the Dash action as a bonus action.
+                                <b><i>Song of Speed.</i> </b>You project an awe-inspiring aura that keeps your allies
+                                ready for action. While you are not incapacitated, any ally within 30 feet of you who
+                                you can see can take the Dash action as a bonus action.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Song of the Avatars.</i> </b>Your mind sends out a gentle musical humming that affects those around you. Once per short or long rest, you may choose one of the following songs. This song stays in effect until you choose to silence it, are incapacitated, or change the song.
+                                <b><i>Song of the Avatars.</i> </b>Your mind sends out a gentle musical humming that
+                                affects those around you. Once per short or long rest, you may choose one of the
+                                following songs. This song stays in effect until you choose to silence it, are
+                                incapacitated, or change the song.
                                 <ul>
-                                    <li><b>Awe: </b>When you activate this song, any allies within 15 feet of you gain temporary Hit Points equal to your twice your Charisma modifier (minimum 1). Also, while using this song you gain a bonus to your Charisma checks equal to your Intelligence modifier (minimum of +1).</li>
-                                    <li><b>Fear: </b>When you activate this song, any hostile creatures within 15 feet of you must make a Charisma saving throw or be frightened of you. The DC for this ability is equal to 8 + your proficiency bonus + your Charisma modifier. Also, while using this song you have advantage on Charisma (Intimidation) checks.</li>
-                                    <li><b>Joy: </b>When you activate this song, any allies within 15 feet of you, including yourself, gains one inspiration die to use before they take a short or long rest. This die begins at d4 at 1st level and increases to a d6 at 7th level and d8 at 13th level. Also, while using this song, you have advantage on Charisma (Persuasion) checks.</li>
-                                    <li><b>Rage: </b>When you activate this song, any allies within 15 feet of you may immediately make an attack roll against a creature. While this song is active, you also gain a bonus to weapon attack damage equal to your Charisma modifier (minimum of +1).</li>
+                                    <li><b>Awe: </b>When you activate this song, any allies within 15 feet of you gain
+                                        temporary Hit Points equal to your twice your Charisma modifier (minimum 1).
+                                        Also, while using this song you gain a bonus to your Charisma checks equal to
+                                        your Intelligence modifier (minimum of +1).</li>
+                                    <li><b>Fear: </b>When you activate this song, any hostile creatures within 15 feet
+                                        of you must make a Charisma saving throw or be frightened of you. The DC for
+                                        this ability is equal to 8 + your proficiency bonus + your Charisma modifier.
+                                        Also, while using this song you have advantage on Charisma (Intimidation)
+                                        checks.</li>
+                                    <li><b>Joy: </b>When you activate this song, any allies within 15 feet of you,
+                                        including yourself, gains one inspiration die to use before they take a short or
+                                        long rest. This die begins at d4 at 1st level and increases to a d6 at 7th level
+                                        and d8 at 13th level. Also, while using this song, you have advantage on
+                                        Charisma (Persuasion) checks.</li>
+                                    <li><b>Rage: </b>When you activate this song, any allies within 15 feet of you may
+                                        immediately make an attack roll against a creature. While this song is active,
+                                        you also gain a bonus to weapon attack damage equal to your Charisma modifier
+                                        (minimum of +1).</li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
-                        <th class="class-border border-0" colspan="10"></th>
+                            <th class="class-border border-0" colspan="10"></th>
                         </tr>
                     </tbody>
                 </table>
 
-                <table class="table-sm shadow race-table tab-pane fade" id="spiderling" role="tabpanel" aria-labelledby="spiderling-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="spiderling" role="tabpanel"
+                    aria-labelledby="spiderling-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Touched-Kin Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2 points may be assigned to a single score. Also, select one ability score. That score now has a cap of 22.                            
-                        </td></tr>
-                        <tr><td>
-                            <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are good, evil, or something in-between rests entirely on their upbringing and the space society makes (or doesn’t make) for them.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350. Your size is Medium.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages.</i> </b>You can speak Pergashan (Common).
-                        </td></tr>
+                        <tr>
+                            <th class="race-table-title">Touched-Kin Traits</th>
+                        </tr>
                         <tr>
                             <td>
-                                <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the Sundering Sands, and you were born with an incredible skill. Select one skill or tool proficiency. You have expertise in that proficiency.
+                                <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2
+                                points may be assigned to a single score. Also, select one ability score. That score now
+                                has a cap of 22.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms
+                                and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are
+                                good, evil, or something in-between rests entirely on their upbringing and the space
+                                society makes (or doesn’t make) for them.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350.
+                                Your size is Medium.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages.</i> </b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the
+                                Sundering Sands, and you were born with an incredible skill. Select one skill or tool
+                                proficiency. You have expertise in that proficiency.
                             </td>
                         </tr>
                         <tr>
@@ -720,7 +1243,8 @@
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Unusual Size.</i> </b>Unlike most Touched Kin, your size is Small, and your movement speed is 25 feet. 
+                                <b><i>Unusual Size.</i> </b>Unlike most Touched Kin, your size is Small, and your
+                                movement speed is 25 feet.
                             </td>
                         </tr>
                         <tr>
@@ -730,62 +1254,107 @@
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Darkvision.</i> </b>Your eyes grant you superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+                                <b><i>Darkvision.</i> </b>Your eyes grant you superior vision in dark and dim
+                                conditions. You can see in dim light within 60 feet of you as if it were bright light,
+                                and in darkness as if it were dim light. You can’t discern color in darkness, only
+                                shades of gray.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Climb.</i> </b>Your hands and limbs have tiny hairs that cling to surfaces giving you a climb speed of 20 feet. 
+                                <b><i>Climb.</i> </b>Your hands and limbs have tiny hairs that cling to surfaces giving
+                                you a climb speed of 20 feet.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Mandibles.</i> </b>You might look a bit frightening, but your mandibles have kept you alive. Your mandibles are a naturalweapon that are used to make melee attacks. If you hit with them, you deal 1d4 + your Dexterity modifier in piercing damage.
+                                <b><i>Mandibles.</i> </b>You might look a bit frightening, but your mandibles have kept
+                                you alive. Your mandibles are a naturalweapon that are used to make melee attacks. If
+                                you hit with them, you deal 1d4 + your Dexterity modifier in piercing damage.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Venomous Bite.</i> </b>On a successful attack with your mandibles, you may use your reaction and expend a Hit Die to deal poison damage equal to the 1 Hit Die + your Constitution modifier.
+                                <b><i>Venomous Bite.</i> </b>On a successful attack with your mandibles, you may use
+                                your reaction and expend a Hit Die to deal poison damage equal to the 1 Hit Die + your
+                                Constitution modifier.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Spider’s Web.</i> </b>Your twisted anatomy enables you to spin useful and powerful silk. Once per long rest, you can shoot out a thick, sticky webbing at a point of your choice within range. The web fills a 20-foot cube from that point for up to 1 hour. The webs are difficult terrain and lightly obscure the area. Each creature of Large or smaller size that starts its turn in the webs or that enters them during its turn must make a Dexterity saving throw. On a failed save, the creature is restrained as long as it remains in the webs or until it breaks free. If the creature is larger than Huge, the web is destroyed by the creature’s movements. A creature restrained by the webs can use its action to make a Strength check against your DC. If it succeeds, it is no longer restrained. Your DC is 8 + your proficiency modifier + your Dexterity modifier. The webs are flammable. Any 5-foot cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire.<br>&nbsp; &nbsp;  Alternatively, you may expel the webs harmlessly and use them as a material. The silk webbing is a valuable resource that can be used in building and crafting. You expel the equivalent of 1 square yard of silk worth 1 uncommon barter.
+                                <b><i>Spider’s Web.</i> </b>Your twisted anatomy enables you to spin useful and powerful
+                                silk. Once per long rest, you can shoot out a thick, sticky webbing at a point of your
+                                choice within range. The web fills a 20-foot cube from that point for up to 1 hour. The
+                                webs are difficult terrain and lightly obscure the area. Each creature of Large or
+                                smaller size that starts its turn in the webs or that enters them during its turn must
+                                make a Dexterity saving throw. On a failed save, the creature is restrained as long as
+                                it remains in the webs or until it breaks free. If the creature is larger than Huge, the
+                                web is destroyed by the creature’s movements. A creature restrained by the webs can use
+                                its action to make a Strength check against your DC. If it succeeds, it is no longer
+                                restrained. Your DC is 8 + your proficiency modifier + your Dexterity modifier. The webs
+                                are flammable. Any 5-foot cube of webs exposed to fire burns away in 1 round, dealing
+                                2d4 fire damage to any creature that starts its turn in the fire.<br>&nbsp; &nbsp;
+                                Alternatively, you may expel the webs harmlessly and use them as a material. The silk
+                                webbing is a valuable resource that can be used in building and crafting. You expel the
+                                equivalent of 1 square yard of silk worth 1 uncommon barter.
                             </td>
                         </tr>
                         <tr>
-                        <th class="class-border border-0" colspan="10"></th>
+                            <th class="class-border border-0" colspan="10"></th>
                         </tr>
                     </tbody>
                 </table>
 
-                <table class="table-sm shadow race-table tab-pane fade" id="twisted" role="tabpanel" aria-labelledby="twisted-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="twisted" role="tabpanel"
+                    aria-labelledby="twisted-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
                         </tr>
-                        <tr><th class="race-table-title">Touched-Kin Traits</th></tr>
-                        <tr><td>
-                            <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2 points may be assigned to a single score. Also, select one ability score. That score now has a cap of 22.                            
-                        </td></tr>
-                        <tr><td>
-                            <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are good, evil, or something in-between rests entirely on their upbringing and the space society makes (or doesn’t make) for them.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350. Your size is Medium.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages.</i> </b>You can speak Pergashan (Common).
-                        </td></tr>
+                        <tr>
+                            <th class="race-table-title">Touched-Kin Traits</th>
+                        </tr>
                         <tr>
                             <td>
-                                <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the Sundering Sands, and you were born with an incredible skill. Select one skill or tool proficiency. You have expertise in that proficiency.
+                                <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2
+                                points may be assigned to a single score. Also, select one ability score. That score now
+                                has a cap of 22.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms
+                                and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are
+                                good, evil, or something in-between rests entirely on their upbringing and the space
+                                society makes (or doesn’t make) for them.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350.
+                                Your size is Medium.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages.</i> </b>You can speak Pergashan (Common).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the
+                                Sundering Sands, and you were born with an incredible skill. Select one skill or tool
+                                proficiency. You have expertise in that proficiency.
                             </td>
                         </tr>
                         <tr>
@@ -793,41 +1362,52 @@
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Two Heads.</i> </b>You have advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, stunned, and knocked unconscious. 
+                                <b><i>Two Heads.</i> </b>You have advantage on Wisdom (Perception) checks and on saving
+                                throws against being blinded, charmed, deafened, stunned, and knocked unconscious.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>I Beg to Differ.</i> </b>Your other head sometimes knows things that you do not. Once per long rest, you can reroll a failed skill check as you talk things over with head number two.
+                                <b><i>I Beg to Differ.</i> </b>Your other head sometimes knows things that you do not.
+                                Once per long rest, you can reroll a failed skill check as you talk things over with
+                                head number two.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Wakeful.</i> </b>When one of your heads is asleep, the other head is awake. You can be fully aware of your surroundings and still complete a full rest.
+                                <b><i>Wakeful.</i> </b>When one of your heads is asleep, the other head is awake. You
+                                can be fully aware of your surroundings and still complete a full rest.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Two Minds.</i> </b>Two is always better than one. You learn a Psionic Talent of your choice, and you may always use your bonus action to have one head use a Psionic Talent.
+                                <b><i>Two Minds.</i> </b>Two is always better than one. You learn a Psionic Talent of
+                                your choice, and you may always use your bonus action to have one head use a Psionic
+                                Talent.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Twisted Metabolism.</i> </b>When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.
+                                <b><i>Twisted Metabolism.</i> </b>When you are reduced to 0 hit points but not killed
+                                outright, you can drop to 1 hit point instead. You can’t use this feature again until
+                                you finish a long rest.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Quick Recovery.</i> </b>You have incredible recovery abilities. You may use a bonus action and roll 1 Hit Die + your Constitution modifier to heal for that amount. You can’t use this feature again until you finish a long rest.
+                                <b><i>Quick Recovery.</i> </b>You have incredible recovery abilities. You may use a
+                                bonus action and roll 1 Hit Die + your Constitution modifier to heal for that amount.
+                                You can’t use this feature again until you finish a long rest.
                             </td>
                         </tr>
                         <tr>
-                        <th class="class-border border-0" colspan="10"></th>
+                            <th class="class-border border-0" colspan="10"></th>
                         </tr>
                     </tbody>
                 </table>
                 <!-- LIZARDFOLK -->
-                <table class="table-sm shadow race-table tab-pane fade" id="lizardfolk" role="tabpanel" aria-labelledby="lizardfolk-list">                    
+                <table class="table-sm shadow race-table tab-pane fade" id="lizardfolk" role="tabpanel"
+                    aria-labelledby="lizardfolk-list">
                     <tbody>
                         <tr colspan="10">
                             <th class="class-border border-0" colspan="10"></th>
@@ -837,26 +1417,39 @@
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Ability score increase.</i></b> Your Constitution score increases by 2. You may assign 2 ability points how you prefer, but the cap does not change.                            
+                                <b><i>Ability score increase.</i></b> Your Constitution score increases by 2. You may
+                                assign 2 ability points how you prefer, but the cap does not change.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Age.</i> </b>Lizardfolk reach maturity around age 14 and rarely live longer than 60 years.
+                                <b><i>Age.</i> </b>Lizardfolk reach maturity around age 14 and rarely live longer than
+                                60 years.
                             </td>
                         </tr>
-                        <tr><td>
-                            <b><i>Alignment.</i> </b>Most lizardfolk are neutral. They see the world as a place of predators and prey, where life and death are natural processes. They wish only to survive and prefer to leave other creatures to their own devices. 
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Size.</i> </b>Lizardfolk on this side of the Chasm adapted to the land of giants. Your size is Large.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
-                        </td></tr>
-                        <tr><td>
-                            <b><i>Languages.</i> </b>You can speak Pergashan (Common) and Draconic.
-                        </td></tr>
+                        <tr>
+                            <td>
+                                <b><i>Alignment.</i> </b>Most lizardfolk are neutral. They see the world as a place of
+                                predators and prey, where life and death are natural processes. They wish only to
+                                survive and prefer to leave other creatures to their own devices.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Size.</i> </b>Lizardfolk on this side of the Chasm adapted to the land of giants.
+                                Your size is Large.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b><i>Languages.</i> </b>You can speak Pergashan (Common) and Draconic.
+                            </td>
+                        </tr>
                         <tr>
                             <td>
                                 <b><i>Swim Speed.</i> </b>You have a swimming speed of 30 feet.
@@ -864,17 +1457,26 @@
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Darkvision.</i> </b>Your reptilian eyes grant you superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+                                <b><i>Darkvision.</i> </b>Your reptilian eyes grant you superior vision in dark and dim
+                                conditions. You can see in dim light within 60 feet of you as if it were bright light,
+                                and in darkness as if it were dim light. You can't discern color in darkness, only
+                                shades of gray.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Bite.</i> </b>Your fanged maw is a natural weapon that you can use as an action. If you hit with it, you deal piercing damage equal to 1d8 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+                                <b><i>Bite.</i> </b>Your fanged maw is a natural weapon that you can use as an action.
+                                If you hit with it, you deal piercing damage equal to 1d8 + your Strength modifier,
+                                instead of the bludgeoning damage normal for an unarmed strike.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Cunning Artisan.</i> </b>As part of a short rest, you can harvest bone and hide from a slain beast, construct, dragon, monstrosity, or plant creature of size small or larger to create one of the following items: a shield, a club, a javelin, or 1d4 darts or blowgun needles. To use this trait, you need a blade, such as a dagger, or appropriate artisan's tools, such as leatherworker's tools.
+                                <b><i>Cunning Artisan.</i> </b>As part of a short rest, you can harvest bone and hide
+                                from a slain beast, construct, dragon, monstrosity, or plant creature of size small or
+                                larger to create one of the following items: a shield, a club, a javelin, or 1d4 darts
+                                or blowgun needles. To use this trait, you need a blade, such as a dagger, or
+                                appropriate artisan's tools, such as leatherworker's tools.
                             </td>
                         </tr>
                         <tr>
@@ -884,22 +1486,35 @@
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Hunter's Lore.</i> </b>You gain proficiency with two of the following skills of your choice: Animal Handling, Nature, Perception, Stealth, and Survival.
+                                <b><i>Hunter's Lore.</i> </b>You gain proficiency with two of the following skills of
+                                your choice: Animal Handling, Nature, Perception, Stealth, and Survival.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Natural Armor.</i> </b>You have tough, scaly skin. When you aren't wearing armor, your AC is 13 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor.
+                                <b><i>Natural Armor.</i> </b>You have tough, scaly skin. When you aren't wearing armor,
+                                your AC is 13 + your Dexterity modifier. You can use your natural armor to determine
+                                your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply
+                                as normal while you use your natural armor.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Feeding Frenzy.</i> </b>In battle, you can throw yourself into a vicious feeding frenzy. As a bonus action, you can make a special attack with your bite. If the attack hits, it deals its normal damage, and you gain temporary hit points equal to your twice your Constitution modifier (minimum of 1). Additionally, for the next minute, you may add your proficiency modifier to any weapon damage you deal to this creature. <br>&nbsp; &nbsp;  Finally, your food consumption needs are fulfilled for the day, and you can’t use this trait again until you finish a long rest. If your food requirements are increased beyond normal for the day, this ability only fulfills your base needs.
+                                <b><i>Feeding Frenzy.</i> </b>In battle, you can throw yourself into a vicious feeding
+                                frenzy. As a bonus action, you can make a special attack with your bite. If the attack
+                                hits, it deals its normal damage, and you gain temporary hit points equal to your twice
+                                your Constitution modifier (minimum of 1). Additionally, for the next minute, you may
+                                add your proficiency modifier to any weapon damage you deal to this creature. <br>&nbsp;
+                                &nbsp; Finally, your food consumption needs are fulfilled for the day, and you can’t use
+                                this trait again until you finish a long rest. If your food requirements are increased
+                                beyond normal for the day, this ability only fulfills your base needs.
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <b><i>Tail Slam. </i></b>Your tail packs a surprise. As a bonus action, you can make a melee attack with your tail. It has reach of 10 feet and on a successful hit, deals bludgeoning damage equal to 1d6 + your Strength modifier.
+                                <b><i>Tail Slam. </i></b>Your tail packs a surprise. As a bonus action, you can make a
+                                melee attack with your tail. It has reach of 10 feet and on a successful hit, deals
+                                bludgeoning damage equal to 1d6 + your Strength modifier.
                             </td>
                         </tr>
                         <tr>
@@ -908,15 +1523,21 @@
                     </tbody>
                 </table>
             </div>
-        
-      </div>
-    
 
-    <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="../pergasha.js"></script>
-</body>
+
+        <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+        <script src="../pergasha.js"></script>
+    </body>
+
 </html>
