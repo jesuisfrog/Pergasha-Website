@@ -1,154 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="pergasha.css">
-        <link rel="shortcut icon" href="assets/icons/pergasha-icon.ico" />
-
-
-        <title>Pergasha</title>
-    </head>
-
-    <body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="pergasha.css">
+    <link rel="shortcut icon" href="assets/icons/pergasha-icon.ico" />
 
 
-        <header>
+    <title>Pergasha</title>
+</head>
 
-            <nav class="navbar navbar-dark navbar-expand-xl">
-                <div class="navbar-brand  mr-4">
-                    <a href="pergasha.html">
-                        <img id="dreadful-logo" src="./assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
-                    </a>
+<body>
+
+
+    <header>
+
+        <nav class="navbar navbar-dark navbar-expand-xl">
+            <div class="navbar-brand  mr-4">
+                <a href="pergasha.html">
+                    <img id="dreadful-logo" src="./assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="pergasha.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Player Options
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="content/classes.html">Classes</a>
+                            <a class="dropdown-item" href="content/races.html">Races</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="content/feats.html">Feats</a>
+                            <a class="dropdown-item" href="content/infusions.html">Infusions</a>
+                            <a class="dropdown-item" href="content/training.html">Training</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="content/psionics.html">Psionics</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            References
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="content/characters.html">Characters</a>
+                            <a class="dropdown-item" href="content/glyphs.html">Glyphs</a>
+                            <a class="dropdown-item" href="content/items.html">Items</a>
+                            <a class="dropdown-item" href="content/locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="content/rules.html">Rules</a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
+                <div class="d-none" id="notlogged">
+                    <form class="form-inline">
+                        <div class="form-group form-group-sm">
+                            <input type="text" class="form-control form-control-sm mr-sm-2 login-input" id="username"
+                                placeholder="Username">
+                            <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd"
+                                placeholder="Password">
+                            <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
+                        </div>
+                    </form>
+                    <input type="checkbox" id="showPwd" class="mr-1" autocomplete="off"><span id="show-pwd-label"
+                        style="color: white;">Show Password</span>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="pergasha.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Player Options
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="content/classes.html">Classes</a>
-                                <a class="dropdown-item" href="content/races.html">Races</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="content/feats.html">Feats</a>
-                                <a class="dropdown-item" href="content/infusions.html">Infusions</a>
-                                <a class="dropdown-item" href="content/training.html">Training</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="content/psionics.html">Psionics</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                References
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="content/characters.html">Characters</a>
-                                <a class="dropdown-item" href="content/glyphs.html">Glyphs</a>
-                                <a class="dropdown-item" href="content/items.html">Items</a>
-                                <a class="dropdown-item" href="content/locations.html">Locations</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="content/rules.html">Rules</a>
-                        </li>
-                    </ul>
-                    <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
-                    <div class="d-none" id="notlogged">
-                        <form class="form-inline">
-                            <div class="form-group form-group-sm">
-                                <input type="text" class="form-control form-control-sm mr-sm-2 login-input"
-                                    id="username" placeholder="Username">
-                                <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd"
-                                    placeholder="Password">
-                                <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
-                            </div>
-                        </form>
-                        <input type="checkbox" id="showPwd" class="mr-1" autocomplete="off"><span id="show-pwd-label"
-                            style="color: white;">Show Password</span>
-                    </div>
 
-                </div>
-            </nav>
+            </div>
+        </nav>
 
-        </header>
+    </header>
 
 
-        <h1 class="text-center mt-5 arjulian">Welcome to Pergasha!</h1>
+    <h1 class="text-center mt-5 arjulian">Welcome to Pergasha!</h1>
 
-        <div class="homepage-shortcuts d-flex justify-content-around flex-wrap">
+    <div class="homepage-shortcuts d-flex justify-content-around flex-wrap">
 
-            <a class="shortcuts text-reset text-decoration-none" href="content/races.html">
-                <div><img class="shortcuts-icon" src="assets/icons/race-logo.svg"></div>
-                <h4 class="arjulian">Races</h4>
-            </a>
-            <a class="shortcuts text-reset text-decoration-none" href="content/classes.html">
-                <div><img class="shortcuts-icon" src="assets/icons/class-logo.svg"></div>
-                <h4 class="arjulian">Classes</h4>
-            </a>
-            <a class="shortcuts text-reset text-decoration-none" href="content/items.html">
-                <div><img class="shortcuts-icon" src="assets/icons/item-logo.svg"></div>
-                <h4 class="arjulian">Items</h4>
-            </a>
-            <a class="shortcuts text-reset text-decoration-none" href="content/psionics.html">
-                <div><img class="shortcuts-icon" src="assets/icons/psionics-logo.svg"></div>
-                <h4 class="arjulian">Psionics</h4>
-            </a>
-            <a class="shortcuts text-reset text-decoration-none" href="content/feats.html">
-                <div><img class="shortcuts-icon" src="assets/icons/feats-logo.svg"></div>
-                <h4 class="arjulian">Feats</h4>
-            </a>
-            <a class="shortcuts text-reset text-decoration-none" href="content/training.html">
-                <div><img class="shortcuts-icon" src="assets/icons/training-logo.svg"></div>
-                <h4 class="arjulian">Training</h4>
-            </a>
-            <a class="shortcuts text-reset text-decoration-none" href="content/glyphs.html">
-                <div><img class="shortcuts-icon" src="assets/icons/glyphs-logo.svg"></div>
-                <h4 class="arjulian">Glyphs</h4>
-            </a>
-            <a class="shortcuts text-reset text-decoration-none" href="content/rules.html">
-                <div><img class="shortcuts-icon" src="assets/icons/rules-logo.svg"></div>
-                <h4 class="arjulian">Rules</h4>
-            </a>
-            <a class="shortcuts text-reset text-decoration-none" href="content/characters.html">
-                <div><img class="shortcuts-icon pr-3" src="assets/icons/characters-logo.svg"></div>
-                <h4 class="arjulian">Characters</h4>
-            </a>
-            <a class="shortcuts text-reset text-decoration-none" href="content/locations.html">
-                <div><img class="shortcuts-icon" src="assets/icons/locations-logo.svg"></div>
-                <h4 class="arjulian">Locations</h4>
-            </a>
-        </div>
+        <a class="shortcuts text-reset text-decoration-none" href="content/races.html">
+            <div><img class="shortcuts-icon" src="assets/icons/race-logo.svg"></div>
+            <h4 class="arjulian">Races</h4>
+        </a>
+        <a class="shortcuts text-reset text-decoration-none" href="content/classes.html">
+            <div><img class="shortcuts-icon" src="assets/icons/class-logo.svg"></div>
+            <h4 class="arjulian">Classes</h4>
+        </a>
+        <a class="shortcuts text-reset text-decoration-none" href="content/items.html">
+            <div><img class="shortcuts-icon" src="assets/icons/item-logo.svg"></div>
+            <h4 class="arjulian">Items</h4>
+        </a>
+        <a class="shortcuts text-reset text-decoration-none" href="content/psionics.html">
+            <div><img class="shortcuts-icon" src="assets/icons/psionics-logo.svg"></div>
+            <h4 class="arjulian">Psionics</h4>
+        </a>
+        <a class="shortcuts text-reset text-decoration-none" href="content/feats.html">
+            <div><img class="shortcuts-icon" src="assets/icons/feats-logo.svg"></div>
+            <h4 class="arjulian">Feats</h4>
+        </a>
+        <a class="shortcuts text-reset text-decoration-none" href="content/training.html">
+            <div><img class="shortcuts-icon" src="assets/icons/training-logo.svg"></div>
+            <h4 class="arjulian">Training</h4>
+        </a>
+        <a class="shortcuts text-reset text-decoration-none" href="content/glyphs.html">
+            <div><img class="shortcuts-icon" src="assets/icons/glyphs-logo.svg"></div>
+            <h4 class="arjulian">Glyphs</h4>
+        </a>
+        <a class="shortcuts text-reset text-decoration-none" href="content/rules.html">
+            <div><img class="shortcuts-icon" src="assets/icons/rules-logo.svg"></div>
+            <h4 class="arjulian">Rules</h4>
+        </a>
+        <a class="shortcuts text-reset text-decoration-none" href="content/characters.html">
+            <div><img class="shortcuts-icon pr-3" src="assets/icons/characters-logo.svg"></div>
+            <h4 class="arjulian">Characters</h4>
+        </a>
+        <a class="shortcuts text-reset text-decoration-none" href="content/locations.html">
+            <div><img class="shortcuts-icon" src="assets/icons/locations-logo.svg"></div>
+            <h4 class="arjulian">Locations</h4>
+        </a>
+    </div>
 
-        <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+    <footer class="text-right mr-2">
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+        <script
+            type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#87898a', 'B0B15MGC4'); kofiwidget2.draw();</script>
+    </footer>
 
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-            crossorigin="anonymous"></script>
-        <script src="pergasha.js"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="pergasha.js"></script>
+</body>
 
 </html>

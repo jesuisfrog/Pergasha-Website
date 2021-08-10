@@ -126,7 +126,7 @@
                             <td class="text-center">1</td>
                             <td class="text-center">1</td>
                             <td class="text-center">2</td>
-                            <td class="text-center">Psionic Talent, Psionic Discipline, Brightness,
+                            <td class="text-center">Psionic Talent, Psionic Discipline,
                                 Proficiencies[3]**, Feat</td>
                         </tr>
                         <tr>
@@ -764,8 +764,10 @@
                             <li><b>Evoking Time: </b>Special</li>
                             <li><b>Range: </b>Self</li>
                             <li><b>Duration: </b>Instantaneous</li>
-                            <li>As part of your movement action, you jump in any direction up to 20 feet per Psi
-                                Point spent.</li>
+                            <li>As part of your movement action, you jump in any direction up to 20 feet per Psi Point
+                                spent. You can trigger a forceful burst when you land. Any creatures within 5 feet of
+                                you when you land must make a Strength saving throw. On a fail, creatures up to one size
+                                larger than you fall prone</li>
                         </ul>
                         <span class="psionics-subtitle">Titan’s Strength (Mastery)</span>
                         <ul style="list-style-type:none;">
@@ -774,10 +776,13 @@
                             <li><b>Range: </b>Self</li>
                             <li><b>Duration: </b>Concentration, up to 10 minutes</li>
                             <li>You increase your muscle mass to an incredible degree. Your size increases by one
-                                level, and you have a 22 in Strength. You have advantage on Strength saving throws
-                                and advantage on any rolls required to stand from prone. However, this incredible
-                                feat is physically taxing and once this effect’s duration has ended (10 minutes,
-                                even if your concentration ends early), you gain one level of exhaustion.</li>
+                                level, you gain +10 to your movement speed, and you gain +2 to your Strength and
+                                Constitution (temporarily exceeding your maximum cap if necessary). In addition, you
+                                have advantage
+                                on Strength saving throws and advantage on any rolls required to stand from prone.
+                                However, this incredible feat is physically taxing and once this effect’s duration has
+                                ended (10 minutes, even if your concentration ends early), you gain one level of
+                                exhaustion.</li>
                         </ul>
                     </div>
                 </div>
@@ -811,6 +816,8 @@
                             <li>You gain two benefits until the start of your next turn: <ul>
                                     <li>You don't provoke opportunity attacks.</li>
                                     <li>You have a climbing speed equal to your walking speed.</li>
+                                    <li>You gain advantage on a melee attack against a target if you move at least 15
+                                        feet towards them.</li>
                                 </ul>
                             </li>
                         </ul>
@@ -829,7 +836,7 @@
                         <ul style="list-style-type:none;">
                             <li><i>Passive.</i> Your mastery over your own body creates an aura that helps your
                                 allies. You have a persistent 15-foot aura around you so long as you are not
-                                incapacitated or unconscious. Allies that start their turn in your aura gain 5 feet
+                                incapacitated or unconscious. Allies that start their turn in your aura gain 10 feet
                                 to their walking speed. Additionally, if an ally is in your aura when you activate
                                 any Celerity powers, it benefits from the effects.</li>
                         </ul>
@@ -1083,7 +1090,8 @@
                             <li><b>Duration: </b>Instantaneous</li>
                             <li>You capture that sense of an event repeating itself and hurl it at your foe. You
                                 duplicate the Action you took this turn in its entirety (action surges and bonus
-                                actions are not duplicated). Your movement speed is 0. You do not pay psi points for
+                                actions are not duplicated). Rolls made are not duplicated. Your movement speed is 0.
+                                You do not pay psi points for
                                 any psionic abilities that are duplicated through this power.</li>
                         </ul>
                         <span class="psionics-subtitle">Echo (Mastery)</span>
@@ -1820,9 +1828,10 @@
                     <div class="psionics-body" style="display: none">
                         <span class="psionics-subtitle">Psychic Focus</span>
                         <ul style="list-style-type:none;">
-                            <li>While you are focused on this discipline, any attack roll you make for a ranged
-                                weapon attack ignores disadvantage. If disadvantage would normally apply to the
-                                roll, that roll also cannot benefit from advantage.</li>
+                            <li>While you are focused on this discipline, anytime you attack with a ranged weapon you
+                                can use your Intelligence or Wisdom modifier instead of your Dexterity for the attack
+                                and damage rolls.
+                            </li>
                         </ul>
                         <span class="psionics-subtitle">Speed Dart</span>
                         <ul style="list-style-type:none;">
@@ -1843,16 +1852,71 @@
                             <li>As a reaction when you miss with a ranged weapon attack, you can repeat the attack
                                 roll against the same target.</li>
                         </ul>
-                        <span class="psionics-subtitle">Faithful Archer </span>
+                        <span class="psionics-subtitle">Archers of Legend</span>
                         <ul style="list-style-type:none;">
                             <li><b>Cost: </b>5 psi point</li>
                             <li><b>Evoking Time: </b>1 bonus action</li>
                             <li><b>Range: </b>One ranged weapon you wield</li>
                             <li><b>Duration: </b>Concentration, up to 1 minute</li>
-                            <li>You imbue a ranged weapon that you wield with limited sentience. Until your
-                                concentration ends, the ranged weapon makes a single free psionic attack at the
-                                start of each of your turns. No action is required on your part. If it is a thrown
-                                weapon, it returns to your grasp each time you make any attack with it.</li>
+                            <li>You channel the sentience of an expert marksman from another time and place who imbues
+                                your ranged attacks with their aura. When you make a ranged attack, the channeled archer
+                                makes one of the following enhancements to your shot. This enhancement remains until
+                                your concentration ends, you end the ability, or you evoke this power again to select a
+                                different archer.</li>
+                            <ul>
+                                <li><strong>Arjuna.</strong> Arjuna’s laser-focused aura keeps your hand steady and
+                                    enables a penetrating shot.
+                                    <ul>
+                                        <li><strong>Passive:</strong> Your ranged weapon attacks have the
+                                            <i>Effective</i> property.
+                                        </li>
+                                        <li><strong>Ducks in a Row!</strong> You make a penetrating shot that cuts
+                                            through
+                                            enemies. As an action, select a target within your weapon’s range
+                                            and any creature in a 60-foot line behind them is also targeted by
+                                            this attack. Make one ranged attack roll with your weapon and use
+                                            it to determine which of the targets are successfully hit. The first
+                                            target in the line to be hit receives full damage from your attack,
+                                            and subsequent targets hit receive half the amount in psychic
+                                            damage.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Simetra</strong> Simetra’s cleverness is only outshined by her fury. Her
+                                    forceful personality enhances your ranged attacks to push back the enemy
+                                    and keep them down—permanently, as is her preference.
+                                    <ul>
+                                        <li><strong>Passive:</strong> On a successful hit with your ranged weapon, you
+                                            can push a target 5 feet back. The target must be able to fit in the space
+                                            andmust be Huge or smaller to be affected.</li>
+                                        <li><strong>Pin Them Down!</strong> As an action, select a point on the ground
+                                            within your weapon’s range. You create a hail of force missiles in a 25-foot
+                                            diameter, 50-foot-tall cylinder. All creatures in the cylinder must
+                                            make a Dexterity saving throw or fall prone and take force damage
+                                            equal to your weapon damage + your Wisdom or Intelligence
+                                            modifier. Flying creatures immediately fall to the ground prone and
+                                            taking appropriate falling damage in addition to the attack. On a
+                                            success, creatures take half the damage.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Locksley</strong> This vengeful spirit of justice takes from his enemies to
+                                    give to his allies. Locksley bestows your shots with the ability to sap your foes of
+                                    strength so the weak are protected.
+                                    <ul>
+                                        <li><strong>Passive:</strong> On a successful ranged weapon attack, your target
+                                            must make an Intelligence save or be sapped until the start of your next
+                                            turn. A sapped creature cannot add its ability modifiers to damage rolls.
+                                        </li>
+                                        <li><strong>Game Over!</strong> As an action, make a ranged weapon attack and on
+                                            a hit, you attempt to stun your target. Your target takes the damage
+                                            appropriate to the attack and must make an Intelligence saving
+                                            throw or is stunned for 1 minute or until you drop your concentration
+                                            on this ability. At the end of each of its turns, it can make a
+                                            Constitution saving throw to shrug off the stun. Once a creature has
+                                            been stunned by you with this ability, it is immune until you take a
+                                            long rest.</li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </ul>
                         <span class="psionics-subtitle">Psionic Shot (Mastery)</span>
                         <ul style="list-style-type:none;">
@@ -1865,7 +1929,7 @@
                     </div>
                 </div>
 
-                <div class="shadow psionics-box rounded border border-secondary immortal-filter w-75 align-self-center">
+                <!-- <div class="shadow psionics-box rounded border border-secondary immortal-filter w-75 align-self-center">
                     <span class="psionics-title p-2" role="button" onclick="collapsibleBox(this)">Iron
                         Durability<span class="psionic-order">Immortal Discipline</span><span
                             class="psionic-description">You transform your body to become a living metal, allowing
@@ -1909,7 +1973,7 @@
                                 now grants you +2 bonus to AC.</li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="shadow psionics-box rounded border border-secondary farhand-filter w-75 align-self-center">
                     <span class="psionics-title p-2" role="button" onclick="collapsibleBox(this)">Living Knives<span
@@ -1954,7 +2018,7 @@
                             <li><b>Range: </b>60 feet</li>
                             <li><b>Duration: </b>Concentration, up to 1 minute</li>
                             <li>You direct a handful of knives, arrows, spears, swords or other pointy objects at
-                                your foe. Select a target that you can see within 100 feet of you. The creature must
+                                your foe. Select a target that you can see within 60 feet of you. The creature must
                                 succeed on a Dexterity save or take 8d6 piercing damage as these objects impale it
                                 repeatedly. If you drop a target to 0 hit points with this attack, the damage
                                 increases by 1d6. On a success, the target takes half the damage and on the next use
@@ -2470,23 +2534,25 @@
                         </ul>
                         <span class="psionics-subtitle">All-Around Sight </span>
                         <ul style="list-style-type:none;">
-                            <li><b>Cost: </b>3 psi point</li>
+                            <li><b>Cost: </b>2 psi point</li>
                             <li><b>Evoking Time: </b>1 reaction</li>
                             <li><b>Range: </b>Self</li>
                             <li><b>Duration: </b>Instantaneous</li>
-                            <li>In response to an attack hitting you, you use your reaction to impose disadvantage
-                                on that attack roll, possibly causing it to miss.</li>
+                            <li>In response to an attack hitting you, you use your reaction to to force
+                                the attacker to roll again and keep the lowest of the two rolls, possibly causing it to
+                                miss.</li>
                         </ul>
                         <span class="psionics-subtitle">Danger Sense </span>
                         <ul style="list-style-type:none;">
                             <li><b>Cost: </b>5 psi point</li>
                             <li><b>Evoking Time: </b>1 action</li>
                             <li><b>Range: </b>Self</li>
-                            <li><b>Duration: </b>Concentration, up to 8 hours</li>
+                            <li><b>Duration: </b>up to 8 hours</li>
                             <li>You create a psychic model of reality in your mind and set it to show you a few
-                                seconds into the future. Until your concentration ends, you can’t be surprised,
-                                attack rolls against you can’t gain advantage, and you gain a +10 bonus to
-                                initiative.</li>
+                                seconds into the future. Until this power ends, attack rolls against you can’t have
+                                advantage, and you gain a +10 bonus to
+                                initiative. In addition, you can cancel the first critical hit made against you after
+                                activating this ability.</li>
                         </ul>
                         <span class="psionics-subtitle">Victory Before Battle </span>
                         <ul style="list-style-type:none;">
@@ -2497,10 +2563,14 @@
                             <li>When you roll initiative, you can use this ability to grant yourself and up to five
                                 creatures of your choice within 60 feet of you a +10 bonus to initiative.</li>
                         </ul>
-                        <span class="psionics-subtitle">Alertness (Mastery)</span>
+                        <span class="psionics-subtitle">Foretelling (Mastery)</span>
                         <ul style="list-style-type:none;">
-                            <li><i>Passive. </i>If you choose this discipline as your Psychic Mastery, you can’t be
-                                surprised, and you can use a reaction to force your allies to re-roll surprise.</li>
+                            <li>When you or another creature you can see within 30 feet of you
+                                makes an ability check, attack roll or a saving throw, you can use
+                                your reaction to add your Intelligence modifier to the roll. You can
+                                apply this bonus after the roll but before you know the results and
+                                you can use this ability number of times equal to your Intelligence
+                                modifier before having to take a long rest.</li>
                         </ul>
                     </div>
                 </div>
@@ -2983,21 +3053,35 @@
                         </ul>
                         <span class="psionics-subtitle">Truesight </span>
                         <ul style="list-style-type:none;">
-                            <li><b>Cost: </b>5 psi point</li>
+                            <li><b>Cost: </b>5-7 psi point</li>
                             <li><b>Evoking Time: </b>1 bonus action</li>
                             <li><b>Range: </b>Self</li>
                             <li><b>Duration: </b>Concentration, up to 1 minute</li>
-                            <li>You gain truesight with a radius of 30 feet which lasts until your concentration
-                                ends.</li>
+                            <li>You gain truesight with a radius of 30 feet which lasts until your concentration ends.
+                                If you spend 6 psi, the duration increases to 5 minutes and the range increases to 60
+                                feet. If you spend 7 psi, the duration increases to 10 minutes and the range increases
+                                to 120 feet.</li>
                         </ul>
                         <span class="psionics-subtitle">Far Sight (Mastery)</span>
                         <ul style="list-style-type:none;">
                             <li><b>Cost: </b>7 psi point</li>
-                            <li><b>Evoking Time: </b>1 bonus action</li>
-                            <li><b>Range: </b>Self</li>
-                            <li><b>Duration: </b>Concentration, up to 10 minutes</li>
-                            <li>You gain truesight with a radius of 120 feet which lasts until your concentration
-                                ends.</li>
+                            <li><b>Evoking Time: </b>10 minutes*</li>
+                            <li><b>Range: </b>Touch</li>
+                            <li><b>Duration: </b>Concentration, up to 1 hour</li>
+                            <li>You gain are able to see through the eyes of another creature. You must commune,
+                                meditate, or mentally subdue a creature that has a minimum Intelligence score of 4. If
+                                you are able to communicate telepathically with the creature, the evoking time is
+                                reduced to 1 minute. The creature must make an Intelligence save or serve as your eyes
+                                for the duration. You can decide if the creature is aware of your connection or not, but
+                                this connection does not allow you to influence behavior or communicate telepathically.
+                                A willing creature can choose to fail the save and allow the connection. Once a
+                                connection is made, you lose your own vision beyond 5 feet for the duration and instead
+                                see through the creature.</br>
+                                You cannot act through the creature but merely see and experience the world through its
+                                eyes.</br>
+                                At the end of the duration, you can spend another 2 psi to extend your connection for
+                                another hour, but a creature can make an Intelligence saving throw and disconnect on a
+                                success.</li>
                         </ul>
                     </div>
                 </div>
@@ -3372,33 +3456,42 @@
 
                 <div class="shadow psionics-box rounded border border-secondary talent-filter w-75 align-self-center">
                     <span class="psionics-title p-2" role="button" onclick="collapsibleBox(this)">Minor
-                        Pyrokinesis<span class="psionic-order">Psionic Talent - Racial Talent</span></span>
+                        Pyrokinesis<span class="psionic-order">Psionic Talent [Fire Pergashan]</span></span>
                     <div class="psionics-body" style="display: none">
                         <ul class="pt-2" style="list-style-type:none;">
-                            <li><b>Evoking Time: </b>1 action to 1 minute</li>
+                            <li><b>Evoking Time: </b>1 bonus action to 1 minute (see below)</li>
                             <li><b>Range: </b>30 feet</li>
                             <li><b>Duration: </b>Special</li>
-                            <li>Your body burns unnaturally hot. You can focus this inner fire for 1 minute to
-                                ignite flammable material or an object, light a torch, or start a small fire. You
-                                must touch what you wish to ignite, and your inner fire cannot melt metal or produce
-                                light from your body.<br> Additionally, you use your affinity to affect fire in the
-                                following ways:
+                            <li>Your body burns unnaturally hot. You can focus this inner fire for 1
+                                minute to ignite flammable material or an object, light a torch, or
+                                start a small fire. You must touch what you wish to ignite, and your
+                                inner fire cannot melt metal or produce light from your body.<br> Additionally, you use
+                                your affinity to affect fire in the following ways:
                                 <ul>
-                                    <li><b>Grow.</b> You can spend an action to expand flame within range up to 5
-                                        feet in one direction, provided that wood or other fuel is present in the
-                                        new location.</li>
-                                    <li><b>Snuff.</b> You can use an action to extinguish flame within range in a
-                                        5-foot cube.</li>
+                                    <li><b>Grow.</b> You can spend a bonus action to expand flame within range
+                                        up to 5 feet in one direction, provided that wood or other fuel is
+                                        present in the new location.</li>
+                                    <li><b>Snuff.</b> You can use a bonus action to extinguish flame within range in
+                                        a 5-foot cube. The size of the flame you can extinguish increases
+                                        when you reach certain levels: 5th level (10-foot cube), 11th level
+                                        (15-foot cube), and 17th level (20-foot cube).</li>
                                     <li><b>Extend.</b> You can spend 1 minute to slow a fire to burn fuel more
-                                        efficiently. You double the life of a fire in a 5-foot cube. The duration is
-                                        based on the fuel.</li>
+                                        efficiently. You double the life of a fire in a 5-foot cube. The duration
+                                        is based on the fuel.</li>
                                 </ul>
                             </li>
-                            <li><b>Burn - Erupt:</b> You take hot-headedness to a new level. As an action, you can
-                                expend any number of your available Hit Die and deal the amount rolled as fire
-                                damage to all creatures adjacent to you. The creatures must make a Dexterity saving
-                                throw (8 + your proficiency + your Constitution) and only take half that damage on a
-                                success. You gain a level of exhaustion at the end of your turn.</li>
+                            <li><b>Burn - Immolation Armor.</b> You break your control over your
+                                inner fire and allow it to spread over your body like an armor of
+                                flame. When you burn this talent as a bonus action, your flaming
+                                armor bursts in place and all creatures within 15 feet of you must make a Dexterity
+                                saving throw or take 2d6 fire damage (save for half damage). For a number of turns equal
+                                to 1 + your Intelligence modifier (minimum 1), any creature that ends its turn adjacent
+                                to you, touches, or attacks you with a melee or natural weapon takes
+                                2d6 fire damage.
+                                </br>
+                                This ability’s burst and persistent damage increases by 1d6 when you
+                                reach certain levels: 5th level (3d6), 11th level (4d6), and 17th level
+                                (5d6).</li>
                         </ul>
                     </div>
                 </div>
@@ -3505,6 +3598,84 @@
                 </div>
 
                 <div class="shadow psionics-box rounded border border-secondary talent-filter w-75 align-self-center">
+                    <span class="psionics-title p-2" role="button" onclick="collapsibleBox(this)">Sandshaping<span
+                            class="psionic-order">Psionic Talent [Sand Pergashan]</span></span>
+                    <div class="psionics-body" style="display: none">
+                        <ul class="pt-2" style="list-style-type:none;">
+                            <li><b>Evoking Time: </b>1 bonus action</li>
+                            <li><b>Range: </b>30 feet</li>
+                            <li><b>Duration: </b>Instantaneous to 1 minute (see below)</li>
+                            <li>You choose a portion of sand that you can see within range and fits
+                                within a 5-foot cube. You manipulate it in one of the following ways:
+                                <ul>
+                                    <li><b>Move.</b> If you target an area of loose sand, you can instantaneously
+                                        excavate it, move it along the ground, and deposit it up to 5 feet
+                                        away. This movement doesn’t have enough force to cause
+                                        damage.</li>
+                                    <li><b>Flurry.</b> You can toss sand into the air and stir up a small flurry in a 5-
+                                        foot area within range. Any creature in or that passes through the
+                                        area of a flurry suffers disadvantage on their next attack. The flurry
+                                        remains for 1 minute, and you can use a bonus action to move the
+                                        flurry 5 feet away. If you create another flurry, any existing flurries
+                                        dissipate. Sand Pergashans are immune to the effects of these small
+                                        flurries.</li>
+                                </ul>
+                                The area of sand you can manipulate and the distance you can
+                                move sand increases by 5 feet when you reach certain levels: 5th
+                                level (10-foot cube, 10 feet), 11th level (15-foot cube, 15 feet), and
+                                17th level (20-foot cube, 20 feet).
+                            </li>
+                            <li><b>Burn - Quicksand:</b> You put all your mental efforts into creating
+                                a sandy whirlpool and drawing your enemies into its depths. As an
+                                action, target a desert or sandy space within 60 feet of you that you
+                                can see. All creatures in a 10-foot radius of that space must make a
+                                Strength saving throw or have their feet and bodies dragged into the
+                                quicksand. The area of quicksand is difficult terrain, requires a
+                                Perception check to notice it (DC=14), remains for a number of turns
+                                equal to your level.
+                                </br></br>
+                                Any creature entering or ending their turn in the quicksand must
+                                make a Strength saving throw or be caught. Creatures can be
+                                assisted with rope or other abilities to gain advantage on their saves.
+                                The longer a creature is trapped, the more dire their circumstances.
+                                </br></br>
+                                Creatures caught in the quicksand has their movement speed
+                                reduced to 0. At the start of each of their turns, creatures must make
+                                a Strength saving throw or continue to sink. If a creature falls
+                                unconscious in the quicksand, it automatically begins to sink and
+                                suffocate. After a successful save, a creature regains their
+                                movement speed.
+                                <table class="table table-striped table-bordered p-1">
+                                    <th class="text-center">Turn</th>
+                                    <th class="text-center">Effect</th>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="text-center">Movement speed = 0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td class="text-center">Disadvantage on Strength and Dexterity checks and saves.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td class="text-center">Advantage on attacks against it</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">4</td>
+                                        <td class="text-center"><i>Suffocation:</i> at the end of each of its turns, it
+                                            takes 2d6
+                                            damage that cannot be reduced or resisted. The creature is no
+                                            longer able to be targeted as it is under the surface of the
+                                            quicksand.</td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="shadow psionics-box rounded border border-secondary talent-filter w-75 align-self-center">
                     <span class="psionics-title p-2" role="button" onclick="collapsibleBox(this)">Telepathy<span
                             class="psionic-order">Psionic Talent</span></span>
                     <div class="psionics-body" style="display: none">
@@ -3545,6 +3716,45 @@
                                 through the mind of your foe. On a hit, you deal twice the damage and the target
                                 must make an Intelligence saving throw. On a fail, the target gains 1 level of
                                 fatigue.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="shadow psionics-box rounded border border-secondary talent-filter w-75 align-self-center">
+                    <span class="psionics-title p-2" role="button" onclick="collapsibleBox(this)">Windstream<span
+                            class="psionic-order">Psionic Talent [Cloud Pergashan]</span></span>
+                    <div class="psionics-body" style="display: none">
+                        <ul class="pt-2" style="list-style-type:none;">
+                            <li><b>Evoking Time: </b>1 action</li>
+                            <li><b>Range: </b>60 feet</li>
+                            <li><b>Duration: </b>Instantaneous</li>
+                            <li>You summon forth a stream of wind 60 feet long and 5 feet wide
+                                from your hand. The wind extinguishes small fires, disperses fog or
+                                mist, blows light objects around, and pushes larger objects.
+                                Creatures one size category larger than you and smaller must
+                                succeed on a Strength saving throw to resist the wind.
+                                </br></br>
+                                <strong>Failure:</strong> The creature is pushed back 5 feet.</br>
+                                <strong>Failure by 5:</strong> The creature is pushed back 10 feet.</br>
+                                <strong>Critical Failure:</strong> The creature is pushed back 15 feet and knocked
+                                prone.
+                                </br></br>
+                                This talent improves by adding 2d4 slashing damage when you
+                                reach certain levels: 5th level (2d4), 11th level (4d4), and 17th level
+                                (8d4)
+                            </li>
+                            <li><b>Burn - Ranseur of Air.</b> You concentrate your wind stream into a
+                                focused blade of devastation. Target a creature within 30 feet of
+                                you that you can see with a ranged psionic attack. On a hit, your
+                                ranseur of air deals 2d8 slashing damage and the target is dazed for
+                                1 minute. A dazed creature has disadvantage on all Perception
+                                checks and ranged attacks. Whether or not you hit, any creatures
+                                within a 20-foot radius must make a Strength saving throw or be
+                                pushed 10 feet back from the source.
+                                </br></br>
+                                This ability improves by adding 1d8 slashing damage when you
+                                reach certain levels: 5th level (3d8), 11th level (4d8), and 17th level
+                                (5d8).</li>
                         </ul>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 //"Login"
-var currentPath = window.location.pathname;
-var currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+const currentPath = window.location.pathname;
+const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
 
 if (!sessionStorage.getItem("login")) {
     sessionStorage.setItem("login", "false");
@@ -73,7 +73,7 @@ $(document).ready(function () {
     });
 
     $('#showPwd').click(function () {
-        var x = document.getElementById("pwd");
+        let x = document.getElementById("pwd");
         if (x.type === "password") {
             x.type = "text";
         } else if (x.type === "text") {
@@ -116,7 +116,7 @@ function classPage() {
     mybutton.addEventListener('click', topFunction)
     // Scroll to top section
 
-    var barbarian = {
+    const barbarian = {
         hd: "1d12",
         hp1stlvl: "12",
         hphigherlvl: "1d12 (or 7) + your Constitution modifier per Barbarian",
@@ -275,7 +275,7 @@ function classPage() {
         }]
     };
 
-    var fighter = {
+    const fighter = {
         hd: "1d10",
         hp1stlvl: "10",
         hphigherlvl: "1d10 (or 6) + your Constitution modifier per Fighter",
@@ -469,7 +469,7 @@ function classPage() {
         }]
     };
 
-    var monk = {
+    const monk = {
         hd: "1d8",
         hp1stlvl: "8",
         hphigherlvl: "1d8 (or 5) + your Constitution modifier per Monk",
@@ -612,7 +612,7 @@ function classPage() {
         }]
     };
 
-    var ranger = {
+    const ranger = {
         hd: "1d8",
         hp1stlvl: "8",
         hphigherlvl: "1d8 (or 5) + your Constitution modifier per Ranger",
@@ -717,7 +717,7 @@ function classPage() {
         ]
     };
 
-    var rogue = {
+    const rogue = {
         hd: "1d8",
         hp1stlvl: "8",
         hphigherlvl: "1d8 (or 5) + your Constitution modifier per Rogue",
@@ -845,16 +845,16 @@ function classPage() {
     };
 
 
-    var classSelection = document.getElementById('class-selection');
-    var classTable = document.getElementById('class-table');
-    var classFeatures = document.getElementById('class-feature-body');
-    var profBox = document.getElementById('prof-box');
-    var currentFilterClass = classSelection.getElementsByClassName('active');
+    const classSelection = document.getElementById('class-selection');
+    const classTable = document.getElementById('class-table');
+    const classFeatures = document.getElementById('class-feature-body');
+    const profBox = document.getElementById('prof-box');
+    const currentFilterClass = classSelection.getElementsByClassName('active');
 
     let classFeatureDisplay = '';
 
     function collapsingButton(button, id) {
-        var section = document.getElementById(id);
+        const section = document.getElementById(id);
         if (button.innerText.includes('[-]')) {
             button.innerText = '[+]';
         } else {
@@ -875,10 +875,10 @@ function classPage() {
         classTable.querySelector('#class-table-title').innerHTML = baseClass.className;
 
         if (baseClass.classAdditionalFeatures != '') {
-            for (var i = 0; i < baseClass.classAdditionalFeatures.length; i++) {
+            for (let i = 0; i < baseClass.classAdditionalFeatures.length; i++) {
                 classTable.rows[2].cells[3 + i].innerHTML = baseClass.classAdditionalFeatures[i];
             };
-            for (var i = 0; i < baseClass.extraFeatures.length; i++) {
+            for (let i = 0; i < baseClass.extraFeatures.length; i++) {
                 if (baseClass.classAdditionalFeatures.length == 1) {
                     classTable.rows[3 + i].cells[3].innerHTML = baseClass.extraFeatures[i];
                 } else {
@@ -889,7 +889,7 @@ function classPage() {
                 }
             };
         }
-        for (var i = 0; i < baseClass.features.length; i++) {
+        for (let i = 0; i < baseClass.features.length; i++) {
             classTable.querySelector('#features' + (i + 1)).innerHTML = baseClass.features[i];
         };
 
@@ -951,7 +951,7 @@ function classPage() {
 
                 //Class Table
                 classTable.querySelector('#class-table-title').innerHTML = fighter.className;
-                for (var i = 0; i < fighter.features.length; i++) {
+                for (let i = 0; i < fighter.features.length; i++) {
                     classTable.querySelector('#features' + (i + 1)).innerHTML = fighter.features[i];
                 };
 
@@ -1788,7 +1788,7 @@ function classPage() {
                 break;
         }
 
-        var newFilter = document.getElementById(classSelected);
+        const newFilter = document.getElementById(classSelected);
         if (currentFilterClass[0]) {
             if (currentFilterClass[0].getAttribute('id') != classSelected) {
                 currentFilterClass[0].classList.toggle('active');
@@ -1805,7 +1805,7 @@ function classPage() {
 
     }
 
-    var currentClass = sessionStorage.getItem("currentClassDisplay");
+    const currentClass = sessionStorage.getItem("currentClassDisplay");
 
     displayClass(currentClass, true);
 
@@ -1819,15 +1819,15 @@ function classPage() {
 
 //RACES START
 function racePage() {
-    var raceSelection = document.getElementById('race-list');
-    var raceOptions = raceSelection.getElementsByTagName('a');
-    var currentRace = sessionStorage.getItem("currentRace");
+    const raceSelection = document.getElementById('race-list');
+    const raceOptions = raceSelection.getElementsByTagName('a');
+    const currentRace = sessionStorage.getItem("currentRace");
 
 
     function refreshedRaceFilter(filter) {
-        var filterToActivate = document.getElementById(filter);
+        const filterToActivate = document.getElementById(filter);
         if (filter != null) {
-            var filtered = document.getElementById(filter.slice(0, filter.indexOf('-list')));
+            const filtered = document.getElementById(filter.slice(0, filter.indexOf('-list')));
             filtered.classList.toggle("show");
             filtered.classList.toggle("active");
             filterToActivate.classList.toggle("active");
@@ -1841,7 +1841,7 @@ function racePage() {
 
     for (let race of raceOptions) {
         race.addEventListener('click', () => {
-            var selectedFilter = event.target.getAttribute('id');
+            const selectedFilter = event.target.getAttribute('id');
             sessionStorage.setItem("currentRace", selectedFilter);
         });
     }
@@ -1853,15 +1853,15 @@ function racePage() {
 
 //INFUSIONS
 function infusionPage() {
-    var infusionSelection = document.getElementById('infusion-list');
-    var infusionOptions = infusionSelection.getElementsByTagName('a');
-    var currentInfusion = sessionStorage.getItem("currentInfusion");
+    const infusionSelection = document.getElementById('infusion-list');
+    const infusionOptions = infusionSelection.getElementsByTagName('a');
+    const currentInfusion = sessionStorage.getItem("currentInfusion");
 
 
     function refreshedInfusionFilter(filter) {
-        var filterToActivate = document.getElementById(filter);
+        const filterToActivate = document.getElementById(filter);
         if (filter != null) {
-            var filtered = document.getElementById(filter.slice(0, filter.indexOf('-list')));
+            const filtered = document.getElementById(filter.slice(0, filter.indexOf('-list')));
             filtered.classList.toggle("show");
             filtered.classList.toggle("active");
             filterToActivate.classList.toggle("active");
@@ -1875,7 +1875,7 @@ function infusionPage() {
 
     for (let infusion of infusionOptions) {
         infusion.addEventListener('click', () => {
-            var selectedFilter = event.target.getAttribute('id');
+            const selectedFilter = event.target.getAttribute('id');
             sessionStorage.setItem("currentInfusion", selectedFilter);
         });
     }
@@ -1970,14 +1970,14 @@ function featPage() {
         '<div class="shadow feat-box rounded  border border-secondary"><span class="feat-title p-2">Tough<br></span><p>Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit points.</p></div>'];
 
     let featText;
-    var featList = document.getElementById('feat-list');
-    var featFilters = featList.getElementsByTagName('a');
-    var featSection = document.getElementById('feat-display-section');
+    const featList = document.getElementById('feat-list');
+    const featFilters = featList.getElementsByTagName('a');
+    const featSection = document.getElementById('feat-display-section');
 
-    var currentFeatFilter = sessionStorage.getItem("currentFeatFilter");
+    const currentFeatFilter = sessionStorage.getItem("currentFeatFilter");
 
     function refreshedFeatFilter(filter) {
-        var filterToActivate = document.getElementById(filter);
+        const filterToActivate = document.getElementById(filter);
         if (filter != null) {
             filterToActivate.classList.toggle("active");
         } else {
@@ -1985,9 +1985,9 @@ function featPage() {
         }
     }
 
-    var displayFeats = function (filter = 'all-filter', refreshed = false) {
+    const displayFeats = function (filter = 'all-filter', refreshed = false) {
         featText = '';
-        var featsToDisplay;
+        let featsToDisplay;
         if (!refreshed) {
             featsToDisplay = event.target.getAttribute('id');
         } else {
@@ -2040,8 +2040,8 @@ function psionicsPage() {
     mybutton.addEventListener('click', topFunction)
     // Scroll to top section
 
-    var psionicsFilterList = document.getElementById('psionics-list');
-    var psionicsBoxes = document.getElementsByClassName('psionics-box');
+    const psionicsFilterList = document.getElementById('psionics-list');
+    const psionicsBoxes = document.getElementsByClassName('psionics-box');
 
     // function collapsibleBox(box){
     //     let boxBody = box.parentNode.children[1];
@@ -2091,9 +2091,9 @@ function itemsPage() {
     mybutton.addEventListener('click', topFunction)
     // Scroll to top section
 
-    var itemsFilterList = document.getElementById('items-list');
-    var itemDisplaySection = document.getElementById('items-display-section');
-    var elementsToToggle = itemDisplaySection.getElementsByClassName('item-section');
+    const itemsFilterList = document.getElementById('items-list');
+    const itemDisplaySection = document.getElementById('items-display-section');
+    const elementsToToggle = itemDisplaySection.getElementsByClassName('item-section');
     function itemFilter() {
         let filter = event.target.getAttribute('id');
         for (const section of elementsToToggle) {

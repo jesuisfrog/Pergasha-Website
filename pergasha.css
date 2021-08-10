@@ -72,7 +72,7 @@ body{
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 769px) {
-    #trained-abilities, #race-tabDesc, #feat-display-section, #items-display-section, #infusion-tabDesc{
+    #trained-abilities, .race-tabDesc, #feat-display-section, #items-display-section, #infusion-tabDesc{
         flex-basis: auto;
     }
     
@@ -201,6 +201,14 @@ body{
     font-size: 1.8rem;
 }
 
+.race-table-subtitle{
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: flex;
+    color: #ca1b13;
+}
+
 .table-subtitle{
     font-size: 1.5rem;
     color: brown;
@@ -313,7 +321,7 @@ body{
     max-width: 300px;
 }
 
-#race-tabDesc, #infusion-tabDesc{
+.race-tabDesc, #infusion-tabDesc{
     min-width: 350px;
 }
 
@@ -542,4 +550,8 @@ body{
 
 #rules-container .section-title{
     color: #ca1b13;
+}
+
+.hide{
+    display: none;
 }

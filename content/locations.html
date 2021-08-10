@@ -1,457 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../pergasha.css">
-    <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="../pergasha.css">
+  <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico" />
 
-    <title>Locations - Pergasha</title>
-  </head>
+  <title>Locations - Pergasha</title>
+</head>
 
-  <body>
-
-
-    <header>
-
-      <nav class="navbar navbar-dark navbar-expand-xl">
-        <div class="navbar-brand  mr-4">
-          <a href="../pergasha.html">
-            <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
-          </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../pergasha.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Player Options
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="classes.html">Classes</a>
-                <a class="dropdown-item" href="races.html">Races</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="feats.html">Feats</a>
-                <a class="dropdown-item" href="infusions.html">Infusions</a>
-                <a class="dropdown-item" href="training.html">Training</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="psionics.html">Psionics</a>
-            </li>
-            <li class="nav-item dropdown active">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                References
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="characters.html">Characters</a>
-                <a class="dropdown-item" href="glyphs.html">Glyphs</a>
-                <a class="dropdown-item" href="items.html">Items</a>
-                <a class="dropdown-item" href="locations.html">Locations</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="rules.html">Rules</a>
-            </li>
-          </ul>
-          <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
-          <div class="d-none" id="notlogged">
-            <form class="form-inline">
-              <div class="form-group form-group-sm">
-                <input type="text" class="form-control form-control-sm mr-sm-2 login-input" id="username"
-                  placeholder="Username">
-                <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd"
-                  placeholder="Password">
-                <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
-              </div>
-            </form>
-            <input type="checkbox" id="showPwd" class="mr-1" autocomplete="off"><span id="show-pwd-label">Show
-              Password</span>
-          </div>
-        </div>
-      </nav>
-
-    </header>
+<body>
 
 
-    <div class="d-flex flex-column" id="location-container">
-      <h1 class="text-center mt-5 arjulian">Pergasha's Locations</h1>
+  <header>
 
-      <button type="button" class="btn btn-outline-secondary text-center mb-2 align-self-center"
-        onclick="collapsingMap()" id="mapButton" style="box-shadow: none;">Hide Map</button>
-      <div class="d-flex mb-3 w-100 justify-content-center align-self-center">
-        <img src="../assets/WEB-VIEW-Pergasha.jpg" class="mw-100" id="pergasha-map">
+    <nav class="navbar navbar-dark navbar-expand-xl">
+      <div class="navbar-brand  mr-4">
+        <a href="../pergasha.html">
+          <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
+        </a>
       </div>
-
-
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">BEYOND THE CHASM</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">Beyond the Chasm</h5>
-          <p class="card-text">Tall, imposing mountains await those who survive the Chasm. The dwarven kingdom of
-            Torhelm are staunch guardians that attack anyone who dares to cross over and enter Kanishe. With the
-            resources from the humans of the Eleven Elders and the magic from the elves of Mairea Dor, the people of
-            Pergasha avoid any attempts to cross.
-            Unless there is a Great Flood. But that’s another story.</p>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../pergasha.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Player Options
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="classes.html">Classes</a>
+              <a class="dropdown-item" href="races.html">Races</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="feats.html">Feats</a>
+              <a class="dropdown-item" href="infusions.html">Infusions</a>
+              <a class="dropdown-item" href="training.html">Training</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="psionics.html">Psionics</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              References
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="characters.html">Characters</a>
+              <a class="dropdown-item" href="glyphs.html">Glyphs</a>
+              <a class="dropdown-item" href="items.html">Items</a>
+              <a class="dropdown-item" href="locations.html">Locations</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rules.html">Rules</a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
+        <div class="d-none" id="notlogged">
+          <form class="form-inline">
+            <div class="form-group form-group-sm">
+              <input type="text" class="form-control form-control-sm mr-sm-2 login-input" id="username"
+                placeholder="Username">
+              <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd"
+                placeholder="Password">
+              <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
+            </div>
+          </form>
+          <input type="checkbox" id="showPwd" class="mr-1" autocomplete="off"><span id="show-pwd-label">Show
+            Password</span>
         </div>
       </div>
+    </nav>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">THE BROKEN FINGERS</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">The Broken Fingers</h5>
-          <p class="card-text">A series of jagged peninsulas were carved out during the Sundering, turning a once lush,
-            tropical coast into dank, quicksand-ridden fragments. Despite this, the Broken Fingers are rife with pockets
-            of almost-potable water, odd herbs, roots and spices grow abundantly, and the low hills. The presence of
-            water makes this a hotspot for all manner of dangerous creatures. The land is difficult to build upon, and
-            evidence suggests that the water is slowly claiming the Fingers.</p>
-          <p class="card-text"><b>Denizens. </b>Dozens of Lizardfolk tribes roam these lands as their ancestors once
-            ruled the tropics. Anyone venturing near the tips of the peninsulas will be hard-pressed to avoid meeting
-            any of these private survivalists. Some of the more traveled Lizardfolk reside inland and down the
-            southeastern coast by Siren’s Call to meet with trade caravans.<br><br>
-            Additionally, many clans of Storm Pergashans sojourn in this region. The Storm Pergashans search for relics
-            and their lost, underwater kingdoms, and some have built buoys and small rafts to carry them out to the
-            islands to the northern most ends of the Fingers. These islands have many natural resources, but toxic winds
-            blow in from the ocean seasonally, making the islands uninhabitable for much of the year.</p>
-          <p class="card-text"><b>Dangers. </b>Disease, eating something poisonous, and being eaten by amphibious
-            amalgamates that venture out of the water are common dangers in the Broken Fingers. Additionally, creatures
-            are more aggressive and territorial due to the dwindling resources. One could easily lose footing and find
-            themselves drowning in marshy, boggy quicksand, or get lost in a storm that drops suddenly without warning.
-          </p>
-          <p class="card-text"><b>Resources. </b>Medicinal herbs and fungi, many rare spices, fish, large harvestable
-            creatures, and natural sources of potable water are available in the Broken Fingers.</p>
-        </div>
+  </header>
+
+
+  <div class="d-flex flex-column" id="location-container">
+    <h1 class="text-center mt-5 arjulian">Pergasha's Locations</h1>
+
+    <button type="button" class="btn btn-outline-secondary text-center mb-2 align-self-center" onclick="collapsingMap()"
+      id="mapButton" style="box-shadow: none;">Hide Map</button>
+    <div class="d-flex mb-3 w-100 justify-content-center align-self-center">
+      <img src="../assets/WEB-VIEW-Pergasha.jpg" class="mw-100" id="pergasha-map">
+    </div>
+
+
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">BEYOND THE CHASM</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">Beyond the Chasm</h5>
+        <p class="card-text">Tall, imposing mountains await those who survive the Chasm. The dwarven kingdom of
+          Torhelm are staunch guardians that attack anyone who dares to cross over and enter Kanishe. With the
+          resources from the humans of the Eleven Elders and the magic from the elves of Mairea Dor, the people of
+          Pergasha avoid any attempts to cross.
+          Unless there is a Great Flood. But that’s another story.</p>
       </div>
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">THE CHASM</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">The Chasm</h5>
-          <p class="card-text">The Chasm is nearly 150 miles across and over a mile deep. Jagged rocks create a
-            dangerous maze that hides monstrous beasts and aberrations. The ocean on either side of the Chasm is held at
-            bay by an unknown energy source similar to a force field. The sight is terrifying: a wall of water a mile
-            high, swirling and undulating against the fields, sometimes splashing over this invisible wall, all while
-            presenting the dark, eerie secrets of the ocean depths. Massive creatures of the oceans sometimes pass by,
-            curious, while others bash themselves against the walls, challenging its strength. </p>
-          <p class="card-text"><b>The Great Flood.</b> The ocean walls of the Chasm have failed multiple times over the
-            years. There is no explanation, but when the force fields collapse, the ocean crashes into the Chasm and
-            often causes what the Pergashans call the Great Floods or High Waters. Sometimes, the flooding is so severe,
-            much of the Pergashan peninsula is under water. When the floods finally recede, hidden technology, ruins,
-            and treasures are revealed or left behind.</p>
-          <p class="card-text"><b>Adventuring the Chasm. </b>The dry interior of the Chasm grows darker the lower one
-            descends. Terrors live in this rocky corridor, their shrieks and calls sometimes echoing loud enough for the
-            vibrations to be felt like an earthquake near the Sword’s Edge above. In the early days after the Sundering,
-            the people tried to pass the Chasm to seek refuge. <br><br>Survivors, what few there were, returned to the
-            desert telling haunting tales of ghosts, the living dead, and moving stone. Deadly flash floods rush through
-            the Chasm without warning, tearing anyone and anything with them. Some brought back incredible relics,
-            glittering gems, and technology not ever seen before, encouraging would-be treasure hunters to try their
-            luck. It became clear that it was safer to live in the desert with its Sundering Storms and gargantuan
-            worms.</p>
-        </div>
+    </div>
+
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">THE BROKEN FINGERS</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">The Broken Fingers</h5>
+        <p class="card-text">A series of jagged peninsulas were carved out during the Sundering, turning a once lush,
+          tropical coast into dank, quicksand-ridden fragments. Despite this, the Broken Fingers are rife with pockets
+          of almost-potable water, odd herbs, roots and spices grow abundantly, and the low hills. The presence of
+          water makes this a hotspot for all manner of dangerous creatures. The land is difficult to build upon, and
+          evidence suggests that the water is slowly claiming the Fingers.</p>
+        <p class="card-text"><b>Denizens. </b>Dozens of Lizardfolk tribes roam these lands as their ancestors once
+          ruled the tropics. Anyone venturing near the tips of the peninsulas will be hard-pressed to avoid meeting
+          any of these private survivalists. Some of the more traveled Lizardfolk reside inland and down the
+          southeastern coast by Siren’s Call to meet with trade caravans.<br><br>
+          Additionally, many clans of Storm Pergashans sojourn in this region. The Storm Pergashans search for relics
+          and their lost, underwater kingdoms, and some have built buoys and small rafts to carry them out to the
+          islands to the northern most ends of the Fingers. These islands have many natural resources, but toxic winds
+          blow in from the ocean seasonally, making the islands uninhabitable for much of the year.</p>
+        <p class="card-text"><b>Dangers. </b>Disease, eating something poisonous, and being eaten by amphibious
+          amalgamates that venture out of the water are common dangers in the Broken Fingers. Additionally, creatures
+          are more aggressive and territorial due to the dwindling resources. One could easily lose footing and find
+          themselves drowning in marshy, boggy quicksand, or get lost in a storm that drops suddenly without warning.
+        </p>
+        <p class="card-text"><b>Resources. </b>Medicinal herbs and fungi, many rare spices, fish, large harvestable
+          creatures, and natural sources of potable water are available in the Broken Fingers.</p>
       </div>
-
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">THE GLITTERING CHAIN</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">The Glittering Chain</h5>
-          <p class="card-text">This mountain chain boasts the highest peaks in Pergasha. The cold, arid mountains house
-            treasures within its barren exterior. There are underground networks that house some of the few cities in
-            Pergasha.</p>
-          <p class="card-text"><b>Denizens. </b>Gems, psi-crystals, and metal ore are abundant for those that can handle
-            darkness, poor air quality, and beasts that stalk its prey for miles. Stone and Gem Pergashans often dwell
-            near or within the Chain. Fire Pergashans make frequent visits to trade for ore.</p>
-          <p class="card-text"><b>Dangers. </b>Traveling the cold exterior of the Glittering Chain is a unique challenge
-            in Pergasha. In addition to hypothermia, rockslides and flash flooding are common. Massive
-            rock-biters—armored worms with teeth hard as diamonds—chew their way through the mountains as easily as a
-            fish swims through water, and the eerie groans that echo through the canyons are thought to be the spirits
-            of the dead. <br><br>Dangers within the caverns of the Glittering Chain are similar and different. Cave-ins,
-            floods, and rock-biter intrusions are common hazards. Living too long underground, however, can have
-            deleterious effects on the body. Kipsum, a phosphorescent mineral that builds up on damp stones in caverns,
-            is abundant in the Glittering Chain. This mineral creates a toxic gas when it comes into direct sunlight
-            that lingers for weeks.</p>
-          <p class="card-text"><b>Resources. </b>In addition to metal ore, precious gems, and historical artifacts,
-            psi-crystals, mysteriums and impressive relics have been found in the Glittering Chain. Kipsum also has been
-            used to make interesting, effervescent beverages, and spelunkers have found large doppelkin geodes beneath
-            crusts of this mineral.</p>
-          <hr style="border-top: 2px solid">
-          <p class="card-text"><b><i>Adamant Falls. </i></b>One of the largest settlements known, Adamant Falls is
-            carved into phosphorescent cavern walls located near an underground river. This river is called Sleepy Run
-            which is a bit of a misnomer as the river eventually grows turbulent and violently sheds off into a massive
-            waterfall. The waters from this river are fed from an enclosed lake in addition to snowmelt from the
-            Glittering Chain. <br><br>Gaps in the stone walls and ceilings allow spurts of sunlight, enabling unusual
-            moss and flora to thrive. The sunlight also reflects scintillating colors off the gems, metal ore, and
-            psi-crystals embedded into the caverns. Adamant Falls is the home of many Stone, Gem, and Fire Pergashans
-            and is a popular stop for drifters and travelers. The settlement has been washed away by the Great Floods
-            that bleed through the Glittering Chain through the Chasm, only to be rebuilt upon the bodies of those too
-            afraid to traverse the desert.</p>
-          <p class="card-text"><b><i>Lustran. </i></b>This settlement is built on the remnants of what was clearly once
-            a proper, great city. Lustran comprises of about three miles of tunnels that open to an immense cavern where
-            Stone and Gem Pergashans, various scholars, and masterful crafters have made their home. This core of
-            Lustran displays beautiful marble arches and pillars erected long ago. The walls and structures are painted
-            with vibrant colors and adorned with masterwork sculptures, some new, some ancient. Who built the original
-            city is unknown, but the monk scholars known as the Delvers have protected this site as it is one of the few
-            known places in Pergasha to have written texts, scrolls, and even remnants of books.</p>
-        </div>
+    </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">THE CHASM</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">The Chasm</h5>
+        <p class="card-text">The Chasm is nearly 150 miles across and over a mile deep. Jagged rocks create a
+          dangerous maze that hides monstrous beasts and aberrations. The ocean on either side of the Chasm is held at
+          bay by an unknown energy source similar to a force field. The sight is terrifying: a wall of water a mile
+          high, swirling and undulating against the fields, sometimes splashing over this invisible wall, all while
+          presenting the dark, eerie secrets of the ocean depths. Massive creatures of the oceans sometimes pass by,
+          curious, while others bash themselves against the walls, challenging its strength. </p>
+        <p class="card-text"><b>The Great Flood.</b> The ocean walls of the Chasm have failed multiple times over the
+          years. There is no explanation, but when the force fields collapse, the ocean crashes into the Chasm and
+          often causes what the Pergashans call the Great Floods or High Waters. Sometimes, the flooding is so severe,
+          much of the Pergashan peninsula is under water. When the floods finally recede, hidden technology, ruins,
+          and treasures are revealed or left behind.</p>
+        <p class="card-text"><b>Adventuring the Chasm. </b>The dry interior of the Chasm grows darker the lower one
+          descends. Terrors live in this rocky corridor, their shrieks and calls sometimes echoing loud enough for the
+          vibrations to be felt like an earthquake near the Sword’s Edge above. In the early days after the Sundering,
+          the people tried to pass the Chasm to seek refuge. <br><br>Survivors, what few there were, returned to the
+          desert telling haunting tales of ghosts, the living dead, and moving stone. Deadly flash floods rush through
+          the Chasm without warning, tearing anyone and anything with them. Some brought back incredible relics,
+          glittering gems, and technology not ever seen before, encouraging would-be treasure hunters to try their
+          luck. It became clear that it was safer to live in the desert with its Sundering Storms and gargantuan
+          worms.</p>
       </div>
+    </div>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">THE GRAVEYARD</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">The Graveyard</h5>
-          <p class="card-text">The Graveyard is a dried basin set in the lowest elevation of Pergasha. It can be
-            unbearably hot in this region especially with its lack of wind. While its name is ominous, the Graveyard is
-            valuable because the floods have deposited many relics and mysteriums in the area. <br><br>When the region
-            gets an abundance of water either through flooding or a rare wet season, the Graveyard transforms. Flora
-            bloom in an array of colors for miles, attracting many people and creatures.</p>
-          <p class="card-text"><b>Denizens. </b>Fire and Sand Pergashan clans live on the outskirts of the Graveyard
-            where the heat is less severe. Otherwise, most avoid the Graveyard due to the high heat. Drifters and
-            travelers often opt to go around rather than the most expedient path, but sometimes the promise of buried
-            relics is too strong a lure.</p>
-          <p class="card-text"><b>Dangers. </b>Few things survive in such intense, arid heat. The Graveyard is part of
-            an underground migration path between the Titan’s Eye and The Nests for magwyrms, insectoid-shaped creatures
-            that are partly made of magma. While the magwyrms themselves are not aggressive, they slice tunnels as they
-            travel which causes instability in the land above that can lead to massive, deadly sinkholes. And when
-            provoked, magwyrms will not hesitate to defend themselves by spewing their magma innards at enemies.</p>
-          <p class="card-text"><b>Resources. </b>The grisly truth is that scavengers do well in the Graveyard. Clans and
-            caravans that die trying to cross leave behind their worldly possessions. Treasure hunters look for
-            mysteriums and relics, and intrepid delvers enter sink holes in search for secrets. <br><br>Despite the
-            heat, some wildlife exists in the Graveyard. A variety of cacti, some so massive, they look like trees,
-            bloom fragrant flowers that attract insects, and both the insects and the flowers have medicinal properties.
-            The cacti are also the rare sources of water. Flakes of transparent, glass-like stone are scattered across
-            the sandy fields. These stone flakes are of an unknown origin and make excellent weapons. Fire Pergashans
-            have been experimenting with this stone to understand its properties and have named it Starflint.</p>
-        </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">THE GLITTERING CHAIN</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">The Glittering Chain</h5>
+        <p class="card-text">This mountain chain boasts the highest peaks in Pergasha. The cold, arid mountains house
+          treasures within its barren exterior. There are underground networks that house some of the few cities in
+          Pergasha.</p>
+        <p class="card-text"><b>Denizens. </b>Gems, psi-crystals, and metal ore are abundant for those that can handle
+          darkness, poor air quality, and beasts that stalk its prey for miles. Stone and Gem Pergashans often dwell
+          near or within the Chain. Fire Pergashans make frequent visits to trade for ore.</p>
+        <p class="card-text"><b>Dangers. </b>Traveling the cold exterior of the Glittering Chain is a unique challenge
+          in Pergasha. In addition to hypothermia, rockslides and flash flooding are common. Massive
+          rock-biters—armored worms with teeth hard as diamonds—chew their way through the mountains as easily as a
+          fish swims through water, and the eerie groans that echo through the canyons are thought to be the spirits
+          of the dead. <br><br>Dangers within the caverns of the Glittering Chain are similar and different. Cave-ins,
+          floods, and rock-biter intrusions are common hazards. Living too long underground, however, can have
+          deleterious effects on the body. Kipsum, a phosphorescent mineral that builds up on damp stones in caverns,
+          is abundant in the Glittering Chain. This mineral creates a toxic gas when it comes into direct sunlight
+          that lingers for weeks.</p>
+        <p class="card-text"><b>Resources. </b>In addition to metal ore, precious gems, and historical artifacts,
+          psi-crystals, mysteriums and impressive relics have been found in the Glittering Chain. Kipsum also has been
+          used to make interesting, effervescent beverages, and spelunkers have found large doppelkin geodes beneath
+          crusts of this mineral.</p>
+        <hr style="border-top: 2px solid">
+        <p class="card-text"><b><i>Adamant Falls. </i></b>One of the largest settlements known, Adamant Falls is
+          carved into phosphorescent cavern walls located near an underground river. This river is called Sleepy Run
+          which is a bit of a misnomer as the river eventually grows turbulent and violently sheds off into a massive
+          waterfall. The waters from this river are fed from an enclosed lake in addition to snowmelt from the
+          Glittering Chain. <br><br>Gaps in the stone walls and ceilings allow spurts of sunlight, enabling unusual
+          moss and flora to thrive. The sunlight also reflects scintillating colors off the gems, metal ore, and
+          psi-crystals embedded into the caverns. Adamant Falls is the home of many Stone, Gem, and Fire Pergashans
+          and is a popular stop for drifters and travelers. The settlement has been washed away by the Great Floods
+          that bleed through the Glittering Chain through the Chasm, only to be rebuilt upon the bodies of those too
+          afraid to traverse the desert.</p>
+        <p class="card-text"><b><i>Lustran. </i></b>This settlement is built on the remnants of what was clearly once
+          a proper, great city. Lustran comprises of about three miles of tunnels that open to an immense cavern where
+          Stone and Gem Pergashans, various scholars, and masterful crafters have made their home. This core of
+          Lustran displays beautiful marble arches and pillars erected long ago. The walls and structures are painted
+          with vibrant colors and adorned with masterwork sculptures, some new, some ancient. Who built the original
+          city is unknown, but the monk scholars known as the Delvers have protected this site as it is one of the few
+          known places in Pergasha to have written texts, scrolls, and even remnants of books.</p>
       </div>
+    </div>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">THE NESTS</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">The Nests</h5>
-          <p class="card-text">Set at low elevation in central Pergasha, the Nests are comprised of rust and crimson
-            mesas jutting out of the land. The Nests have the largest towns and number of sedentary clans because of the
-            milder temperatures and natural environment. Structures are built into the sides of the mesas and reach
-            below the surface into natural and artificial caverns to benefit from cooler conditions. Flying creatures
-            and Feathered Kin make their homes higher on the mesas, giving the area its name.</p>
-          <p class="card-text"><b>Denizens. </b>This region is popular location with Cloud and Stone Pergashans in
-            addition to Feathered Kin. Cloud Pergashans have built sky bridges and ladders to reach the tops of mesas,
-            greatly expanding their reach in the region. Stone Pergashans have concentrated themselves in the cooler
-            caverns, expanding a network of tunnels to create a large underground city.</p>
-          <p class="card-text"><b>Dangers. </b>Sundering storms strike the northern shores frequently, and the larger
-            storms often affect those in Tyr’s Reach. When a storm looks especially dangerous, Cloud Pergashans go for
-            the lower areas of the mesas to hide within stone walls. <br><br>The central region of The Nests is the home
-            to some of the largest flying dinosaurs in all of Pergasha. They can be especially aggressive during mating
-            season, and they will not hesitate to make a snack out of a careless Pergashan.<br><br>Magwyrms live deep
-            underground throughout the area during the hot season to feed on stone and mate. Often, the holes left in
-            their feeding frenzies get filled by the waste products of other wyrms, so sinkholes are less frequent but
-            not unheard of. There is a tale of an entire mesa being lost because of a particularly voracious
-            magwyrm.<br><br>The higher one goes in the mesas, the stronger the winds. Gusts are more dangerous as they
-            can surprise even the steadiest, most sure-footed individual.</p>
-          <p class="card-text"><b>Resources. </b>Magwyrm waste, called klaar, has many uses. Fresh, it is mostly
-            magma-like and can be used to smelt ore quickly and carve into rock if used carefully. It stays in a
-            semi-solid state for months and is used to keep the chilly peaks more comfortable softly alight. As klaar
-            begins to harden, it darkens, and its crust can used similarly as charcoal. In its completely cooled state,
-            which generally takes over a year to be reached, klaar becomes hupak, a dense stone useful for weapons,
-            tools, and construction. <br><br>In addition to klaar and hupak, colorful pigments, minerals, and chalks are
-            abundant. A fragrant spice called apik, akin to capers and peppers, grows from the crevices of the mesas and
-            drapes down its walls. <br><br>Beneath the mesas, the underground river that runs through Q’rac is the site
-            of many fungi, mosses, and grubs. The fresh water and the access to cooler temperatures allows for some
-            farming when enriched soil is available. <br><br>The Rainbow Road is a bustling trading zone where almost
-            anything you need (or want) is likely to be found.</p>
-          <hr style="border-top: 2px solid">
-          <p class="card-text"><b><i>Hightown. </i></b>The Feathered Kin have slowly and meticulously crafted their sky
-            kingdom at the tops of the mesas. With the help of their Spiderling brethren, Feathered Kin created a city
-            woven together in a beautiful array of colors. Silks, feathers, colorful glass, and other reflective or
-            shiny materials are knitted from one peak to another to form bridges, nest-like structures, and beautiful
-            swings. Hightown is a free, open space for people to gather, share songs and stories, and live
-            harmoniously.<br><br>Long rope ladders are available to invite walkers or non-flying friends to Hightown,
-            but visitors and locals alike must adhere to strict rules of non-violence and fire prohibition. Because the
-            city is made with highly flammable materials, no one can bring flame to Hightown. Doing so comes with the
-            immediate sentence of being thrown from a peak with bound wings.<br><br>Hightown is defended by a rotation
-            of guards, and these guards are the only ones allowed to use violence in the area. Large birds or flying
-            reptiles sometimes make attempts at hunting, but the guards use ballistae and nets to keep the denizens
-            safe.<br><br>The city’s leadership is constantly flowing and shifting much like the guard. Each season, a
-            new king or queen (or “Song”) is chosen by the winds. Contenders begin to sing, and denizens of Hightower
-            choose a leader by following him or her in the song. The event can take days, waiting for contenders to drop
-            out or their songs get lost in the din.Some contenders have died from exhaustion, but never has a leader won
-            through violence. The king or queen of Hightown helps organize Peak Elders—the heads of each high point of
-            the city—guide building projects, negotiates trade agreements with caravans, and is the representative to
-            the Pergashan Tribunal when needed.<br><br>Those that live below dense areas of Hightown often enjoy the art
-            reflecting colors and light across the canyon as well as the tinkling of chimes and music echoing down the
-            mesa walls.</p>
-          <p class="card-text"><b><i>Q’rac. </i></b>This sprawling underground city is the pride of the Stone Tribe.
-            Thanks to the readily available pigments in the mesas, artisans have created a vibrant, beautiful home
-            beneath the hard, hot ground. Q’rac is accessible through guarded entrances at varying levels of the mesas
-            that form Tyr’s Reach, some secret, some in plain view.<br><br>Individual clans within the Stone Tribe
-            prefer to keep their distance from each other. After all, they are a private people that prefer solitude to
-            tap into their minds and creativity. Parts of Q’rac are almost chilly as the city reaches deep below and
-            eventually is divided by a wide underground river. The river is called Fenris, named for the claw-like shape
-            of its tributaries. Bridges connect the divided areas, special symbols mark the walls to help with
-            navigation to those who can interpret them, and it is hard to say just how far this underground system
-            runs.<br><br>The Stone Tribe works closely with a group formed primarily of curious but secretive monks
-            called the Delvers to help excavate and study ruins found underground. Together, they protect the secrets
-            and natural beauty of the city. Despite the abundance of precious gems and psi-crystals found in its depths,
-            Q’rac is a place known for its treasures left untapped. Those who have been granted visitation to see the
-            deeper, protected areas describe it as a hauntingly beautiful but untouchable place where the past is
-            preserved in crystalline perfection.</p>
-          <p class="card-text"><b><i>Rainbow Road. </i></b>The grounds below Hightown are populated with walkers or
-            those without flight. The area is transient with drifters and travelers temporarily setting shop as a
-            layover before moving on to find more supplies. However, some have made a permanent home beneath the beauty
-            of Hightown and made an almost equally beautiful reflection upon the hard earth.<br><br>To enable ease for
-            travelers with wagons, the people have created a 10-mile long road with stones. It may not be a perfectly
-            smooth road, but it is the only road known in all of Pergasha. Using pigments found in the region, the
-            stones of the road and the mesa walls on either side are chalked in brilliant colors. The residents
-            regularly recolor the fading pigments and take great pride in their road. Deliberately harming the road is a
-            vile act in this settlement and is harshly punished. Visitors who plan to stay a while are expected to offer
-            supplies for the road or help with continuing its construction.<br><br>Residents use stone and mud to build
-            homes out from the mesa walls, using natural openings or caves to expand their homes underground. This helps
-            keep their homes cool, and clever channeling of the caves helps bring the cooler air to the road itself.</p>
-          <p class="card-text"><b><i>Tyr’s Reach. </i></b>Located in the northern region of The Nests, Tyr’s Reach is
-            comprised of the five tallest mesas in the area and is the stronghold of the majority of the Cloud Tribe.
-            These mesas look over the Sundered Forest and the northern seas, and each mesa is connected to the others
-            via incredible skybridges and flyropes. Flyropes are strong cables that enable fast travel from higher areas
-            to lower ones by gliding down on special handles and harnesses. The lower elevations of these five mesas
-            have openings that lead into the stony mesas, and Stone Pergashans have carved staircases to lead deep below
-            to their own settlement called Q’rac.<br><br>There are often small skirmishes between Cloud clans, each clan
-            seeking to claim higher ground on the mesas. The higher one’s clan resides, the greater prestige and power.
-            Despite these skirmishes, the tribe unites to stand watch over the skies for enemies and incoming
-            storms.<br><br>Storm Pergashans clans that focus on storm chasing in the Sundered Forest travel to Tyr’s
-            Reach to restock, trade, and recuperate. As such, they have a close relationship with the clans of this
-            region and often intermarry.<br><br>A few Gem Pergashan clans, especially those interested in scholarly
-            study of ruins, also make their home in Tyr’s Reach as well as Q’rac. They lend their psionic prowess and
-            precious materials in exchange for protection and freedom to pass between the heights of Tyr’s Reach and the
-            depths of Q’rac without question.
-          </p>
-        </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">THE GRAVEYARD</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">The Graveyard</h5>
+        <p class="card-text">The Graveyard is a dried basin set in the lowest elevation of Pergasha. It can be
+          unbearably hot in this region especially with its lack of wind. While its name is ominous, the Graveyard is
+          valuable because the floods have deposited many relics and mysteriums in the area. <br><br>When the region
+          gets an abundance of water either through flooding or a rare wet season, the Graveyard transforms. Flora
+          bloom in an array of colors for miles, attracting many people and creatures.</p>
+        <p class="card-text"><b>Denizens. </b>Fire and Sand Pergashan clans live on the outskirts of the Graveyard
+          where the heat is less severe. Otherwise, most avoid the Graveyard due to the high heat. Drifters and
+          travelers often opt to go around rather than the most expedient path, but sometimes the promise of buried
+          relics is too strong a lure.</p>
+        <p class="card-text"><b>Dangers. </b>Few things survive in such intense, arid heat. The Graveyard is part of
+          an underground migration path between the Titan’s Eye and The Nests for magwyrms, insectoid-shaped creatures
+          that are partly made of magma. While the magwyrms themselves are not aggressive, they slice tunnels as they
+          travel which causes instability in the land above that can lead to massive, deadly sinkholes. And when
+          provoked, magwyrms will not hesitate to defend themselves by spewing their magma innards at enemies.</p>
+        <p class="card-text"><b>Resources. </b>The grisly truth is that scavengers do well in the Graveyard. Clans and
+          caravans that die trying to cross leave behind their worldly possessions. Treasure hunters look for
+          mysteriums and relics, and intrepid delvers enter sink holes in search for secrets. <br><br>Despite the
+          heat, some wildlife exists in the Graveyard. A variety of cacti, some so massive, they look like trees,
+          bloom fragrant flowers that attract insects, and both the insects and the flowers have medicinal properties.
+          The cacti are also the rare sources of water. Flakes of transparent, glass-like stone are scattered across
+          the sandy fields. These stone flakes are of an unknown origin and make excellent weapons. Fire Pergashans
+          have been experimenting with this stone to understand its properties and have named it Starflint.</p>
       </div>
+    </div>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">THE SHIFTING SANDS</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">The Shifting Sands</h5>
-          <p class="card-text">This western region of Pergasha is lined with trails of dunes as winds push the fine
-            sands against the inland mountain range known as the Titan’s Spine. Priceless oases are spread across the
-            region but finding them is treacherous. The landscape can literally change overnight as miles of dunes are
-            drawn in like whirlpools and transferred to a different area of the region. This chaotic landscape can make
-            one go from riches to rags—or worse—in the blink of an eye. Sometimes, oases linger for seasons, making it a
-            great gamble with great rewards to remain for extended periods.</p>
-          <p class="card-text"><b>Denizens. </b>Nomadic Sand Pergashans reside in the Shifting Sands, taking their tent
-            and caravan villages from one oasis to another. The area is also known to be the favored hideouts for bandit
-            gangs and the burgeoning Touched Kin tribe. Merchant groups and drifters take great care to find open oases,
-            gather as much as they can, and move on to continue with trade.</p>
-          <p class="card-text"><b>Dangers. </b>Because of oasis looting, bandits are spread throughout the Sands.
-            Powerful sandstorms occur frequently and grow into Sundering Storms with lightning and mind-affecting howls
-            in the right conditions. Great sand serpents and worms rule the area, swimming through the sands as though
-            they were water.</p>
-          <p class="card-text"><b>Resources. </b>The massive oases—some, multiple miles in diameter—house lush greenery,
-            pristine waters, exotic fruit, and rare spices like saffron and vanilla. Beyond the oases, the sandstorms
-            can uncover ancient ruins, massive relics, and mysteriums of great power. And along the coast, salt fields
-            provide most of the peninsula’s supply of the precious preservative and seasoning.</p>
-        </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">THE NESTS</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">The Nests</h5>
+        <p class="card-text">Set at low elevation in central Pergasha, the Nests are comprised of rust and crimson
+          mesas jutting out of the land. The Nests have the largest towns and number of sedentary clans because of the
+          milder temperatures and natural environment. Structures are built into the sides of the mesas and reach
+          below the surface into natural and artificial caverns to benefit from cooler conditions. Flying creatures
+          and Feathered Kin make their homes higher on the mesas, giving the area its name.</p>
+        <p class="card-text"><b>Denizens. </b>This region is popular location with Cloud and Stone Pergashans in
+          addition to Feathered Kin. Cloud Pergashans have built sky bridges and ladders to reach the tops of mesas,
+          greatly expanding their reach in the region. Stone Pergashans have concentrated themselves in the cooler
+          caverns, expanding a network of tunnels to create a large underground city.</p>
+        <p class="card-text"><b>Dangers. </b>Sundering storms strike the northern shores frequently, and the larger
+          storms often affect those in Tyr’s Reach. When a storm looks especially dangerous, Cloud Pergashans go for
+          the lower areas of the mesas to hide within stone walls. <br><br>The central region of The Nests is the home
+          to some of the largest flying dinosaurs in all of Pergasha. They can be especially aggressive during mating
+          season, and they will not hesitate to make a snack out of a careless Pergashan.<br><br>Magwyrms live deep
+          underground throughout the area during the hot season to feed on stone and mate. Often, the holes left in
+          their feeding frenzies get filled by the waste products of other wyrms, so sinkholes are less frequent but
+          not unheard of. There is a tale of an entire mesa being lost because of a particularly voracious
+          magwyrm.<br><br>The higher one goes in the mesas, the stronger the winds. Gusts are more dangerous as they
+          can surprise even the steadiest, most sure-footed individual.</p>
+        <p class="card-text"><b>Resources. </b>Magwyrm waste, called klaar, has many uses. Fresh, it is mostly
+          magma-like and can be used to smelt ore quickly and carve into rock if used carefully. It stays in a
+          semi-solid state for months and is used to keep the chilly peaks more comfortable softly alight. As klaar
+          begins to harden, it darkens, and its crust can used similarly as charcoal. In its completely cooled state,
+          which generally takes over a year to be reached, klaar becomes hupak, a dense stone useful for weapons,
+          tools, and construction. <br><br>In addition to klaar and hupak, colorful pigments, minerals, and chalks are
+          abundant. A fragrant spice called apik, akin to capers and peppers, grows from the crevices of the mesas and
+          drapes down its walls. <br><br>Beneath the mesas, the underground river that runs through Q’rac is the site
+          of many fungi, mosses, and grubs. The fresh water and the access to cooler temperatures allows for some
+          farming when enriched soil is available. <br><br>The Rainbow Road is a bustling trading zone where almost
+          anything you need (or want) is likely to be found.</p>
+        <hr style="border-top: 2px solid">
+        <p class="card-text"><b><i>Hightown. </i></b>The Feathered Kin have slowly and meticulously crafted their sky
+          kingdom at the tops of the mesas. With the help of their Spiderling brethren, Feathered Kin created a city
+          woven together in a beautiful array of colors. Silks, feathers, colorful glass, and other reflective or
+          shiny materials are knitted from one peak to another to form bridges, nest-like structures, and beautiful
+          swings. Hightown is a free, open space for people to gather, share songs and stories, and live
+          harmoniously.<br><br>Long rope ladders are available to invite walkers or non-flying friends to Hightown,
+          but visitors and locals alike must adhere to strict rules of non-violence and fire prohibition. Because the
+          city is made with highly flammable materials, no one can bring flame to Hightown. Doing so comes with the
+          immediate sentence of being thrown from a peak with bound wings.<br><br>Hightown is defended by a rotation
+          of guards, and these guards are the only ones allowed to use violence in the area. Large birds or flying
+          reptiles sometimes make attempts at hunting, but the guards use ballistae and nets to keep the denizens
+          safe.<br><br>The city’s leadership is constantly flowing and shifting much like the guard. Each season, a
+          new king or queen (or “Song”) is chosen by the winds. Contenders begin to sing, and denizens of Hightower
+          choose a leader by following him or her in the song. The event can take days, waiting for contenders to drop
+          out or their songs get lost in the din.Some contenders have died from exhaustion, but never has a leader won
+          through violence. The king or queen of Hightown helps organize Peak Elders—the heads of each high point of
+          the city—guide building projects, negotiates trade agreements with caravans, and is the representative to
+          the Pergashan Tribunal when needed.<br><br>Those that live below dense areas of Hightown often enjoy the art
+          reflecting colors and light across the canyon as well as the tinkling of chimes and music echoing down the
+          mesa walls.</p>
+        <p class="card-text"><b><i>Q’rac. </i></b>This sprawling underground city is the pride of the Stone Tribe.
+          Thanks to the readily available pigments in the mesas, artisans have created a vibrant, beautiful home
+          beneath the hard, hot ground. Q’rac is accessible through guarded entrances at varying levels of the mesas
+          that form Tyr’s Reach, some secret, some in plain view.<br><br>Individual clans within the Stone Tribe
+          prefer to keep their distance from each other. After all, they are a private people that prefer solitude to
+          tap into their minds and creativity. Parts of Q’rac are almost chilly as the city reaches deep below and
+          eventually is divided by a wide underground river. The river is called Fenris, named for the claw-like shape
+          of its tributaries. Bridges connect the divided areas, special symbols mark the walls to help with
+          navigation to those who can interpret them, and it is hard to say just how far this underground system
+          runs.<br><br>The Stone Tribe works closely with a group formed primarily of curious but secretive monks
+          called the Delvers to help excavate and study ruins found underground. Together, they protect the secrets
+          and natural beauty of the city. Despite the abundance of precious gems and psi-crystals found in its depths,
+          Q’rac is a place known for its treasures left untapped. Those who have been granted visitation to see the
+          deeper, protected areas describe it as a hauntingly beautiful but untouchable place where the past is
+          preserved in crystalline perfection.</p>
+        <p class="card-text"><b><i>Rainbow Road. </i></b>The grounds below Hightown are populated with walkers or
+          those without flight. The area is transient with drifters and travelers temporarily setting shop as a
+          layover before moving on to find more supplies. However, some have made a permanent home beneath the beauty
+          of Hightown and made an almost equally beautiful reflection upon the hard earth.<br><br>To enable ease for
+          travelers with wagons, the people have created a 10-mile long road with stones. It may not be a perfectly
+          smooth road, but it is the only road known in all of Pergasha. Using pigments found in the region, the
+          stones of the road and the mesa walls on either side are chalked in brilliant colors. The residents
+          regularly recolor the fading pigments and take great pride in their road. Deliberately harming the road is a
+          vile act in this settlement and is harshly punished. Visitors who plan to stay a while are expected to offer
+          supplies for the road or help with continuing its construction.<br><br>Residents use stone and mud to build
+          homes out from the mesa walls, using natural openings or caves to expand their homes underground. This helps
+          keep their homes cool, and clever channeling of the caves helps bring the cooler air to the road itself.</p>
+        <p class="card-text"><b><i>Tyr’s Reach. </i></b>Located in the northern region of The Nests, Tyr’s Reach is
+          comprised of the five tallest mesas in the area and is the stronghold of the majority of the Cloud Tribe.
+          These mesas look over the Sundered Forest and the northern seas, and each mesa is connected to the others
+          via incredible skybridges and flyropes. Flyropes are strong cables that enable fast travel from higher areas
+          to lower ones by gliding down on special handles and harnesses. The lower elevations of these five mesas
+          have openings that lead into the stony mesas, and Stone Pergashans have carved staircases to lead deep below
+          to their own settlement called Q’rac.<br><br>There are often small skirmishes between Cloud clans, each clan
+          seeking to claim higher ground on the mesas. The higher one’s clan resides, the greater prestige and power.
+          Despite these skirmishes, the tribe unites to stand watch over the skies for enemies and incoming
+          storms.<br><br>Storm Pergashans clans that focus on storm chasing in the Sundered Forest travel to Tyr’s
+          Reach to restock, trade, and recuperate. As such, they have a close relationship with the clans of this
+          region and often intermarry.<br><br>A few Gem Pergashan clans, especially those interested in scholarly
+          study of ruins, also make their home in Tyr’s Reach as well as Q’rac. They lend their psionic prowess and
+          precious materials in exchange for protection and freedom to pass between the heights of Tyr’s Reach and the
+          depths of Q’rac without question.
+        </p>
       </div>
+    </div>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">SIREN'S CALL</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">Siren's Call<b><i> - WIP</i></b></h5>
-          <!-- <p class="card-text"></p> -->
-          <p class="card-text"><b>Denizens. </b>Lizardfolk. Storm Pergashans also reside here to search for underwater
-            cities.</p>
-          <p class="card-text"><b>Dangers. </b>Tsunamis and seasonally bad weather, but otherwise one of the nicer
-            places to be.</p>
-          <p class="card-text"><b>Resources. </b>Pinion, salt, game, fish.</p>
-        </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">THE SHIFTING SANDS</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">The Shifting Sands</h5>
+        <p class="card-text">This western region of Pergasha is lined with trails of dunes as winds push the fine
+          sands against the inland mountain range known as the Titan’s Spine. Priceless oases are spread across the
+          region but finding them is treacherous. The landscape can literally change overnight as miles of dunes are
+          drawn in like whirlpools and transferred to a different area of the region. This chaotic landscape can make
+          one go from riches to rags—or worse—in the blink of an eye. Sometimes, oases linger for seasons, making it a
+          great gamble with great rewards to remain for extended periods.</p>
+        <p class="card-text"><b>Denizens. </b>Nomadic Sand Pergashans reside in the Shifting Sands, taking their tent
+          and caravan villages from one oasis to another. The area is also known to be the favored hideouts for bandit
+          gangs and the burgeoning Touched Kin tribe. Merchant groups and drifters take great care to find open oases,
+          gather as much as they can, and move on to continue with trade.</p>
+        <p class="card-text"><b>Dangers. </b>Because of oasis looting, bandits are spread throughout the Sands.
+          Powerful sandstorms occur frequently and grow into Sundering Storms with lightning and mind-affecting howls
+          in the right conditions. Great sand serpents and worms rule the area, swimming through the sands as though
+          they were water.</p>
+        <p class="card-text"><b>Resources. </b>The massive oases—some, multiple miles in diameter—house lush greenery,
+          pristine waters, exotic fruit, and rare spices like saffron and vanilla. Beyond the oases, the sandstorms
+          can uncover ancient ruins, massive relics, and mysteriums of great power. And along the coast, salt fields
+          provide most of the peninsula’s supply of the precious preservative and seasoning.</p>
       </div>
+    </div>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">THE SUNDERED FOREST</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">The Sundered Forest<b><i> - WIP</i></b></h5>
-          <p class="card-text">The trees are not exactly living. Sundering Storms have touched down here hard before
-            tearing through the central peninsula. </p>
-          <p class="card-text"><b>Denizens. </b>Storm Pergashan clans that focus on storm chasing live here.</p>
-          <p class="card-text"><b>Dangers. </b>Abundant storms, mental effects.</p>
-          <p class="card-text"><b>Resources. </b>Petrified wood, blue glass made when sundering lightning strikes.</p>
-        </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">SIREN'S CALL</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">Siren's Call<b><i> - WIP</i></b></h5>
+        <!-- <p class="card-text"></p> -->
+        <p class="card-text"><b>Denizens. </b>Lizardfolk. Storm Pergashans also reside here to search for underwater
+          cities.</p>
+        <p class="card-text"><b>Dangers. </b>Tsunamis and seasonally bad weather, but otherwise one of the nicer
+          places to be.</p>
+        <p class="card-text"><b>Resources. </b>Pinion, salt, game, fish.</p>
       </div>
+    </div>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">THE SUNDERING SHALLOWS</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">The Sundering Shallows<b><i> - WIP</i></b></h5>
-          <p class="card-text">These lowlands are littered with black sand and craters. Doppelkin geodes, psi-crystals
-            and other oddities are found here.</p>
-          <p class="card-text"><b>Denizens. </b>Many Gem Pergashan clans have ventured out of their underground homes to
-            find psi-crystals in this area.</p>
-          <p class="card-text"><b>Dangers. </b>Bad air, geysers, poisonous creatures.</p>
-          <p class="card-text"><b>Resources. </b>Sulfur, minerals, creatures to harvest. Psi-crystals and geodes.</p>
-        </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">THE SUNDERED FOREST</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">The Sundered Forest<b><i> - WIP</i></b></h5>
+        <p class="card-text">The trees are not exactly living. Sundering Storms have touched down here hard before
+          tearing through the central peninsula. </p>
+        <p class="card-text"><b>Denizens. </b>Storm Pergashan clans that focus on storm chasing live here.</p>
+        <p class="card-text"><b>Dangers. </b>Abundant storms, mental effects.</p>
+        <p class="card-text"><b>Resources. </b>Petrified wood, blue glass made when sundering lightning strikes.</p>
       </div>
+    </div>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">SWORD'S EDGE</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">Sword's Edge</h5>
-          <p class="card-text">People once settled here after the Sundering. It suffers the least from storms and the
-            land is more fertile. Then the First Great Flood wiped everyone out. This area is only traversed through
-            when attempting to enter the Chasm.</p>
-        </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">THE SUNDERING SHALLOWS</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">The Sundering Shallows<b><i> - WIP</i></b></h5>
+        <p class="card-text">These lowlands are littered with black sand and craters. Doppelkin geodes, psi-crystals
+          and other oddities are found here.</p>
+        <p class="card-text"><b>Denizens. </b>Many Gem Pergashan clans have ventured out of their underground homes to
+          find psi-crystals in this area.</p>
+        <p class="card-text"><b>Dangers. </b>Bad air, geysers, poisonous creatures.</p>
+        <p class="card-text"><b>Resources. </b>Sulfur, minerals, creatures to harvest. Psi-crystals and geodes.</p>
       </div>
+    </div>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">TITAN'S SPINE</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">Titan's Spine<b><i> - WIP</i></b></h5>
-          <p class="card-text">These windy hills separate the Shifting Sands from the rest of the peninsula. Canyons
-            throughout and vibrant colored stone.</p>
-          <p class="card-text"><b>Denizens. </b>Stone and Cloud Pergashans reside here.</p>
-          <p class="card-text"><b>Dangers. </b>Home to dinosaur-like creatures and rock worms.</p>
-          <p class="card-text"><b>Resources. </b>Pigments, minerals, precious metals, herbs and grasses, creatures to
-            tame.</p>
-        </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">SWORD'S EDGE</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">Sword's Edge</h5>
+        <p class="card-text">People once settled here after the Sundering. It suffers the least from storms and the
+          land is more fertile. Then the First Great Flood wiped everyone out. This area is only traversed through
+          when attempting to enter the Chasm.</p>
       </div>
+    </div>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">TITAN'S HEART</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">Titan's Heart<b><i> - WIP</i></b></h5>
-          <p class="card-text">Two valleys with moderate heat. It’s a rain shadow area with some basins that allow
-            abundant flora and fauna. People generally stay at Siren’s Call and the nearby mountains in the hot season
-            and venture down into the valley for the cooler season to take advantage of the abundance.</p>
-          <!-- <p class="card-text"><b>XXXX</b>XXXX</p> -->
-          <p class="card-text"><b>Dangers. </b>Other people fighting to take what is yours.</p>
-          <p class="card-text"><b>Resources. </b>Pinion, nuts, herbs, game, large quail and cassowary eggs, cacti with
-            unusual fluid.</p>
-        </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">TITAN'S SPINE</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">Titan's Spine<b><i> - WIP</i></b></h5>
+        <p class="card-text">These windy hills separate the Shifting Sands from the rest of the peninsula. Canyons
+          throughout and vibrant colored stone.</p>
+        <p class="card-text"><b>Denizens. </b>Stone and Cloud Pergashans reside here.</p>
+        <p class="card-text"><b>Dangers. </b>Home to dinosaur-like creatures and rock worms.</p>
+        <p class="card-text"><b>Resources. </b>Pigments, minerals, precious metals, herbs and grasses, creatures to
+          tame.</p>
       </div>
+    </div>
 
-      <div class="card mb-3 w-75 align-self-center">
-        <div onclick="collapsingBox(this)" class="location-title text-center">TITAN'S EYE</div>
-        <div class="card-body" style="display: none;">
-          <h5 class="card-title">Titan's Eye<b><i> - WIP</i></b></h5>
-          <p class="card-text">This crater is an active volcano in the middle of a bay.</p>
-          <p class="card-text"><b>Denizens. </b>Fire and Storm Pergashans have found a way to eke out an existence in
-            this sulfuric region.</p>
-          <p class="card-text"><b>Dangers. </b>The volcano, toxic food and water. The volcano.</p>
-          <p class="card-text"><b>Resources. </b>Magwyrms nest here. Obsidian is abundant as well.</p>
-        </div>
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">TITAN'S HEART</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">Titan's Heart<b><i> - WIP</i></b></h5>
+        <p class="card-text">Two valleys with moderate heat. It’s a rain shadow area with some basins that allow
+          abundant flora and fauna. People generally stay at Siren’s Call and the nearby mountains in the hot season
+          and venture down into the valley for the cooler season to take advantage of the abundance.</p>
+        <!-- <p class="card-text"><b>XXXX</b>XXXX</p> -->
+        <p class="card-text"><b>Dangers. </b>Other people fighting to take what is yours.</p>
+        <p class="card-text"><b>Resources. </b>Pinion, nuts, herbs, game, large quail and cassowary eggs, cacti with
+          unusual fluid.</p>
       </div>
+    </div>
+
+    <div class="card mb-3 w-75 align-self-center">
+      <div onclick="collapsingBox(this)" class="location-title text-center">TITAN'S EYE</div>
+      <div class="card-body" style="display: none;">
+        <h5 class="card-title">Titan's Eye<b><i> - WIP</i></b></h5>
+        <p class="card-text">This crater is an active volcano in the middle of a bay.</p>
+        <p class="card-text"><b>Denizens. </b>Fire and Storm Pergashans have found a way to eke out an existence in
+          this sulfuric region.</p>
+        <p class="card-text"><b>Dangers. </b>The volcano, toxic food and water. The volcano.</p>
+        <p class="card-text"><b>Resources. </b>Magwyrms nest here. Obsidian is abundant as well.</p>
+      </div>
+    </div>
 
 
 
-      <!-- <div class="card mb-3 w-75 align-self-center">
+    <!-- <div class="card mb-3 w-75 align-self-center">
         <img src="https://via.placeholder.com/500x60.png/000000/FFFFFF/?text=Pergasha+Locations" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -459,44 +459,36 @@
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
       </div>   -->
-    </div>
+  </div>
 
-    <script>
-      function collapsingBox(box) {
-        var section = box.nextElementSibling;
-        if (section.style.display != "none") {
-          section.style.display = "none"
-        } else {
-          section.style.display = "block"
-        }
+  <script>
+    function collapsingBox(box) {
+      var section = box.nextElementSibling;
+      if (section.style.display != "none") {
+        section.style.display = "none"
+      } else {
+        section.style.display = "block"
       }
+    }
 
-      function collapsingMap() {
-        var map = document.getElementById('pergasha-map');
-        var button = document.getElementById('mapButton');
-        if (button.innerText.includes('Hide Map')) {
-          button.innerText = 'Show Map';
-        } else {
-          button.innerText = 'Hide Map';
-        }
-        if (map.style.display != "none") {
-          map.style.display = "none"
-        } else {
-          map.style.display = "block"
-        }
-      }
-    </script>
+    function collapsingMap() {
+      var map = document.getElementById('pergasha-map');
+      var button = document.getElementById('mapButton');
+      (button.innerText.includes('Hide Map')) ? button.innerText = 'Show Map' : button.innerText = 'Hide Map';
+      map.classList.toggle("hide");
+    }
+  </script>
 
-    <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"></script>
-    <script src="../pergasha.js"></script>
-  </body>
+  <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="../pergasha.js"></script>
+</body>
 
 </html>
