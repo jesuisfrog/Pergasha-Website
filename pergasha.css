@@ -76,10 +76,10 @@ body{
         flex-basis: auto;
     }
     
-    #training-info, #race-list-container, #feat-list, #items-list{
+    #training-info, #feat-list, #items-list{
         max-width: 100%!important;
     }
-    #race-list-container, #feat-list, #items-list{
+    #feat-list, #items-list{
         text-align: center;
         font-size: 1.5rem;
         position: static;
@@ -112,6 +112,13 @@ body{
 
     .class-left-container, .class-right-container,#items-list, #items-display-section, #psionics-display-section {
         flex-basis: 100%;
+    }
+
+    #race-list-container{
+        max-width: 100%!important;
+        text-align: center;
+        font-size: 1.5rem;
+        position: static;
     }
 
     .item-table, #property-list, #items-display-section, #description-list, #psionics-list, .psionics-box, #psionics-table{
@@ -150,6 +157,17 @@ body{
 @media (max-width: 1199.98px) { 
     #rules-container #myScrollspy{
         font-size: 0.6rem;
+    }
+
+    #ko-fi-icon{
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width: 1200.00px) { 
+    #ko-fi-icon{
+        margin-left: 5px;
+        align-self: center;
     }
 }
 
