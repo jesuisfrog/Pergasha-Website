@@ -11,6 +11,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="../pergasha.css">
     <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico" />
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 
     <title>Races - Pergasha</title>
 </head>
@@ -67,6 +68,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="rules.html">Rules</a>
                     </li>
+                    <li class="nav-item align-self-center ml-3">
+                        <a href="https://ko-fi.com/jesuisfrog"><span class="iconify" data-icon="simple-icons:kofi"
+                                style="color: white;" data-width="40" data-height="40"></span></a>
+                    </li>
                 </ul>
                 <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
                 <div class="d-none" id="notlogged">
@@ -93,7 +98,7 @@
     <div class="row mt-5 mb-5 flex-wrap justify-content-center container-fluid" id="race-container">
 
         <div class="col mb-5" id="race-list-container">
-            <div class="list-group" id="race-list" role="tablist">
+            <div class="list-group old-races race-list hide" role="tablist">
                 <a class="list-group-item list-group-item-action list-group-item-secondary old-races hide"
                     id="cloud-pergashan-list" data-toggle="list" href="#cloud-pergashan" role="tab"
                     aria-controls="cloud-pergashan">Cloud
@@ -139,6 +144,9 @@
                     id="lizardfolk-list" data-toggle="list" href="#lizardfolk" role="tab"
                     aria-controls="lizardfolk">Pergashan
                     Lizardfolk</a>
+
+            </div>
+            <div class="list-group race-list new-races" role="tablist">
                 <a class="list-group-item list-group-item-action list-group-item-secondary new-races"
                     id="pergashan-list" data-toggle="list" href="#pergashan" role="tab"
                     aria-controls="pergashan">Pergashan</a>
@@ -839,62 +847,301 @@
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Able.</strong> Pick one Ability Score. Its maximum value is now 22. This
+                            feature can be selected multiple times. <i>(Minimum level: 5.)</i>
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Aquatic.</strong> You are at ease in water. You can hold breath when
+                            under water for up to 30 minutes and you gain a swim speed of
+                            30 feet.
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Bone Arsenal.</strong> You are a living weapon. Your fists are covered
+                            with bony plates. Your unarmed strike has the Impact property,
+                            deals bludgeoning damage equal to 1d6 + your Constitution
+                            modifier, and you are proficient with this attack. If your
+                            unarmed strike has a higher dice roll than this feature, you can
+                            instead add bludgeoning damage to each successful strike
+                            equal to half of your Constitution modifier (minimum of +1).
+                            </br></br>
+                            In addition as a bonus action, you can shoot out a piercing
+                            bone shard from your body. Your bone shards have a range of
+                            30/60 feet, have the Bleed property, and deal piercing
+                            damage equal to 1d6 + your Constitution modifier. You are
+                            proficient with this ranged attack.
+                            </br></br>
+                            The damage of your fists and bone shards increases to 1d8
+                            when you reach 12th level.
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Careful Training.</strong> You gain 1 training point. You can spend it
+                            immediately or save it for later. This feature can be selected
+                            multiple times.
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Darkvision.</strong> Your eyes grant you superior vision in dark and dim
+                            conditions. You can see in dim light within 60 feet of you as if it
+                            were bright light, and in darkness as if it were dim light. You
+                            can’t discern color in darkness, only shades of gray.
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Extra arms.</strong> You have a second pair of arms. These arms are
+                            fully functional and can use all weapons and shields with which
+                            you are proficient except for Massive and Colossal weapons.
+                            You can use a bonus action to make one attack with a
+                            weapon wielded by those arms or an unarmed strike. <i>(Must be
+                                taken at 1st level.)</i>
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Finesse Natural Weapons.</strong> You grow fangs, claws, a stinger, or
+                            horns. Select an appropriate damage type, and you are
+                            proficient with this finesse natural weapon. Your natural
+                            weapon deals 1d4 damage.
+                            </br></br>
+                            The damage die category to your natural weapon increases
+                            when you reach certain levels: 5th (1d6), 11th (1d8), 17th
+                            (1d10).
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Keen Senses.</strong> One of your senses is heightened. Select one
+                            sense (hearing, sight or smell). You gain advantage on
+                            Perception and Investigation checks related to that sense. This
+                            feature can be selected multiple times, each time selecting a
+                            new sense.
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Long-Armed.</strong> Your reach with your arms is 5 feet greater than
+                            normal.
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Natural Telepathy.</strong> You gain the Telepathy talent. The range of
+                            this talent increases to 60 feet at 5th, 90 feet at 11th, and 120
+                            feet at 17th level.
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Powerful Build.</strong> You count as 1 size larger for carry capacity and
+                            to determine what powers can affect you.
                         </td>
                     </tr>
                     <tr class="twistedPergashanFeatures hide">
                         <td>
-                            <strong></strong>
+                            <strong>Psi Manifestation: Amplify.</strong> Your body has flakes or fragments of
+                            psi-crystal within it, granting you a wild psionic ability that
+                            cannot be mastered in the mind alone. As a bonus action, you
+                            can trigger this ability for 1 minute. Your attacks with weapons
+                            or your unarmed strike deal additional psychic damage to your
+                            foes equal to your Intelligence modifier once per turn. You must
+                            be proficient with the weapon. Once you use this
+                            manifestation, you must take a short rest before you can do so
+                            again.
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Psi Manifestation: Psistep.</strong> Your body has flakes or fragments of
+                            psi-crystal within it, granting you a wild psionic ability that
+                            cannot be mastered in the mind alone. As a bonus action, you
+                            can trigger this ability for 1 minute. Your movement speed
+                            increases by 10 feet. Also, once per turn when you are hit with
+                            an attack, you can instantly transport yourself to a location up
+                            to 15 feet away that you can see. Once you use this
+                            manifestation, you must take a short rest before you can do so
+                            again.
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Psi Manifestation: Reflect.</strong> Your body has flakes or fragments of
+                            psi-crystal within it, granting you a wild psionic ability that
+                            cannot be mastered in the mind alone. As a bonus action, you
+                            can trigger this ability for 1 minute. You bounce back the pain
+                            others inflict upon you. Once per turn whenever you are hit with
+                            a melee weapon or natural attack by a creature that you can
+                            see, you can reflect psychic damage back to them equal to
+                            your Intelligence modifier. Once you use this manifestation, you
+                            must take a short rest before you can do so again.
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Prehensile Tail.</strong> You have a prehensile tail that acts like a third
+                            limb. This tail is strong enough to support your own weight and
+                            hang upside down, gives you advantage on Athletics checks
+                            to climb, can hold small objects, and can wield a one-handed
+                            finesse weapon or shield with which you are proficient. As a
+                            bonus action, you can make an attack with your armed tail,
+                            and your reach with this attack increases by 5 feet. This tail
+                            cannot help wield a two-handed weapon or aim with ranged
+                            weapons.
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Psionic Finesse.</strong> You are attuned to the psionic spectrum and
+                            able to uniquely manipulate its weave, and this affinity may
+                            present itself in a physical manner. For example, psi-crystal
+                            flakes adorning the temples, a rune glowing on the forehead,
+                            multi-ringed irises, or unusually colored veins marking the body.
+                            You may reroll 1’s on the damage dice of any psionic
+                            disciplines and talents you use. You must keep the new result.
+                            When you reach 7th level, you can use psionic abilities with a
+                            range of touch at a range of 10 feet instead.
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Psionic Recovery.</strong> Whenever you regain Psi points from resting,
+                            you recover your proficiency modifier in additional Psi points.
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Song of Avatars.</strong> Your aura sends out a musical hum that
+                            affects those around you. This musical aura continues until you
+                            choose to silence it or are incapacitated. Each time you select
+                            this feature, select one of the following songs. If you have
+                            multiple songs, only one song can be active at a time. Each
+                            song has an activation that requires a bonus action to use. A
+                            creature can be affected by a specific song once per short
+                            rest. Once you use the activation ability of a song, you cannot
+                            use that song again in such a way until you take a short or long rest.
+                            <ul>
+                                <li>
+                                    <strong>Song of Speed.</strong> When you activate this song, all allies within
+                                    15 feet of you can immediately move up to half their
+                                    movement speed. While this song is active, you project an
+                                    awe-inspiring aura that keeps your allies ready for action. Any
+                                    ally within 30 feet who can see you can take the Dash action
+                                    as a bonus action.
+                                </li>
+                                <li>
+                                    <strong>Song of Awe.</strong> When you activate this song, any allies within
+                                    15 feet of you gain temporary Hit Points equal to your twice
+                                    your Charisma modifier (minimum 1). While this song is active,
+                                    you and your allies within 30 feet of you gain a bonus to
+                                    Charisma checks equal to your Intelligence modifier (minimum
+                                    of +1). In addition, when you target a creature with a psionic
+                                    charm ability, it has disadvantage on its saving throw. A
+                                    creature can only be affected once per long rest by this ability.
+                                </li>
+                                <li>
+                                    <strong>Song of Fear.</strong> When you activate this song, any hostile
+                                    creatures within 15 feet of you must make a Charisma saving
+                                    throw or be frightened of you for 1 minute. In addition to
+                                    normal fear effects, creatures suffer a 1d4 penalty to all attacks
+                                    and skill checks. The DC for this ability is equal to 8 + your
+                                    proficiency bonus + your Charisma modifier. While this song is
+                                    active, you and your allies within 30 feet of you have
+                                    advantage on Charisma (Intimidation) checks.
+                                </li>
+                                <li>
+                                    <strong>Song of Joy.</strong> When you activate this song, any allies within 15
+                                    feet of you, including yourself, gains one inspiration die to use
+                                    before they take a short or long rest. This die begins at d4 at 1st
+                                    level and increases to a d6 at 7th level and d8 at 13th level.
+                                    While this song is active, you and your allies within 30 feet of you
+                                    have advantage on Charisma (Persuasion) checks.
+                                </li>
+                                <li>
+                                    <strong>Song of Rage.</strong> When you activate this song, any allies within
+                                    15 feet of you may immediately make an attack roll against a
+                                    creature. While this song is active, once per turn you also gain a
+                                    bonus to weapon attack damage equal to your Charisma
+                                    modifier (minimum of +1).
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Spiky Protrusions.</strong> Your body is covered in sharp quills or spikes.
+                            Any creature that grapples you suffers piercing damage equal
+                            to 1d6 + your Constitution modifier. This damage applies at the
+                            start of a grapple and at the start of every turn that a grapple is
+                            maintained. In addition, you can use a bonus action to spray
+                            quills at all creatures adjacent to you. You expend 1 Hit Die and
+                            deal piercing damage equal 1 HD + your Constitution modifier
+                            to all adjacent creatures. <i>(Minimum level: 3.)</i>
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Twisted Metabolism.</strong> You have incredible recovery abilities.
+                            When you are reduced to 0 hit points but not killed outright, you
+                            can drop to 1 hit point instead. In addition, you may use a
+                            bonus action and roll 1 Hit Die + your Constitution modifier to
+                            heal for that amount. Each ability can be used once per long
+                            rest.
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Venomous Natural Weapon.</strong> Your natural weapon secretes
+                            venom. Once on each of your turns, you may make a
+                            venomous natural weapon attack, dealing an additional
+                            weapon damage die + your Constitution modifier of poison damage to your target on a success.
+                            <i>(Minimum level: 7.
+                                Requires Finesse Natural Weapon.)</i>
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Web.</strong> Your twisted anatomy enables you to spin useful and
+                            powerful silk. Once per long rest, you can shoot out a thick,
+                            sticky webbing at a point of your choice within range. The web
+                            fills a 20-foot cube from that point for up to 1 hour. For each
+                            category size above Small, the size of the area increases by 5
+                            feet (Medium has a 25-foot cube, Large has a 30-foot cube,
+                            and so on). The webs are difficult terrain and lightly obscure the
+                            area. You are not affected by webbing of any kind.
+                            </br></br>
+                            Each creature of Large or smaller size that starts its turn in the
+                            webs or that enters them during its turn must make a Dexterity
+                            saving throw. On a failed save, the creature is restrained as
+                            long as it remains in the webs or until it breaks free. If the
+                            creature is larger than Huge, the web is destroyed by the
+                            creature’s movements.
+                            </br></br>
+                            A creature restrained by the webs can use its action to make
+                            a Strength check against your DC. If it succeeds, it is no longer
+                            restrained. Your DC is 8 + your proficiency modifier + your
+                            Constitution modifier.
+                            </br></br>
+                            The webs are flammable. Any 5-foot cube of webs exposed
+                            to fire burns away in 1 round, dealing 2d4 fire damage to any
+                            creature that starts its turn in the fire.
+                            </br></br>
+                            Alternatively, you may expel the webs harmlessly and use
+                            them as a material. The silk webbing is a valuable resource that
+                            can be used in building and crafting. You expel the equivalent
+                            of 1 square yard of silk worth 1 uncommon barter.
+                        </td>
+                    </tr>
+                    <tr class="twistedPergashanFeatures hide">
+                        <td>
+                            <strong>Wiry Hairs.</strong> Your body is covered in sensitive, wiry hairs. You gain
+                            tremorsense within 15 feet and a climb speed equal to your
+                            movement speed.
                         </td>
                     </tr>
                     <tr>
@@ -909,21 +1156,56 @@
                         <th class="class-border border-0" colspan="10"></th>
                     </tr>
                     <tr>
-                        <th class="race-table-title">Touched-Kin Traits</th>
+                        <th class="race-table-title">Touched-Kin</th>
                     </tr>
                     <tr>
+                        <td>
+                            <strong>Determine your size category.</strong> Medium touched kins are the
+                            most common, but there are different advantages and
+                            disadvantages for each category.
+                            <ul>
+                                <li>
+                                    <strong>Large:</strong> You have a -1 penalty to AC, and your base speed
+                                    is 35.
+                                </li>
+                                <li>
+                                    <strong>Medium:</strong> Your base speed is 30, and you gain +1 training
+                                    point.
+                                </li>
+                                <li>
+                                    <strong>Small:</strong> You have a +1 bonus to AC, your base speed is 25,
+                                    and you gain +1 training point. In addition, you have
+                                    disadvantage on checks related to being knocked prone,
+                                    standing from prone, being grappled, or being moved by
+                                    any creature larger than you.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Select 3 racial features.</strong> Some features have minimum level
+                            requirements, prerequisites, or refer to your choice from step 1.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="race-table-subtitle d-flex justify-content-between">Touched-Kin Base Traits <span
+                                class="collapsing-button" aria-expanded="false" role="button"
+                                onClick='collapsingButton(this, "touchedKinBaseFeatures" )'>[+]</span></span></th>
+                    </tr>
+                    <tr class="touchedKinBaseFeatures hide">
                         <td>
                             <b><i>Ability score increase.</i></b> You may assign 4 ability points. No more than 2
                             points may be assigned to a single score. Also, select one ability score. That score now
                             has a cap of 22.
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="touchedKinBaseFeatures hide">
                         <td>
                             <b><i></i>Age.</i> </b>Touched Kin age similarly to humans but can live to 125 years.
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="touchedKinBaseFeatures hide">
                         <td>
                             <b><i>Alignment.</i> </b>Touched Kin were twisted at birth because of Sundering Storms
                             and are often seen as outsiders, so they tend to lean towards chaotic. Whether they are
@@ -931,23 +1213,18 @@
                             society makes (or doesn’t make) for them.
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="touchedKinBaseFeatures hide">
                         <td>
-                            <b><i>Size.</i> </b>Touched Kin average 6 to 8 feet tall and weigh between 180 and 350.
-                            Your size is Medium.
+                            <b><i>Speed.</i> </b>Based on your size category. Large (35 ft), Medium (30 ft),
+                            Small (25 ft).
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <b><i>Speed.</i> </b>Your base walking speed is 30 feet.
-                        </td>
-                    </tr>
-                    <tr>
+                    <tr class="touchedKinBaseFeatures hide">
                         <td>
                             <b><i>Languages.</i> </b>You can speak Pergashan (Common).
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="touchedKinBaseFeatures hide">
                         <td>
                             <b><i>Tainted Prodigy.</i> </b>You are a blended being tainted—or blessed—by the
                             Sundering Sands, and you were born with an incredible skill. Select one skill or tool
@@ -962,12 +1239,504 @@
                     </tr>
                     <tr class="touchedKinFeatures hide">
                         <td>
-                            Something
+                            <strong>Able.</strong> Pick one Ability Score. Its maximum value is now 22. This
+                            feature can be selected multiple times. <i>(Minimum level: 5.)</i>
                         </td>
                     </tr>
                     <tr class="touchedKinFeatures hide">
                         <td>
-                            Some Feature
+                            <strong>Aquatic.</strong> You are at ease in water. You can hold breath when
+                            under water for up to 30 minutes and you gain a swim speed of
+                            30 feet.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Bone Arsenal.</strong> You are a living weapon. Your fists are covered
+                            with bony plates. Your unarmed strike has the Impact property,
+                            deals bludgeoning damage equal to 1d6 + your Constitution
+                            modifier, and you are proficient with this attack. If your
+                            unarmed strike has a higher dice roll than this feature, you can
+                            instead add bludgeoning damage to each successful strike
+                            equal to half of your Constitution modifier (minimum of +1).
+                            </br></br>
+                            In addition as a bonus action, you can shoot out a piercing
+                            bone shard from your body. Your bone shards have a range of
+                            30/60 feet, have the Bleed property, and deal piercing
+                            damage equal to 1d6 + your Constitution modifier. You are
+                            proficient with this ranged attack.
+                            </br></br>
+                            The damage of your fists and bone shards increases to 1d8
+                            when you reach 12th level.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Careful Training.</strong> You gain 1 training point. You can spend it
+                            immediately or save it for later. This feature can be selected
+                            multiple times.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Chitinous Shell Skin.</strong> You grow a tough shell over your body.
+                            When not wearing any armor, your AC = 10 + your Constitution
+                            modifier + your proficiency bonus.<i>(Cannot have Direskin.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Darkvision.</strong> Your eyes grant you superior vision in dark and dim
+                            conditions. You can see in dim light within 60 feet of you as if it
+                            were bright light, and in darkness as if it were dim light. You
+                            can’t discern color in darkness, only shades of gray.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Direskin.</strong> Your skin grows tough and thick. You gain damage
+                            reduction to bludgeoning, piercing, and slashing damage
+                            equal to your proficiency modifier. <i>(Cannot have Chitinous
+                                Shell Skin.)</i>
+                            </br></br>
+                            <i>Cultural note:</i> Your skin can be shed and used as a raw
+                            material. Direhide is a translucent fabric often used in the
+                            crafting of armor and tough canvas. The hide can be cooked
+                            down into an adhesive and combining both creates a material
+                            similar to plywood.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Extra arms.</strong> You have a second pair of arms. These arms are
+                            fully functional and can use all weapons and shields with which
+                            you are proficient except for Massive and Colossal weapons.
+                            You can use a bonus action to make one attack with a
+                            weapon wielded by those arms or an unarmed strike. <i>(Must be
+                                taken at 1st level.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Finesse Natural Weapons.</strong> You grow fangs, claws, a stinger, or
+                            horns. Select an appropriate damage type, and you are
+                            proficient with this finesse natural weapon. Your natural
+                            weapon deals 1d4 damage.
+                            </br></br>
+                            The damage die category to your natural weapon increases
+                            when you reach certain levels: 5th (1d6), 11th (1d8), 17th
+                            (1d10).
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Fury of the Small.</strong> When you damage a creature with an attack
+                            and the creature's size is larger than yours, you can cause the
+                            attack to deal extra damage to the creature. The extra
+                            damage equals your level. Once you use this trait, you can’t
+                            use it again until you finish a short or long rest. <i>(Requires Small
+                                size.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Improved Darkvision.</strong> Your vision in dim light increases to 120
+                            feet. <i>(Requires Darkvision.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Improved Direskin.</strong> Your sturdy skin gives you the abilities Do
+                            You Spice? and Not This Time!. <i>(Minimum level: 5. Requires
+                                Direskin.)</i>
+                            <ul>
+                                <li>
+                                    <strong>Do You Spice?</strong> Once per long rest, you can sand off some of
+                                    your thick skin to use as a spice to flavor food. Every individual
+                                    has a unique flavor profile that can shift slightly with diet, mood,
+                                    and age. Additionally, you may expend 1 Hit Die to enhance
+                                    freshly cooked food with your spice. As long as there is enough
+                                    food, up to 10 creatures can regain hit points equal to 1 HD +
+                                    your Constitution modifier. A creature can only benefit from this
+                                    feature once per long rest.
+                                </li>
+                                <li>
+                                    <strong>Not This Time!</strong> You can ignore damage by sacrificing your
+                                    direskin protection. As a reaction to incoming damage from a
+                                    source that you can see, you ignore all damage except for
+                                    psychic and poison. You leave your skin behind and appear in
+                                    an adjacent space that you can see. You must be able to fit in
+                                    this space or you cannot use this ability. In addition, you may
+                                    not use this ability if you are incapacitated or are taking falling
+                                    damage. Once you use this ability, you lose all other Direskin
+                                    features until you take a full rest to regrow it.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Insectoid Legs.</strong> You possess unusual legs akin to insects. Your
+                            base movement speed increases by 10 feet and your jump
+                            distance is doubled. <i>(Must be taken at 1st level.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Keen Senses.</strong> One of your senses is heightened. Select one
+                            sense (hearing, sight or smell). You gain advantage on
+                            Perception and Investigation checks related to that sense. This
+                            feature can be selected multiple times, each time selecting a
+                            new sense.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Long-Armed.</strong> Your reach with your arms is 5 feet greater than
+                            normal.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Natural Telepathy.</strong> You gain the Telepathy talent. The range of
+                            this talent increases to 60 feet at 5th, 90 feet at 11th, and 120
+                            feet at 17th level.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Powerful Build.</strong> You count as 1 size larger for carry capacity and
+                            to determine what powers can affect you.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Primal Stamina.</strong> Your body is infused with primal energy
+                            sources. Once per long rest, you can use a feature requiring
+                            the expenditure of a Hit Die without paying its cost. In addition,
+                            you count as having one free Hit Die towards features that
+                            require you to tap a Hit Die.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Prodigious Mind.</strong> You gain 1 proficiency point. You can spend
+                            it immediately or save it for later. This feature can be selected
+                            multiple times.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Psi Manifestation: Amplify.</strong> Your body has flakes or fragments of
+                            psi-crystal within it, granting you a wild psionic ability that
+                            cannot be mastered in the mind alone. As a bonus action, you
+                            can trigger this ability for 1 minute. Your attacks with weapons
+                            or your unarmed strike deal additional psychic damage to your
+                            foes equal to your Intelligence modifier once per turn. You must
+                            be proficient with the weapon. Once you use this
+                            manifestation, you must take a short rest before you can do so
+                            again.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Psi Manifestation: Psistep.</strong> Your body has flakes or fragments of
+                            psi-crystal within it, granting you a wild psionic ability that
+                            cannot be mastered in the mind alone. As a bonus action, you
+                            can trigger this ability for 1 minute. Your movement speed
+                            increases by 10 feet. Also, once per turn when you are hit with
+                            an attack, you can instantly transport yourself to a location up
+                            to 15 feet away that you can see. Once you use this
+                            manifestation, you must take a short rest before you can do so
+                            again.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Psi Manifestation: Reflect.</strong> Your body has flakes or fragments of
+                            psi-crystal within it, granting you a wild psionic ability that
+                            cannot be mastered in the mind alone. As a bonus action, you
+                            can trigger this ability for 1 minute. You bounce back the pain
+                            others inflict upon you. Once per turn whenever you are hit with
+                            a melee weapon or natural attack by a creature that you can
+                            see, you can reflect psychic damage back to them equal to
+                            your Intelligence modifier. Once you use this manifestation, you
+                            must take a short rest before you can do so again.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Prehensile Tail.</strong> You have a prehensile tail that acts like a third
+                            limb. This tail is strong enough to support your own weight and
+                            hang upside down, gives you advantage on Athletics checks
+                            to climb, can hold small objects, and can wield a one-handed
+                            finesse weapon or shield with which you are proficient. As a
+                            bonus action, you can make an attack with your armed tail,
+                            and your reach with this attack increases by 5 feet. This tail
+                            cannot help wield a two-handed weapon or aim with ranged
+                            weapons.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Psionic Edge.</strong> You can channel psionic power. Select one
+                            Psionic Talent. In addition, you add your Intelligence Modifier to
+                            damage rolls for any Psionic Talents you use (minimum 1).
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Psionic Finesse.</strong> You are attuned to the psionic spectrum and
+                            able to uniquely manipulate its weave, and this affinity may
+                            present itself in a physical manner. For example, psi-crystal
+                            flakes adorning the temples, a rune glowing on the forehead,
+                            multi-ringed irises, or unusually colored veins marking the body.
+                            You may reroll 1’s on the damage dice of any psionic
+                            disciplines and talents you use. You must keep the new result.
+                            When you reach 7th level, you can use psionic abilities with a
+                            range of touch at a range of 10 feet instead.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Psionic Recovery.</strong> Whenever you regain Psi points from resting,
+                            you recover your proficiency modifier in additional Psi points.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Smallfolk Nimbleness.</strong> You can hide behind or move through
+                            the space of any creature that is of a size larger than yours. <i>(Requires Small size.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Song of Avatars.</strong> Your aura sends out a musical hum that
+                            affects those around you. This musical aura continues until you
+                            choose to silence it or are incapacitated. Each time you select
+                            this feature, select one of the following songs. If you have
+                            multiple songs, only one song can be active at a time. Each
+                            song has an activation that requires a bonus action to use. A
+                            creature can be affected by a specific song once per short
+                            rest. Once you use the activation ability of a song, you cannot
+                            use that song again in such a way until you take a short or long rest.
+                            <ul>
+                                <li>
+                                    <strong>Song of Speed.</strong> When you activate this song, all allies within
+                                    15 feet of you can immediately move up to half their
+                                    movement speed. While this song is active, you project an
+                                    awe-inspiring aura that keeps your allies ready for action. Any
+                                    ally within 30 feet who can see you can take the Dash action
+                                    as a bonus action.
+                                </li>
+                                <li>
+                                    <strong>Song of Awe.</strong> When you activate this song, any allies within
+                                    15 feet of you gain temporary Hit Points equal to your twice
+                                    your Charisma modifier (minimum 1). While this song is active,
+                                    you and your allies within 30 feet of you gain a bonus to
+                                    Charisma checks equal to your Intelligence modifier (minimum
+                                    of +1). In addition, when you target a creature with a psionic
+                                    charm ability, it has disadvantage on its saving throw. A
+                                    creature can only be affected once per long rest by this ability.
+                                </li>
+                                <li>
+                                    <strong>Song of Fear.</strong> When you activate this song, any hostile
+                                    creatures within 15 feet of you must make a Charisma saving
+                                    throw or be frightened of you for 1 minute. In addition to
+                                    normal fear effects, creatures suffer a 1d4 penalty to all attacks
+                                    and skill checks. The DC for this ability is equal to 8 + your
+                                    proficiency bonus + your Charisma modifier. While this song is
+                                    active, you and your allies within 30 feet of you have
+                                    advantage on Charisma (Intimidation) checks.
+                                </li>
+                                <li>
+                                    <strong>Song of Joy.</strong> When you activate this song, any allies within 15
+                                    feet of you, including yourself, gains one inspiration die to use
+                                    before they take a short or long rest. This die begins at d4 at 1st
+                                    level and increases to a d6 at 7th level and d8 at 13th level.
+                                    While this song is active, you and your allies within 30 feet of you
+                                    have advantage on Charisma (Persuasion) checks.
+                                </li>
+                                <li>
+                                    <strong>Song of Rage.</strong> When you activate this song, any allies within
+                                    15 feet of you may immediately make an attack roll against a
+                                    creature. While this song is active, once per turn you also gain a
+                                    bonus to weapon attack damage equal to your Charisma
+                                    modifier (minimum of +1).
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Spiky Protrusions.</strong> Your body is covered in sharp quills or spikes.
+                            Any creature that grapples you suffers piercing damage equal
+                            to 1d6 + your Constitution modifier. This damage applies at the
+                            start of a grapple and at the start of every turn that a grapple is
+                            maintained. In addition, you can use a bonus action to spray
+                            quills at all creatures adjacent to you. You expend 1 Hit Die and
+                            deal piercing damage equal 1 HD + your Constitution modifier
+                            to all adjacent creatures. <i>(Minimum level: 3.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Tactical Advantage.</strong> Your viewpoint from the skies gives you
+                            and your allies a tactical advantage on the field. Any ally
+                            within 120 feet that can see you while you are flying has
+                            advantage on initiative rolls. Additionally, the first attack made
+                            by you and your allies in a combat is made with advantage. <i>(Minimum Level: 7. Requires
+                                Wings.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Twisted Metabolism.</strong> You have incredible recovery abilities.
+                            When you are reduced to 0 hit points but not killed outright, you
+                            can drop to 1 hit point instead. In addition, you may use a
+                            bonus action and roll 1 Hit Die + your Constitution modifier to
+                            heal for that amount. Each ability can be used once per long
+                            rest.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Two Heads.</strong> You have advantage on Wisdom (Perception)
+                            checks and on saving throws against being blinded, charmed,
+                            deafened, stunned, and knocked unconscious. In addition,
+                            your other head sometimes knows things that you do not. Once
+                            per long rest, you can reroll a failed skill check as you talk things
+                            over with head number two. <i>(Must be taken at 1st level.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Two Minds.</strong> Two is always better than one. You learn a Psionic
+                            Talent of your choice, and you may always use your bonus
+                            action to have one head use a Psionic Talent. <i>(Requires Two
+                                Heads.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Venomous Natural Weapon.</strong> Your natural weapon secretes
+                            venom. Once on each of your turns, you may make a
+                            venomous natural weapon attack, dealing an additional
+                            weapon damage die + your Constitution modifier of poison damage to your target on a success.
+                            <i>(Minimum level: 7.
+                                Requires Finesse Natural Weapon.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Web.</strong> Your twisted anatomy enables you to spin useful and
+                            powerful silk. Once per long rest, you can shoot out a thick,
+                            sticky webbing at a point of your choice within range. The web
+                            fills a 20-foot cube from that point for up to 1 hour. For each
+                            category size above Small, the size of the area increases by 5
+                            feet (Medium has a 25-foot cube, Large has a 30-foot cube,
+                            and so on). The webs are difficult terrain and lightly obscure the
+                            area. You are not affected by webbing of any kind.
+                            </br></br>
+                            Each creature of Large or smaller size that starts its turn in the
+                            webs or that enters them during its turn must make a Dexterity
+                            saving throw. On a failed save, the creature is restrained as
+                            long as it remains in the webs or until it breaks free. If the
+                            creature is larger than Huge, the web is destroyed by the
+                            creature’s movements.
+                            </br></br>
+                            A creature restrained by the webs can use its action to make
+                            a Strength check against your DC. If it succeeds, it is no longer
+                            restrained. Your DC is 8 + your proficiency modifier + your
+                            Constitution modifier.
+                            </br></br>
+                            The webs are flammable. Any 5-foot cube of webs exposed
+                            to fire burns away in 1 round, dealing 2d4 fire damage to any
+                            creature that starts its turn in the fire.
+                            </br></br>
+                            Alternatively, you may expel the webs harmlessly and use
+                            them as a material. The silk webbing is a valuable resource that
+                            can be used in building and crafting. You expel the equivalent
+                            of 1 square yard of silk worth 1 uncommon barter.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Wings.</strong>Choose between feathered, insectoid, or leathery
+                            wings. At 1st level, they are useable, but your twisted nature
+                            makes it impossible to fly for long periods. The wings require
+                            conditioning and patience to fully master. Once per short rest,
+                            you can fly for 1 minute at the same rate as your walking
+                            speed. You cannot be encumbered or exhausted to use this
+                            ability. If you fall unconscious or have your movement reduced
+                            to 0 while flying, you plummet to the ground, and while flying you must move at least half
+                            your speed to stay aloft. You can always glide from a height easily, preventing you from
+                            taking falling damage so long as you are conscious and
+                            unencumbered. Finally, you can use a bonus action to Dash
+                            while flying.
+                            </br></br>
+                            Your wings improve when you reach certain levels: at 5th you
+                            can fly for 1 hour once per short rest; at 11th you can fly up to 8
+                            hours once per long rest; at 17th you gain a flight speed equal
+                            to your walking speed as you have fully adapted and
+                            strengthened your wings.
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Wings Mastery: Feathered.</strong> You have improved your flight
+                            mastery with your feathered wings. Your flight speed increases
+                            by 15 feet, and you gain a Surprise Flyby attack. <i>(Minimum
+                                level: 5. Requires Wings.)</i>
+                            <ul>
+                                <li>
+                                    <strong>Surprise Flyby:</strong> As an action, you can fly to a target, make a
+                                    melee attack, and continue flying past the target without
+                                    triggering an attack of opportunity. On a successful hit, you
+                                    deal an additional weapon die of damage.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Wings Mastery: Insectoid.</strong> You have improved your flight
+                            mastery with your insectoid wings. Your special wings allow you
+                            to hover in place so that you no longer need to use half your
+                            movement to stay aloft. You also have advantage on Dexterity
+                            saving throws and Acrobatics checks while flying because you
+                            have superior mobility. <i>(Minimum level: 5. Requires Wings.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Wings Mastery: Leathery.</strong> You have improved your flight
+                            mastery with your leathery wings. You become a silent stalker
+                            and gain advantage on Stealth checks when flying. In
+                            addition, the ends of your wings are razor sharp and clawed,
+                            giving you the Thrash and Slash abilities.
+                            <ul>
+                                <li>
+                                    <strong>Thrash:</strong> When you take damage, you can use a reaction to
+                                    have your wings thrash out reflexively. Make a melee attack
+                                    against up to two targets within range. On a hit, each target
+                                    takes 1d6 + your Dexterity modifier in slashing damage.
+                                </li>
+                                <li>
+                                    <strong>Slash:</strong>As a bonus action you make a slashing wing attack
+                                    against a single target. On a hit, the target takes 2d4 + yourDexterity modifier in
+                                    slashing damage.
+                                </li>
+                            </ul>
+                            Your wings have the Bleed, Bypass, and Vicious properties
+                            and a 10-foot reach. <i>(Minimum level: 5. Requires Wings.)</i>
+                        </td>
+                    </tr>
+                    <tr class="touchedKinFeatures hide">
+                        <td>
+                            <strong>Wiry Hairs.</strong> Your body is covered in sensitive, wiry hairs. You gain
+                            tremorsense within 15 feet and a climb speed equal to your
+                            movement speed.
                         </td>
                     </tr>
                     <tr>
@@ -1106,7 +1875,7 @@
                                 role="button"
                                 onClick='collapsingButton(this, "generalLizardFeatures" )'>[+]</span></span></th>
                     </tr>
-                    <tr>
+                    <tr class="generalLizardFeatures hide">
                         <td>
                             These features are open to all Pergashan Lizardfolk. Each feature
                             can only be selected once unless specified, and any requirements
@@ -1173,7 +1942,7 @@
                         <td>
                             <strong>Tongue.</strong> Your tongue can whip out to grab foes. As a bonus
                             action, you snap out your tongue at a target within 10 feet and
-                            attempt to pull it towards you. The target must make a Dexteritysaving throw, and on a fail
+                            attempt to pull it towards you. The target must make a Dexterity saving throw, and on a fail
                             you pull it to a space
                             adjacent to you. The DC = 8 + your Constitution modifier + your proficiency
                             bonus. Regardless of the result, the target suffers disadvantage
@@ -1195,7 +1964,7 @@
                                 role="button"
                                 onClick='collapsingButton(this, "purebloodedLizardFeatures" )'>[+]</span></span></th>
                     </tr>
-                    <tr>
+                    <tr class="purebloodedLizardFeatures hide">
                         <td>
                             These features are only available to pureblooded lizardfolk.
                         </td>
@@ -1287,7 +2056,7 @@
                             When you successfully pull a creature to you with your tongue,
                             you may hold it in a grapple. Make an opposed Athletics
                             check against the target’s Acrobatics or Athletics check (their
-                            choice) to hold it in a grapple. If you critically succeed ordefeat their check by 10 or
+                            choice) to hold it in a grapple. If you critically succeed or defeat their check by 10 or
                             more, you can draw them into
                             your mouth and make a Bite attack for free. After the attack, the
                             creature returns to a space adjacent to you and is still
@@ -1352,12 +2121,317 @@
                     </tr>
                     <tr class="twistedLizardFeatures hide">
                         <td>
-                            Something
+                            <strong>Able.</strong> Pick one Ability Score. Its maximum value is now 22. This
+                            feature can be selected multiple times. <i>(Minimum level: 5.)</i>
                         </td>
                     </tr>
                     <tr class="twistedLizardFeatures hide">
                         <td>
-                            Some Feature
+                            <strong>Aquatic.</strong> You are at ease in water. You can hold breath when
+                            under water for up to 30 minutes and you gain a swim speed of
+                            30 feet.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Bone Arsenal.</strong> You are a living weapon. Your fists are covered
+                            with bony plates. Your unarmed strike has the Impact property,
+                            deals bludgeoning damage equal to 1d6 + your Constitution
+                            modifier, and you are proficient with this attack. If your
+                            unarmed strike has a higher dice roll than this feature, you can
+                            instead add bludgeoning damage to each successful strike
+                            equal to half of your Constitution modifier (minimum of +1).
+                            </br></br>
+                            In addition as a bonus action, you can shoot out a piercing
+                            bone shard from your body. Your bone shards have a range of
+                            30/60 feet, have the Bleed property, and deal piercing
+                            damage equal to 1d6 + your Constitution modifier. You are
+                            proficient with this ranged attack.
+                            </br></br>
+                            The damage of your fists and bone shards increases to 1d8
+                            when you reach 12th level.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Careful Training.</strong> You gain 1 training point. You can spend it
+                            immediately or save it for later. This feature can be selected
+                            multiple times.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Darkvision.</strong> Your eyes grant you superior vision in dark and dim
+                            conditions. You can see in dim light within 60 feet of you as if it
+                            were bright light, and in darkness as if it were dim light. You
+                            can’t discern color in darkness, only shades of gray.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Extra arms.</strong> You have a second pair of arms. These arms are
+                            fully functional and can use all weapons and shields with which
+                            you are proficient except for Massive and Colossal weapons.
+                            You can use a bonus action to make one attack with a
+                            weapon wielded by those arms or an unarmed strike. <i>(Must be
+                                taken at 1st level.)</i>
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Finesse Natural Weapons.</strong> You grow fangs, claws, a stinger, or
+                            horns. Select an appropriate damage type, and you are
+                            proficient with this finesse natural weapon. Your natural
+                            weapon deals 1d4 damage.
+                            </br></br>
+                            The damage die category to your natural weapon increases
+                            when you reach certain levels: 5th (1d6), 11th (1d8), 17th
+                            (1d10).
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Fury of the Small.</strong> When you damage a creature with an attack
+                            and the creature's size is larger than yours, you can cause the
+                            attack to deal extra damage to the creature. The extra
+                            damage equals your level. Once you use this trait, you can’t
+                            use it again until you finish a short or long rest. <i>(Requires Small
+                                size.)</i>
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Keen Senses.</strong> One of your senses is heightened. Select one
+                            sense (hearing, sight or smell). You gain advantage on
+                            Perception and Investigation checks related to that sense. This
+                            feature can be selected multiple times, each time selecting a
+                            new sense.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Long-Armed.</strong> Your reach with your arms is 5 feet greater than
+                            normal.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Natural Telepathy.</strong> You gain the Telepathy talent. The range of
+                            this talent increases to 60 feet at 5th, 90 feet at 11th, and 120
+                            feet at 17th level.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Powerful Build.</strong> You count as 1 size larger for carry capacity and
+                            to determine what powers can affect you.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Psi Manifestation: Amplify.</strong> Your body has flakes or fragments of
+                            psi-crystal within it, granting you a wild psionic ability that
+                            cannot be mastered in the mind alone. As a bonus action, you
+                            can trigger this ability for 1 minute. Your attacks with weapons
+                            or your unarmed strike deal additional psychic damage to your
+                            foes equal to your Intelligence modifier once per turn. You must
+                            be proficient with the weapon. Once you use this
+                            manifestation, you must take a short rest before you can do so
+                            again.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Psi Manifestation: Psistep.</strong> Your body has flakes or fragments of
+                            psi-crystal within it, granting you a wild psionic ability that
+                            cannot be mastered in the mind alone. As a bonus action, you
+                            can trigger this ability for 1 minute. Your movement speed
+                            increases by 10 feet. Also, once per turn when you are hit with
+                            an attack, you can instantly transport yourself to a location up
+                            to 15 feet away that you can see. Once you use this
+                            manifestation, you must take a short rest before you can do so
+                            again.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Psi Manifestation: Reflect.</strong> Your body has flakes or fragments of
+                            psi-crystal within it, granting you a wild psionic ability that
+                            cannot be mastered in the mind alone. As a bonus action, you
+                            can trigger this ability for 1 minute. You bounce back the pain
+                            others inflict upon you. Once per turn whenever you are hit with
+                            a melee weapon or natural attack by a creature that you can
+                            see, you can reflect psychic damage back to them equal to
+                            your Intelligence modifier. Once you use this manifestation, you
+                            must take a short rest before you can do so again.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Prehensile Tail.</strong> You have a prehensile tail that acts like a third
+                            limb. This tail is strong enough to support your own weight and
+                            hang upside down, gives you advantage on Athletics checks
+                            to climb, can hold small objects, and can wield a one-handed
+                            finesse weapon or shield with which you are proficient. As a
+                            bonus action, you can make an attack with your armed tail,
+                            and your reach with this attack increases by 5 feet. This tail
+                            cannot help wield a two-handed weapon or aim with ranged
+                            weapons.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Psionic Finesse.</strong> You are attuned to the psionic spectrum and
+                            able to uniquely manipulate its weave, and this affinity may
+                            present itself in a physical manner. For example, psi-crystal
+                            flakes adorning the temples, a rune glowing on the forehead,
+                            multi-ringed irises, or unusually colored veins marking the body.
+                            You may reroll 1’s on the damage dice of any psionic
+                            disciplines and talents you use. You must keep the new result.
+                            When you reach 7th level, you can use psionic abilities with a
+                            range of touch at a range of 10 feet instead.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Psionic Recovery.</strong> Whenever you regain Psi points from resting,
+                            you recover your proficiency modifier in additional Psi points.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Smallfolk Nimbleness.</strong> You can hide behind or move through
+                            the space of any creature that is of a size larger than yours. <i>(Requires Small size.)</i>
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Song of Avatars.</strong> Your aura sends out a musical hum that
+                            affects those around you. This musical aura continues until you
+                            choose to silence it or are incapacitated. Each time you select
+                            this feature, select one of the following songs. If you have
+                            multiple songs, only one song can be active at a time. Each
+                            song has an activation that requires a bonus action to use. A
+                            creature can be affected by a specific song once per short
+                            rest. Once you use the activation ability of a song, you cannot
+                            use that song again in such a way until you take a short or long rest.
+                            <ul>
+                                <li>
+                                    <strong>Song of Speed.</strong> When you activate this song, all allies within
+                                    15 feet of you can immediately move up to half their
+                                    movement speed. While this song is active, you project an
+                                    awe-inspiring aura that keeps your allies ready for action. Any
+                                    ally within 30 feet who can see you can take the Dash action
+                                    as a bonus action.
+                                </li>
+                                <li>
+                                    <strong>Song of Awe.</strong> When you activate this song, any allies within
+                                    15 feet of you gain temporary Hit Points equal to your twice
+                                    your Charisma modifier (minimum 1). While this song is active,
+                                    you and your allies within 30 feet of you gain a bonus to
+                                    Charisma checks equal to your Intelligence modifier (minimum
+                                    of +1). In addition, when you target a creature with a psionic
+                                    charm ability, it has disadvantage on its saving throw. A
+                                    creature can only be affected once per long rest by this ability.
+                                </li>
+                                <li>
+                                    <strong>Song of Fear.</strong> When you activate this song, any hostile
+                                    creatures within 15 feet of you must make a Charisma saving
+                                    throw or be frightened of you for 1 minute. In addition to
+                                    normal fear effects, creatures suffer a 1d4 penalty to all attacks
+                                    and skill checks. The DC for this ability is equal to 8 + your
+                                    proficiency bonus + your Charisma modifier. While this song is
+                                    active, you and your allies within 30 feet of you have
+                                    advantage on Charisma (Intimidation) checks.
+                                </li>
+                                <li>
+                                    <strong>Song of Joy.</strong> When you activate this song, any allies within 15
+                                    feet of you, including yourself, gains one inspiration die to use
+                                    before they take a short or long rest. This die begins at d4 at 1st
+                                    level and increases to a d6 at 7th level and d8 at 13th level.
+                                    While this song is active, you and your allies within 30 feet of you
+                                    have advantage on Charisma (Persuasion) checks.
+                                </li>
+                                <li>
+                                    <strong>Song of Rage.</strong> When you activate this song, any allies within
+                                    15 feet of you may immediately make an attack roll against a
+                                    creature. While this song is active, once per turn you also gain a
+                                    bonus to weapon attack damage equal to your Charisma
+                                    modifier (minimum of +1).
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Spiky Protrusions.</strong> Your body is covered in sharp quills or spikes.
+                            Any creature that grapples you suffers piercing damage equal
+                            to 1d6 + your Constitution modifier. This damage applies at the
+                            start of a grapple and at the start of every turn that a grapple is
+                            maintained. In addition, you can use a bonus action to spray
+                            quills at all creatures adjacent to you. You expend 1 Hit Die and
+                            deal piercing damage equal 1 HD + your Constitution modifier
+                            to all adjacent creatures. <i>(Minimum level: 3.)</i>
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Twisted Metabolism.</strong> You have incredible recovery abilities.
+                            When you are reduced to 0 hit points but not killed outright, you
+                            can drop to 1 hit point instead. In addition, you may use a
+                            bonus action and roll 1 Hit Die + your Constitution modifier to
+                            heal for that amount. Each ability can be used once per long
+                            rest.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Venomous Natural Weapon.</strong> Your natural weapon secretes
+                            venom. Once on each of your turns, you may make a
+                            venomous natural weapon attack, dealing an additional
+                            weapon damage die + your Constitution modifier of poison damage to your target on a success.
+                            <i>(Minimum level: 7.
+                                Requires Finesse Natural Weapon.)</i>
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Web.</strong> Your twisted anatomy enables you to spin useful and
+                            powerful silk. Once per long rest, you can shoot out a thick,
+                            sticky webbing at a point of your choice within range. The web
+                            fills a 20-foot cube from that point for up to 1 hour. For each
+                            category size above Small, the size of the area increases by 5
+                            feet (Medium has a 25-foot cube, Large has a 30-foot cube,
+                            and so on). The webs are difficult terrain and lightly obscure the
+                            area. You are not affected by webbing of any kind.
+                            </br></br>
+                            Each creature of Large or smaller size that starts its turn in the
+                            webs or that enters them during its turn must make a Dexterity
+                            saving throw. On a failed save, the creature is restrained as
+                            long as it remains in the webs or until it breaks free. If the
+                            creature is larger than Huge, the web is destroyed by the
+                            creature’s movements.
+                            </br></br>
+                            A creature restrained by the webs can use its action to make
+                            a Strength check against your DC. If it succeeds, it is no longer
+                            restrained. Your DC is 8 + your proficiency modifier + your
+                            Constitution modifier.
+                            </br></br>
+                            The webs are flammable. Any 5-foot cube of webs exposed
+                            to fire burns away in 1 round, dealing 2d4 fire damage to any
+                            creature that starts its turn in the fire.
+                            </br></br>
+                            Alternatively, you may expel the webs harmlessly and use
+                            them as a material. The silk webbing is a valuable resource that
+                            can be used in building and crafting. You expel the equivalent
+                            of 1 square yard of silk worth 1 uncommon barter.
+                        </td>
+                    </tr>
+                    <tr class="twistedLizardFeatures hide">
+                        <td>
+                            <strong>Wiry Hairs.</strong> Your body is covered in sensitive, wiry hairs. You gain
+                            tremorsense within 15 feet and a climb speed equal to your
+                            movement speed.
                         </td>
                     </tr>
                     <tr>
@@ -1696,7 +2770,7 @@
                                 <li><b>Psychokinesis: </b>You are naturally gifted in telekinesis. You gain the Far
                                     Hand talent. You can move twice as much weight with the talent, and you can
                                     leave objects suspended in mid-air from one round to another without them
-                                    falling to the ground. You can also use skills or tools in which youhave
+                                    falling to the ground. You can also use skills or tools in which you have
                                     proficiency with your telekinesis instead of your hands, changing Dexterity for
                                     Intelligence. You still need the proper tools available to use.</li>
                                 <li><b>Immortal Endurance: </b>Your mind can influence your body, and your body can
@@ -2283,7 +3357,7 @@
                     <tr>
                         <td>
                             <b><i>Dire Growth.</i> </b>You can manipulate the bones and keratin within your body. As
-                            a bonus action, you activate one of thefollowing abilities for one minute. Once you use
+                            a bonus action, you activate one of the following abilities for one minute. Once you use
                             this feature, you can’t use it again until you finish a short rest.
                             <ul>
                                 <li><b>Tail: </b>You sprout a prehensile tail from your spine that you can use like
@@ -2510,7 +3584,7 @@
                     <tr>
                         <td>
                             <b><i>Mandibles.</i> </b>You might look a bit frightening, but your mandibles have kept
-                            you alive. Your mandibles are a naturalweapon that are used to make melee attacks. If
+                            you alive. Your mandibles are a natural weapon that are used to make melee attacks. If
                             you hit with them, you deal 1d4 + your Dexterity modifier in piercing damage.
                         </td>
                     </tr>

@@ -1,280 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../pergasha.css">
-    <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="../pergasha.css">
+  <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico" />
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 
-    <title>Glyphs - Pergasha</title>
-  </head>
+  <title>Glyphs - Pergasha</title>
+</head>
 
-  <body onload="glyphsPage()">
+<body onload="glyphsPage()">
 
 
-    <header>
+  <header>
 
-      <nav class="navbar navbar-dark navbar-expand-xl">
-        <div class="navbar-brand  mr-4">
-          <a href="../pergasha.html">
-            <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
-          </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../pergasha.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Player Options
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="classes.html">Classes</a>
-                <a class="dropdown-item" href="races.html">Races</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="feats.html">Feats</a>
-                <a class="dropdown-item" href="infusions.html">Infusions</a>
-                <a class="dropdown-item" href="training.html">Training</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="psionics.html">Psionics</a>
-            </li>
-            <li class="nav-item dropdown active">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                References
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="characters.html">Characters</a>
-                <a class="dropdown-item" href="glyphs.html">Glyphs</a>
-                <a class="dropdown-item" href="items.html">Items</a>
-                <a class="dropdown-item" href="locations.html">Locations</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="rules.html">Rules</a>
-            </li>
-          </ul>
-          <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
-          <div class="d-none" id="notlogged">
-            <form class="form-inline">
-              <div class="form-group form-group-sm">
-                <input type="text" class="form-control form-control-sm mr-sm-2 login-input" id="username"
-                  placeholder="Username">
-                <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd"
-                  placeholder="Password">
-                <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
-              </div>
-            </form>
-            <input type="checkbox" id="showPwd" class="mr-1" autocomplete="off"><span id="show-pwd-label">Show
-              Password</span>
-          </div>
-        </div>
-      </nav>
-
-    </header>
-    <div class="d-flex flex-column" id="glyphs-container">
-      <h1 class="text-center mt-5 arjulian">GLYPHS</h1>
-
-      <div class="text-center" id="glyphnotlogged">
-        <h2>You need to be logged in to view this page.</h2>
+    <nav class="navbar navbar-dark navbar-expand-xl">
+      <div class="navbar-brand  mr-4">
+        <a href="../pergasha.html">
+          <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
+        </a>
       </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../pergasha.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Player Options
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="classes.html">Classes</a>
+              <a class="dropdown-item" href="races.html">Races</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="feats.html">Feats</a>
+              <a class="dropdown-item" href="infusions.html">Infusions</a>
+              <a class="dropdown-item" href="training.html">Training</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="psionics.html">Psionics</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              References
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="characters.html">Characters</a>
+              <a class="dropdown-item" href="glyphs.html">Glyphs</a>
+              <a class="dropdown-item" href="items.html">Items</a>
+              <a class="dropdown-item" href="locations.html">Locations</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rules.html">Rules</a>
+          </li>
+          <li class="nav-item align-self-center ml-3">
+            <a href="https://ko-fi.com/jesuisfrog"><span class="iconify" data-icon="simple-icons:kofi"
+                style="color: white;" data-width="40" data-height="40"></span></a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
+        <div class="d-none" id="notlogged">
+          <form class="form-inline">
+            <div class="form-group form-group-sm">
+              <input type="text" class="form-control form-control-sm mr-sm-2 login-input" id="username"
+                placeholder="Username">
+              <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd"
+                placeholder="Password">
+              <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
+            </div>
+          </form>
+          <input type="checkbox" id="showPwd" class="mr-1" autocomplete="off"><span id="show-pwd-label">Show
+            Password</span>
+        </div>
+      </div>
+    </nav>
 
-      <ul class="list-unstyled align-self-center" id="glyph-list">
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g02.png" class="mr-3">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">TRUTH</h5>
-            Found scarred onto a dead Direskin in the caravan wrecks, and on Lily the spiderling girl's pendant.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g01.png" class="mr-3">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">FIRE or LIGHTNING</h5>
-            Found on a stick with a mechanism that creates a spark.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g03.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">WATER</h5>
-            Seen on a fancy waterskin that refills everyday.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g04.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">LIGHT (?)</h5>
-            Seen on a 'lightstick', given to Kalar by the Seer of the Song of High Town.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g12.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">LIFE</h5>
-            Inside a weird poop-avocado pit, engraved on a crystal.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g15.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">SUSTENANCE (?)</h5>
-            Food or otherwise?
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g14.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">NOT(?)</h5>
-            We think it means ‘not’, or in a way it means the inverse of what follows it
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g11.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">PERIOD(?)</h5>
-            <b>Seen on a radio</b>. Seen in the middle of words as well as at the end of sentences.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g22.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1 glyph-title">ANIMAL</h5>
-            Non-person e.g. animal
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g06.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">Likely Definition: DEATH ???</h5>
-            Seen as part of a sentence/string of glyphs.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g07.png" class="mr-3  ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">SPEECH, SOUND</h5>
-            <b>Seen on a radio</b>. Vocalizing, talking Given to us by the Song of Hightown, has several varieties but
-            this one is more precise.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g08.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">UP / HIGH / ABOVE</h5>
-            <b>Seen on a radio</b>. Upward direction, high position, above
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g09.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">METAPHOR</h5>
-            <b>Seen on a radio</b>. “What follows is likely figurative or complex, likely not strictly literal”
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g18.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">KNOWLEDGE or INFORMATION</h5>
-            Seen on texts/scrolls containing knowledge, information. Shows up in historical records regarding gem
-            pergashans.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g05.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">Meaning Unknown</h5>
-            Seen as part of a sentence/string of glyphs.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g10.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">Meaning Unknown</h5>
-            Seen as part of a sentence/string of glyphs.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g13.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">Meaning Unknown</h5>
-            Seen as part of a sentence/string of glyphs.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g16.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">Meaning Unknown</h5>
-            Seen as part of a sentence/string of glyphs.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g17.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">Meaning Unknown</h5>
-            Seen as part of a sentence/string of glyphs.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g19.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">Meaning Unknown</h5>
-            Seen as part of a sentence/string of glyphs.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g20.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">Meaning Unknown</h5>
-            Seen as part of a sentence/string of glyphs.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g21.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1 glyph-title">Meaning Unknown</h5>
-            Seen as part of a sentence/string of glyphs.
-          </div>
-        </li>
-        <li class="media mb-5 pr-2 ">
-          <img src="../assets/glyphs/ancient_g23.png" class="mr-3 ">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1 glyph-title">Meaning Unknown</h5>
-            Seen as part of a sentence/string of glyphs.
-          </div>
-        </li>
+  </header>
+  <div class="d-flex flex-column" id="glyphs-container">
+    <h1 class="text-center mt-5 arjulian">GLYPHS</h1>
 
-      </ul>
+    <div class="text-center" id="glyphnotlogged">
+      <h2>You need to be logged in to view this page.</h2>
     </div>
 
+    <ul class="list-unstyled align-self-center" id="glyph-list">
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g02.png" class="mr-3">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">TRUTH</h5>
+          Found scarred onto a dead Direskin in the caravan wrecks, and on Lily the spiderling girl's pendant.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g01.png" class="mr-3">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">FIRE or LIGHTNING</h5>
+          Found on a stick with a mechanism that creates a spark.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g03.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">WATER</h5>
+          Seen on a fancy waterskin that refills everyday.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g04.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">LIGHT (?)</h5>
+          Seen on a 'lightstick', given to Kalar by the Seer of the Song of High Town.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g12.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">LIFE</h5>
+          Inside a weird poop-avocado pit, engraved on a crystal.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g15.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">SUSTENANCE (?)</h5>
+          Food or otherwise?
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g14.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">NOT(?)</h5>
+          We think it means ‘not’, or in a way it means the inverse of what follows it
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g11.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">PERIOD(?)</h5>
+          <b>Seen on a radio</b>. Seen in the middle of words as well as at the end of sentences.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g22.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1 glyph-title">ANIMAL</h5>
+          Non-person e.g. animal
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g06.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Likely Definition: DEATH ???</h5>
+          Seen as part of a sentence/string of glyphs.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g07.png" class="mr-3  ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">SPEECH, SOUND</h5>
+          <b>Seen on a radio</b>. Vocalizing, talking Given to us by the Song of Hightown, has several varieties but
+          this one is more precise.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g08.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">UP / HIGH / ABOVE</h5>
+          <b>Seen on a radio</b>. Upward direction, high position, above
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g09.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">METAPHOR</h5>
+          <b>Seen on a radio</b>. “What follows is likely figurative or complex, likely not strictly literal”
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g18.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">KNOWLEDGE or INFORMATION</h5>
+          Seen on texts/scrolls containing knowledge, information. Shows up in historical records regarding gem
+          pergashans.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g05.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Meaning Unknown</h5>
+          Seen as part of a sentence/string of glyphs.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g10.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Meaning Unknown</h5>
+          Seen as part of a sentence/string of glyphs.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g13.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Meaning Unknown</h5>
+          Seen as part of a sentence/string of glyphs.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g16.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Meaning Unknown</h5>
+          Seen as part of a sentence/string of glyphs.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g17.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Meaning Unknown</h5>
+          Seen as part of a sentence/string of glyphs.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g19.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Meaning Unknown</h5>
+          Seen as part of a sentence/string of glyphs.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g20.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Meaning Unknown</h5>
+          Seen as part of a sentence/string of glyphs.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g21.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1 glyph-title">Meaning Unknown</h5>
+          Seen as part of a sentence/string of glyphs.
+        </div>
+      </li>
+      <li class="media mb-5 pr-2 ">
+        <img src="../assets/glyphs/ancient_g23.png" class="mr-3 ">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1 glyph-title">Meaning Unknown</h5>
+          Seen as part of a sentence/string of glyphs.
+        </div>
+      </li>
+
+    </ul>
+  </div>
 
 
 
-    <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"></script>
-    <script src="../pergasha.js"></script>
 
-  </body>
+  <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="../pergasha.js"></script>
+
+</body>
 
 </html>

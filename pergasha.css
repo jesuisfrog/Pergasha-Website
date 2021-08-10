@@ -218,7 +218,7 @@ body{
     background-color: gray;
 }
 
-#race-list a:not(.active):hover {
+.race-list a:not(.active):hover {
     background-color: gray;
 }
 

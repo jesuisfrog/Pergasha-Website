@@ -1,666 +1,671 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="../pergasha.css">
-        <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../pergasha.css">
+    <link rel="shortcut icon" href="../assets/icons/pergasha-icon.ico" />
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 
 
-        <title>Training Points - Pergasha</title>
-    </head>
+    <title>Training Points - Pergasha</title>
+</head>
 
-    <body>
-        <!--  onload="trainingPage()" -->
+<body>
+    <!--  onload="trainingPage()" -->
 
-        <header>
+    <header>
 
-            <nav class="navbar navbar-dark navbar-expand-xl">
-                <div class="navbar-brand  mr-4">
-                    <a href="../pergasha.html">
-                        <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
-                    </a>
+        <nav class="navbar navbar-dark navbar-expand-xl">
+            <div class="navbar-brand  mr-4">
+                <a href="../pergasha.html">
+                    <img id="dreadful-logo" src="../assets/logos/dreadful_odysseys_pergasha_logo-dark_theme.png">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pergasha.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Player Options
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="classes.html">Classes</a>
+                            <a class="dropdown-item" href="races.html">Races</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="feats.html">Feats</a>
+                            <a class="dropdown-item" href="infusions.html">Infusions</a>
+                            <a class="dropdown-item" href="training.html">Training</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="psionics.html">Psionics</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            References
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="characters.html">Characters</a>
+                            <a class="dropdown-item" href="glyphs.html">Glyphs</a>
+                            <a class="dropdown-item" href="items.html">Items</a>
+                            <a class="dropdown-item" href="locations.html">Locations</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rules.html">Rules</a>
+                    </li>
+                    <li class="nav-item align-self-center ml-3">
+                        <a href="https://ko-fi.com/jesuisfrog"><span class="iconify" data-icon="simple-icons:kofi"
+                                style="color: white;" data-width="40" data-height="40"></span></a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
+                <div class="d-none" id="notlogged">
+                    <form class="form-inline">
+                        <div class="form-group form-group-sm">
+                            <input type="text" class="form-control form-control-sm mr-sm-2 login-input" id="username"
+                                placeholder="Username">
+                            <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd"
+                                placeholder="Password">
+                            <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
+                        </div>
+                    </form>
+                    <input type="checkbox" id="showPwd" class="mr-1" autocomplete="off"><span id="show-pwd-label">Show
+                        Password</span>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pergasha.html">Home</a>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="row mt-5 mb-5  flex-wrap justify-content-center container-fluid" id="training-container">
+        <div class="col  mb-5" id="training-info">
+            <table class="shadow" id="training-base">
+                <tbody>
+                    <tr>
+                        <th class="class-border border-0" colspan="6"></th>
+                    </tr>
+
+                    <tr>
+                        <td colspan="6" id='training-split' class="pb-3">
+                            <h5 class="arjulian">Earning Training Points</h5>
+                            <div>Training Points are earned by completing character arcs, pursuing side quests to
+                                uncover places of power or mysteries of Pergasha, exploring the world, and helping
+                                NPCs. These points are used to purchase a new feature such as feats and psionic
+                                abilities. Each player also receives one Training Point at 4th, 8th, 12th, 16th, and
+                                19th levels.</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="pt-3" colspan="6">
+                            <h5 class="arjulian">Spending Training Points</h5>
+                            <div>Training Points can be spent when leveling up, with special trainers, at places of
+                                power, or at the GM’s discretion.</div>
+                            <br>
+                            <h6>Training Point Costs</h6>
+                            <table class="table table-striped table-bordered">
+                                <th class="text-center">Features</th>
+                                <th class="text-center">Cost</th>
+                    </tr>
+                    <tr>
+                        <td class="text-center">Psionic Talent</td>
+                        <td class="text-center">1</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">Psionic Discipline</td>
+                        <td class="text-center">2</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">Increase Psi Points</td>
+                        <td class="text-center">3</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">Feat</td>
+                        <td class="text-center">4</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">Trained Ability</td>
+                        <td class="text-center">*</td>
+                    </tr>
+            </table>
+            <div><strong>Psionic Talent.</strong> Select one Psionic Talent. You now know this talent and can use it
+                as per standard rules.</div>
+            <div><strong>Psionic Discipline.</strong> Select one Psionic Discipline. You now know this discipline,
+                its focus, and all the abilities for this discipline.</div>
+            <div><strong>Increase Psi Points.</strong> Gain a number of Psi Points equal to 1d6 + your Intelligence
+                modifier. Your maximum increases, but your Psi Limit remains the same.</div>
+            <div><strong>Feat.</strong> Select one <a href="feats.html">feat</a> and gain its benefits.</div>
+            <div><strong>Trained Ability.</strong> Select an ability from the next section and gain its benefits.
+                You must have sufficient Training Points for the ability as well as meet any requirements.</div>
+            </td>
+            </tr>
+            <tr>
+                <th class="class-border border-0" colspan="6"></th>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="col d-flex flex-column" id="trained-abilities">
+            <ul class="pl-0 shadow">
+                <li class="list-group-item list-group-item-action d-flex justify-content-between  trained-title"
+                    id="trained-header">
+                    <h4><strong>Name</strong></h4>
+                    <h4><strong>Cost</strong></h4>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between  trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-1"
+                    id="trained-ability-1">
+                    <span class="class-nav-item">Brutal Warrior</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You gain the ability to
+                        utilize Brutalities (<i>see the Path of the Primal Warrior in the <a
+                                href="classes.html">class</a> section</i>). Select two Brutalities that you learn
+                        from the list. You can use a Brutality once per short rest.</p>
+                </div>
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-2"
+                    id="trained-ability-2">
+                    <span class="class-nav-item">Consumptive Power</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-2" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You gain the ability to
+                        sacrifice your physical durability in exchange for psionic power. When activating a psionic
+                        discipline, you can pay its Psi Point cost with your hit points instead. Your current hit
+                        points are reduced by the number of hit points you spend. This reduction cannot be lessened
+                        in any way.<br>&nbsp;&nbsp;&nbsp;&nbsp;Once you use this feature, you cannot use it again
+                        until you finish a short rest.</p>
+                </div>
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-3"
+                    id="trained-ability-3">
+                    <span class="class-nav-item">Convergent Future</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">2</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-3" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Training in any Awakened
+                            Discipline</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can peer through possible futures and
+                        pull one of them into events around you, ensuring a particular outcome. When you or a
+                        creature you can see within 60 feet of you makes an attack roll, an ability check, or a
+                        saving throw, you can use your reaction to ignore the die roll and decide whether the number
+                        rolled is the minimum needed to succeed or one less than that number (your
+                        choice).<br>&nbsp;&nbsp;&nbsp;&nbsp;When you use this feature, you gain one level of
+                        exhaustion. Only by finishing a long rest can you remove a level of exhaustion gained in
+                        this way.</p>
+                </div>
+
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-4"
+                    id="trained-ability-4">
+                    <span class="class-nav-item">Energy Transmutation</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-4" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can exert yourself
+                        to alter your psionic energy. When
+                        you use a psionic discipline or talent that deals psychic damage,
+                        you can spend 1 Psi Point to transmute that energy into force
+                        damage.<br>&nbsp;&nbsp;&nbsp;&nbsp;You cannot spend this point if doing so would increase
+                        the
+                        cost above your Psi Limit, and this cost cannot be reduced in
+                        any way.</p>
+                </div>
+
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-5"
+                    id="trained-ability-5">
+                    <span class="class-nav-item">Force Shield</span><br>
+                    <span class="class-nav-item badge badge-secondary badge-pill">2</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-5" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Training in any Far Hand
+                            Discipline</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can overload your psychic focus to
+                        create a protective barrier. As a reaction against an incoming non-psionic attack (even if
+                        you are surprised), you create an invisible globe with radius of 15 feet centered on you.
+                        Nothing physical can pass the barrier until your next turn including attacks or creatures.
+                        Projectiles stop in the middle of the air and fall to the ground, and any creatures Large or
+                        smaller caught in or crossing the barrier are pushed back 5 feet and knocked
+                        prone.<br>&nbsp;&nbsp;&nbsp;&nbsp;Your psychic focus immediately ends if it’s active, and
+                        you can’t use it until you finish a short or long rest. You cannot use this feature if you
+                        can’t use your psychic focus.</p>
+                </div>
+
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-6"
+                    id="trained-ability-6">
+                    <span class="class-nav-item">Health Surge</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-6" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can draw on your
+                        psychic focus to escape great harm.
+                        As a reaction when you take damage, you can halve that
+                        damage against you.<br>&nbsp;&nbsp;&nbsp;&nbsp;Your psychic focus immediately ends if it’s
+                        active, and you
+                        can’t use it until you finish a short or long rest. You cannot use
+                        this feature if you can’t use your psychic focus.</p>
+                </div>
+
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-7"
+                    id="trained-ability-7">
+                    <span class="class-nav-item">Immortal Will</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-7" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Psi Limit 5</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can draw on
+                        your reserves of psionic power to pull
+                        yourself from death’s door. At the end of your turn while at 0
+                        hit points, you can spend 5 psi points to immediately regain a
+                        number of hit points equal to your level + your Constitution
+                        modifier. You do not suffer exhaustion from dropping to 0 hit
+                        points.<br>&nbsp;&nbsp;&nbsp;&nbsp;Once you use this ability, you cannot do so again until
+                        you
+                        finish a full rest.</p>
+                </div>
+
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-8"
+                    id="trained-ability-8">
+                    <span class="class-nav-item">Inspired Will</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-8" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can draw on your
+                        Inspiration Points to refill your
+                        psionic reservoir. Using a bonus action and expending one
+                        Inspiration Point recovers Psi Points equal to your Intelligence
+                        modifier (minimum 1).<br>&nbsp;&nbsp;&nbsp;&nbsp;Once you use this ability, you cannot do so
+                        again until you
+                        finish a short rest.</p>
+                </div>
+
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-9"
+                    id="trained-ability-9">
+                    <span class="class-nav-item">Ki Artistry</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-9" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Ki Points</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You have carefully
+                        honed your spiritual prowess and unlocked new skills within yourself. When you train in Ki
+                        Artistry, you can select one of the following abilities. You may take this training multiple
+                        times to select new features from this list.
+                    <ul class="pr-4">
+                        <li class="internal-list"><b>Ki Anchor.</b> You can use your ki to create anchors that link
+                            to your mind and spirit. As an action, you can spend 2 ki points to create an invisible,
+                            psychic anchor in a shadowed space that you can see within 60 feet of you. This anchor
+                            remains for up to 1 hour. It dissipates if there are no shadows over it, you are
+                            incapacitated, you summon another anchor, or you dismiss it with a free action. While
+                            the anchor is active and within 120 feet of you, you can use a bonus action and 1 ki
+                            point to jump your mind, spirit and body to it. You teleport to that location so long as
+                            it is unoccupied, and you can fit. If you cannot, the ability does not activate and you
+                            do not expend the ki, but the bonus action is lost.<br>&nbsp;&nbsp;&nbsp;&nbsp;You can
+                            bring a willing creature you touch with you for 1 additional ki point per creature
+                            (maximum 2). The creature(s) must be able to fit in the area adjacent to the anchor. If
+                            any creature cannot fit, the ability does not activate.<br>&nbsp;&nbsp;&nbsp;&nbsp;The
+                            anchor is invisible to normal vision, but it does exude an aura for those that look for
+                            them. The aura mimics your own and is as unique as a fingerprint.</li>
+                        <li class="internal-list"><b>Ki Completion.</b> Select two ki features to learn that you do
+                            not already know: Distant Eye, Ki-Fueled Strike, Patient Defense, and Step of the Wind.
                         </li>
-                        <li class="nav-item dropdown active">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Player Options
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="classes.html">Classes</a>
-                                <a class="dropdown-item" href="races.html">Races</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="feats.html">Feats</a>
-                                <a class="dropdown-item" href="infusions.html">Infusions</a>
-                                <a class="dropdown-item" href="training.html">Training</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="psionics.html">Psionics</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                References
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="characters.html">Characters</a>
-                                <a class="dropdown-item" href="glyphs.html">Glyphs</a>
-                                <a class="dropdown-item" href="items.html">Items</a>
-                                <a class="dropdown-item" href="locations.html">Locations</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="rules.html">Rules</a>
-                        </li>
+                        <li class="internal-list"><b>Ki Spear.</b> You use your spiritual and psychic energy to
+                            shape your own blood into a spear. As a bonus action, you can spend 1 ki point and take
+                            1 damage to hurl your ki-infused blood-spear at a foe in a burst of telekinetic power.
+                            You aim your spear at a creature within 30 feet of you and perform a ranged attack. On a
+                            hit, you deal 1d8 piercing damage and the creature must make a Constitution saving
+                            throw. On a fail, the spear leaves a hole in the target and it gains the Bleed property.
+                            The damage of this ability increases to 2d8 at 10th level.</li>
+                        <li class="internal-list"><b>Ki Whip.</b> You can spend 2 ki points as an action to create a
+                            whip of telekinetic energy that shoves and pulls a creature to unbalance it. A creature
+                            that you can see that is within 30 feet of you must make a Dexterity saving throw. On a
+                            failed save, the creature takes 2d8 force damage, plus an extra 1d8 force damage for
+                            each additional ki point you spend, and you canpull a creature up to one size category
+                            larger than yourself up to 10 feet closer to you. If extra ki points were spent on this
+                            ability, you can pull the creature an extra 5 feet (25 feet max). On a successful save,
+                            the creature takes half as much damage, and you do not pull it.</li>
                     </ul>
-                    <button type="button" class="btn btn-warning d-none" id="logoutbtn">Logout</button>
-                    <div class="d-none" id="notlogged">
-                        <form class="form-inline">
-                            <div class="form-group form-group-sm">
-                                <input type="text" class="form-control form-control-sm mr-sm-2 login-input"
-                                    id="username" placeholder="Username">
-                                <input type="password" class="form-control form-control-sm mr-sm-2 login-input" id="pwd"
-                                    placeholder="Password">
-                                <button type="button" class="btn btn-warning btn-sm" id="loginbtn">Login</button>
-                            </div>
-                        </form>
-                        <input type="checkbox" id="showPwd" class="mr-1" autocomplete="off"><span
-                            id="show-pwd-label">Show Password</span>
-                    </div>
+                    </p>
                 </div>
-            </nav>
 
-        </header>
 
-        <div class="row mt-5 mb-5  flex-wrap justify-content-center container-fluid" id="training-container">
-            <div class="col  mb-5" id="training-info">
-                <table class="shadow" id="training-base">
-                    <tbody>
-                        <tr>
-                            <th class="class-border border-0" colspan="6"></th>
-                        </tr>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-10"
+                    id="trained-ability-10">
+                    <span class="class-nav-item">Martial Prowess</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-10" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Action Surge and Second
+                            Wind</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You are a master at the art of battle and can
+                        tap deep into your fighting spirit to enhance yourself. When you train in Martial Prowess,
+                        you can select one of the following abilities. You may take this training multiple times to
+                        select new features from this list.
+                    <ul class="pr-4 pb-4">
+                        <li class="internal-list"><b>Improved Second Wind. </b>When you use Second Wind, you may
+                            roll 2d10 and take the highest between the two results.</li>
+                        <li class="internal-list"><b>Improved Action Surge. </b>When you use an Action Surge, you
+                            may also gain temporary hit points equal to twice your Constitution modifier.</li>
+                        <li class="internal-list"><b>Inspiring Surge. </b>You inspire your allies around you with
+                            your martial prowess. When you use an Action Surge, any ally within 10 feet of and can
+                            see you gains an Inspiration Point.</li>
+                    </ul>
+                    </p>
+                </div>
 
-                        <tr>
-                            <td colspan="6" id='training-split' class="pb-3">
-                                <h5 class="arjulian">Earning Training Points</h5>
-                                <div>Training Points are earned by completing character arcs, pursuing side quests to
-                                    uncover places of power or mysteries of Pergasha, exploring the world, and helping
-                                    NPCs. These points are used to purchase a new feature such as feats and psionic
-                                    abilities. Each player also receives one Training Point at 4th, 8th, 12th, 16th, and
-                                    19th levels.</div>
-                            </td>
-                        </tr>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-11"
+                    id="trained-ability-11">
+                    <span class="class-nav-item">Martial Training</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-11" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You have honed your
+                        martial skills and can now perform special combat maneuvers. You learn <b>one maneuver</b>
+                        of your choice from the Battle Master archetype. If the maneuver requires a saving throw,
+                        the DC is equal to 8 + your proficiency bonus + your Strength or Dexterity modifier (your
+                        choice). Additionally, you gain <b>1 superiority die</b> (if you don't already have
+                        superiority dice, it is a d6). This die is used to fuel your maneuvers. It is expended when
+                        you use it, and is regained when you finish a short or long rest. <b>You may select this
+                            training ability more than once.</b></p>
+                </div>
 
-                        <tr>
-                            <td class="pt-3" colspan="6">
-                                <h5 class="arjulian">Spending Training Points</h5>
-                                <div>Training Points can be spent when leveling up, with special trainers, at places of
-                                    power, or at the GM’s discretion.</div>
-                                <br>
-                                <h6>Training Point Costs</h6>
-                                <table class="table table-striped table-bordered">
-                                    <th class="text-center">Features</th>
-                                    <th class="text-center">Cost</th>
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-12"
+                    id="trained-ability-12">
+                    <span class="class-nav-item">Mounted Combat</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">3</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-12" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Fine quality saddle and a
+                            mount</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You have trained in the art of mounted combat.
+                        Your mount shares your initiative. While mounted, you use its movement speed in place of
+                        your own, and you can comfortably attack with ranged or melee weapons while mounted and
+                        moving. In addition, you gain the following benefits:
+                    <ul class="pr-4 pb-4">
+                        <li class="internal-list"><b>Quick Mount. </b>Mounting or dismounting a creature costs you
+                            only 5 feet of movement rather than half your speed.</li>
+                        <li class="internal-list"><b>One with the Saddle. </b>You have advantage on saving throws
+                            made to avoid falling off your mount. If you fall off your mount and descend no more
+                            than 10 feet, you can land on your feet if you’re not incapacitated. If the fall is
+                            greater than 10 feet, you have advantage on any saving throws or skill checks made to
+                            avoid falling prone, but you will still take falling damage.</li>
+                        <li class="internal-list"><b>Mounted Defender. </b>You can fend off strikes directed at you,
+                            your mount, or other creatures nearby. If you or a creature you can see within 5 feet of
+                            you is hit by an attack, you can roll 1d8 as a reaction if you’re wielding a melee
+                            weapon or a shield. Roll the die, and add the number rolled to the target's AC against
+                            that attack. If the attack still hits, the target has resistance against the attack’s
+                            damage.<br>&nbsp;&nbsp;&nbsp;&nbsp;You can use this ability a number of times equal to
+                            your Constitution modifier (minimum of once), and you regain all expended uses of it
+                            when you finish a long rest.</li>
+                        <li class="internal-list"><b>Mounted Strike. </b>When you are riding upon a creature capable
+                            of movement at a speed 40 feet or faster, you can use the momentum of your mount to deal
+                            one powerful strike at a target that is not prone or smaller than you. If the weapon
+                            also has reach, the prone condition or size difference doesn’t prevent your mounted
+                            strike.<br>&nbsp;&nbsp;&nbsp;&nbsp;You must command your mount to Dash in a straight
+                            line through the position of your target. When you enter reach, you can spend one of
+                            your attacks to make a special melee attack. If it hits, the target suffers
+                            susceptibility (1d10) to the attack damage.<br>&nbsp;&nbsp;&nbsp;&nbsp;You can then
+                            continue the movement of your mount and you do not provoke an opportunity attack if you
+                            leave the reach of your target unless your special melee attack missed.</li>
+                    </ul>
+                    </p>
+                </div>
+
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-13"
+                    id="trained-ability-13">
+                    <span class="class-nav-item">Mystical Recovery</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-13" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can draw vigor from
+                        the psi energy you use to power your psionic disciplines. Immediately after you spend Psi
+                        Points on a psionic discipline, you can take a bonus action to recover hit points equal to
+                        the number of Psi Points you spent.<br>&nbsp;&nbsp;&nbsp;&nbsp;You must finish a short rest
+                        to use this ability again.</p>
+                </div>
+
+
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-14"
+                    id="trained-ability-14">
+                    <span class="class-nav-item">Power Drain</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-14" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can absorb the
+                        energy within a mysterium to invigorate your mind. By spending a bonus action, you can break
+                        down the energy within a mysterium and gain a number of Psi Points according to the rarity
+                        of the item (see below). The mysterium is rendered inert and falls apart.<br>
+                    <h5 class="text-center">MYSTERIUM - PSI POINT EXCHANGE RATE</h5>
+                    <table class="table table-striped table-bordered p-1">
+                        <th class="text-center">Rarity</th>
+                        <th class="text-center">Psi Points</th>
                         </tr>
                         <tr>
-                            <td class="text-center">Psionic Talent</td>
-                            <td class="text-center">1</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">Psionic Discipline</td>
+                            <td class="text-center">Common</td>
                             <td class="text-center">2</td>
                         </tr>
                         <tr>
-                            <td class="text-center">Increase Psi Points</td>
+                            <td class="text-center">Uncommon</td>
                             <td class="text-center">3</td>
                         </tr>
                         <tr>
-                            <td class="text-center">Feat</td>
+                            <td class="text-center">Rare</td>
                             <td class="text-center">4</td>
                         </tr>
                         <tr>
-                            <td class="text-center">Trained Ability</td>
-                            <td class="text-center">*</td>
+                            <td class="text-center">Very Rare</td>
+                            <td class="text-center">5</td>
                         </tr>
-                </table>
-                <div><strong>Psionic Talent.</strong> Select one Psionic Talent. You now know this talent and can use it
-                    as per standard rules.</div>
-                <div><strong>Psionic Discipline.</strong> Select one Psionic Discipline. You now know this discipline,
-                    its focus, and all the abilities for this discipline.</div>
-                <div><strong>Increase Psi Points.</strong> Gain a number of Psi Points equal to 1d6 + your Intelligence
-                    modifier. Your maximum increases, but your Psi Limit remains the same.</div>
-                <div><strong>Feat.</strong> Select one <a href="feats.html">feat</a> and gain its benefits.</div>
-                <div><strong>Trained Ability.</strong> Select an ability from the next section and gain its benefits.
-                    You must have sufficient Training Points for the ability as well as meet any requirements.</div>
-                </td>
-                </tr>
-                <tr>
-                    <th class="class-border border-0" colspan="6"></th>
-                </tr>
-                </tbody>
-                </table>
-            </div>
-            <div class="col d-flex flex-column" id="trained-abilities">
-                <ul class="pl-0 shadow">
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained-title"
-                        id="trained-header">
-                        <h4><strong>Name</strong></h4>
-                        <h4><strong>Cost</strong></h4>
-                    </li>
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between  trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-1"
-                        id="trained-ability-1">
-                        <span class="class-nav-item">Brutal Warrior</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-1" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You gain the ability to
-                            utilize Brutalities (<i>see the Path of the Primal Warrior in the <a
-                                    href="classes.html">class</a> section</i>). Select two Brutalities that you learn
-                            from the list. You can use a Brutality once per short rest.</p>
-                    </div>
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-2"
-                        id="trained-ability-2">
-                        <span class="class-nav-item">Consumptive Power</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-2" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You gain the ability to
-                            sacrifice your physical durability in exchange for psionic power. When activating a psionic
-                            discipline, you can pay its Psi Point cost with your hit points instead. Your current hit
-                            points are reduced by the number of hit points you spend. This reduction cannot be lessened
-                            in any way.<br>&nbsp;&nbsp;&nbsp;&nbsp;Once you use this feature, you cannot use it again
-                            until you finish a short rest.</p>
-                    </div>
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-3"
-                        id="trained-ability-3">
-                        <span class="class-nav-item">Convergent Future</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">2</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-3" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Training in any Awakened
-                                Discipline</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can peer through possible futures and
-                            pull one of them into events around you, ensuring a particular outcome. When you or a
-                            creature you can see within 60 feet of you makes an attack roll, an ability check, or a
-                            saving throw, you can use your reaction to ignore the die roll and decide whether the number
-                            rolled is the minimum needed to succeed or one less than that number (your
-                            choice).<br>&nbsp;&nbsp;&nbsp;&nbsp;When you use this feature, you gain one level of
-                            exhaustion. Only by finishing a long rest can you remove a level of exhaustion gained in
-                            this way.</p>
-                    </div>
+                    </table>
+                    </p>
+                </div>
 
 
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-4"
-                        id="trained-ability-4">
-                        <span class="class-nav-item">Energy Transmutation</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-4" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can exert yourself
-                            to alter your psionic energy. When
-                            you use a psionic discipline or talent that deals psychic damage,
-                            you can spend 1 Psi Point to transmute that energy into force
-                            damage.<br>&nbsp;&nbsp;&nbsp;&nbsp;You cannot spend this point if doing so would increase
-                            the
-                            cost above your Psi Limit, and this cost cannot be reduced in
-                            any way.</p>
-                    </div>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-15"
+                    id="trained-ability-15">
+                    <span class="class-nav-item">Psi-Surge</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">2</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-15" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can overload your
+                        psychic focus to batter down an opponent’s defenses. You can impose disadvantage on a
+                        target’s saving throw against a discipline or talent you use but at the cost of using your
+                        psychic focus.<br>&nbsp;&nbsp;&nbsp;&nbsp;Your psychic focus immediately ends if it’s
+                        active, and you can’t use it until you finish a short or long rest. You cannot use this
+                        feature if you can’t use your psychic focus.</p>
+                </div>
 
 
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-5"
-                        id="trained-ability-5">
-                        <span class="class-nav-item">Force Shield</span><br>
-                        <span class="class-nav-item badge badge-secondary badge-pill">2</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-5" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Training in any Far Hand
-                                Discipline</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can overload your psychic focus to
-                            create a protective barrier. As a reaction against an incoming non-psionic attack (even if
-                            you are surprised), you create an invisible globe with radius of 15 feet centered on you.
-                            Nothing physical can pass the barrier until your next turn including attacks or creatures.
-                            Projectiles stop in the middle of the air and fall to the ground, and any creatures Large or
-                            smaller caught in or crossing the barrier are pushed back 5 feet and knocked
-                            prone.<br>&nbsp;&nbsp;&nbsp;&nbsp;Your psychic focus immediately ends if it’s active, and
-                            you can’t use it until you finish a short or long rest. You cannot use this feature if you
-                            can’t use your psychic focus.</p>
-                    </div>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-16"
+                    id="trained-ability-16">
+                    <span class="class-nav-item">Psychic Inquisition</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-16" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Telepathy</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You know when a
+                        creature communicating with you via telepathy is lying as well as a simple description of
+                        its mood or disposition.</p>
+                </div>
 
 
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-6"
-                        id="trained-ability-6">
-                        <span class="class-nav-item">Health Surge</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-6" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can draw on your
-                            psychic focus to escape great harm.
-                            As a reaction when you take damage, you can halve that
-                            damage against you.<br>&nbsp;&nbsp;&nbsp;&nbsp;Your psychic focus immediately ends if it’s
-                            active, and you
-                            can’t use it until you finish a short or long rest. You cannot use
-                            this feature if you can’t use your psychic focus.</p>
-                    </div>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-17"
+                    id="trained-ability-17">
+                    <span class="class-nav-item">RAGE!</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-17" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Rage</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You have tapped deep
+                        within your primal strength to enhance your Rage ability. When you train in RAGE!, you can
+                        select one of the following abilities. You may take this training multiple times to select
+                        new features from this list.
+                    <ul class="pr-4 pb-4">
+                        <li class="internal-list"><b>Bloodletting. </b>You sacrifice your own blood to fuel your
+                            rage ability even when you are not in active battle. When you enter rage, you may elect
+                            to trigger bloodletting. Your rage will endure for its maximum duration so long as you
+                            are conscious. You take 1 point of damage at the start of each turn after entering rage
+                            even if you take damage in a fight. This damage cannot be reduced or mitigated in any
+                            way, and will not stop until your rage is complete, you deactivate your rage, or you are
+                            incapacitated in a way that ends your rage prematurely.</li>
+                        <li class="internal-list"><b>Terrifying. </b>You let out a terrifying roar as you tap into
+                            your rage. When you enter rage, you may elect to trigger this ability. All creatures
+                            that can hear your roar in a 30-foot cone from you suffer disadvantage on their next
+                            attack.</li>
+                        <li class="internal-list"><b>Empowering. </b>A surge of lifeforce hits you when you enter
+                            rage. You gain temporary hit points equal to your level + your Constitution modifier. If
+                            any temporary hit points remain when your rage ends, they dissipate.</li>
+                    </ul>
+                    </p>
+                </div>
 
 
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-7"
-                        id="trained-ability-7">
-                        <span class="class-nav-item">Immortal Will</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-7" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Psi Limit 5</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can draw on
-                            your reserves of psionic power to pull
-                            yourself from death’s door. At the end of your turn while at 0
-                            hit points, you can spend 5 psi points to immediately regain a
-                            number of hit points equal to your level + your Constitution
-                            modifier. You do not suffer exhaustion from dropping to 0 hit
-                            points.<br>&nbsp;&nbsp;&nbsp;&nbsp;Once you use this ability, you cannot do so again until
-                            you
-                            finish a full rest.</p>
-                    </div>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-18"
+                    id="trained-ability-18">
+                    <span class="class-nav-item">Soul Bind</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">2*</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-18" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You gain the ability to
+                        bind your soul to another. Select a willing creature with a minimum Intelligence of 6 to
+                        share a bond. You must spend a short rest in meditation with the creature while holding
+                        hands or otherwise touching. At the end of this meditation, you will always be aware of each
+                        other’s location, well-being, and can telepathically communicate with each other regardless
+                        of distance. If bonded souls are within 120 feet of each other, they can freely share
+                        Inspiration Points.<br>&nbsp;&nbsp;&nbsp;&nbsp;If one of you perishes, the bond is broken,
+                        and the other is aware. A fragment of the deceased’s soul will always be within the mind of
+                        the other, and if the living partner does not have Fate, it gains
+                        it.<br>&nbsp;&nbsp;&nbsp;&nbsp;You can only Soul Bind with one creature at a time. If you
+                        Soul Bind with another creature before your first partner dies, you suffer one point of
+                        exhaustion.<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>*. The Training Point cost for this feature can be
+                            shared between two individuals, each one spending 1 TP.</i></p>
+                </div>
 
 
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-8"
-                        id="trained-ability-8">
-                        <span class="class-nav-item">Inspired Will</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-8" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can draw on your
-                            Inspiration Points to refill your
-                            psionic reservoir. Using a bonus action and expending one
-                            Inspiration Point recovers Psi Points equal to your Intelligence
-                            modifier (minimum 1).<br>&nbsp;&nbsp;&nbsp;&nbsp;Once you use this ability, you cannot do so
-                            again until you
-                            finish a short rest.</p>
-                    </div>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-19"
+                    id="trained-ability-19">
+                    <span class="class-nav-item">Strength of Mind</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-19" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Proficiency in Wisdom saving
+                            throws</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;Even the simplest psionic technique requires a
+                        deep understanding of how psionic energy can augment mind and body. You can replace your
+                        proficiency in Wisdom saving throws with Strength, Dexterity, or Constitution whenever you
+                        finish a short or long rest. You gain proficiency in saves using that ability instead, and
+                        this change lasts until you finish your next short or long rest.</p>
+                </div>
 
 
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-9"
-                        id="trained-ability-9">
-                        <span class="class-nav-item">Ki Artistry</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-9" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Ki Points</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You have carefully
-                            honed your spiritual prowess and unlocked new skills within yourself. When you train in Ki
-                            Artistry, you can select one of the following abilities. You may take this training multiple
-                            times to select new features from this list.
-                        <ul class="pr-4">
-                            <li class="internal-list"><b>Ki Anchor.</b> You can use your ki to create anchors that link
-                                to your mind and spirit. As an action, you can spend 2 ki points to create an invisible,
-                                psychic anchor in a shadowed space that you can see within 60 feet of you. This anchor
-                                remains for up to 1 hour. It dissipates if there are no shadows over it, you are
-                                incapacitated, you summon another anchor, or you dismiss it with a free action. While
-                                the anchor is active and within 120 feet of you, you can use a bonus action and 1 ki
-                                point to jump your mind, spirit and body to it. You teleport to that location so long as
-                                it is unoccupied, and you can fit. If you cannot, the ability does not activate and you
-                                do not expend the ki, but the bonus action is lost.<br>&nbsp;&nbsp;&nbsp;&nbsp;You can
-                                bring a willing creature you touch with you for 1 additional ki point per creature
-                                (maximum 2). The creature(s) must be able to fit in the area adjacent to the anchor. If
-                                any creature cannot fit, the ability does not activate.<br>&nbsp;&nbsp;&nbsp;&nbsp;The
-                                anchor is invisible to normal vision, but it does exude an aura for those that look for
-                                them. The aura mimics your own and is as unique as a fingerprint.</li>
-                            <li class="internal-list"><b>Ki Completion.</b> Select two ki features to learn that you do
-                                not already know: Distant Eye, Ki-Fueled Strike, Patient Defense, and Step of the Wind.
-                            </li>
-                            <li class="internal-list"><b>Ki Spear.</b> You use your spiritual and psychic energy to
-                                shape your own blood into a spear. As a bonus action, you can spend 1 ki point and take
-                                1 damage to hurl your ki-infused blood-spear at a foe in a burst of telekinetic power.
-                                You aim your spear at a creature within 30 feet of you and perform a ranged attack. On a
-                                hit, you deal 1d8 piercing damage and the creature must make a Constitution saving
-                                throw. On a fail, the spear leaves a hole in the target and it gains the Bleed property.
-                                The damage of this ability increases to 2d8 at 10th level.</li>
-                            <li class="internal-list"><b>Ki Whip.</b> You can spend 2 ki points as an action to create a
-                                whip of telekinetic energy that shoves and pulls a creature to unbalance it. A creature
-                                that you can see that is within 30 feet of you must make a Dexterity saving throw. On a
-                                failed save, the creature takes 2d8 force damage, plus an extra 1d8 force damage for
-                                each additional ki point you spend, and you canpull a creature up to one size category
-                                larger than yourself up to 10 feet closer to you. If extra ki points were spent on this
-                                ability, you can pull the creature an extra 5 feet (25 feet max). On a successful save,
-                                the creature takes half as much damage, and you do not pull it.</li>
-                        </ul>
-                        </p>
-                    </div>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-20"
+                    id="trained-ability-20">
+                    <span class="class-nav-item">Survivalist</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-20" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Ranger's Survival
+                            Instincts</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You are a ranger without equal and find
+                        more comfort in the wilderness than in a town or village. Select one Survival Instinct that
+                        you do not currently know. You may take this training multiple times and select a different
+                        Survival Instinct each time.</p>
+                </div>
 
 
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-10"
-                        id="trained-ability-10">
-                        <span class="class-nav-item">Martial Prowess</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-10" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Action Surge and Second
-                                Wind</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You are a master at the art of battle and can
-                            tap deep into your fighting spirit to enhance yourself. When you train in Martial Prowess,
-                            you can select one of the following abilities. You may take this training multiple times to
-                            select new features from this list.
-                        <ul class="pr-4 pb-4">
-                            <li class="internal-list"><b>Improved Second Wind. </b>When you use Second Wind, you may
-                                roll 2d10 and take the highest between the two results.</li>
-                            <li class="internal-list"><b>Improved Action Surge. </b>When you use an Action Surge, you
-                                may also gain temporary hit points equal to twice your Constitution modifier.</li>
-                            <li class="internal-list"><b>Inspiring Surge. </b>You inspire your allies around you with
-                                your martial prowess. When you use an Action Surge, any ally within 10 feet of and can
-                                see you gains an Inspiration Point.</li>
-                        </ul>
-                        </p>
-                    </div>
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-11"
-                        id="trained-ability-11">
-                        <span class="class-nav-item">Martial Training</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-11" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You have honed your
-                            martial skills and can now perform special combat maneuvers. You learn <b>one maneuver</b>
-                            of your choice from the Battle Master archetype. If the maneuver requires a saving throw,
-                            the DC is equal to 8 + your proficiency bonus + your Strength or Dexterity modifier (your
-                            choice). Additionally, you gain <b>1 superiority die</b> (if you don't already have
-                            superiority dice, it is a d6). This die is used to fuel your maneuvers. It is expended when
-                            you use it, and is regained when you finish a short or long rest. <b>You may select this
-                                training ability more than once.</b></p>
-                    </div>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-21"
+                    id="trained-ability-21">
+                    <span class="class-nav-item">Talented Rapscallion</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">1</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-21" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: Sneak Attack</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You are no
+                        simple thief, scamp, or scoundrel. You are not only excellent at your own craft, you are
+                        clever enough to borrow good ideas from others in your line of work. When you train in
+                        Talented Rapscallion, you can select one of the following abilities. You may take this
+                        training multiple times to select new features from this list.
+                    <ul class="pr-4 pb-4">
+                        <li class="internal-list"><b>Trickster. </b>You unlock the secret talent, “Mind Sliver.”
+                        </li>
+                        <li class="internal-list"><b>Enterprising. </b>You know how to get a drop on your enemies.
+                            You have advantage on weapon attack rolls against any creature that hasn’t taken a turn
+                            in the combat yet. In addition, any hit with a weapon you score against a creature that
+                            is surprised is a critical hit.</li>
+                        <li class="internal-list"><b>Inquisitive. </b>You have a talent for picking out lies.
+                            Whenever you make a Wisdom (Insight) check to determine whether a creature is lying,
+                            treat a roll of 7 or lower on the d20 as an 8.<br>&nbsp;&nbsp;&nbsp;&nbsp;You also gain
+                            the ability to decipher an opponent's tactics and develop a counter to them. As a bonus
+                            action, you can make a Wisdom (Insight) check against a creature you can seethat isn’t
+                            incapacitated, contested by the target's Charisma (Deception) check. If you succeed, you
+                            can use your Sneak Attack against that target even if you don’t have advantage on the
+                            attack roll, but not if you have disadvantage on it.<br>&nbsp;&nbsp;&nbsp;&nbsp;This
+                            benefit lasts for 1 minute or until you successfully use this feature against a
+                            different target.</li>
+                    </ul>
+                    </p>
+                </div>
 
 
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-12"
-                        id="trained-ability-12">
-                        <span class="class-nav-item">Mounted Combat</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">3</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-12" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Fine quality saddle and a
-                                mount</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You have trained in the art of mounted combat.
-                            Your mount shares your initiative. While mounted, you use its movement speed in place of
-                            your own, and you can comfortably attack with ranged or melee weapons while mounted and
-                            moving. In addition, you gain the following benefits:
-                        <ul class="pr-4 pb-4">
-                            <li class="internal-list"><b>Quick Mount. </b>Mounting or dismounting a creature costs you
-                                only 5 feet of movement rather than half your speed.</li>
-                            <li class="internal-list"><b>One with the Saddle. </b>You have advantage on saving throws
-                                made to avoid falling off your mount. If you fall off your mount and descend no more
-                                than 10 feet, you can land on your feet if you’re not incapacitated. If the fall is
-                                greater than 10 feet, you have advantage on any saving throws or skill checks made to
-                                avoid falling prone, but you will still take falling damage.</li>
-                            <li class="internal-list"><b>Mounted Defender. </b>You can fend off strikes directed at you,
-                                your mount, or other creatures nearby. If you or a creature you can see within 5 feet of
-                                you is hit by an attack, you can roll 1d8 as a reaction if you’re wielding a melee
-                                weapon or a shield. Roll the die, and add the number rolled to the target's AC against
-                                that attack. If the attack still hits, the target has resistance against the attack’s
-                                damage.<br>&nbsp;&nbsp;&nbsp;&nbsp;You can use this ability a number of times equal to
-                                your Constitution modifier (minimum of once), and you regain all expended uses of it
-                                when you finish a long rest.</li>
-                            <li class="internal-list"><b>Mounted Strike. </b>When you are riding upon a creature capable
-                                of movement at a speed 40 feet or faster, you can use the momentum of your mount to deal
-                                one powerful strike at a target that is not prone or smaller than you. If the weapon
-                                also has reach, the prone condition or size difference doesn’t prevent your mounted
-                                strike.<br>&nbsp;&nbsp;&nbsp;&nbsp;You must command your mount to Dash in a straight
-                                line through the position of your target. When you enter reach, you can spend one of
-                                your attacks to make a special melee attack. If it hits, the target suffers
-                                susceptibility (1d10) to the attack damage.<br>&nbsp;&nbsp;&nbsp;&nbsp;You can then
-                                continue the movement of your mount and you do not provoke an opportunity attack if you
-                                leave the reach of your target unless your special melee attack missed.</li>
-                        </ul>
-                        </p>
-                    </div>
-
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-13"
-                        id="trained-ability-13">
-                        <span class="class-nav-item">Mystical Recovery</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-13" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can draw vigor from
-                            the psi energy you use to power your psionic disciplines. Immediately after you spend Psi
-                            Points on a psionic discipline, you can take a bonus action to recover hit points equal to
-                            the number of Psi Points you spent.<br>&nbsp;&nbsp;&nbsp;&nbsp;You must finish a short rest
-                            to use this ability again.</p>
-                    </div>
-
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-14"
-                        id="trained-ability-14">
-                        <span class="class-nav-item">Power Drain</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-14" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can absorb the
-                            energy within a mysterium to invigorate your mind. By spending a bonus action, you can break
-                            down the energy within a mysterium and gain a number of Psi Points according to the rarity
-                            of the item (see below). The mysterium is rendered inert and falls apart.<br>
-                        <h5 class="text-center">MYSTERIUM - PSI POINT EXCHANGE RATE</h5>
-                        <table class="table table-striped table-bordered p-1">
-                            <th class="text-center">Rarity</th>
-                            <th class="text-center">Psi Points</th>
-                            </tr>
-                            <tr>
-                                <td class="text-center">Common</td>
-                                <td class="text-center">2</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">Uncommon</td>
-                                <td class="text-center">3</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">Rare</td>
-                                <td class="text-center">4</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">Very Rare</td>
-                                <td class="text-center">5</td>
-                            </tr>
-                        </table>
-                        </p>
-                    </div>
-
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-15"
-                        id="trained-ability-15">
-                        <span class="class-nav-item">Psi-Surge</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">2</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-15" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You can overload your
-                            psychic focus to batter down an opponent’s defenses. You can impose disadvantage on a
-                            target’s saving throw against a discipline or talent you use but at the cost of using your
-                            psychic focus.<br>&nbsp;&nbsp;&nbsp;&nbsp;Your psychic focus immediately ends if it’s
-                            active, and you can’t use it until you finish a short or long rest. You cannot use this
-                            feature if you can’t use your psychic focus.</p>
-                    </div>
-
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-16"
-                        id="trained-ability-16">
-                        <span class="class-nav-item">Psychic Inquisition</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-16" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Telepathy</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You know when a
-                            creature communicating with you via telepathy is lying as well as a simple description of
-                            its mood or disposition.</p>
-                    </div>
-
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-17"
-                        id="trained-ability-17">
-                        <span class="class-nav-item">RAGE!</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-17" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Rage</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You have tapped deep
-                            within your primal strength to enhance your Rage ability. When you train in RAGE!, you can
-                            select one of the following abilities. You may take this training multiple times to select
-                            new features from this list.
-                        <ul class="pr-4 pb-4">
-                            <li class="internal-list"><b>Bloodletting. </b>You sacrifice your own blood to fuel your
-                                rage ability even when you are not in active battle. When you enter rage, you may elect
-                                to trigger bloodletting. Your rage will endure for its maximum duration so long as you
-                                are conscious. You take 1 point of damage at the start of each turn after entering rage
-                                even if you take damage in a fight. This damage cannot be reduced or mitigated in any
-                                way, and will not stop until your rage is complete, you deactivate your rage, or you are
-                                incapacitated in a way that ends your rage prematurely.</li>
-                            <li class="internal-list"><b>Terrifying. </b>You let out a terrifying roar as you tap into
-                                your rage. When you enter rage, you may elect to trigger this ability. All creatures
-                                that can hear your roar in a 30-foot cone from you suffer disadvantage on their next
-                                attack.</li>
-                            <li class="internal-list"><b>Empowering. </b>A surge of lifeforce hits you when you enter
-                                rage. You gain temporary hit points equal to your level + your Constitution modifier. If
-                                any temporary hit points remain when your rage ends, they dissipate.</li>
-                        </ul>
-                        </p>
-                    </div>
-
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-18"
-                        id="trained-ability-18">
-                        <span class="class-nav-item">Soul Bind</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">2*</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-18" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You gain the ability to
-                            bind your soul to another. Select a willing creature with a minimum Intelligence of 6 to
-                            share a bond. You must spend a short rest in meditation with the creature while holding
-                            hands or otherwise touching. At the end of this meditation, you will always be aware of each
-                            other’s location, well-being, and can telepathically communicate with each other regardless
-                            of distance. If bonded souls are within 120 feet of each other, they can freely share
-                            Inspiration Points.<br>&nbsp;&nbsp;&nbsp;&nbsp;If one of you perishes, the bond is broken,
-                            and the other is aware. A fragment of the deceased’s soul will always be within the mind of
-                            the other, and if the living partner does not have Fate, it gains
-                            it.<br>&nbsp;&nbsp;&nbsp;&nbsp;You can only Soul Bind with one creature at a time. If you
-                            Soul Bind with another creature before your first partner dies, you suffer one point of
-                            exhaustion.<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>*. The Training Point cost for this feature can be
-                                shared between two individuals, each one spending 1 TP.</i></p>
-                    </div>
-
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-19"
-                        id="trained-ability-19">
-                        <span class="class-nav-item">Strength of Mind</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-19" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Proficiency in Wisdom saving
-                                throws</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;Even the simplest psionic technique requires a
-                            deep understanding of how psionic energy can augment mind and body. You can replace your
-                            proficiency in Wisdom saving throws with Strength, Dexterity, or Constitution whenever you
-                            finish a short or long rest. You gain proficiency in saves using that ability instead, and
-                            this change lasts until you finish your next short or long rest.</p>
-                    </div>
-
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-20"
-                        id="trained-ability-20">
-                        <span class="class-nav-item">Survivalist</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-20" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Ranger's Survival
-                                Instincts</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You are a ranger without equal and find
-                            more comfort in the wilderness than in a town or village. Select one Survival Instinct that
-                            you do not currently know. You may take this training multiple times and select a different
-                            Survival Instinct each time.</p>
-                    </div>
-
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-21"
-                        id="trained-ability-21">
-                        <span class="class-nav-item">Talented Rapscallion</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">1</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-21" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: Sneak Attack</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;You are no
-                            simple thief, scamp, or scoundrel. You are not only excellent at your own craft, you are
-                            clever enough to borrow good ideas from others in your line of work. When you train in
-                            Talented Rapscallion, you can select one of the following abilities. You may take this
-                            training multiple times to select new features from this list.
-                        <ul class="pr-4 pb-4">
-                            <li class="internal-list"><b>Trickster. </b>You unlock the secret talent, “Mind Sliver.”
-                            </li>
-                            <li class="internal-list"><b>Enterprising. </b>You know how to get a drop on your enemies.
-                                You have advantage on weapon attack rolls against any creature that hasn’t taken a turn
-                                in the combat yet. In addition, any hit with a weapon you score against a creature that
-                                is surprised is a critical hit.</li>
-                            <li class="internal-list"><b>Inquisitive. </b>You have a talent for picking out lies.
-                                Whenever you make a Wisdom (Insight) check to determine whether a creature is lying,
-                                treat a roll of 7 or lower on the d20 as an 8.<br>&nbsp;&nbsp;&nbsp;&nbsp;You also gain
-                                the ability to decipher an opponent's tactics and develop a counter to them. As a bonus
-                                action, you can make a Wisdom (Insight) check against a creature you can seethat isn’t
-                                incapacitated, contested by the target's Charisma (Deception) check. If you succeed, you
-                                can use your Sneak Attack against that target even if you don’t have advantage on the
-                                attack roll, but not if you have disadvantage on it.<br>&nbsp;&nbsp;&nbsp;&nbsp;This
-                                benefit lasts for 1 minute or until you successfully use this feature against a
-                                different target.</li>
-                        </ul>
-                        </p>
-                    </div>
-
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
-                        data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-22"
-                        id="trained-ability-22">
-                        <span class="class-nav-item">Temporal Awareness</span>
-                        <span class="class-nav-item badge badge-secondary badge-pill">2</span>
-                    </li>
-                    <div class="collapse abilities trained-desc" id="ability-22" data-parent="#trained-abilities">
-                        <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;Add your Intelligence
-                            modifier to your initiative rolls.</p>
-                    </div>
-                </ul>
-            </div>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center trained"
+                    data-toggle="collapse" role="button" aria-expanded="false" data-target="#ability-22"
+                    id="trained-ability-22">
+                    <span class="class-nav-item">Temporal Awareness</span>
+                    <span class="class-nav-item badge badge-secondary badge-pill">2</span>
+                </li>
+                <div class="collapse abilities trained-desc" id="ability-22" data-parent="#trained-abilities">
+                    <p class="p-4"><i>Requirements: None</i><br><br>&nbsp;&nbsp;&nbsp;&nbsp;Add your Intelligence
+                        modifier to your initiative rolls.</p>
+                </div>
+            </ul>
         </div>
+    </div>
 
 
 
-        <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-            crossorigin="anonymous"></script>
-        <script src="../pergasha.js"></script>
-    </body>
+    <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="../pergasha.js"></script>
+</body>
 
 </html>

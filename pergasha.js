@@ -1819,34 +1819,52 @@ function classPage() {
 
 //RACES START
 function racePage() {
-    const raceSelection = document.getElementById('race-list');
-    const raceOptions = raceSelection.getElementsByTagName('a');
-    const currentRace = sessionStorage.getItem("currentRace");
+    const raceSelection = document.getElementsByClassName('race-list');
+    const raceOptions = [raceSelection[0].getElementsByTagName('a'), raceSelection[1].getElementsByTagName('a')];
+    const currentOldRace = sessionStorage.getItem("currentOldRace");
+    const currentNewRace = sessionStorage.getItem("currentNewRace");
 
 
-    function refreshedRaceFilter(filter) {
-        const filterToActivate = document.getElementById(filter);
-        if (filter != null) {
-            const filtered = document.getElementById(filter.slice(0, filter.indexOf('-list')));
-            filtered.classList.toggle("show");
-            filtered.classList.toggle("active");
-            filterToActivate.classList.toggle("active");
+    function refreshedRaceFilter(filter1, filter2) {
+        const firstFilterToActivate = document.getElementById(filter1);
+        const secondFilterToActivate = document.getElementById(filter2);
+        if (filter1 != null) {
+            const filtered1 = document.getElementById(filter1.slice(0, filter1.indexOf('-list')));
+            filtered1.classList.toggle("show");
+            filtered1.classList.toggle("active");
+            firstFilterToActivate.classList.toggle("active");
         } else {
             document.getElementById('cloud-pergashan').classList.toggle("active");
             document.getElementById('cloud-pergashan').classList.toggle("show");
             document.getElementById('cloud-pergashan-list').classList.toggle("active");
         }
+        if (filter2 != null) {
+            const filtered2 = document.getElementById(filter2.slice(0, filter2.indexOf('-list')));
+            filtered2.classList.toggle("show");
+            filtered2.classList.toggle("active");
+            secondFilterToActivate.classList.toggle("active");
+        } else {
+            document.getElementById('pergashan').classList.toggle("active");
+            document.getElementById('pergashan').classList.toggle("show");
+            document.getElementById('pergashan-list').classList.toggle("active");
+        }
     }
 
 
-    for (let race of raceOptions) {
-        race.addEventListener('click', () => {
+    for (let oldRace of raceOptions[0]) {
+        oldRace.addEventListener('click', () => {
             const selectedFilter = event.target.getAttribute('id');
-            sessionStorage.setItem("currentRace", selectedFilter);
+            sessionStorage.setItem("currentOldRace", selectedFilter);
+        });
+    }
+    for (let newRace of raceOptions[1]) {
+        newRace.addEventListener('click', () => {
+            const selectedFilter = event.target.getAttribute('id');
+            sessionStorage.setItem("currentNewRace", selectedFilter);
         });
     }
 
-    refreshedRaceFilter(currentRace);
+    refreshedRaceFilter(currentOldRace, currentNewRace);
 
 }
 //RACES END
