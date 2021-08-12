@@ -42,7 +42,7 @@ $(document).ready(function () {
         let username = $('#username').val();
         let pwd = $('#pwd').val();
         let remember = $('#remember');
-        if (currentPage == "pergasha.html") {
+        if (currentPage == "home.html") {
             $.getJSON('login.json', function (data) {
                 if (username == data.username && pwd == data.pwd) {
                     $('#logoutbtn').removeClass('d-none');
