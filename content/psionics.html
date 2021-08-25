@@ -97,6 +97,7 @@
         <div class="col list-group mb-5 align-self-start sticky-top" id="psionics-list" role="tablist">
             <a class="list-group-item list-group-item-action list-group-item-secondary active" id="all-filter"
                 data-toggle="list" role="button">All Orders & Talents</a>
+
             <a class="list-group-item list-group-item-action list-group-item-secondary" id="avatar-filter"
                 data-toggle="list" role="button">Order of the Avatar</a>
             <a class="list-group-item list-group-item-action list-group-item-secondary" id="awakened-filter"
@@ -107,6 +108,8 @@
                 data-toggle="list" role="button">Order of the Immortal</a>
             <a class="list-group-item list-group-item-action list-group-item-secondary" id="nomad-filter"
                 data-toggle="list" role="button">Order of the Nomad</a>
+            <a class="list-group-item list-group-item-action list-group-item-secondary" id="psion-filter"
+                data-toggle="list" role="button">Order of the Psion</a>
             <a class="list-group-item list-group-item-action list-group-item-secondary" id="talent-filter"
                 data-toggle="list" role="button">Talents</a>
         </div>
@@ -138,7 +141,7 @@
                         <tr>
                             <td class="text-center" scope="row">2nd</td>
                             <td class="text-center">1</td>
-                            <td class="text-center">+1d4[2]</td>
+                            <td class="text-center">+1d4(2)</td>
                             <td class="text-center">2</td>
                             <td class="text-center">—</td>
                         </tr>
@@ -159,7 +162,7 @@
                         <tr>
                             <td class="text-center" scope="row">5th</td>
                             <td class="text-center">2</td>
-                            <td class="text-center">+1d4[2]</td>
+                            <td class="text-center">+1d4(2)</td>
                             <td class="text-center">3</td>
                             <td class="text-center">Racial Feature</td>
                         </tr>
@@ -180,7 +183,7 @@
                         <tr>
                             <td class="text-center" scope="row">8th</td>
                             <td class="text-center">2</td>
-                            <td class="text-center">+1d4[2]</td>
+                            <td class="text-center">+1d4(2)</td>
                             <td class="text-center">4</td>
                             <td class="text-center">+1 Training Point, +1 Proficiency Point</td>
                         </tr>
@@ -194,7 +197,7 @@
                         <tr>
                             <td class="text-center" scope="row">10th</td>
                             <td class="text-center">3</td>
-                            <td class="text-center">+1d6[3]</td>
+                            <td class="text-center">+1d6(3)</td>
                             <td class="text-center">4</td>
                             <td class="text-center">—</td>
                         </tr>
@@ -215,7 +218,7 @@
                         <tr>
                             <td class="text-center" scope="row">13th</td>
                             <td class="text-center">3</td>
-                            <td class="text-center">+1d6[3]</td>
+                            <td class="text-center">+1d6(3)</td>
                             <td class="text-center">5</td>
                             <td class="text-center">Racial Feature</td>
                         </tr>
@@ -236,7 +239,7 @@
                         <tr>
                             <td class="text-center" scope="row">16th</td>
                             <td class="text-center">4</td>
-                            <td class="text-center">+1d6[3]</td>
+                            <td class="text-center">+1d6(3)</td>
                             <td class="text-center">6</td>
                             <td class="text-center">+1 Training Point, +1 Proficiency Point</td>
                         </tr>
@@ -257,14 +260,14 @@
                         <tr>
                             <td class="text-center" scope="row">19th</td>
                             <td class="text-center">4</td>
-                            <td class="text-center">+1d8[4]</td>
+                            <td class="text-center">+1d8(4)</td>
                             <td class="text-center">7</td>
                             <td class="text-center">+1 Training Point, +1 Proficiency Point, Racial Feature</td>
                         </tr>
                         <tr>
                             <td class="text-center" scope="row">20th</td>
                             <td class="text-center">5</td>
-                            <td class="text-center">+1d8[4]</td>
+                            <td class="text-center">+1d8(4)</td>
                             <td class="text-center">7</td>
                             <td class="text-center">Select a Psionic Mastery</td>
                         </tr>
@@ -598,8 +601,10 @@
                     <div class="psionics-body" style="display: none">
                         <span class="psionics-subtitle">Psychic Focus</span>
                         <ul style="list-style-type:none;">
-                            <li>While focused on this discipline, you and allies within 10 feet of you who can see
-                                you receive a bonus to saving throws equal to your Charisma modifier.</li>
+                            <li>While focused on this discipline, you gain a bonus to saving throws equal to your
+                                Charisma modifier (minimum 1), and
+                                allies within 10 feet of you who can see you receive half this bonus (minimum 1, rounded
+                                down).</li>
                         </ul>
                         <span class="psionics-subtitle">Incite Courage</span>
                         <ul style="list-style-type:none;">
@@ -3240,6 +3245,550 @@
                                 their reaction to succeed on a Dexterity save and move to the next unoccupied space.
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="shadow psionics-box rounded border border-secondary psion-filter w-75 align-self-center">
+                    <span class="psionics-title p-2" role="button" onclick="collapsibleBox(this)">Inquisitor<span
+                            class="psionic-order">Psion</span><span class="psionic-description">These psions can see
+                            into the minds of other sentient creatures. Their
+                            abilities are feared, for the mind is merely clay to be shaped by the
+                            will of an Inquisitor. Memories can be taken away whole or altered in
+                            ways that can utterly change an individual. And while Inquisitors are
+                            primarily known for their powerful abilities to control, manipulate, and
+                            harm, they are also capable of repairing that which no healer can
+                            ever touch.</span></span>
+                    <div class="psionics-body" style="display: none">
+                        <span class="psionics-subtitle">Memory Strand</span>
+                        <ul style="list-style-type:none;">
+                            <li>As an action, you put a finger to your head and copy a memory, an
+                                idea, or a message from your mind and transform it into a thin,
+                                tangible shard of psionic energy called a memory strand, which
+                                persists indefinitely until it used or you destroy it. The memory strand
+                                appears in an unoccupied space within 5 feet of you as a Tiny,
+                                weightless, semisolid object that can be held and carried like a twig.
+                                It is otherwise stationary.<br>
+                                If you use this ability while reading or manipulating the thoughts of
+                                others, you can transform the thoughts or memories you read, rather
+                                than your own, into a memory strand.<br>
+                                A sentient creature with an Intelligence of 8 and above can spend
+                                an action to interact with a memory strand to instantly receive
+                                whatever memory, idea, or message it contains.</li>
+                        </ul>
+                        <span class="psionics-subtitle">Inquisition</span>
+                        <ul style="list-style-type:none;">
+                            <li><b>Cost: </b>2-7 psi point</li>
+                            <li><b>Evoking Time: </b>10 minutes</li>
+                            <li><b>Range: </b>15 feet</li>
+                            <li><b>Duration: </b>Instantaneous</li>
+                            <li>Over a period of 10 minutes, you delve into the mind of one creature
+                                that can see and hear you within 15 feet of you. After this period,
+                                you may ask one question that is phrased so that it can be answered
+                                with a yes or no. Any other question causes this ability to fail unless
+                                you pay to enhance this ability. The target must succeed on a
+                                Charisma saving throw, or it replies with a truthful answer. Creatures
+                                immune to charm have advantage on this saving throw.<br>
+                                When using this ability, you can make the following enhancements
+                                by paying the additional psi points required:<br><br>
+                                <table class="table table-striped table-bordered p-1">
+                                    <th class="text-center">Effect</th>
+                                    <th class="text-center">Additional Psi Cost</th>
+                                    <tr>
+                                        <td class="text-center">Additional Questioning</td>
+                                        <td class="text-center">1+</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Call Memory</td>
+                                        <td class="text-center">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Forceful Query</td>
+                                        <td class="text-center">2</td>
+                                    </tr>
+                                </table>
+                                <ul>
+                                    <li><strong>Additional Questioning:</strong> For each additional psi point, you may
+                                        ask
+                                        another yes-or-no question.</li>
+                                    <li><strong>Call Memory:</strong> Instead of a yes-or-no question, you can ask for
+                                        the
+                                        memory from a specific event. On a successful save, you suffer 1
+                                        level of fatigue and learn nothing. On a fail, you instantly receive a
+                                        visual and auditory telepathic scene of the memory no longer than
+                                        15 minutes from the target’s perspective.</li>
+                                    <li><strong>Forceful Query:</strong> You press your target for information. The
+                                        target has
+                                        disadvantage on the next Charisma saving throw against your
+                                        Inquisition.</li>
+                                </ul>
+                                <strong>Heightened:</strong> You can use an Inspiration Point to harm the target’s
+                                mind. The effects depend on the results of Charisma saving throw.
+                                Intelligence ability score damage can only be healed by another
+                                Inquisitor:
+                                <ul>
+                                    <li><strong>Save:</strong> No effect, and you suffer 1 level of fatigue.</li>
+                                    <li><strong>Critical Success:</strong> No effect, and you suffer 2 levels of
+                                        fatigue.</li>
+                                    <li><strong>Fail by 5 or less:</strong> The target’s Intelligence score decreases by
+                                        2.</li>
+                                    <li><strong>Fail by 6 or more:</strong> The target’s Intelligence score decreases by
+                                        4.</li>
+                                    <li><strong>Critical fail:</strong> The target’s Intelligence score decreases by 6.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <span class="psionics-subtitle">Lift the Fog</span>
+                        <ul style="list-style-type:none;">
+                            <li><b>Cost: </b>2-7 psi point</li>
+                            <li><b>Evoking Time: </b>10 minutes</li>
+                            <li><b>Range: </b>15 feet</li>
+                            <li><b>Duration: </b>Instantaneous</li>
+                            <li>You focus on a creature that has suffered damage to their mind
+                                (such as Intelligence ability score damage, long term mind control,
+                                or similar effects) or had their memories altered. When evoking this
+                                ability, you understand the depth of the damage. You must pay the
+                                psi point cost and make an Intelligence (Psionics) check to attempt
+                                to make repairs. You can only repair one aspect per evocation.<br><br>
+                                <table class="table table-striped table-bordered p-1">
+                                    <th class="text-center">Effect</th>
+                                    <th class="text-center">DC</th>
+                                    <th class="text-center">Cost</th>
+                                    <tr>
+                                        <td class="text-center">Intelligence ability score
+                                            damage</td>
+                                        <td class="text-center">DC = 15 + the value of
+                                            Intelligence decrease</td>
+                                        <td class="text-center">Inspiration Point +
+                                            2 psi points per 1
+                                            Intelligence</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Mind-influencing effect</td>
+                                        <td class="text-center">DC = the save DC of the
+                                            original source of the effect</td>
+                                        <td class="text-center">3 psi points</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Memory alteration or loss</td>
+                                        <td class="text-center">DC = the Psionics DC of the
+                                            entity responsible for the
+                                            alteration or loss</td>
+                                        <td class="text-center">Inspiration + 5 psi
+                                            points</td>
+                                    </tr>
+                                </table>
+                                On a success, you repair the damage. On a fail, you suffer 1 level of
+                                fatigue.
+                            </li>
+                        </ul>
+                        <span class="psionics-subtitle">Sculpt</span>
+                        <ul style="list-style-type:none;">
+                            <li><b>Cost: </b>3-7 psi point</li>
+                            <li><b>Evoking Time: </b>1 hour</li>
+                            <li><b>Range: </b>10 feet</li>
+                            <li><b>Duration: </b>Special</li>
+                            <li>You shape the mind of a creature, forcing it to perform or refrain
+                                from carrying out a certain act or altering its memory in a specific
+                                manner. You can sculpt the mind in a variety of ways by paying the
+                                costs as listed later in this section.<br>
+                                If the target is willing, no saving throw is required, they must know all
+                                the specifics of the sculpt, and the duration can last for as long as
+                                the target agrees to.<br>
+                                If the target is unwilling, the details of the sculpt do not need to be
+                                shared and it must make a Charisma saving throw. On a success,
+                                you suffer 2 levels of fatigue, the sculpt does not take hold, and the
+                                creature is aware of your attempt at manipulation. On a fail, the
+                                sculpt succeeds without their knowing.<br><br>
+                                <table class="table table-striped table-bordered p-1">
+                                    <th class="text-center">Effect</th>
+                                    <th class="text-center">Cost</th>
+                                    <tr>
+                                        <td class="text-center">Act of Service</td>
+                                        <td class="text-center">3 psi points</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Alter</td>
+                                        <td class="text-center">4 psi points</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Create</td>
+                                        <td class="text-center">5 psi points</td>
+                                    </tr>
+                                </table>
+                                <strong>Act of Service: </strong>This act cannot cause bodily harm or death to the
+                                creature. Acts are usually conditional, such as, “Always offer
+                                hospitality to strangers seeking a place to stay.” Alternatively, the act
+                                can be more generalized or framed in a way that doesn’t require the target to perform
+                                that act exclusively, though it must prioritize the
+                                task above all leisurely pursuits.<br>
+                                On a failed save, the sculpt takes hold and remains in place for 1
+                                day. Each day thereafter, the creature makes a saving throw to free
+                                themselves of the sculpt; this saving throw cannot be enhanced in
+                                any way. Once the creature frees themselves, they are aware of
+                                your influence, but you do not suffer any negative effects.<br>
+                                If the target is unable or fights performing the act, it gains 1 level of
+                                exhaustion, and the exhaustion increases by 1 level for each
+                                consecutive day it is prevented from performing or fights the act, up
+                                to a maximum of 4. These levels of exhaustion are immediately
+                                removed when it follows the sculpt again or the sculpt is lifted; it
+                                cannot remove exhaustion gained from this ability in any other way.
+                                Only an Inquisitor can repair a mind affected in this manner.<br>
+                                <strong>Heightened:</strong> You can spend 1 Inspiration Point to increase the
+                                duration to 1 month or 3 Inspiration Points to increase the duration to
+                                1 year.<br><br>
+                                <strong>Alter: </strong>You can affect the target's memory of an event that it
+                                experienced within the last 24 hours and that lasted no more than 10
+                                minutes. On a failed save, you can permanently eliminate all
+                                memory of the event, allow the target to recall the event with
+                                perfect clarity and exacting detail, or change its memory of the
+                                details of the event.<br>
+                                You must speak to the target to describe how its memories are
+                                affected, and it must be able to understand your language for the
+                                modified memories to take root. Its mind fills in any gaps in the details
+                                of your description. If the evoking time ends before you have finished
+                                describing the modified memories, the creature's memory isn't
+                                altered. Otherwise, the modified memories take hold when the
+                                evoking time ends.<br>
+                                A modified memory doesn't necessarily affect how a creature
+                                behaves, particularly if the memory contradicts the creature's
+                                natural inclinations or beliefs. An illogical modified memory, such as
+                                implanting a memory of how much the creature enjoyed dousing
+                                itself in acid, is dismissed, perhaps as a bad dream. The GM might
+                                deem a modified memory too nonsensical to affect a creature in a
+                                significant manner.<br><br>
+                                <strong>Create: </strong>This works similarly to Alter but you are not tied to a
+                                specific
+                                window of time, and you can create a memory rather than adjust
+                                one. You must still obey the memory duration.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="shadow psionics-box rounded border border-secondary psion-filter w-75 align-self-center">
+                    <span class="psionics-title p-2" role="button" onclick="collapsibleBox(this)">Seer<span
+                            class="psionic-order">Psion</span><span class="psionic-description">These psions can see
+                            into secrets of the past, present truths, or hints
+                            of the future. Sometimes the visions are uncontrolled foretellings, but
+                            talented Seers can draw out answers to specific inquiries. Often
+                            those with the strongest abilities in seeing are born or go blind, but
+                            the moderate version of seeing only temporarily affects the psion.</span></span>
+                    <div class="psionics-body" style="display: none">
+                        <span class="psionics-subtitle">The Sight</span>
+                        <ul style="list-style-type:none;">
+                            <li>You catch glimpses of what is to come and use this knowledge to
+                                your advantage. When you finish a long rest, roll one d20 and record
+                                the number rolled. You can replace any attack roll, saving throw, or
+                                ability check made by you or a creature that you can see with one
+                                of these foretelling rolls. You must choose to do so before the roll,
+                                and a roll can be replaced in this way only once per turn. When you
+                                finish a long rest, you lose any unused foretelling rolls.<br>
+                                In addition, your dreams are busy with visions of different times and
+                                places. The GM can use dreams to grant interesting or important
+                                information a Seer. Also, once per session, you can seek out
+                                guidance or answer to a specific question. To do so, frame your
+                                question and perform a blind Wisdom (Psionics) skill check against a
+                                DC determined by the GM. On a success and depending on the
+                                nature of the question, the GM will provide an answer that may
+                                come in the form of visions, a riddle, or a simple response. On a
+                                failure, you will receive empty mists or the GM may decide to grant
+                                some manner of vision. Critical failures may result in false information.</li>
+                        </ul>
+                        <span class="psionics-subtitle">Wandering Eye</span>
+                        <ul style="list-style-type:none;">
+                            <li><b>Cost: </b>4 psi point</li>
+                            <li><b>Evoking Time: </b>1 action</li>
+                            <li><b>Range: </b>60feet*</li>
+                            <li><b>Duration: </b>Concentration, up to 1 hour*</li>
+                            <li>As an action, you create a psychic sensor within 60 feet of you. The
+                                sensor lasts until your concentration ends. You can spend 1 psi to
+                                increase the duration of this ability by 1 hour for each psi spent
+                                beyond the base cost. This sensor is invisible but has a trace of your
+                                aura and hovers in the air, has 1 hit point, and is immune to all
+                                damage except for psychic and force damage.<br><br>
+                                You lose your own sight and instead see through this sensor that has
+                                normal and darkvision with a range of 60 feet. While you use this
+                                ability, you can spend an action to switch between seeing through
+                                your own eyes and the sensor. You have no other sensory
+                                information through the sensor, but your body retains its other senses
+                                for your physical location. The sensor can look in all directions and as
+                                an action, you can move the sensor up to 30 feet in any direction.
+                                There is no limit to how far away from you the eye can move, but it
+                                can’t enter another plane of existence or go through a teleportation
+                                gateway. A solid barrier blocks the eye’s movement, but the eye
+                                can pass through an opening as small as 1 inch in diameter. You
+                                cannot use abilities through the sensor.<br><br>
+                                <strong>Heightened:</strong> You can use an Inspiration Point to make the sensor
+                                pass through solid objects harmlessly for the duration.
+                            </li>
+                        </ul>
+                        <span class="psionics-subtitle">Seeking Eyes</span>
+                        <ul style="list-style-type:none;">
+                            <li><b>Cost: </b>4 psi point</li>
+                            <li><b>Evoking Time: </b>10 minutes</li>
+                            <li><b>Range: </b>Self</li>
+                            <li><b>Duration: </b>Concentration, up to 10 minutes</li>
+                            <li>You can see a particular location, creature, or object you choose
+                                that is on the same plane of existence as you. You cannot see your
+                                own surroundings while using Seeking Eyes, but you have your other
+                                senses available.<br>
+                                When you succeed in using this ability, you create an invisible sensor
+                                made of a fragment of your aura in the location or within 10 feet of
+                                the creature or object. You can see through the sensor as if you
+                                were there, using your own vision capabilities. Creatures capable of
+                                seeing auras see the sensor as a luminous tiny orb.<br>
+                                All Seers can use this ability to seek out familiar places, people, and
+                                objects, but each Seer’s technique, method, and focus is unique.
+                                Select a specialization between locations, creatures, or objects and
+                                refer to the end of this section for expanded abilities. You can only
+                                specialize in one and cannot change your selection.<br><br>
+                                <strong>Location. </strong>Make an Intelligence (Psionics) skill check against a DC
+                                determined by the GM. The location you choose must be known to
+                                you, and it must be on the same plane of existence as you. Your
+                                familiarity with the destination modifies the difficulty.
+                                <br><br>
+                                <table class="table table-striped table-bordered p-1">
+                                    <th class="text-center">Familiarity</th>
+                                    <th class="text-center">DC</th>
+                                    <tr>
+                                        <td class="text-center">Been to very often</td>
+                                        <td class="text-center">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Seen more than once but less familiar</td>
+                                        <td class="text-center">15</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Viewed once or experience shared through telepathy</td>
+                                        <td class="text-center">20</td>
+                                    </tr>
+                                </table>
+                                On a success, you create the sensor in the location, and it doesn’t
+                                move. On a failure, you suffer 1 level of Fatigue.<br><br>
+                                <strong>Creature. </strong>You must choose a target that you have met or know. A
+                                creature must make a Wisdom saving throw which is modified by
+                                how well you know the target. The difficulty is your Psionics DC. If the
+                                creature knows you are using this ability, it can fail the saving throw
+                                voluntarily if it wants to be observed.
+                                <br><br>
+                                <table class="table table-striped table-bordered p-1">
+                                    <th class="text-center">Knowledge of Target</th>
+                                    <th class="text-center">Save DC Modifier</th>
+                                    <tr>
+                                        <td class="text-center">You have met and interacted with the target briefly</td>
+                                        <td class="text-center">+0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">You know the target well</td>
+                                        <td class="text-center">+2</td>
+                                    </tr>
+                                </table>
+                                On a successful save, you suffer 1 level of Fatigue, and the target
+                                isn’t affected. On a failed save, your sensor appears and moves with
+                                the target, remaining within 10 feet of it for the duration.
+                                <br><br>
+                                <strong>Object. </strong>You must target a specific object that you know well. The DC
+                                is modified by how strong your connection is to the specific object. If
+                                the object is held by a creature, the creature must make a Wisdom
+                                saving throw and on a success, your ability fails and you suffer 1 level
+                                of Fatigue.<br><br>
+                                <table class="table table-striped table-bordered p-1">
+                                    <th class="text-center">Connection</th>
+                                    <th class="text-center">DC</th>
+                                    <tr>
+                                        <td class="text-center">Once belonged to you for an extended period</td>
+                                        <td class="text-center">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Something that you have held in your hands or interacted
+                                            with for at least one hour.</td>
+                                        <td class="text-center">15</td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                        <span class="psionics-subtitle">Seeking Eyes Specialization</span>
+                        <ul style="list-style-type:none;">
+                            <li><b>Place: </b>If you have an object from a location, you can attempt to use
+                                Seeking Eyes while touching the object (DC=18).</li>
+                            <li><b>Person: </b>You can seek a person if you have been given a telepathic
+                                visual or a piece of the body. The Wisdom save DC to resist this ability
+                                decreases by 2.</li>
+                            <li><b>Object: </b>You can seek items similar to something you are holding
+                                within 1 mile of you (DC=18). You gain a sense of how many, how
+                                near, and you know the direction of the nearest object of its kind. If
+                                objects are attended or held by another creature, you will still feel
+                                the presence of the object. You do not gain the ability to see the areas near these
+                                objects, but you do not suffer any ill effects from
+                                failing the check.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="shadow psionics-box rounded border border-secondary psion-filter w-75 align-self-center">
+                    <span class="psionics-title p-2" role="button" onclick="collapsibleBox(this)">Traveler<span
+                            class="psionic-order">Psion</span><span class="psionic-description">Travelers are one of the
+                            most recently revived psions, and while they
+                            are generally well-loved, they have also created a burgeoning
+                            paranoia. Their ability to attune to anchors and then transport
+                            themselves and others to these anchors make travel that once was
+                            painstakingly long and dangerous fluid and safe. However, with this
+                            luxury came those that sought to exploit and take advantage of the
+                            lack of security against such powers. After a period of chaos and
+                            thievery, a semblance of order was attained after the guilty travelers
+                            had their abilities stunted or controlled by Inquisitors. Now, people
+                            are often barred from entry or seeing inside important locations until
+                            they have been thoroughly vetted or questioned. Thus, few travelers
+                            have since made themselves publicly known, and those exhibiting
+                            any teleportation abilities are watched carefully.</span></span>
+                    <div class="psionics-body" style="display: none">
+                        <span class="psionics-subtitle">Anchoring</span>
+                        <ul style="list-style-type:none;">
+                            <li>You use a fragment of your aura to create an invisible, intangible
+                                teleportation anchor. This anchor bears your unique aural signature
+                                and requires 10 minutes of focus while touching a 10x10 solid, flat
+                                surface to take hold. You can create a number of anchors equal to
+                                your proficiency bonus. Once an anchor takes hold, it no longer
+                                requires the original surface to exist. If the surface is destroyed, the
+                                anchor is locked in place and suspended in the air.<br><br>
+                                Anchors are visible to creatures with the ability to see auras, and
+                                these creatures can attempt to destroy an anchor by spending 10
+                                minutes and performing a Psionics (Intelligence) check. The DC to
+                                destroy an anchor is the Traveler’s Psionic DC. On a failure, the
+                                anchor remains and the creature takes 2 levels of fatigue. On a
+                                success, the anchor is destroyed and the creature takes 1 level of
+                                fatigue. You are always aware of the state of your anchors.
+                                <br><br>
+                                You can convert one anchor into a home anchor by spending a full
+                                rest in the location. A home anchor cannot be destroyed and is
+                                immobile. You can only ever have one home anchor. If you create
+                                another home anchor, the existing one converts to a basic anchor.
+                                <br><br>
+                                A Traveler can see any anchor and knowing an individual and their
+                                aura can help identify the owner. A Traveler can only use their own
+                                anchors.<br><br>
+                                Additionally, whenever you use any psionic discipline to teleport, you
+                                can instead teleport to an anchor even if you can’t see it, but it must
+                                be within range of the teleportation ability.
+                            </li>
+                        </ul>
+                        <span class="psionics-subtitle">Traveler’s Journey</span>
+                        <ul style="list-style-type:none;">
+                            <li><b>Cost: </b>3-7 psi point</li>
+                            <li><b>Evoking Time: </b>1 action</li>
+                            <li><b>Range: </b>Self</li>
+                            <li><b>Duration: </b>Instantaneous</li>
+                            <li>If you have not used your movement this turn, you can spend an
+                                action to jump to any of your existing anchors. You and your
+                                equipment instantaneously appear at the anchor, but any objects or
+                                creatures you carry do not make the journey.
+                                <br><br>
+                                For each additional psi point you spend on this ability, you can bring
+                                a number of willing and conscious creatures equal to your
+                                proficiency modifier. These creatures must be Huge or smaller and in
+                                contact with you or in contact with a creature already touching you.
+                                Any items or creatures they carry will not make the journey. The
+                                creatures must be able to fit in the area or they will be left behind.
+                                <br><br>
+                                <strong>Heightened:</strong> You can use an Inspiration Point to open a gate
+                                between two of your existing anchors. A visible portal appears that is
+                                15 feet wide and 15 feet tall and lasts for 1 hour. The portal reveals
+                                what is on the other side, but elements, powers, psionic abilities, and weather do not
+                                pass through it. Any creature and
+                                objects can go through the portal so long as they fit.<br>
+                                You can close this connection as an action. Any creatures and
+                                objects still passing through are shunted out to one side randomly
+                                before the portal closes
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="shadow psionics-box rounded border border-secondary psion-filter w-75 align-self-center">
+                    <span class="psionics-title p-2" role="button" onclick="collapsibleBox(this)">Whisperer<span
+                            class="psionic-order">Psion</span><span class="psionic-description">A Whisperer can perform
+                            long distance communication. They play
+                            an important role in society, so much so that they were responsible
+                            for the first Conclave. Thranes and Seres search for these psions and
+                            reward loyalty handsomely. Unfortunately, where loyalty cannot be
+                            bought, service has often been forced especially upon the Touched
+                            Kin with the ability. Because of this, many non-Pergashans hide
+                            children exhibiting Whisperer abilities to protect them from being
+                            taken away from family. There are some Whisperers who feel a
+                            calling to serve a particular individual or cause, but many are happy
+                            to serve the highest bidder.</span></span>
+                    <div class="psionics-body" style="display: none">
+                        <span class="psionics-subtitle">Telepathic Master</span>
+                        <ul style="list-style-type:none;">
+                            <li>A Whisperer has the Telepathy talent, but the range is unlimited (so
+                                long as the target is on the same plane of existence as you) and the
+                                visual requirement is waived. To be able to use telepathy in this
+                                manner, you must be familiar with the target.</li>
+                        </ul>
+                        <span class="psionics-subtitle">Whispers</span>
+                        <ul style="list-style-type:none;">
+                            <li><b>Cost: </b>1-7 psi point</li>
+                            <li><b>Evoking Time: </b>Special</li>
+                            <li><b>Range: </b>Self</li>
+                            <li><b>Duration: </b>Instantaneous</li>
+                            <li>You can enhance your telepathy with the following benefits:
+                                <br><br>
+                                <table class="table table-striped table-bordered p-1">
+                                    <th class="text-center">Cost</th>
+                                    <th class="text-center">Effect</th>
+                                    <tr>
+                                        <td class="text-center">1+</td>
+                                        <td class="text-center">Increase number of targets by your proficiency bonus.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">1+</td>
+                                        <td class="text-center">Include a visual and/or auditory aspect up to a minute
+                                            in duration.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td class="text-center">Attempt to contact a target you do not know. You must
+                                            have seen
+                                            their face, been given a telepathic visual, or know their name.*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td class="text-center">Receive a telepathic response. This response is limited
+                                            to
+                                            information that would normally take 1 minute or less to share
+                                            verbally.</td>
+                                    </tr>
+                                </table>
+                                If you are attempting to contact a creature with which you are
+                                unfamiliar, you must make an Intelligence (Psionics) skill check. The
+                                DC is modified by information you have regarding the target.
+                                <br><br>
+                                <table class="table table-striped table-bordered p-1">
+                                    <th class="text-center">Information</th>
+                                    <th class="text-center">DC</th>
+                                    <tr>
+                                        <td class="text-center">Knowing the target’s full name and face</td>
+                                        <td class="text-center">18</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Knowing the target’s full name</td>
+                                        <td class="text-center">20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">Knowing the target’s face</td>
+                                        <td class="text-center">25</td>
+                                    </tr>
+                                </table>
+                                <br><br>
+                                <strong>Heightened:</strong> You can use an Inspiration Point to create an open line
+                                of communication with your target(s) for 1 hour. This link benefits from
+                                all the additional effects purchased.
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
 
