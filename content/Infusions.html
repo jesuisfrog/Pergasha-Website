@@ -100,12 +100,6 @@
         <a class="list-group-item list-group-item-action list-group-item-secondary" id="bloodfusion-infusion-list"
           data-toggle="list" href="#bloodfusion-infusion" role="tab" aria-controls="bloodfusion-infusion"
           role="button">Bloodfusion</a>
-        <a class="list-group-item list-group-item-action list-group-item-secondary" id="cryofusion-infusion-list"
-          data-toggle="list" href="#cryofusion-infusion" role="tab" aria-controls="cryofusion-infusion"
-          role="button">Cryofusion</a>
-        <a class="list-group-item list-group-item-action list-group-item-secondary" id="galvanofusion-infusion-list"
-          data-toggle="list" href="#galvanofusion-infusion" role="tab" aria-controls="galvanofusion-infusion"
-          role="button">Galvanofusion</a>
         <a class="list-group-item list-group-item-action list-group-item-secondary" id="hydrofusion-infusion-list"
           data-toggle="list" href="#hydrofusion-infusion" role="tab" aria-controls="hydrofusion-infusion"
           role="button">Hydrofusion</a>
@@ -119,532 +113,1100 @@
     <div class="tab-content col " id="infusion-tabDesc">
       <div class="tab-pane text-center" id="aerofusion-infusion" role="tabpanel"
         aria-labelledby="aerofusion-infusion-list">
-        <h2>Aerofusion</h2>
-        <img src="../assets/tech_trees/tech-tree_aero_full.png" class="mt-5 mb-5" style="height: 315px; width: 1125px;">
+        <h2 class="arjulian">Aerofusion</h2>
+        <img src="../assets/tech_trees/infusions_aero_full.png" class="mt-2 mb-5" style="height: 644px; width: 500px;">
+        <p class="mb-2 text-left">Aerofusion allows control over air and, by extension, wind. Air motes are constantly
+          moving and while the untrained eye may see them as agents of chaos, they are quite the opposite. They are a
+          conundrum: logical yet flighty; predictably dynamic; heavy and light. This affinity lends grace and speed to
+          fusists while also an ability to pull back from a heated moment and analyze a situation dispassionately..</p>
+        <p class="text-left">When you select Aerofusion, you gain the following passive ability in addition to the first
+          tier of Windweaving.
+        <ul class="mb-5 text-left">
+          <li><strong>Infused Movement:</strong> Your steps are quick and quiet. You gain proficiency in Stealth (or
+            gain expertise if you already have proficiency), and your movement speed increases by 5 feet. If you have a
+            flying speed, it increases by 10 feet.</li>
+        </ul>
+        </p>
         <div class="col d-flex flex-column infusion-powers" id="aero-powers">
-          <ul class="pl-0 shadow">
-            <!-- <li class="list-group-item list-group-item-action d-flex justify-content-between  trained-title"  id="trained-header">
-                                <h4><strong>Name</strong></h4>
-                                <h4><strong>Cost</strong></h4>
-                              </li> -->
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-1" id="aero-power-1">
-              <span class="class-nav-item">Windweaving</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-1" data-parent="#aero-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some fart power</p>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Windweaving</span>
+            <div class="infusions-body" style="display: none">
+              <p>Aerofusists are quick to shift and are light on their feet, helping them avoid danger or bypass
+                obstacles more easily. Debris and dust easily fall away, and your clothing and hair flutters. At tier I,
+                you can use the Windwhip ability.</p>
+              v
+              <span class="infusions-subtitle">Windwhip</span>
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>30 feet</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>A ribbon of wind whips out from your fingertips. Make a ranged infusion attack against a target you
+                  can see within range. On a hit, the target takes 1d8 slashing damage.
+                  <br><b>Critical hit:</b> The target is also moved 10 feet either away or toward you (your choice). The
+                  creature must be Huge or smaller to be moved in this way.
+                </li>
+              </ul>
+              <h4 class="arjulian">Tier II</h4>
+              <ul>
+                <li>Your Infused Movement improves, increasing your speed by another 5 feet.</li>
+                <li>If you have a flying speed, it also increases by another 5 feet.</li>
+                <li>Your Windwhip improves, dealing 2d8 slashing damage with a range of 60 feet.</li>
+                <li>In addition, you gain the Airburst ability.</li>
+              </ul>
+              <span class="infusions-subtitle">Airburst</span>
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>30 feet</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>You can use a bonus action to create an airburst from your hands or feet, propelling you 30 feet in
+                  a direction of your choice. You must have an unobstructed path, or your propulsion is halted. You
+                  cannot activate this ability if you are encumbered. After moving, you fall to the ground, ignoring the
+                  first 30 feet of falling damage.<br><br> If you use this airburst while flying, levitating, or
+                  hovering, you are not forced to fall so long as you can maintain your height otherwise. Airburst can
+                  be used while underwater to help with movement.</li>
+              </ul>
+              <h4 class="arjulian">Tier III</h4>
+              <ul>
+                <li>Your Infused Movement improves, increasing your base jump distance increases by 10 feet.</li>
+                <li>Your Windwhip improves, dealing 3d8 slashing damage with a range of 90 feet. On a critical hit, the
+                  distance the
+                  creature is moved increases to 30 feet.</li>
+                <li>In addition, your Airburst now moves you 40 feet and after using a burst, you may ignore the first
+                  40 feet of falling
+                  damage.</li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-2" id="aero-power-2">
-              <span class="class-nav-item">Gust</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-2" data-parent="#aero-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some fart power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Aerostep</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>Mana 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>Touch</li>
+                <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                <li>
+                  <p>
+                    As part of movement, a creature you touch (including yourself) can travel vertically up to 20 feet
+                    each turn for the
+                    duration. If the target stops in the air, it can opt to fall to the ground. If it stays aloft, it
+                    has disadvantage on
+                    Dexterity ability checks (unless the target is an Aerofusist or a flying creature). The creature
+                    immediately falls if
+                    you lose concentration, or it falls unconscious.
+
+                    If the target is a flying creature, it gains 20 feet to its flying speed.
+                  </p>
+                  <p><b>Empower</b>: When you trigger this ability, you can tap 1 HD in addition to the original cost.
+                    The target can instead walk
+                    on air as if it were solid ground for the duration. It can ascend and descend in this way at a
+                    maximum of a 45-degree
+                    angle. It suffers disadvantage on Dexterity ability checks if it ends its movement
+                    in the air.</p>
+
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-3" id="aero-power-3">
-              <span class="class-nav-item">Windward</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-3" data-parent="#aero-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some fart power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Gust</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>60-foot-line</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>A violent wind issues forth from your palm, blowing from the point where you are when you cast the
+                  spell to the line's opposite end. The wind extinguishes small fires, disperses fog and mist, blows
+                  Small objects (1 slot or less) around, and pushes larger objects. Large or smaller creatures in the
+                  area must attempt a Strength save.
+                  <ul>
+                    <li><b>Success by 5 or more</b>: The creature is unaffected.</li>
+                    <li><b>Success</b>: The creature can't move against the wind.</li>
+                    <li><b>Failure</b>: The creature is knocked prone. If it was flying, it is pushed in a line away
+                      from you up to the limit of your line.</li>
+                    <li><b>Failure by 5 or more</b>: The creature is pushed 30 feet in the wind's direction, knocked
+                      prone, and takes 2d6 bludgeoning damage. If it was flying, it is instead pushed an additional 30
+                      feet from you on top of the limit of your line. If it hits a surface or the ground, it takes
+                      falling damage equal to the distanced pushed but is not knocked prone.</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-4" id="aero-power-4">
-              <span class="class-nav-item">Aerostep</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-4" data-parent="#aero-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some fart power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Storm of Wind</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>Mana 5, HD 1*</li>
+                <li><b>Trigger: </b>Somatic, Verbal</li>
+                <li><b>Range: </b>100 feet</li>
+                <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                <li>
+                  <p>You churn up a violent windstorm centered on a point you can see and spreading to a radius of 50
+                    feet. Thunder booms, winds roar and flying debris turn deadly. Upon creating the storm and at the
+                    start of each of your turns while you maintain concentration, each creature in the storm must make a
+                    Constitution saving throw. On a failed save, a creature takes 2d6 slashing damage from the debris,
+                    is blinded, and is deafened for 5 minutes. A creature can wear eye protection to avoid blindness,
+                    but a creature already blinded cannot recover until the end of their next turn after protecting
+                    their eyes. An Aerofusist will not be blinded or deafened while in the storm, but they can be
+                    damaged by the debris.</p>
+                  <p>All flying creatures in the area immediately descend 40 feet. The entire area is difficult terrain
+                    for all creatures except those that burrow. Any creature that ends its turn flying within the area
+                    descends 20 feet, and any creature pushed into a surface by this ability’s winds or some other means
+                    takes bludgeoning damage as though it had fallen.</p>
+                  <p>Ranged or thrown weapons and smaller projectiles cannot be used effectively in the storm or
+                    targeting creatures within the storm. However, massive projectiles (such as a boulder) can be used.
+                  </p>
+                  <p>A creature attempting to leave the storm must use an action to succeed at an Athletics check or
+                    Acrobatics check against your spell DC to get through. A creature that fails is trapped within but
+                    can try again.</p>
+                  <p>To maintain concentration on this ability, you must expend 1 Hit Die at the start of each of your
+                    turns. If you do not have Hit Die to expend, the storm immediately dies.</p>
+                  <p><b>Synergy</b>: Using infusions targeting an area within the storm or while a fusist is in the
+                    storm itself while using abilities causes a variety of effects. The infusion must have a minimum
+                    cost of 1 mana or Hit Die. Using an ability with a concentration effect that has no minimum cost
+                    will not trigger a synergy, but initially activating an ability with a cost will.
+                  <ul>
+                    <li>Bloodfusion creates a sickening rain to fall in the storm. Each creature in the storm takes 1d6
+                      necrotic damage.</li>
+                    <li>Hydrofusion creates a flurry of hailstones. Each creature in the storm takes 2d6 bludgeoning
+                      damage.</li>
+                    <li>Pyrofusion creates 6 bolts of fiery lightning to strike objects or creatures of the Pyrofusist’s
+                      choice within the storm. A given creature or object can't be struck by more than one bolt. A
+                      struck creature must make a Dexterity saving throw. The creature takes 2d6 lightning damage and
+                      2d6 fire damage on a failed save, or half as much damage on a successful one.</li>
+                  </ul>
+                  </p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-5" id="aero-power-5">
-              <span class="class-nav-item">Whirlwind</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-5" data-parent="#aero-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some fart power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Whirlwind</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>HD 2, Mana 2, P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>30 feet</li>
+                <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                <li>
+                  <p>Powerful winds coalesce to cause destruction in an area within 30 feet of you. You can trigger this
+                    ability only if you are outside or the ceiling is 80 feet or higher. The whirlwind is a cylinder
+                    that is 70 feet high with a radius of 20 feet. The area of the whirlwind is difficult terrain.</p>
+                  <p>All creatures in the area must make a Dexterity save or take 5d10 bludgeoning damage as powerful
+                    winds and debris buffet them. Flying creatures have disadvantage on this save unless they are
+                    Aerofusists.</p>
+                  <p>Each turn you maintain concentration, you may move the whirlwind up to 15 feet in a straight line.
+                    Each creature the whirlwind moves through must make a Dexterity save. A creature can be affected by
+                    a whirlwind only once per turn.
+                  <ul>
+                    <li><b>Critical Success</b>: The creature is unaffected.</li>
+                    <li><b>Success</b>: The creature takes half damage.</li>
+                    <li><b>Critical failure</b>: The creature takes double damage and rises 20 feet into the air. While
+                      it is in the whirlwind, it remains aloft and must make a Dexterity (Acrobatics) check to move up
+                      to their movement speed in the difficult terrain. If they leave the whirlwind, they immediately
+                      fall.</li>
+                  </ul>
+                  </p>
+                  <p>
+                    <b>Synergy</b>: Using Hydrofusion or Bloodfusion abilities through the Whirlwind increases their
+                    damage. These abilities passing through the whirlwind deal an additional amount of piercing damage
+                    equal to the fusist’s Constitution modifier. When an infusion attack misses its target (so long as
+                    it is not a critical miss), creatures within 5 feet of the target take piercing damage equal to the
+                    fusist’s Constitution modifier.
+                  </p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-6" id="aero-power-6">
-              <span class="class-nav-item">Windstream</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-6" data-parent="#aero-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some fart power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Wind Ward</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>30 feet</li>
+                <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                <li>
+                  <p>You create a barrier of gusting winds that hinders anything moving through it. The wall of swirling
+                    winds is 5 feet thick, 60 feet long, and 30 feet high. The wall stands vertically, but you can shape
+                    its path. Though the wall of wind distorts the air, it does not hamper sight. The wall has the
+                    following effects.</p>
+                  <p>Ammunition from physical ranged attacks—such as arrows, bolts, sling bullets, and other objects of
+                    similar size—can't pass through the wall. Attacks with bigger ranged weapons, such as javelins, have
+                    advantage on attack rolls if their paths pass through the wall. Massive ranged weapons and effects
+                    that don't create physical objects pass through the wall with no penalty.</p>
+                  <p>The wall is difficult terrain to creatures attempting to move overland through it. Gases can't pass
+                    through the wall. A creature that attempts to fly through the wall must succeed on a Strength save
+                    to do so. Hovering or levitating creatures are instantly pushed out of the wall in a random
+                    direction and cannot pass
+                    through.</p>
+                  <p><b>Empower</b>: When you trigger this ability and pay an additional 1 mana, you can transform the
+                    wall into a barrier of wind blades. Alternatively, you can use another bonus action in a different
+                    turn and pay 1 mana to empower the ward. A burst of blades reaches out 5 feet from the wall and all
+                    creatures within 10 feet must make a Dexterity save or take 3d6 slashing damage. Then, any creatures
+                    beginning their turn or passing through the wall take 1d6 slashing damage. At will, you can remove
+                    the blades while still maintaining the ward, but you must spend 1 mana and use a bonus action to
+                    reactivate.
+                  <ul>
+                    <li><b>Success</b>: Creature takes half damage.</li>
+                    <li><b>Critical failure</b>: Creature takes double damage.</li>
+                  </ul>
+                  </p>
+                  <p>
+                    <b>Synergy</b>: Using Hydrofusion abilities through the Wind Ward transforms the water into ice.
+                    Hydrofusion abilities passing through the ward deal an additional amount of cold damage equal to the
+                    fusist’s Constitution modifier.
+                  </p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-7" id="aero-power-7">
-              <span class="class-nav-item">Whispering Wind</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-7" data-parent="#aero-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some fart power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Winter’s Burst</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>HD 1</li>
+                <li><b>Trigger: </b>Somatic, Verbal</li>
+                <li><b>Range: </b>Self</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>
+                  <p>You breathe deeply, concentrating air motes into a chill burst of wind. When you trigger this
+                    ability, all creatures within 20 feet of you must make a Dexterity save or take 4d4 cold damage.</p>
+                  <p>You also create a layer of ice on all surfaces in the area, which become difficult terrain for
+                    anyone that is not an Aerofusist. Unattended objects in the area become slick with ice, and picking
+                    them up requires a successful Dexterity save or Acrobatics check against your infusion DC. The ice
+                    melts on any object that takes fire damage as well as in any square included in the area of an
+                    ability that deals fire damage.
+                  <ul>
+                    <li><b>Critical success</b>: The creature takes no damage.</li>
+                    <li><b>Success</b>: The creature takes half damage.</li>
+                    <li><b>Critical fail</b>: The creature also falls prone.</li>
+                  </ul>
+                  </p>
+                  <p><b>Empower</b>: Pay an additional 2 mana to empower the burst. It deals 8d4 cold damage in a
+                    30-foot burst.</p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-8" id="aero-power-8">
-              <span class="class-nav-item">Hurricane</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-8" data-parent="#aero-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some fart power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Wind Stream</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>Mana 1-3</li>
+                <li><b>Trigger: </b>Verbal</li>
+                <li><b>Range: </b>30-foot-line</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>
+                  <p>As an action, you blow out a stream of focused air from yourself that is 30 feet long and 5 feet
+                    wide. You can aim this line vertically or horizontally, and each creature in that area must make a
+                    Strength saving throw or take 2d6 bludgeoning damage per mana spent.
+                  <ul>
+                    <li><b>Critical success</b>: Creature is unaffected.</li>
+                    <li><b>Success</b>: Creature takes half damage.</li>
+                    <li><b>Failure</b>: A creature up to one size category larger than you or smaller is knocked prone.
+                      If the creature is flying, it falls 20 feet instead.</li>
+                    <li><b>Critical failure</b>: Creature takes double damage.</li>
+                  </ul>
+                  </p>
+                  <p><b>Empower</b>: If you maintain a mana pool of 1, you can hold concentration on this Wind Stream
+                    for up to 1 minute. Each turn after triggering the stream, you can spend a bonus action to reshape
+                    the stream. The stream no longer deals bludgeoning damage on these subsequent turns, but it can
+                    still knock creatures prone. In addition, you can move through your stream once per turn,
+                    immediately traveling from the beginning to the end of it. Other Aerofusists can also travel through
+                    the stream in the same manner. If your stream is blocked by an obstacle, you stop at that point. If
+                    you stop in air, you fall immediately unless you have another mechanism to stay aloft.</p>
+                  <p><b>Synergy</b>: If you hold concentration on this ability, any infusions from yourself or allies
+                    besides Aerofusion can target the stream. The infusion triggers through the stream or at any point
+                    of the stream (fusist’s choice). An enemy fusist attempting to use your stream must make a
+                    Constitution save against your DC. On a success, the fusist can access your stream.</p>
+                </li>
+              </ul>
             </div>
-          </ul>
+          </div>
+
         </div>
       </div>
       <div class="tab-pane text-center" id="bloodfusion-infusion" role="tabpanel"
         aria-labelledby="bloodfusion-infusion-list">
-        <h2>Bloodfusion</h2>
-        <img src="../assets/tech_trees/tech-tree_blood_full.png" class="mt-5 mb-5" style="height: 939px; width: 639px;">
+        <h2 class="arjulian">Bloodfusion</h2>
+        <img src="../assets/tech_trees/infusions_blood_full.png" class="mt-2 mb-5" style="height: 500px; width: 500px;">
+        <p class="mb-2 text-left">Bloodfusion grants power over blood, the liquid lifeforce of all creatures. Blood
+          motes are passionate and perky, giving a first impression of lightheartedness and gaiety. However, once
+          enraged, these motes do not hesitate to drink greedily and kill. This affinity bestows these traits to the
+          bearer in addition to an increased
+          appetite.</p>
+        <p class="text-left">When you select Bloodfusion, you gain the following passive abilities in addition to the
+          first tier of Bloodweaving.
+        <ul class="mb-5 text-left">
+          <li><b>Hard to Kill</b>: You have advantage on death saving throws and on checks or saves against disease and
+            illness.</li>
+          <li><b>Infused Recovery</b>: Whenever you use Hit Die to recover hit points, you always roll an extra die
+            without expending it.</li>
+        </ul>
+        </p>
         <div class="col d-flex flex-column infusion-powers" id="blood-powers">
-          <ul class="pl-0 shadow">
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-1"
-              id="infusion-power-1">
-              <span class="class-nav-item">Bloodweaving</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-1" data-parent="#blood-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-2"
-              id="infusion-power-2">
-              <span class="class-nav-item">Seeker</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-2" data-parent="#blood-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-3"
-              id="infusion-power-3">
-              <span class="class-nav-item">Dessication</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-3" data-parent="#blood-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-4"
-              id="infusion-power-4">
-              <span class="class-nav-item">Inflict</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-4" data-parent="#blood-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-5"
-              id="infusion-power-5">
-              <span class="class-nav-item">Leech</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-5" data-parent="#blood-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-6"
-              id="infusion-power-6">
-              <span class="class-nav-item">Greater Seeker</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-6" data-parent="#blood-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-7"
-              id="infusion-power-7">
-              <span class="class-nav-item">Enervate</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-7" data-parent="#blood-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-8"
-              id="infusion-power-8">
-              <span class="class-nav-item">Transference</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-8" data-parent="#blood-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
-            </div>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tab-pane text-center" id="cryofusion-infusion" role="tabpanel"
-        aria-labelledby="cryofusion-infusion-list">
-        <h2>Cryofusion</h2>
-        <img src="../assets/tech_trees/tech-tree_cryo_full.png" class="mt-5 mb-5" style="height: 492px; width: 1126px;">
-        <p>Cryofusion is the ability to use water motes to form ice. This affinity alters the bearer with a
-          penetrating glare, sharper voice, or chilly disposition.<br>
-
-          Cryofusists exude a cooling demeanor and focus, allowing them stay level-headed even in the most
-          uncomfortable conditions. They have advantage on any saves or checks against environmental effects and can
-          keep perishables that they carry preserved for twice as long. Additionally, by taking this infusion, a
-          cryofusist gains the Iceweaving ability.</p>
-        <div class="col d-flex flex-column infusion-powers" id="cryo-powers">
-          <ul class="pl-0 shadow">
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-1"
-              id="infusion-power-1">
-              <span class="class-nav-item">Iceweaving</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-1" data-parent="#cryo-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Bloodweaving</span>
+            <div class="infusions-body" style="display: none">
+              <p>Bloodfusists are imposing, intimidating figures even if lacking in stature. At tier I, you can use the
+                Bloodspear ability.</p>
+              <h4 class="arjulian">Tier I</h4>
+              <span class="infusions-subtitle">Bloodspear</span>
               <ul style="list-style-type:none;">
-                <li><b>Activation: </b>1 action to 10 minutes</li>
-                <li><b>Duration: </b>Concentration, up to 1 hour</li>
-                <li>You are able to chill or freeze water and similar liquids. You must have a source of liquid within
-                  10 feet of you to activate this ability. The amount of liquid you can affect and the time required
-                  to do so is based on your Waterweaving ability: Tier I requires 1 action to freeze, Tier II requires
-                  1 minute, and Tier III requires 10 minutes. Alternatively, you can reduce the time requirement to 1
-                  action by expending 1 Hit Die for each tier above I.
-
-                  Once you have initiated this ability, you must stay within 30 feet of the ice and hold concentration
-                  to continue controlling it. You can manipulate the ice in the following ways:
-
-                  Shape and Move: As an action, you can create simple shapes (or break them apart) and animate the
-                  ice. For example, you can create a solid sphere of ice that you shift and move up to 30 feet per
-                  turn. You are able to concentrate on this manipulation for up to 1 hour. Once this ability ends, the
-                  sphere reverts back to its natural state, falling to the ground or being held in a prepared vessel.
-
-                  Toss: As a bonus action, you can toss ice you are controlling at a creature or area. The tier of ice
-                  you toss determines the area you can target, any extra effects, and the amount of bludgeoning damage
-                  dealt (refer to the end of this description). You still control the ice regardless of the results of
-                  the attack and can continue using your bonus action to toss it. Any creatures in the area of your
-                  toss attack must make a Dexterity saving throw. On a success, creatures take half the damage but
-                  suffer no other effects.
-
-                  The DC for this saving throw is 8 + your proficiency bonus + your Constitution modifier.
-                  Waterweaving Tier I: Target must be an area or creature you can see within 30 feet of you. You
-                  cannot toss ice through solid objects. Any creature in a 5-foot radius of this attack takes 1d10
-                  bludgeoning damage and are pushed back 5 feet on a failed Dexterity saving throw.
-
-                  Waterweaving Tier II: Target must be an area or creature you can see within 60 feet of you. You
-                  cannot toss ice through solid objects. Any creature in a 15-foot radius of this attack takes 3d10
-                  bludgeoning damage and are knocked prone on a failed Dexterity saving throw.
-
-                  Waterweaving Tier III: Target must be an area or creature you can see within 60 feet of you. You
-                  cannot toss ice through solid objects. Any creature in a 15-foot radius of this attack takes 5d10
-                  bludgeoning damage and are knocked prone on a failed Dexterity saving throw. In addition, you can
-                  choose to leave shards of ice on the ground, creating difficult terrain that deals 1d4 piercing
-                  damage to any creature walking through a space with the ice shards. Doing so ends your control over
-                  the ice.</li>
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>30 feet</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>You shoot forth a spear of your own blood at your foe. Make a ranged infusion attack against a
+                  target you can see within range. You must take 1d4 damage to yourself, and this damage cannot be
+                  reduced in any way (but it can be taken from temporary hit points). On a hit, the target takes 1d10
+                  necrotic damage.
+                  <ul>
+                    <li><b>Critical Hit</b>: The target is sickened. A creature sickened by this ability suffers
+                      disadvantage on all Constitution saving throws. This effect lasts until the creature
+                      heals or otherwise recovers hit points.</li>
+                  </ul>
+                </li>
               </ul>
-              </p>
+              <h4 class="arjulian">Tier II</h4>
+              <ul>
+                <li>Your Bloodspear improves, dealing 2d10 necrotic damage and has a range of 60 feet.</li>
+                <li>You take 2d4 damage when using Bloodspear.</li>
+              </ul>
+              <h4 class="arjulian">Tier III</h4>
+              <ul>
+                <li>Your Bloodspear improves again, dealing 3d10 necrotic damage.</li>
+                <li>You take 3d4 damage when using Bloodspear.</li>
+                <li>In addition, you learn the Recall Wound ability.</li>
+              </ul>
+              <span class="infusions-subtitle">Recall Wound</span>
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 reaction</li>
+                <li><b>Cost: </b>P 2</li>
+                <li><b>Trigger: </b>Verbal</li>
+                <li><b>Range: </b>60 feet</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>Your voice—whether it is a shout, a growl, or a curse—triggers a frenzy within your bloodspear that
+                  reactivates old wounds in your enemy. After a successful bloodspear attack against a creature, you may
+                  spend your reaction to recall wounds in the same target. The creature must make a Constitution save or
+                  suffer 1d6 + your Constitution modifier in necrotic damage and gain 1 level of exhaustion. On a
+                  success, the creature only takes the necrotic damage. A creature cannot take more than 1 level of
+                  exhaustion from this ability, but it can continue to take necrotic damage.</li>
+              </ul>
             </div>
-
-
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-2"
-              id="infusion-power-2">
-              <span class="class-nav-item">Frost Fingers</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-2" data-parent="#cryo-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some freezing power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-3"
-              id="infusion-power-3">
-              <span class="class-nav-item">Ice Blade</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-3" data-parent="#cryo-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some freezing power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-4"
-              id="infusion-power-4">
-              <span class="class-nav-item">Freeze</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-4" data-parent="#cryo-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some freezing power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-5"
-              id="infusion-power-5">
-              <span class="class-nav-item">Chill Cloud</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-5" data-parent="#cryo-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some freezing power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-6"
-              id="infusion-power-6">
-              <span class="class-nav-item">Ice Bolt</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-6" data-parent="#cryo-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some freezing power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-7"
-              id="infusion-power-7">
-              <span class="class-nav-item">Ice Wall</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-7" data-parent="#cryo-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some freezing power</p>
-            </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-8"
-              id="infusion-power-8">
-              <span class="class-nav-item">Blizzard</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-8" data-parent="#cryo-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some freezing power</p>
-            </div>
-          </ul>
+          </div>
         </div>
-      </div>
-
-      <div class="tab-pane text-center" id="galvanofusion-infusion" role="tabpanel"
-        aria-labelledby="galvanofusion-infusion-list">
-        <h2>Galvanofusion</h2>
-        <img src="../assets/tech_trees/tech-tree_galvano_full.png" class="mt-5 mb-5"
-          style="height: 602px; width: 606px;">
-        <div class="col d-flex flex-column infusion-powers" id="galvano-powers">
-          <ul class="pl-0 shadow">
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-1"
-              id="infusion-power-1">
-              <span class="class-nav-item">Static</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-1" data-parent="#galvano-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some Zappy power</p>
+        <div class="col d-flex flex-column infusion-powers" id="blood-powers">
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Decay</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>Mana 2</li>
+                <li><b>Trigger: </b>Somatic, Verbal</li>
+                <li><b>Range: </b>Touch</li>
+                <li><b>Duration: </b>1 minute</li>
+                <li>
+                  <p>You utter an ancient elemental word that stirs the motes in a creature’s blood and decays it. A
+                    target you touch must make a Constitution saving throw. On a fail, select between Strength,
+                    Dexterity, or Constitution. That creature’s ability score lowers by 2 points for the duration.</p>
+                  <p>Once a creature has been affected by Decay, targeting it again requires an additional 1 mana.
+                  <ul>
+                    <li><b>Critical success</b>: The creature has advantage on its next attack as its body has a surge
+                      of energy.</li>
+                    <li><b>Critical fail</b>: Select 2 ability scores and lower both by 2 points.</li>
+                  </ul>
+                  </p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-2"
-              id="infusion-power-2">
-              <span class="class-nav-item">Grasp</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-2" data-parent="#galvano-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+          </div>
+        </div>
+        <div class="col d-flex flex-column infusion-powers" id="blood-powers">
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Seeker’s Mark</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>Mana 2</li>
+                <li><b>Trigger: </b>Verbal</li>
+                <li><b>Range: </b>30 feet</li>
+                <li><b>Duration: </b>1 minute to 1 hour*</li>
+                <li>
+                  <p>With a word, a target you see within range has its own blood lift to the surface of its body,
+                    marking it with an odd rune. So long as a creature bears this mark, you will know its location. Once
+                    per turn, when the creature takes physical damage, you heal hit points equal to your Constitution
+                    modifier. If the creature dies, you gain a temporary Hit Die that lasts until you take a long rest.
+                    You can only gain up to 2 temporary Hit Die with this ability.</p>
+                  <p>If a marked creature dies before the duration is over, you may transfer the mark to another
+                    creature within range as a free action. If you activate this ability again, the first mark
+                    dissipates.</p>
+                  <p>This ability’s duration increases depending on your Bloodweaving tier: tier II increases the
+                    duration to 10 minutes, and tier III increases it to 1 hour.</p>
+                  <p><b>Empower</b>: You can increase the duration of this mark for the purposes of tracking a creature
+                    by 1 day for each Hit Die you expend. Otherwise, the combat elements of the mark are limited to the
+                    maximum duration of 1 hour if you have tier III in Bloodweaving.</p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-3"
-              id="infusion-power-3">
-              <span class="class-nav-item">Sphere</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-3" data-parent="#galvano-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+          </div>
+        </div>
+        <div class="col d-flex flex-column infusion-powers" id="blood-powers">
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Leech</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>Mana 2, P 1</li>
+                <li><b>Trigger: </b>Verbal</li>
+                <li><b>Range: </b>Touch</li>
+                <li><b>Duration: </b>1 minute</li>
+                <li>
+                  <p>You speak an elemental word and blood motes gather around your hand. Your touch siphons off a
+                    portion of the target's lifeforce to bolster your own vitality. Select an ability score between
+                    Strength, Constitution, and Dexterity. The target must make a Constitution save or take 1d4 damage
+                    to this ability score, and your own score increases by this amount for the duration.</p>
+                  <p>If your target bears your Seeker’s Mark and it fails its saving throw, you also heal as though you
+                    expended 1 Hit Die.
+                  <ul>
+                    <li><b>Critical success</b>: You take necrotic damage equal to twice your Constitution modifier as
+                      the motes backfire.</li>
+                    <li><b>Critical failure</b>: The target gains one level of exhaustion.</li>
+                  </ul>
+                  </p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-4"
-              id="infusion-power-4">
-              <span class="class-nav-item">Shatter</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-4" data-parent="#galvano-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+          </div>
+        </div>
+        <div class="col d-flex flex-column infusion-powers" id="blood-powers">
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Inflict Pain</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>HD 2</li>
+                <li><b>Trigger: </b>Verbal</li>
+                <li><b>Range: </b>Self</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>You use your own vitality to boil the blood of those around you. All creatures within 15 feet of you
+                  must make a Constitution saving throw or take 3d6 necrotic damage per Bloodweaving tier. If any of
+                  these creatures bears your Seeker’s Mark, you heal for half the damage it takes (rounded down).
+                  <ul>
+                    <li><b>Critical success</b>: You take necrotic damage equal to twice your Constitution modifier.
+                    </li>
+                    <li><b>Success</b>: The creature takes half damage.</li>
+                    <li><b>Critical failure</b>: The creature gains one level of exhaustion.</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-5"
-              id="infusion-power-5">
-              <span class="class-nav-item">Bolt</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-5" data-parent="#galvano-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+          </div>
+        </div>
+        <div class="col d-flex flex-column infusion-powers" id="blood-powers">
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Enervating Shot</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>Mana 2, HD 1</li>
+                <li><b>Trigger: </b>Somatic, Verbal</li>
+                <li><b>Range: </b>30-foot-line</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>
+                  You cut your finger and with the blood, you fire a beam of energy that weakens the lifeforce of any
+                  creature it touches. Each creature in the line must make a Constitution save or gain 1 level of
+                  exhaustion and suffer 1d10 necrotic damage per Bloodweaving tier. If any of the targets bear your
+                  Seeker’s Mark, you recover hit points equal to your Constitution modifier.
+                  <ul>
+                    <li><b>Critical success</b>: The creature is unaffected.</li>
+                    <li><b>Success</b>: The creature does not suffer exhaustion but still takes the necrotic damage.
+                    </li>
+                    <li><b>Critical failure</b>: The creature is stunned for 1 turn.</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-6"
-              id="infusion-power-6">
-              <span class="class-nav-item">Whip</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-6" data-parent="#galvano-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+          </div>
+        </div>
+        <div class="col d-flex flex-column infusion-powers" id="blood-powers">
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Blood Reaper</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>HD 2</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>Self</li>
+                <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                <li>A word transforms you into a conduit for the blood motes, sharing in their joy of feasting upon
+                  lifeforce. While this ability is active, you gain the following benefits:
+                  <ul>
+                    <li>Add an additional weapon die on any critical hits you make with a weapon you wield.</li>
+                    <li>Temporary hit points equal to twice your Constitution modifier whenever a creature dies within
+                      60 feet of you. If that creature bears your Seeker’s Mark, you can immediately make a Bloodspear
+                      attack against a creature within range.</li>
+                    <li>As a bonus action, you can send a sweeping scythe-shaped arc of your own blood to attack those
+                      around you. You take damage equal to your Constitution modifier that cannot be reduced in any way.
+                      All creatures within 10 feet of you must make a Dexterity saving throw or take 1d10 + your
+                      Constitution modifier in necrotic damage.</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-7"
-              id="infusion-power-7">
-              <span class="class-nav-item">Chain</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-7" data-parent="#galvano-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+          </div>
+        </div>
+        <div class="col d-flex flex-column infusion-powers" id="blood-powers">
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Transference</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 reaction</li>
+                <li><b>Cost: </b>Mana 3, HD 2</li>
+                <li><b>Trigger: </b>Somatic, Verbal</li>
+                <li><b>Range: </b>30 feet</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>
+                  <p>You can transfer damage you are about to take to another creature that you can see within range. If
+                    you have a creature bearing your Seeker’s Mark, you can target that creature at twice the range. If
+                    the creature is willing, all incoming damage is transferred. The damage keeps all the same
+                    properties. You do not transfer any effects or ongoing damage that would be applied. If the willing
+                    creature taking your damage drops to 0 hit points, it is immediately stabilized but unconscious.</p>
+                  <p>If the creature is unwilling, it must make a Constitution saving throw. A creature bearing your
+                    Seeker’s Mark makes this save at disadvantage. On a failure, the creature takes the incoming damage
+                    but none of the effects.</p>
+                  <p>Alternatively, if you see a creature within range taking damage, you can use your reaction and only
+                    pay the Hit Die cost of this ability to take the damage for yourself. If you drop to 0 hit points
+                    because of this transference, you are immediately stabilized but unconscious.</p>
+                </li>
+              </ul>
             </div>
-          </ul>
+          </div>
         </div>
       </div>
 
       <div class="tab-pane text-center" id="hydrofusion-infusion" role="tabpanel"
         aria-labelledby="hydrofusion-infusion-list">
-        <h2>Hydrofusion</h2>
-        <img src="../assets/tech_trees/tech-tree_hydro_full.png" class="mt-5 mb-5"
-          style="height: 657px; width: 1126px;">
+        <h2 class="arjulian">Hydrofusion</h2>
+        <img src="../assets/tech_trees/infusions_hydro_full.png" class="mt-2 mb-5" style="height: 500px; width: 500px;">
+        <p class="mb-2 text-left">Hydrofusion is the ability to manipulate the elemental motes that make water. This
+          affinity for water often marks the bearer with a fluidity of movement, a friendlier demeanor, or a graceful
+          smile that provides comfort to those around them.</p>
+        <p class="text-left">When you select Hydrofusion, you gain the following passive ability in addition to the
+          first tier of Waterweaving.
+        <ul class="mb-5 text-left">
+          <li><b>Infused Connection</b>: Hydrofusists are soothed by and attracted to water, allowing them to detect
+            water sources up to 1 mile away and gain advantage on any skill and ability checks while in water.</li>
+        </ul>
         <div class="col d-flex flex-column infusion-powers" id="hydro-powers">
-          <ul class="pl-0 shadow">
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-1"
-              id="infusion-power-1">
-              <span class="class-nav-item">Waterweaving</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-1" data-parent="#hydro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some wet power</p>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Waterweaving</span>
+            <div class="infusions-body" style="display: none">
+              <p>You are dynamic like the water motes. At tier I, you gain the Manipulate Water, Air Bubble, and Create
+                Water abilities.</p>
+              <h4 class="arjulian">Tier I</h4>
+              <span class="infusions-subtitle">Manipulate Water</span>
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>30 feet</li>
+                <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                <li>
+                  <p>You must have a source of water within 10 feet of you to activate this ability (a pond, a filled
+                    waterskin, or falling rain). Once you have initiated this ability, you must stay within 30 feet of
+                    the water and hold concentration to continue controlling it.</p>
+                  <p>You can create simple shapes and animate water that fits in a 5-foot cube. For example, you can
+                    create a solid orb of water that you shift and move up to 30 feet per turn. Once this ability ends,
+                    the water reverts back to its natural state, falling to the ground or being held in a prepared
+                    vessel.</p>
+                </li>
+              </ul>
+              <span class="infusions-subtitle">Air Bubble</span>
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>Self</li>
+                <li><b>Duration: </b>Concentration, up to 1 minute*</li>
+                <li>
+                  <p>You can create a small, hollow sphere while submerged in water, granting up to 1 minute of air per
+                    Waterweaving tier if placed around your head. With this bubble in place, you can speak and breathe
+                    freely.</p>
+                  <p><b>Empower</b>: You can expend 1 Hit Die to gain an additional number of minutes equal to your
+                    Constitution modifier. You can do so multiple times, but you must maintain concentration throughout
+                    the duration.</p>
+                  <p><b>Synergy</b>: You gain an additional minute of air for each Windweaving tier you master.</p>
+                </li>
+              </ul>
+              <span class="infusions-subtitle">Create Water</span>
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 minute</li>
+                <li><b>Cost: </b>HD 1</li>
+                <li><b>Trigger: </b>Somatic, Verbal</li>
+                <li><b>Range: </b>15 feet</li>
+                <li><b>Duration: </b>Special</li>
+                <li>
+                  <p>You draw water motes out of the air and condense them into a pool of water. You must spend 1 minute
+                    and expend 1 Hit Die to create one gallon of potable water within 15 feet of you. You can target a
+                    vessel that you can see or else the water forms on the ground, saturating it.</p>
+                  <p>Alternatively, you can purify double the amount of water from an available source.</p>
+                </li>
+              </ul>
+              <h4 class="arjulian">Tier II</h4>
+              <ul>
+                <li>Your Manipulate Water improves. You can now control and move up to a 10-foot cube of water.</li>
+                <li>Your Create Water improves. By spending 10 minutes and 3 Hit Die, you can create a 5-foot cube of
+                  water (roughly 37 gallons). If you are purifying water, you double this amount.</li>
+              </ul>
+              <h4 class="arjulian">Tier III</h4>
+              <ul>
+                <li>Your Manipulate Water improves. You can now control and move up to a 20-foot cube of water.</li>
+                <li>In addition, your Create Water improves. By spending 1 hour and 5 Hit Die, you create a 10-foot cube
+                  of water (roughly 75 gallons). If you are purifying water, you double this amount.</li>
+                <li>Finally, you gain the Withdraw ability.</li>
+              </ul>
+              <span class="infusions-subtitle">Withdraw</span>
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 minute</li>
+                <li><b>Cost: </b>P 1*</li>
+                <li><b>Trigger: </b>Verbal</li>
+                <li><b>Range: </b>Touch</li>
+                <li><b>Duration: </b>Special</li>
+                <li>
+                  <p>You can spend 1 minute command water motes to withdraw water from a living plant that you touch (1
+                    gallon for Small, 2 gallons for Medium, 4 gallons for Large, 8 gallons for Huge, and so on). The
+                    plant will shrivel and die once water has been extracted.</p>
+                  <p>Alternatively, you can expend 2 Hit Die to extract water from yourself. You can withdraw a number
+                    of gallons up to your Constitution modifier. You must replenish this missing water before taking a
+                    long rest. If you fail to do so, you cannot recover the expended Hit Die. These Hit Die will be
+                    tapped until you fully rehydrate.</p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-2"
-              id="infusion-power-2">
-              <span class="class-nav-item">Hydromist</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-2" data-parent="#hydro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some wet power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Bubble Cage</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>Mana 1*</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>30 feet</li>
+                <li><b>Duration: </b>Special</li>
+                <li>
+                  <p>You create a 5-foot diameter rolling sphere of churning water that can engulf those it strikes. The
+                    orb can move up to 30 feet per round while on a solid horizontal surface, rolling over barriers less
+                    than 10 feet tall. When you activate this ability, you can also move it up to 30 feet so long as it
+                    remains within range, and on each of your subsequent turns for the duration, you can use a bonus
+                    action to move the orb this same distance. If you do not do so, the bubble cage merely stays at rest
+                    and churns in place. It automatically quenches any fires that it can encompass fully. A bubble cage
+                    stops if it moves outside the ability’s range.</p>
+                  <p>The orb lasts a number of rounds equal to your Waterweaving tier. You can extend the duration of
+                    the orb by expending 1 Hit Die when you activate this ability, allowing the orb to remain for an
+                    additional number of rounds equal to your Constitution modifier.</p>
+                  <p>Your Waterweaving tier also allows you to increase the size of the orb. At tier II, you can spend
+                    an additional mana to make the orb 10 feet. At tier III, you can spend a total of 3 mana to make the
+                    orb 15 feet in diameter.</p>
+                  <p>Any creature in the path of the orb must make a Dexterity saving throw. On a failure, it takes 2d6
+                    points of bludgeoning damage and is engulfed by the bubble cage and carried along with it. Engulfed
+                    creatures are immersed in water and must hold their breath unless capable of breathing water. They
+                    gain cover against attacks from outside the orb but are considered entangled by its churning
+                    currents. Creatures also take 2d6 points of damage at the beginning of their turn each round they
+                    remain trapped. Creatures within the orb may attempt a new Dexterity save each round to escape into
+                    a random square adjacent to the bubble cage.</p>
+                  <p>Depending on what tier of bubble cage you activated, your orb can hold varying sizes and numbers of
+                    creatures. A tier I bubble cage can hold up to 1 Medium, 2 Small, or 4 smaller creatures within it.
+                    At tier II, it can hold 1 Large, 4 Medium, or 16 Small or smaller creatures within it. At tier III,
+                    the orb may hold 1 Huge creature, 2 Large creatures, 8 Medium, or 32 Small or smaller creatures
+                    within it.</p>
+                  <p><b>Synergy</b>: If you have affinity with other infusions, you can alter your bubble cage. To use a
+                    synergy, you must decide select it upon activating this ability.
+                  <ul>
+                    <li>Aerofusion turns the bubble cage to ice. The orb now deals 2d6 bludgeoning damage and 2d6 cold
+                      damage to creatures in its path, but it does not capture creatures within it. Creatures can still
+                      attempt a Dexterity saving throw to avoid this damage. As a bonus action or at the end of the
+                      ability’s duration, you can force your ice orb to explode in a 20-foot radius +burst, dealing 6d6
+                      cold damage to each creature in the area that fails a Dexterity saving throw. On a success,
+                      creatures take half this damage.</li>
+                    <li>Bloodfusion transforms the bubble cage into a bloody orb that drains the lifeforce out of
+                      creatures. It acts as the standard bubble cage, but so long as you are within the range of the
+                      orb, you heal half the damage that creatures take while entangled in the orb.</li>
+                    <li>Pyrofusion heats the bubble cage, scalding creatures within and around it. It acts as the
+                      standard bubble cage with the following addition:
+                      <ul>
+                        <li>Creatures adjacent to the orb’s path take fire damage equal to your
+                          Constitution modifier.</li>
+                        <li>Creatures captured within take an additional 2d6
+                          fire damage.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  </p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-3"
-              id="infusion-power-3">
-              <span class="class-nav-item">Water Whip</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-3" data-parent="#hydro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some wet power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Hydrospear</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>P 1-5</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>60 feet</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>
+                  <p>You concentrate water into a powerful jet to spear your enemy. You must have an adequate water source such as a ration of water held in a waterskin. Make a ranged infusion attack at one creature you can see within range. On a hit, your spear deals 1d6 piercing damage per point in your pool (maximum 5).
+                    <ul>
+                      <li><b>Miss</b>: The water splashes harmlessly against your target and is lost unless you can spend 1 minute in a focused state to collect it.</li>
+                      <li><b>Critical hit</b>: Your hydrospear also deals splash damage. Any creature within 5 feet of your target takes piercing damage equal to your Constitution modifier.</li>
+                    </ul>
+                  </p>
+                  <p><b>Synergy</b>: If you also have affinity to other infusions, you can alter your hydrospear.
+                <ul>
+                  <li>Aerofusion transforms the spear into solid ice and deals additional cold damage equal to your Constitution modifier.</li>
+                  <li>Bloodfusion alters the water to become toxic and adds necrotic damage equal to your Constitution modifier.</li>
+                  <li>Pyrofusion superheats the water and deals fire damage equal to your Constitution modifier.</li>
+                </ul>
+              </p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-4"
-              id="infusion-power-4">
-              <span class="class-nav-item">Water Spear</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-4" data-parent="#hydro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some wet power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Rushing Edge</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>HD 1</li>
+                <li><b>Trigger: </b>Somatic, Verbal</li>
+                <li><b>Range: </b>A melee weapon you wield</li>
+                <li><b>Duration: </b>1 minute</li>
+                <li>
+                  <p>You call to the motes to limn your melee weapon with coat of fast-moving water. Your weapon gains a 5-foot reach and deals additional slashing damage equal to your Constitution modifier. As a bonus action, you can trigger the water motes to burst from your weapon, dealing 2d6 piercing damage to all creatures within 10 feet of you.</p>
+                  <p>Rushing Edge remains on a weapon for the duration, until you deactivate it as a free action, or you no longer wield it.
+                    <ul>
+                      <li><b>Critical hit</b>: If the creature is Huge or smaller, it is knocked prone.</li>
+                      <li><b>Critical miss</b>: You take slashing damage equal to your Constitution modifier, as your grip slips and you’re injured by the motes.</li>
+                    </ul>
+                  </p>
+                  <p><b>Synergy</b>: If you have affinity with other infusions, you can alter your Rushing Edge in the following ways. When you activate this ability, you may select one of these synergies. It requires a bonus action to change the synergy once Rushing Edge is activated.
+                  <ul>
+                    <li>Aerofusion transforms the water to spikes of ice and your weapon gains the following properties instead of the original Rushing Edge: it gains additional piercing damage equal to your Constitution modifier. As a bonus action, you can shoot a burst of ice, dealing 2d6 cold damage to all creatures within 10 feet of you. On a critical hit, the target is dazed instead of knocked prone and suffers disadvantage on its next attack or saving throw.</li>
+                    <li>Bloodfusion taints the weapon, giving it the following properties instead of the original Rushing Edge: it gains additional necrotic damage equal to your Constitution modifier. As a bonus action, you burst a plume of toxic mist, dealing 2d6 necrotic damage to all creatures within 10 feet of you. On a critical hit, the target gains 1 level of exhaustion instead of being knocked prone. A creature can only receive 1 level of exhaustion from this ability.</li>
+                    <li>Pyrofusion heats the weapon, giving it the following properties instead of the original Rushing Edge: it gains additional fire damage equal to your Constitution modifier. As a bonus action, you burst steam, dealing 2d6 fire damage to all creatures within 10 feet of you. On a critical hit, the target becomes overheated and takes fire damage equal to your Constitution modifier at the start of its turn for a number of rounds equal to your Waterweaving tier or your Fireweaving tier, whichever is higher.</li>
+                  </ul>
+                  </p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-5"
-              id="infusion-power-5">
-              <span class="class-nav-item">Bubble Cage</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-5" data-parent="#hydro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some wet power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Torrent</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>HD 2*, Mana 2</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>60 feet</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>
+                  <p>You push forth a powerful stream of water that batters all creatures and obstacles in its path. Your torrential stream is a 30-foot line that is 5 feet wide and 10 feet tall and runs along a solid surface. Loose, unattended objects that are Medium or smaller are pushed along the stream and possibly destroyed. Similarly sized plants are uprooted, and fires along the torrent are extinguished.</p>
+                  <p>Creatures caught in the torrent must make a Dexterity saving throw. On a failed save, the creature takes 5d10 bludgeoning damage and is tossed to an adjacent space next to the torrent. If the creature Huge or smaller, is knocked prone and is dazed until the end of its next turn. A creature dazed in this manner suffers disadvantage on its next attack or saving throw, whichever comes first.</p>
+                  <p>If you do not have a water source of at least 10 cubic feet within range, your cost for this infusion increases by 1 Hit Die for each 5 cubic feet missing as you must drain and gather all possible water motes to activate the ability.
+                <ul>
+                  <li><b>Critical success</b>: A creature takes no damage and suffers no effects.</li>
+                  <li><b>Save</b>: A creature takes half the damage and does not move or fall prone.</li>
+                  <li><b>Critical fail</b>: The creature is stunned until the end of its next turn.</li>
+                </ul>
+                </p>
+                  <p><b>Empower</b>: If you have affinity to other infusions, you can spend 1 additional mana to enhance the torrent in following ways. A torrent can only have one enhancement.
+                  <ul>
+                    <li><b>Aerofusion</b>: You can add 2d6 cold damage per Windweaving tier you mastered, and after the torrent dissipates, the water hardens to ice on the ground that lasts for 1 hour. The area is considered difficult terrain.</li>
+                    <li><b>Bloodfusion</b>: Creatures who fail the saving throw against your torrent also suffer 1 level of exhaustion. A creature can only suffer 1 level of exhaustion with this ability.</li>
+                    <li><b>Pyrofusion</b>: You can add 1d6 fire damage per Fireweaving tier you mastered, and after the torrent dissipates, the water turns to steam. This creates an area of blistering, concealing mist that fills the line and spaces adjacent to it. Attacks made in the mist or through it are done so at disadvantage, and a creature suffers fire damage equal to your Constitution modifier each time it begins its turn and enters a space with steam. The steam remains a number of turns equal to your Constitution modifier.</li>
+                  </ul>
+                  </p>
+                  <p><b>Synergy</b>: If you also have affinity to other infusions, you can alter your torrent. If you have selected an enhancement through the Empower options, you must select the same type for this synergy.
+                  <ul>
+                    <li>Aerofusion makes the water freezing cold, adding cold damage equal to your Constitution modifier.</li>
+                    <li>Bloodfusion turns the water bracken and dark, adding necrotic damage equal to your Constitution modifier.</li>
+                    <li>Pyrofusion superheats the water, adding fire damage equal to your Constitution modifier.</li>
+                  </ul>
+                  </p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-6"
-              id="infusion-power-6">
-              <span class="class-nav-item">Wave Slam</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-6" data-parent="#hydro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some wet power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Waterborn</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>HD 1, P 3</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>Self</li>
+                <li><b>Duration: </b>Concentration, up to 1 hour</li>
+                <li>
+                  <p>Your body takes on a moist, slick appearance. For the duration of this infusion, your form can stretch and shift with ease and becomes slightly transparent, as if you were composed of liquid. This transparency is not enough to grant concealment. You gain DR 10 against slashing and piercing, and your reach increases by 10 feet. In addition, you can pass through small holes or narrow openings, even mere cracks, with anything you were carrying at the time the infusion was activated (except other creatures). Finally, you can move through water with a swim speed of 60 feet and can breathe both water and air for the duration of this effect.</p>
+                  <p><b>Empower</b>: While you are under the effects of Waterborn, you can use a bonus action and 1 mana to create a geyser from the ground. You spring forth a column of water from any horizontal surface within 60 feet of you, knocking over creatures directly over it. A creature on the space where your geyser erupts must make a Dexterity saving throw to avoid being hurled into the air and then tossed to the ground. On a fail, it takes 3d6 points bludgeoning damage from the water pummeling them and also falling damage. The falling damage is determined by the size of the creature: Small creatures are shot up 40 feet (20 falling damage), Medium creatures 30 feet (15 falling damage), Large creatures 20 feet (10 falling damage), Huge creatures 10 feet (5 falling damage).<br><br>Your geysers cannot throw creatures larger than Huge, but they can still take bludgeoning damage from the water column.
+                    <ul>
+                      <li><b>Success</b>: Creatures take half damage from the water but do not take falling damage.</li>
+                      <li><b>Critical failure</b>: Creatures take double damage from all sources.</li>
+                    </ul>
+                </p>
+                  <p><b>Synergy</b>: If you also have an affinity to Pyrofusion, you can improve your geysers. The columns of water become boiling hot, exposing nearby creatures to searing droplets as your geyser’s spray falls back to the ground. The targeted creature takes an additional 3d6 fire damage from the water on a failed save, and adjacent creatures take fire damage equal to your Constitution modifier.</p>
+                </li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-7"
-              id="infusion-power-7">
-              <span class="class-nav-item">Waterborn</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-7" data-parent="#hydro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some wet power</p>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Waterwhip</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>Mana 1-7</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>15 feet</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>
+                  <p>With a sharp thrust of your hand, you send out a whip of water to slash your foe. Make an infused melee attack within range and on a hit, you deal 2d4 slashing damage per mana spent. In addition, your target is splashed in the eyes and has disadvantage on their next attack.</p>
+                  <p><b>Synergy</b>: If you have an affinity to other infusions, you can alter your whip.
+                    <ul>
+                      <li>Aerofusion can alter the whip to hold a sphere of ice at the end, allowing the whip to add bludgeoning damage equal to your Constitution modifier. On a critical hit, you can also push or pull a target up to one size larger than yourself up to 15 feet.</li>
+                      <li>Bloodfusion turns your water putrid, allowing the whip to add necrotic damage equal to your Constitution modifier. On a critical hit, your target suffers one level of exhaustion. A creature can only gain one level of exhaustion from this ability.</li>
+                      <li>Pyrofusion superheats your whip, allowing you to add fire damage equal to your Constitution modifier. On a critical hit, you double this fire damage.</li>
+                    </ul>
+                  </p>
+                </li>
+              </ul>
             </div>
-          </ul>
+          </div>
         </div>
       </div>
 
       <div class="tab-pane text-center" id="pyrofusion-infusion" role="tabpanel"
         aria-labelledby="pyrofusion-infusion-list">
-        <h2>Pyrofusion</h2>
-        <img src="../assets/tech_trees/tech-tree_pyro_full.png" class="mt-5 mb-5" style="height: 826px; width: 634px;">
-        <div class="col d-flex flex-column infusion-powers" id="pyro-powers">
-          <ul class="pl-0 shadow">
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-1"
-              id="infusion-power-1">
-              <span class="class-nav-item">Bloodweaving</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-1" data-parent="#pyro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+        <h2 class="arjulian">Pyrofusion</h2>
+          <img src="../assets/tech_trees/infusions_pyro_full.png" class="mt-2 mb-5"
+            style="height: 576px; width: 500px;">
+            <p class="mb-2 text-left">Pyrofusion grants control over flame. Fire motes are erratic, quick to anger, and dangerous when infuriated. This affinity gifts a fusist with a piercing stare, a high body temperature, and an eagerness for fight whether it one of wits or to the death.</p>
+            <p class="text-left">When you select Pyrofusion, you gain the following passive abilities in addition to the first tier of Fireweaving.
+            <ul class="mb-5 text-left">
+              <li><b>Infused Mind</b>: Pyrofusists are headstrong and are not easily cowed. You have advantage on any saves against fear and charm effects.</li>
+              <li><b>Infused Warmth</b>: You are less affected by weather – the heat is less taxing, and your increased body temperature helps you against the cold.</li>
+            </ul>
+          <div class="col d-flex flex-column infusion-powers" id="pyro-powers">
+            <div class="shadow infusion-box rounded border border-secondary text-left">
+              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Fireweaving</span>
+              <div class="infusions-body" style="display: none">
+                <p>You can manipulate tiny flames into shapes, snuff out a torch, and instantly light a lantern. At tier I, you can use the Spark ability.</p>
+                <h4 class="arjulian">Tier I</h4>
+                <span class="infusions-subtitle">Spark</span>
+                <ul class="pb-0" style="list-style-type:none;">
+                  <li><b>Activation: </b>1 bonus action</li>
+                  <li><b>Cost: </b>P 1</li>
+                  <li><b>Trigger: </b>Somatic</li>
+                  <li><b>Range: </b>Self</li>
+                  <li><b>Duration: </b>Instantaneous</li>
+                  <li>
+                    <p>You stir up the fire motes with a snap of your fingers, creating a burst of heat around you. All creatures within 5
+                      feet of you must make a Dexterity save or take 2d4 fire damage.</p>
+                    <p>You can also use this ability to instantly start a fire in a 5-foot square adjacent to you so long as there is
+                      unattended, flammable material.
+                    <ul>
+                      <li><b>Success</b>: Half damage.</li>
+                      <li><b>Critical failure</b>: The creature catches fire and continues to take fire damage at the end of its turn
+                        equal to your Constitution modifier. It can spend an action to put out the flames</li>
+                    </ul>
+                    </p>
+                  </li>
+                </ul>
+                <h4 class="arjulian">Tier II</h4>
+                <ul>
+                  <li>Your Infused Warmth improves. You may burn a creature grappling you, dealing fire damage equal to your Constitution modifier. This damage is taken when you have been successfully grappled and then at the start of each of your grappler’s turns that it maintains the grapple.</li>
+                  <li>In addition, your Spark improves, dealing 4d4 fire damage.</li>
+                </ul>
+                <h4 class="arjulian">Tier III</h4>
+                <ul>
+                  <li>Your Spark improves, dealing 6d4 fire damage, and it now affects all creatures within 10 feet of you.</li>
+                  <li>On a critical failure, the burning creature takes twice your Constitution modifier in fire damage.</li>
+                </ul>
+              </div>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-2"
-              id="infusion-power-2">
-              <span class="class-nav-item">Seeker</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-2" data-parent="#pyro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+            <div class="shadow infusion-box rounded border border-secondary text-left">
+              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Burning Stream</span>
+              <div class="infusions-body" style="display: none">
+                <ul style="list-style-type:none;">
+                  <li><b>Activation: </b>1 action</li>
+                  <li><b>Cost: </b>Mana 2, P 1</li>
+                  <li><b>Trigger: </b>Somatic</li>
+                  <li><b>Range: </b>15-foot-line</li>
+                  <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                  <li>
+                    <p>A 15-foot line of fire sprays from your outstretched, free hand. This ability remains active up to its duration so long as you maintain concentration and keep one hand free. If you wield a weapon, shield, or perform any activity with the hand holding the burning stream, the infusion ends. This ability cannot function under water, but it can synergize with applicable infusions that utilize water.</p>
+                    <p>All creatures in the line must make a Dexterity saving throw or take 2d6 points of fire damage per Fireweaving tier and catch fire. A creature that catches fire takes fire damage at the start of each of its turns equal to your Constitution modifier up to the duration of this ability. This effect does not stack, and a creature can spend its action to extinguish the flames. Each round you continue to concentrate on this ability, you can select a new direction for the line to affect as a free action.</p>
+                    <p>Your stream sets fire to combustibles and damages objects in the area. It can melt metals with low melting points, such as lead, gold, copper, silver, and bronze. If the damage caused to an interposing barrier shatters or breaks through it, the stream may continue beyond the barrier if the area permits; otherwise it stops at the barrier.</p>
+                    <p><b>Empower</b>: If you expend 1 Hit Die, you can create a second line of fire using your other hand. If you overlap the lines, creatures in the overlap make  their saving throw at Disadvantage, but don’t take damage from both lines. You may stop either line of fire at will on your turn, but once you stop maintaining a line, you must expend another Hit Die to recreate a line and only so long as the infusion is active. Your lines also make the area they affect difficult terrain, pushing against all creatures.</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-3"
-              id="infusion-power-3">
-              <span class="class-nav-item">Dessication</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-3" data-parent="#pyro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+            <div class="shadow infusion-box rounded border border-secondary text-left">
+              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Detonating Mote</span>
+              <div class="infusions-body" style="display: none">
+                <ul style="list-style-type:none;">
+                  <li><b>Activation: </b>1 action</li>
+                  <li><b>Cost: </b>HD 4</li>
+                  <li><b>Trigger: </b>Somatic</li>
+                  <li><b>Range: </b>100 feet</li>
+                  <li><b>Duration: </b>Instantaneous*/li>
+                  <li>
+                    <p>You use your lifeforce to condense fire motes into a bead of devastating potential and deploy it to a space you can see within range. You can either immediately detonate the bead or hold the bead ready up to a number of turns equal to your Constitution modifier. You determine how long to delay the detonation upon completing this ability and that time cannot change once it has been set unless someone touches the bead. If you choose a delay, the glowing bead sits at its destination until it detonates. A creature can pick up and hurl the bead as a thrown weapon (range 15 feet). If a creature handles and moves the bead within 1 turn of its detonation, there is a 25% chance that the bead detonates while being handled.</p>
+                    <p>When the bead detonates, intense explosion triggers from the target location. The explosion is a 30-foot radius sphere that harms all creatures and objects in its range. All creatures in the area must make a Dexterity saving throw or take 10d6 fire damage and be knocked prone.</p>
+                    <p>The longer the bead waits to detonate, the more powerful it becomes. Each turn after creating it, the bead deals an additional 1d6 damage for each Fireweaving tier you master.</p>
+                    <p>The explosion sets fire to combustibles and damages objects in the area. It can melt metals with low melting points, such as lead, gold, copper, silver, and bronze. If the damage caused to an interposing barrier shatters or breaks through it, the explosion may continue beyond the barrier if the area permits; otherwise it stops at the barrier.
+                      <ul>
+                        <li><b>Critical fail</b>: The creature catch fire, taking your Constitution modifier in damage at the start of its next turn.</li>
+                        <li><b>Success</b>: Creatures take half damage but do not fall prone.</li>
+                      </ul>
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-4"
-              id="infusion-power-4">
-              <span class="class-nav-item">Inflict</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-4" data-parent="#pyro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+            <div class="shadow infusion-box rounded border border-secondary text-left">
+              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Flame Blade</span>
+              <div class="infusions-body" style="display: none">
+                <ul style="list-style-type:none;">
+                  <li><b>Activation: </b>1 bonus action</li>
+                  <li><b>Cost: </b>Mana 2</li>
+                  <li><b>Trigger: </b>Somatic</li>
+                  <li><b>Range: </b>Self</li>
+                  <li><b>Duration: </b>1 minute</li>
+                  <li>
+                    <p>Fire motes gather in your free hand, forming a fiery blade similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can gather the motes into the blade again as a bonus action.</p>
+                    <p>You can make a fusion melee attack with the fiery blade. On a hit, the target takes 1d8 plus 1 point per Fireweaving tier in fire damage. The blade is immaterial, so Strength and Dexterity modifiers do not affect the damage.</p>
+                    <p>The blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet. It can also ignite combustible materials such as parchment, straw, dry sticks, and cloth.</p>
+                    <p><b>Empower</b>: You can spend up to 2 additional mana when triggering this ability to increase the damage of the flame blade by 1d8 per mana.</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-5"
-              id="infusion-power-5">
-              <span class="class-nav-item">Leech</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-5" data-parent="#pyro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+            <div class="shadow infusion-box rounded border border-secondary text-left">
+              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Flame Arrows</span>
+              <div class="infusions-body" style="display: none">
+                <ul style="list-style-type:none;">
+                  <li><b>Activation: </b>1 bonus action</li>
+                  <li><b>Cost: </b>HD 1</li>
+                  <li><b>Trigger: </b>Somatic</li>
+                  <li><b>Range: </b>Ammunition you touch</li>
+                  <li><b>Duration: </b>1 minute</li>
+                  <li>
+                    <p>Fire motes transform ammunition (such as arrows, crossbow bolts, and sling stones) into fiery projectiles. Each piece of ammunition deals an extra 1d6 points of fire damage to any target it hits. A flaming projectile can easily ignite a flammable object or structure, but it won't ignite a creature it strikes.</p>
+                    <p><b>Empower</b>: While this ability is active, you can use a bonus action and spend 1 mana to turn your shot into a burst. Your shot deals damage as normal but also creates a burst of fire. All creatures within 10 feet of your target must make a Dexterity save or take 1d6 fire damage per Fireweaving tier you have mastered.
+                  <ul>
+                    <li><b>Success</b>: Creatures take half damage.</li>
+                  </ul>
+                  </p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-6"
-              id="infusion-power-6">
-              <span class="class-nav-item">Greater Seeker</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-6" data-parent="#pyro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+            <div class="shadow infusion-box rounded border border-secondary text-left">
+              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Flaming Sphere</span>
+              <div class="infusions-body" style="display: none">
+                <ul style="list-style-type:none;">
+                  <li><b>Activation: </b>1 bonus action</li>
+                  <li><b>Cost: </b>HD 2, P 1</li>
+                  <li><b>Trigger: </b>Somatic</li>
+                  <li><b>Range: </b>60 feet</li>
+                  <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                  <li>
+                    <p>A burning globe of fire 5 feet in diameter rolls in whichever direction you point and burns those it strikes. It moves 30 feet per round. As part of this movement, it can ascend or jump up to 30 feet to strike a target. If it enters a space with a creature, it stops moving for the round and deals 3d6 points of fire damage to that creature, though a successful Dexterity save halves that damage. A flaming sphere rolls over barriers less than 4 feet tall. It ignites flammable substances it touches and illuminates the same area as a torch would.</p>
+                    <p>The sphere moves as long as you actively direct it with a bonus action. Otherwise, it merely stays at rest and burns. It can be extinguished by any means that would put out a fire of its size. The surface of the sphere has a spongy, yielding consistency and so does not cause damage except by its flame. It cannot push aside unwilling creatures or batter down large obstacles. The sphere winks out if it exceeds the ability’s range.</p>
+                    <p><b>Empower</b>: Spending an additional Hit Die and maintaining a mana pool of 2 increases the size of the sphere to 10 feet in diameter and it deals 6d6 points of fire damage to any creature it strikes. You can also control the sphere within 100 feet of you instead of 60 feet. Any creature that fails its save against the sphere is overheated, suffering disadvantage on its next saving throw or attack roll.</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-7"
-              id="infusion-power-7">
-              <span class="class-nav-item">Enervate</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-7" data-parent="#pyro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+            <div class="shadow infusion-box rounded border border-secondary text-left">
+              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Fire Cloak</span>
+              <div class="infusions-body" style="display: none">
+                <ul style="list-style-type:none;">
+                  <li><b>Activation: </b>1 bonus action</li>
+                  <li><b>Cost: </b>HD 1</li>
+                  <li><b>Trigger: </b>Somatic</li>
+                  <li><b>Range: </b>Self</li>
+                  <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                  <li>
+                    <p>Fire motes feed off your energy and cloak your body in flames that do not harm you or your carried equipment but damage other creatures and objects. The flames cast light as a torch. Any creature that attacks you with a non-reach melee weapon or that begins its turn engaged in a grapple with you takes 1d6 points of fire damage and must succeed at a Dexterity save or catch fire. A creature that catches fire takes fire damage equal to your Constitution modifier at the start of its next turn.</p>
+                    <p>Unattended flammable objects catch fire, spreading fire to one adjacent, flammable object each turn.</p>
+                    <p><b>Empower</b>: You can increase the damage of this ability by 1d6 for 1 mana. Damage taken by catching on fire does not increase, but its duration now lasts 2 turns instead of 1.</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <li class="list-group-item list-group-item-action d-flex justify-content-between infusion"
-              data-toggle="collapse" role="button" aria-expanded="false" data-target="#infusion-8"
-              id="infusion-power-8">
-              <span class="class-nav-item">Transference</span>
-              <span class="class-nav-item badge badge-secondary badge-pill">?</span>
-            </li>
-            <div class="collapse abilities infusion-desc" id="infusion-8" data-parent="#pyro-powers">
-              <p class="p-4"><i>Requirements: None</i><br><br>Some bloody power</p>
+            <div class="shadow infusion-box rounded border border-secondary text-left">
+              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Wildfire</span>
+              <div class="infusions-body" style="display: none">
+                <ul style="list-style-type:none;">
+                  <li><b>Activation: </b>1 action</li>
+                  <li><b>Cost: </b>HD 2</li>
+                  <li><b>Trigger: </b>Somatic, Verbal</li>
+                  <li><b>Range: </b>30 feet</li>
+                  <li><b>Duration: </b>Up to 1 minute</li>
+                  <li>
+                    <p>You stir chaos in nearby fire motes, bringing them to a fierce rage that attempts to engulf everything in flames. When you trigger this ability, you create a ball of wildflame in your hands. Make an infused ranged attack to throw this ball at a target you see within range. On a hit, you deal 2d6 fire damage per Fireweaving tier to the target and it gains the Wildfire status effect. Creatures that have Wildfire on them take your Constitution modifier in fire damage at the start of each of their turns for the duration of the ability.</p>
+                    <p>In addition, anytime you successfully target a creature using a Pyrofusion ability with Wildfire on it, you cause a contagious burst. Any creature within 10 feet of your Wildfire target must make a Dexterity saving throw. On a failure, they take fire damage equal to your Constitution modifier and catch fire as well.</p>
+                    <p>Wildfire is different from other flames in that it is difficult to pat out or douse. Wildfire damage does not stack with being on fire from other abilities. You are immune to catching fire from this ability, but you can take fire damage from being in the vicinity of any bursts.</p>
+                    <p>A creature can spend its entire turn to completely douse itself in water to put out the flames. There must be an adequate supply of water to do so, or a Hydrofusion ability that has a minimum cost of 1 Hit Die or 1 mana can also douse the flames. Alternatively, you can spend your reaction to douse Wildfire flames on a number of creatures up to your Constitution modifier that you can see within range.
+                      <ul>
+                        <li><b>Critical failure</b>: The target takes twice the amount of fire damage on the burst. The Wildfire effect remains the same.</li>
+                      </ul>
+                  </p>
+                    <p><b>Synergy</b>: For every Windweaving tier you master, your contagious burst increases by 5 feet.</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </ul>
-        </div>
+          </div>
       </div>
 
 
     </div>
 
   </div>
+  <button id="myBtn" title="Go to top">↑</button>
 
 
   <!-- <footer class="text-right">©2020 Michael Baglio.</footer> -->
+  <script>
+    function collapsibleBox(box) {
+      let boxBody = box.parentNode.children[1];
+      if (boxBody.style.display == 'none') {
+        boxBody.style.display = 'block';
+      } else {
+        boxBody.style.display = 'none';
+      }
+    }
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

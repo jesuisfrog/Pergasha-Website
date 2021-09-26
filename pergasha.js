@@ -1871,6 +1871,17 @@ function racePage() {
 
 //INFUSIONS
 function infusionPage() {
+
+    // Scroll to top section
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    mybutton.addEventListener('click', topFunction)
+    // Scroll to top section
+
     const infusionSelection = document.getElementById('infusion-list');
     const infusionOptions = infusionSelection.getElementsByTagName('a');
     const currentInfusion = sessionStorage.getItem("currentInfusion");
@@ -1936,6 +1947,8 @@ function featPage() {
         '<div class="shadow feat-box rounded  border border-secondary psionics-filter"><span class="feat-title p-2">Energized</span><p>Your body and mind are brimming with psionic energy. You gain Psi Points equal to your proficiency bonus and they scale with it. Your Psi Limit also increases by 1.</p></div>',
 
         '<div class="shadow feat-box rounded  border border-secondary dexterity-filter intelligence-filter psionics-filter"><span class="feat-title p-2">Far Hand Focused</span><p>You have focused your psionic powers and aligned yourself with the Order of the Far Hand.</p><ul><li>Increase your Dexterity or Intelligence score by 1, to a maximum of 20.</li><li>When you use an ability that has a Psi Point cost from the Order of the Far Hand, you may reduce its cost by 1 point. You have a minimum cost of 1 Psi Point and must still abide by your Psionic Limit for points spent per turn. This feature does not stack with other Psi Point reductions.</li><li>Immediately after you spend Psi Points on a psionic discipline from the Order of the Far Hand, you can recover hit points equal to the number of Psi Points you spent. You must finish a long rest to use this feature again.</li></ul></div>',
+
+        '<div class="shadow feat-box rounded  border border-secondary"><span class="feat-title p-2">Fusist<span class="feat-prerequisites">Prerequisites: Must be a Fusist.</span></span><p>You have expanded your attunement with infusions. You must tap 1 Hit Die. This Hit Die is considered permanently expended and cannot be recovered. In exchange, you gain the following benefits:</p> <ul><li>Increase your maximum mana by 1.</li><li>Select an infusion. You now have access to that tree and its passive abilities.</li><li>You gain the first tier of the initial ability of this infusion.</li></ul></div>',
 
         '<div class="shadow feat-box rounded  border border-secondary"><span class="feat-title p-2">Healing Hands</span><p>You are an able healer and can mend wounds quickly to help your allies get back into the fray. You gain the following benefits:</p><ul><li>When you use a healer’s kit to stabilize a dying creature, that creature also regains 1 hit point.</li><li>You can help up to five allies (including yourself) during a breather by adding a minor herbal refresher to water. Anyone using a water ration during the breather can recover your proficiency modifier in hit points in addition to the regular healing permitted.</li><li>You can use a healer’s kit to help up to five allies (and yourself) during a long rest. Anyone using Hit Die to recover during the long rest can reroll any 1’s or 2’s on their Hit Die.</li></ul></div>',
 
