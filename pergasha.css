@@ -67,6 +67,11 @@ body{
     .item-table{
         font-size: 0.7rem;
     }
+
+    .infusion-tree{
+        width: 90vw!important;
+        height: auto!important;
+    }
 }
 
 
@@ -110,8 +115,12 @@ body{
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) { 
 
-    .class-left-container, .class-right-container,#items-list, #items-display-section, #psionics-display-section {
+    .class-left-container, .class-right-container,#items-list, #items-display-section, #psionics-display-section, #infusion-list {
         flex-basis: 100%;
+    }
+
+    #infusion-list {
+        padding-right: 0;
     }
 
     #race-list-container{
@@ -132,7 +141,7 @@ body{
         position: static;
     }
 
-    .class-left-container, #items-list{
+    .class-left-container, #items-list, #infusion-list{
       max-width: 100%!important;
     }
 
@@ -335,7 +344,7 @@ body{
 
 
 /*race & infusions*/
-#race-list-container, #infusion-list-container{
+#race-list-container, #infusion-list{
     max-width: 300px;
 }
 
@@ -573,3 +582,8 @@ body{
 .hide{
     display: none;
 }
+
+#infusion-list a{
+    font-size: 20px!important;
+}
+

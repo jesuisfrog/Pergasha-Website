@@ -91,22 +91,20 @@
 
   </header>
 
-  <div class="row mt-5 mb-5 flex-wrap justify-content-center container-fluid" id="infusion-container">
-    <div class="col mb-5" id="infusion-list-container">
-      <div class="list-group" id="infusion-list" role="tablist">
-        <a class="list-group-item list-group-item-action list-group-item-secondary" id="aerofusion-infusion-list"
-          data-toggle="list" href="#aerofusion-infusion" role="tab" aria-controls="aerofusion-infusion"
-          role="button">Aerofusion</a>
-        <a class="list-group-item list-group-item-action list-group-item-secondary" id="bloodfusion-infusion-list"
-          data-toggle="list" href="#bloodfusion-infusion" role="tab" aria-controls="bloodfusion-infusion"
-          role="button">Bloodfusion</a>
-        <a class="list-group-item list-group-item-action list-group-item-secondary" id="hydrofusion-infusion-list"
-          data-toggle="list" href="#hydrofusion-infusion" role="tab" aria-controls="hydrofusion-infusion"
-          role="button">Hydrofusion</a>
-        <a class="list-group-item list-group-item-action list-group-item-secondary" id="pyrofusion-infusion-list"
-          data-toggle="list" href="#pyrofusion-infusion" role="tab" aria-controls="pyrofusion-infusion"
-          role="button">Pyrofusion</a>
-      </div>
+  <div class="row mt-5 mb-5 mr-0 ml-0 flex-wrap justify-content-center container-fluid" id="infusion-container">
+    <div class="col list-group mb-5 align-self-start" id="infusion-list" role="tablist">
+      <a class="list-group-item list-group-item-action list-group-item-secondary" id="aerofusion-infusion-list"
+        data-toggle="list" href="#aerofusion-infusion" role="tab" aria-controls="aerofusion-infusion"
+        role="button">Aerofusion</a>
+      <a class="list-group-item list-group-item-action list-group-item-secondary" id="bloodfusion-infusion-list"
+        data-toggle="list" href="#bloodfusion-infusion" role="tab" aria-controls="bloodfusion-infusion"
+        role="button">Bloodfusion</a>
+      <a class="list-group-item list-group-item-action list-group-item-secondary" id="hydrofusion-infusion-list"
+        data-toggle="list" href="#hydrofusion-infusion" role="tab" aria-controls="hydrofusion-infusion"
+        role="button">Hydrofusion</a>
+      <a class="list-group-item list-group-item-action list-group-item-secondary" id="pyrofusion-infusion-list"
+        data-toggle="list" href="#pyrofusion-infusion" role="tab" aria-controls="pyrofusion-infusion"
+        role="button">Pyrofusion</a>
     </div>
 
 
@@ -114,7 +112,8 @@
       <div class="tab-pane text-center" id="aerofusion-infusion" role="tabpanel"
         aria-labelledby="aerofusion-infusion-list">
         <h2 class="arjulian">Aerofusion</h2>
-        <img src="../assets/tech_trees/infusions_aero_full.png" class="mt-2 mb-5" style="height: 644px; width: 500px;">
+        <img src="../assets/tech_trees/infusions_aero_full.png" class="mt-2 mb-5 infusion-tree" style="height: 644px; width: 500px;">
+        <!-- <img src="../assets/tech_trees/infusions_aero_full.png" class="mt-2 mb-5" style="height:auto; width: auto;max-height: 644px; max-width: 500px;"> -->
         <p class="mb-2 text-left">Aerofusion allows control over air and, by extension, wind. Air motes are constantly
           moving and while the untrained eye may see them as agents of chaos, they are quite the opposite. They are a
           conundrum: logical yet flighty; predictably dynamic; heavy and light. This affinity lends grace and speed to
@@ -134,7 +133,6 @@
               <p>Aerofusists are quick to shift and are light on their feet, helping them avoid danger or bypass
                 obstacles more easily. Debris and dust easily fall away, and your clothing and hair flutters. At tier I,
                 you can use the Windwhip ability.</p>
-              v
               <span class="infusions-subtitle">Windwhip</span>
               <ul style="list-style-type:none;">
                 <li><b>Activation: </b>1 bonus action</li>
@@ -443,7 +441,7 @@
       <div class="tab-pane text-center" id="bloodfusion-infusion" role="tabpanel"
         aria-labelledby="bloodfusion-infusion-list">
         <h2 class="arjulian">Bloodfusion</h2>
-        <img src="../assets/tech_trees/infusions_blood_full.png" class="mt-2 mb-5" style="height: 500px; width: 500px;">
+        <img src="../assets/tech_trees/infusions_blood_full.png" class="mt-2 mb-5 infusion-tree" style="height: 500px; width: 500px;">
         <p class="mb-2 text-left">Bloodfusion grants power over blood, the liquid lifeforce of all creatures. Blood
           motes are passionate and perky, giving a first impression of lightheartedness and gaiety. However, once
           enraged, these motes do not hesitate to drink greedily and kill. This affinity bestows these traits to the
@@ -703,7 +701,7 @@
       <div class="tab-pane text-center" id="hydrofusion-infusion" role="tabpanel"
         aria-labelledby="hydrofusion-infusion-list">
         <h2 class="arjulian">Hydrofusion</h2>
-        <img src="../assets/tech_trees/infusions_hydro_full.png" class="mt-2 mb-5" style="height: 500px; width: 500px;">
+        <img src="../assets/tech_trees/infusions_hydro_full.png" class="mt-2 mb-5 infusion-tree" style="height: 500px; width: 500px;">
         <p class="mb-2 text-left">Hydrofusion is the ability to manipulate the elemental motes that make water. This
           affinity for water often marks the bearer with a fluidity of movement, a friendlier demeanor, or a graceful
           smile that provides comfort to those around them.</p>
@@ -872,19 +870,26 @@
                 <li><b>Range: </b>60 feet</li>
                 <li><b>Duration: </b>Instantaneous</li>
                 <li>
-                  <p>You concentrate water into a powerful jet to spear your enemy. You must have an adequate water source such as a ration of water held in a waterskin. Make a ranged infusion attack at one creature you can see within range. On a hit, your spear deals 1d6 piercing damage per point in your pool (maximum 5).
-                    <ul>
-                      <li><b>Miss</b>: The water splashes harmlessly against your target and is lost unless you can spend 1 minute in a focused state to collect it.</li>
-                      <li><b>Critical hit</b>: Your hydrospear also deals splash damage. Any creature within 5 feet of your target takes piercing damage equal to your Constitution modifier.</li>
-                    </ul>
+                  <p>You concentrate water into a powerful jet to spear your enemy. You must have an adequate water
+                    source such as a ration of water held in a waterskin. Make a ranged infusion attack at one creature
+                    you can see within range. On a hit, your spear deals 1d6 piercing damage per point in your pool
+                    (maximum 5), and the water is spent.
+                  <ul>
+                    <li><b>Miss</b>: The water splashes harmlessly against your target and is lost unless you can spend
+                      1 minute in a focused state to collect it.</li>
+                    <li><b>Critical hit</b>: Your hydrospear also deals splash damage. Any creature within 5 feet of
+                      your target takes piercing damage equal to your Constitution modifier.</li>
+                  </ul>
                   </p>
                   <p><b>Synergy</b>: If you also have affinity to other infusions, you can alter your hydrospear.
-                <ul>
-                  <li>Aerofusion transforms the spear into solid ice and deals additional cold damage equal to your Constitution modifier.</li>
-                  <li>Bloodfusion alters the water to become toxic and adds necrotic damage equal to your Constitution modifier.</li>
-                  <li>Pyrofusion superheats the water and deals fire damage equal to your Constitution modifier.</li>
-                </ul>
-              </p>
+                  <ul>
+                    <li>Aerofusion transforms the spear into solid ice and deals additional cold damage equal to your
+                      Constitution modifier.</li>
+                    <li>Bloodfusion alters the water to become toxic and adds necrotic damage equal to your Constitution
+                      modifier.</li>
+                    <li>Pyrofusion superheats the water and deals fire damage equal to your Constitution modifier.</li>
+                  </ul>
+                  </p>
                 </li>
               </ul>
             </div>
@@ -899,18 +904,38 @@
                 <li><b>Range: </b>A melee weapon you wield</li>
                 <li><b>Duration: </b>1 minute</li>
                 <li>
-                  <p>You call to the motes to limn your melee weapon with coat of fast-moving water. Your weapon gains a 5-foot reach and deals additional slashing damage equal to your Constitution modifier. As a bonus action, you can trigger the water motes to burst from your weapon, dealing 2d6 piercing damage to all creatures within 10 feet of you.</p>
-                  <p>Rushing Edge remains on a weapon for the duration, until you deactivate it as a free action, or you no longer wield it.
-                    <ul>
-                      <li><b>Critical hit</b>: If the creature is Huge or smaller, it is knocked prone.</li>
-                      <li><b>Critical miss</b>: You take slashing damage equal to your Constitution modifier, as your grip slips and you’re injured by the motes.</li>
-                    </ul>
-                  </p>
-                  <p><b>Synergy</b>: If you have affinity with other infusions, you can alter your Rushing Edge in the following ways. When you activate this ability, you may select one of these synergies. It requires a bonus action to change the synergy once Rushing Edge is activated.
+                  <p>You call to the motes to limn your melee weapon with coat of fast-moving water. Your weapon gains a
+                    5-foot reach and deals additional slashing damage equal to your Constitution modifier. As a bonus
+                    action, you can trigger the water motes to burst from your weapon, dealing 2d6 piercing damage to
+                    all creatures within 10 feet of you.</p>
+                  <p>Rushing Edge remains on a weapon for the duration, until you deactivate it as a free action, or you
+                    no longer wield it.
                   <ul>
-                    <li>Aerofusion transforms the water to spikes of ice and your weapon gains the following properties instead of the original Rushing Edge: it gains additional piercing damage equal to your Constitution modifier. As a bonus action, you can shoot a burst of ice, dealing 2d6 cold damage to all creatures within 10 feet of you. On a critical hit, the target is dazed instead of knocked prone and suffers disadvantage on its next attack or saving throw.</li>
-                    <li>Bloodfusion taints the weapon, giving it the following properties instead of the original Rushing Edge: it gains additional necrotic damage equal to your Constitution modifier. As a bonus action, you burst a plume of toxic mist, dealing 2d6 necrotic damage to all creatures within 10 feet of you. On a critical hit, the target gains 1 level of exhaustion instead of being knocked prone. A creature can only receive 1 level of exhaustion from this ability.</li>
-                    <li>Pyrofusion heats the weapon, giving it the following properties instead of the original Rushing Edge: it gains additional fire damage equal to your Constitution modifier. As a bonus action, you burst steam, dealing 2d6 fire damage to all creatures within 10 feet of you. On a critical hit, the target becomes overheated and takes fire damage equal to your Constitution modifier at the start of its turn for a number of rounds equal to your Waterweaving tier or your Fireweaving tier, whichever is higher.</li>
+                    <li><b>Critical hit</b>: If the creature is Huge or smaller, it is knocked prone.</li>
+                    <li><b>Critical miss</b>: You take slashing damage equal to your Constitution modifier, as your grip
+                      slips and you’re injured by the motes.</li>
+                  </ul>
+                  </p>
+                  <p><b>Synergy</b>: If you have affinity with other infusions, you can alter your Rushing Edge in the
+                    following ways. When you activate this ability, you may select one of these synergies. It requires a
+                    bonus action to change the synergy once Rushing Edge is activated.
+                  <ul>
+                    <li>Aerofusion transforms the water to spikes of ice and your weapon gains the following properties
+                      instead of the original Rushing Edge: it gains additional piercing damage equal to your
+                      Constitution modifier. As a bonus action, you can shoot a burst of ice, dealing 2d6 cold damage to
+                      all creatures within 10 feet of you. On a critical hit, the target is dazed instead of knocked
+                      prone and suffers disadvantage on its next attack or saving throw.</li>
+                    <li>Bloodfusion taints the weapon, giving it the following properties instead of the original
+                      Rushing Edge: it gains additional necrotic damage equal to your Constitution modifier. As a bonus
+                      action, you burst a plume of toxic mist, dealing 2d6 necrotic damage to all creatures within 10
+                      feet of you. On a critical hit, the target gains 1 level of exhaustion instead of being knocked
+                      prone. A creature can only receive 1 level of exhaustion from this ability.</li>
+                    <li>Pyrofusion heats the weapon, giving it the following properties instead of the original Rushing
+                      Edge: it gains additional fire damage equal to your Constitution modifier. As a bonus action, you
+                      burst steam, dealing 2d6 fire damage to all creatures within 10 feet of you. On a critical hit,
+                      the target becomes overheated and takes fire damage equal to your Constitution modifier at the
+                      start of its turn for a number of rounds equal to your Waterweaving tier or your Fireweaving tier,
+                      whichever is higher.</li>
                   </ul>
                   </p>
                 </li>
@@ -927,26 +952,49 @@
                 <li><b>Range: </b>60 feet</li>
                 <li><b>Duration: </b>Instantaneous</li>
                 <li>
-                  <p>You push forth a powerful stream of water that batters all creatures and obstacles in its path. Your torrential stream is a 30-foot line that is 5 feet wide and 10 feet tall and runs along a solid surface. Loose, unattended objects that are Medium or smaller are pushed along the stream and possibly destroyed. Similarly sized plants are uprooted, and fires along the torrent are extinguished.</p>
-                  <p>Creatures caught in the torrent must make a Dexterity saving throw. On a failed save, the creature takes 5d10 bludgeoning damage and is tossed to an adjacent space next to the torrent. If the creature Huge or smaller, is knocked prone and is dazed until the end of its next turn. A creature dazed in this manner suffers disadvantage on its next attack or saving throw, whichever comes first.</p>
-                  <p>If you do not have a water source of at least 10 cubic feet within range, your cost for this infusion increases by 1 Hit Die for each 5 cubic feet missing as you must drain and gather all possible water motes to activate the ability.
-                <ul>
-                  <li><b>Critical success</b>: A creature takes no damage and suffers no effects.</li>
-                  <li><b>Save</b>: A creature takes half the damage and does not move or fall prone.</li>
-                  <li><b>Critical fail</b>: The creature is stunned until the end of its next turn.</li>
-                </ul>
-                </p>
-                  <p><b>Empower</b>: If you have affinity to other infusions, you can spend 1 additional mana to enhance the torrent in following ways. A torrent can only have one enhancement.
+                  <p>You push forth a powerful stream of water that batters all creatures and obstacles in its path.
+                    Your torrential stream is a 30-foot line that is 5 feet wide and 10 feet tall and runs along a solid
+                    surface. Loose, unattended objects that are Medium or smaller are pushed along the stream and
+                    possibly destroyed. Similarly sized plants are uprooted, and fires along the torrent are
+                    extinguished.</p>
+                  <p>Creatures caught in the torrent must make a Dexterity saving throw. On a failed save, the creature
+                    takes 5d10 bludgeoning damage and is tossed to an adjacent space next to the torrent. If the
+                    creature Huge or smaller, is knocked prone and is dazed until the end of its next turn. A creature
+                    dazed in this manner suffers disadvantage on its next attack or saving throw, whichever comes first.
+                  </p>
+                  <p>If you do not have a water source of at least 10 cubic feet within range, your cost for this
+                    infusion increases by 1 Hit Die for each 5 cubic feet missing as you must drain and gather all
+                    possible water motes to activate the ability.
                   <ul>
-                    <li><b>Aerofusion</b>: You can add 2d6 cold damage per Windweaving tier you mastered, and after the torrent dissipates, the water hardens to ice on the ground that lasts for 1 hour. The area is considered difficult terrain.</li>
-                    <li><b>Bloodfusion</b>: Creatures who fail the saving throw against your torrent also suffer 1 level of exhaustion. A creature can only suffer 1 level of exhaustion with this ability.</li>
-                    <li><b>Pyrofusion</b>: You can add 1d6 fire damage per Fireweaving tier you mastered, and after the torrent dissipates, the water turns to steam. This creates an area of blistering, concealing mist that fills the line and spaces adjacent to it. Attacks made in the mist or through it are done so at disadvantage, and a creature suffers fire damage equal to your Constitution modifier each time it begins its turn and enters a space with steam. The steam remains a number of turns equal to your Constitution modifier.</li>
+                    <li><b>Critical success</b>: A creature takes no damage and suffers no effects.</li>
+                    <li><b>Save</b>: A creature takes half the damage and does not move or fall prone.</li>
+                    <li><b>Critical fail</b>: The creature is stunned until the end of its next turn.</li>
                   </ul>
                   </p>
-                  <p><b>Synergy</b>: If you also have affinity to other infusions, you can alter your torrent. If you have selected an enhancement through the Empower options, you must select the same type for this synergy.
+                  <p><b>Empower</b>: If you have affinity to other infusions, you can spend 1 additional mana to enhance
+                    the torrent in following ways. A torrent can only have one enhancement.
                   <ul>
-                    <li>Aerofusion makes the water freezing cold, adding cold damage equal to your Constitution modifier.</li>
-                    <li>Bloodfusion turns the water bracken and dark, adding necrotic damage equal to your Constitution modifier.</li>
+                    <li><b>Aerofusion</b>: You can add 2d6 cold damage per Windweaving tier you mastered, and after the
+                      torrent dissipates, the water hardens to ice on the ground that lasts for 1 hour. The area is
+                      considered difficult terrain.</li>
+                    <li><b>Bloodfusion</b>: Creatures who fail the saving throw against your torrent also suffer 1 level
+                      of exhaustion. A creature can only suffer 1 level of exhaustion with this ability.</li>
+                    <li><b>Pyrofusion</b>: You can add 1d6 fire damage per Fireweaving tier you mastered, and after the
+                      torrent dissipates, the water turns to steam. This creates an area of blistering, concealing mist
+                      that fills the line and spaces adjacent to it. Attacks made in the mist or through it are done so
+                      at disadvantage, and a creature suffers fire damage equal to your Constitution modifier each time
+                      it begins its turn and enters a space with steam. The steam remains a number of turns equal to
+                      your Constitution modifier.</li>
+                  </ul>
+                  </p>
+                  <p><b>Synergy</b>: If you also have affinity to other infusions, you can alter your torrent. If you
+                    have selected an enhancement through the Empower options, you must select the same type for this
+                    synergy.
+                  <ul>
+                    <li>Aerofusion makes the water freezing cold, adding cold damage equal to your Constitution
+                      modifier.</li>
+                    <li>Bloodfusion turns the water bracken and dark, adding necrotic damage equal to your Constitution
+                      modifier.</li>
                     <li>Pyrofusion superheats the water, adding fire damage equal to your Constitution modifier.</li>
                   </ul>
                   </p>
@@ -964,14 +1012,33 @@
                 <li><b>Range: </b>Self</li>
                 <li><b>Duration: </b>Concentration, up to 1 hour</li>
                 <li>
-                  <p>Your body takes on a moist, slick appearance. For the duration of this infusion, your form can stretch and shift with ease and becomes slightly transparent, as if you were composed of liquid. This transparency is not enough to grant concealment. You gain DR 10 against slashing and piercing, and your reach increases by 10 feet. In addition, you can pass through small holes or narrow openings, even mere cracks, with anything you were carrying at the time the infusion was activated (except other creatures). Finally, you can move through water with a swim speed of 60 feet and can breathe both water and air for the duration of this effect.</p>
-                  <p><b>Empower</b>: While you are under the effects of Waterborn, you can use a bonus action and 1 mana to create a geyser from the ground. You spring forth a column of water from any horizontal surface within 60 feet of you, knocking over creatures directly over it. A creature on the space where your geyser erupts must make a Dexterity saving throw to avoid being hurled into the air and then tossed to the ground. On a fail, it takes 3d6 points bludgeoning damage from the water pummeling them and also falling damage. The falling damage is determined by the size of the creature: Small creatures are shot up 40 feet (20 falling damage), Medium creatures 30 feet (15 falling damage), Large creatures 20 feet (10 falling damage), Huge creatures 10 feet (5 falling damage).<br><br>Your geysers cannot throw creatures larger than Huge, but they can still take bludgeoning damage from the water column.
-                    <ul>
-                      <li><b>Success</b>: Creatures take half damage from the water but do not take falling damage.</li>
-                      <li><b>Critical failure</b>: Creatures take double damage from all sources.</li>
-                    </ul>
-                </p>
-                  <p><b>Synergy</b>: If you also have an affinity to Pyrofusion, you can improve your geysers. The columns of water become boiling hot, exposing nearby creatures to searing droplets as your geyser’s spray falls back to the ground. The targeted creature takes an additional 3d6 fire damage from the water on a failed save, and adjacent creatures take fire damage equal to your Constitution modifier.</p>
+                  <p>Your body takes on a moist, slick appearance. For the duration of this infusion, your form can
+                    stretch and shift with ease and becomes slightly transparent, as if you were composed of liquid.
+                    This transparency is not enough to grant concealment. You gain DR 10 against slashing and piercing,
+                    and your reach increases by 10 feet. In addition, you can pass through small holes or narrow
+                    openings, even mere cracks, with anything you were carrying at the time the infusion was activated
+                    (except other creatures). Finally, you can move through water with a swim speed of 60 feet and can
+                    breathe both water and air for the duration of this effect.</p>
+                  <p><b>Empower</b>: While you are under the effects of Waterborn, you can use a bonus action and 1 mana
+                    to create a geyser from the ground. You spring forth a column of water from any horizontal surface
+                    within 60 feet of you, knocking over creatures directly over it. A creature on the space where your
+                    geyser erupts must make a Dexterity saving throw to avoid being hurled into the air and then tossed
+                    to the ground. On a fail, it takes 3d6 points bludgeoning damage from the water pummeling them and
+                    also falling damage. The falling damage is determined by the size of the creature: Small creatures
+                    are shot up 40 feet (20 falling damage), Medium creatures 30 feet (15 falling damage), Large
+                    creatures 20 feet (10 falling damage), Huge creatures 10 feet (5 falling damage).<br><br>Your
+                    geysers cannot throw creatures larger than Huge, but they can still take bludgeoning damage from the
+                    water column.
+                  <ul>
+                    <li><b>Success</b>: Creatures take half damage from the water but do not take falling damage.</li>
+                    <li><b>Critical failure</b>: Creatures take double damage from all sources.</li>
+                  </ul>
+                  </p>
+                  <p><b>Synergy</b>: If you also have an affinity to Pyrofusion, you can improve your geysers. The
+                    columns of water become boiling hot, exposing nearby creatures to searing droplets as your geyser’s
+                    spray falls back to the ground. The targeted creature takes an additional 3d6 fire damage from the
+                    water on a failed save, and adjacent creatures take fire damage equal to your Constitution modifier.
+                  </p>
                 </li>
               </ul>
             </div>
@@ -986,13 +1053,20 @@
                 <li><b>Range: </b>15 feet</li>
                 <li><b>Duration: </b>Instantaneous</li>
                 <li>
-                  <p>With a sharp thrust of your hand, you send out a whip of water to slash your foe. Make an infused melee attack within range and on a hit, you deal 2d4 slashing damage per mana spent. In addition, your target is splashed in the eyes and has disadvantage on their next attack.</p>
+                  <p>With a sharp thrust of your hand, you send out a whip of water to slash your foe. Make an infused
+                    melee attack within range and on a hit, you deal 2d4 slashing damage per mana spent. In addition,
+                    your target is splashed in the eyes and has disadvantage on their next attack.</p>
                   <p><b>Synergy</b>: If you have an affinity to other infusions, you can alter your whip.
-                    <ul>
-                      <li>Aerofusion can alter the whip to hold a sphere of ice at the end, allowing the whip to add bludgeoning damage equal to your Constitution modifier. On a critical hit, you can also push or pull a target up to one size larger than yourself up to 15 feet.</li>
-                      <li>Bloodfusion turns your water putrid, allowing the whip to add necrotic damage equal to your Constitution modifier. On a critical hit, your target suffers one level of exhaustion. A creature can only gain one level of exhaustion from this ability.</li>
-                      <li>Pyrofusion superheats your whip, allowing you to add fire damage equal to your Constitution modifier. On a critical hit, you double this fire damage.</li>
-                    </ul>
+                  <ul>
+                    <li>Aerofusion can alter the whip to hold a sphere of ice at the end, allowing the whip to add
+                      bludgeoning damage equal to your Constitution modifier. On a critical hit, you can also push or
+                      pull a target up to one size larger than yourself up to 15 feet.</li>
+                    <li>Bloodfusion turns your water putrid, allowing the whip to add necrotic damage equal to your
+                      Constitution modifier. On a critical hit, your target suffers one level of exhaustion. A creature
+                      can only gain one level of exhaustion from this ability.</li>
+                    <li>Pyrofusion superheats your whip, allowing you to add fire damage equal to your Constitution
+                      modifier. On a critical hit, you double this fire damage.</li>
+                  </ul>
                   </p>
                 </li>
               </ul>
@@ -1004,189 +1078,280 @@
       <div class="tab-pane text-center" id="pyrofusion-infusion" role="tabpanel"
         aria-labelledby="pyrofusion-infusion-list">
         <h2 class="arjulian">Pyrofusion</h2>
-          <img src="../assets/tech_trees/infusions_pyro_full.png" class="mt-2 mb-5"
-            style="height: 576px; width: 500px;">
-            <p class="mb-2 text-left">Pyrofusion grants control over flame. Fire motes are erratic, quick to anger, and dangerous when infuriated. This affinity gifts a fusist with a piercing stare, a high body temperature, and an eagerness for fight whether it one of wits or to the death.</p>
-            <p class="text-left">When you select Pyrofusion, you gain the following passive abilities in addition to the first tier of Fireweaving.
-            <ul class="mb-5 text-left">
-              <li><b>Infused Mind</b>: Pyrofusists are headstrong and are not easily cowed. You have advantage on any saves against fear and charm effects.</li>
-              <li><b>Infused Warmth</b>: You are less affected by weather – the heat is less taxing, and your increased body temperature helps you against the cold.</li>
-            </ul>
-          <div class="col d-flex flex-column infusion-powers" id="pyro-powers">
-            <div class="shadow infusion-box rounded border border-secondary text-left">
-              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Fireweaving</span>
-              <div class="infusions-body" style="display: none">
-                <p>You can manipulate tiny flames into shapes, snuff out a torch, and instantly light a lantern. At tier I, you can use the Spark ability.</p>
-                <h4 class="arjulian">Tier I</h4>
-                <span class="infusions-subtitle">Spark</span>
-                <ul class="pb-0" style="list-style-type:none;">
-                  <li><b>Activation: </b>1 bonus action</li>
-                  <li><b>Cost: </b>P 1</li>
-                  <li><b>Trigger: </b>Somatic</li>
-                  <li><b>Range: </b>Self</li>
-                  <li><b>Duration: </b>Instantaneous</li>
-                  <li>
-                    <p>You stir up the fire motes with a snap of your fingers, creating a burst of heat around you. All creatures within 5
-                      feet of you must make a Dexterity save or take 2d4 fire damage.</p>
-                    <p>You can also use this ability to instantly start a fire in a 5-foot square adjacent to you so long as there is
-                      unattended, flammable material.
-                    <ul>
-                      <li><b>Success</b>: Half damage.</li>
-                      <li><b>Critical failure</b>: The creature catches fire and continues to take fire damage at the end of its turn
-                        equal to your Constitution modifier. It can spend an action to put out the flames</li>
-                    </ul>
-                    </p>
-                  </li>
-                </ul>
-                <h4 class="arjulian">Tier II</h4>
-                <ul>
-                  <li>Your Infused Warmth improves. You may burn a creature grappling you, dealing fire damage equal to your Constitution modifier. This damage is taken when you have been successfully grappled and then at the start of each of your grappler’s turns that it maintains the grapple.</li>
-                  <li>In addition, your Spark improves, dealing 4d4 fire damage.</li>
-                </ul>
-                <h4 class="arjulian">Tier III</h4>
-                <ul>
-                  <li>Your Spark improves, dealing 6d4 fire damage, and it now affects all creatures within 10 feet of you.</li>
-                  <li>On a critical failure, the burning creature takes twice your Constitution modifier in fire damage.</li>
-                </ul>
-              </div>
+        <img src="../assets/tech_trees/infusions_pyro_full.png" class="mt-2 mb-5 infusion-tree" style="height: 576px; width: 500px;">
+        <p class="mb-2 text-left">Pyrofusion grants control over flame. Fire motes are erratic, quick to anger, and
+          dangerous when infuriated. This affinity gifts a fusist with a piercing stare, a high body temperature, and an
+          eagerness for fight whether it one of wits or to the death.</p>
+        <p class="text-left">When you select Pyrofusion, you gain the following passive abilities in addition to the
+          first tier of Fireweaving.
+        <ul class="mb-5 text-left">
+          <li><b>Infused Mind</b>: Pyrofusists are headstrong and are not easily cowed. You have advantage on any saves
+            against fear and charm effects.</li>
+          <li><b>Infused Warmth</b>: You are less affected by weather – the heat is less taxing, and your increased body
+            temperature helps you against the cold.</li>
+        </ul>
+        <div class="col d-flex flex-column infusion-powers" id="pyro-powers">
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Fireweaving</span>
+            <div class="infusions-body" style="display: none">
+              <p>You can manipulate tiny flames into shapes, snuff out a torch, and instantly light a lantern. At tier
+                I, you can use the Spark ability.</p>
+              <h4 class="arjulian">Tier I</h4>
+              <span class="infusions-subtitle">Spark</span>
+              <ul class="pb-0" style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>Self</li>
+                <li><b>Duration: </b>Instantaneous</li>
+                <li>
+                  <p>You stir up the fire motes with a snap of your fingers, creating a burst of heat around you. All
+                    creatures within 5
+                    feet of you must make a Dexterity save or take 2d4 fire damage.</p>
+                  <p>You can also use this ability to instantly start a fire in a 5-foot square adjacent to you so long
+                    as there is
+                    unattended, flammable material.
+                  <ul>
+                    <li><b>Success</b>: Half damage.</li>
+                    <li><b>Critical failure</b>: The creature catches fire and continues to take fire damage at the end
+                      of its turn
+                      equal to your Constitution modifier. It can spend an action to put out the flames</li>
+                  </ul>
+                  </p>
+                </li>
+              </ul>
+              <h4 class="arjulian">Tier II</h4>
+              <ul>
+                <li>Your Infused Warmth improves. You may burn a creature grappling you, dealing fire damage equal to
+                  your Constitution modifier. This damage is taken when you have been successfully grappled and then at
+                  the start of each of your grappler’s turns that it maintains the grapple.</li>
+                <li>In addition, your Spark improves, dealing 4d4 fire damage.</li>
+              </ul>
+              <h4 class="arjulian">Tier III</h4>
+              <ul>
+                <li>Your Spark improves, dealing 6d4 fire damage, and it now affects all creatures within 10 feet of
+                  you.</li>
+                <li>On a critical failure, the burning creature takes twice your Constitution modifier in fire damage.
+                </li>
+              </ul>
             </div>
-            <div class="shadow infusion-box rounded border border-secondary text-left">
-              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Burning Stream</span>
-              <div class="infusions-body" style="display: none">
-                <ul style="list-style-type:none;">
-                  <li><b>Activation: </b>1 action</li>
-                  <li><b>Cost: </b>Mana 2, P 1</li>
-                  <li><b>Trigger: </b>Somatic</li>
-                  <li><b>Range: </b>15-foot-line</li>
-                  <li><b>Duration: </b>Concentration, up to 1 minute</li>
-                  <li>
-                    <p>A 15-foot line of fire sprays from your outstretched, free hand. This ability remains active up to its duration so long as you maintain concentration and keep one hand free. If you wield a weapon, shield, or perform any activity with the hand holding the burning stream, the infusion ends. This ability cannot function under water, but it can synergize with applicable infusions that utilize water.</p>
-                    <p>All creatures in the line must make a Dexterity saving throw or take 2d6 points of fire damage per Fireweaving tier and catch fire. A creature that catches fire takes fire damage at the start of each of its turns equal to your Constitution modifier up to the duration of this ability. This effect does not stack, and a creature can spend its action to extinguish the flames. Each round you continue to concentrate on this ability, you can select a new direction for the line to affect as a free action.</p>
-                    <p>Your stream sets fire to combustibles and damages objects in the area. It can melt metals with low melting points, such as lead, gold, copper, silver, and bronze. If the damage caused to an interposing barrier shatters or breaks through it, the stream may continue beyond the barrier if the area permits; otherwise it stops at the barrier.</p>
-                    <p><b>Empower</b>: If you expend 1 Hit Die, you can create a second line of fire using your other hand. If you overlap the lines, creatures in the overlap make  their saving throw at Disadvantage, but don’t take damage from both lines. You may stop either line of fire at will on your turn, but once you stop maintaining a line, you must expend another Hit Die to recreate a line and only so long as the infusion is active. Your lines also make the area they affect difficult terrain, pushing against all creatures.</p>
-                  </li>
-                </ul>
-              </div>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Burning Stream</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>Mana 2, P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>15-foot-line</li>
+                <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                <li>
+                  <p>A 15-foot line of fire sprays from your outstretched, free hand. This ability remains active up to
+                    its duration so long as you maintain concentration and keep one hand free. If you wield a weapon,
+                    shield, or perform any activity with the hand holding the burning stream, the infusion ends. This
+                    ability cannot function under water, but it can synergize with applicable infusions that utilize
+                    water.</p>
+                  <p>All creatures in the line must make a Dexterity saving throw or take 2d6 points of fire damage per
+                    Fireweaving tier and catch fire. A creature that catches fire takes fire damage at the start of each
+                    of its turns equal to your Constitution modifier up to the duration of this ability. This effect
+                    does not stack, and a creature can spend its action to extinguish the flames. Each round you
+                    continue to concentrate on this ability, you can select a new direction for the line to affect as a
+                    free action.</p>
+                  <p>Your stream sets fire to combustibles and damages objects in the area. It can melt metals with low
+                    melting points, such as lead, gold, copper, silver, and bronze. If the damage caused to an
+                    interposing barrier shatters or breaks through it, the stream may continue beyond the barrier if the
+                    area permits; otherwise it stops at the barrier.</p>
+                  <p><b>Empower</b>: If you expend 1 Hit Die, you can create a second line of fire using your other
+                    hand. If you overlap the lines, creatures in the overlap make their saving throw at Disadvantage,
+                    but don’t take damage from both lines. You may stop either line of fire at will on your turn, but
+                    once you stop maintaining a line, you must expend another Hit Die to recreate a line and only so
+                    long as the infusion is active. Your lines also make the area they affect difficult terrain, pushing
+                    against all creatures.</p>
+                </li>
+              </ul>
             </div>
-            <div class="shadow infusion-box rounded border border-secondary text-left">
-              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Detonating Mote</span>
-              <div class="infusions-body" style="display: none">
-                <ul style="list-style-type:none;">
-                  <li><b>Activation: </b>1 action</li>
-                  <li><b>Cost: </b>HD 4</li>
-                  <li><b>Trigger: </b>Somatic</li>
-                  <li><b>Range: </b>100 feet</li>
-                  <li><b>Duration: </b>Instantaneous*/li>
-                  <li>
-                    <p>You use your lifeforce to condense fire motes into a bead of devastating potential and deploy it to a space you can see within range. You can either immediately detonate the bead or hold the bead ready up to a number of turns equal to your Constitution modifier. You determine how long to delay the detonation upon completing this ability and that time cannot change once it has been set unless someone touches the bead. If you choose a delay, the glowing bead sits at its destination until it detonates. A creature can pick up and hurl the bead as a thrown weapon (range 15 feet). If a creature handles and moves the bead within 1 turn of its detonation, there is a 25% chance that the bead detonates while being handled.</p>
-                    <p>When the bead detonates, intense explosion triggers from the target location. The explosion is a 30-foot radius sphere that harms all creatures and objects in its range. All creatures in the area must make a Dexterity saving throw or take 10d6 fire damage and be knocked prone.</p>
-                    <p>The longer the bead waits to detonate, the more powerful it becomes. Each turn after creating it, the bead deals an additional 1d6 damage for each Fireweaving tier you master.</p>
-                    <p>The explosion sets fire to combustibles and damages objects in the area. It can melt metals with low melting points, such as lead, gold, copper, silver, and bronze. If the damage caused to an interposing barrier shatters or breaks through it, the explosion may continue beyond the barrier if the area permits; otherwise it stops at the barrier.
-                      <ul>
-                        <li><b>Critical fail</b>: The creature catch fire, taking your Constitution modifier in damage at the start of its next turn.</li>
-                        <li><b>Success</b>: Creatures take half damage but do not fall prone.</li>
-                      </ul>
-                    </p>
-                  </li>
-                </ul>
-              </div>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Detonating Mote</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>HD 4</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>100 feet</li>
+                <li><b>Duration: </b>Instantaneous*/li>
+                <li>
+                  <p>You use your lifeforce to condense fire motes into a bead of devastating potential and deploy it to
+                    a space you can see within range. You can either immediately detonate the bead or hold the bead
+                    ready up to a number of turns equal to your Constitution modifier. You determine how long to delay
+                    the detonation upon completing this ability and that time cannot change once it has been set unless
+                    someone touches the bead. If you choose a delay, the glowing bead sits at its destination until it
+                    detonates. A creature can pick up and hurl the bead as a thrown weapon (range 15 feet). If a
+                    creature handles and moves the bead within 1 turn of its detonation, there is a 25% chance that the
+                    bead detonates while being handled.</p>
+                  <p>When the bead detonates, intense explosion triggers from the target location. The explosion is a
+                    30-foot radius sphere that harms all creatures and objects in its range. All creatures in the area
+                    must make a Dexterity saving throw or take 10d6 fire damage and be knocked prone.</p>
+                  <p>The longer the bead waits to detonate, the more powerful it becomes. Each turn after creating it,
+                    the bead deals an additional 1d6 damage for each Fireweaving tier you master.</p>
+                  <p>The explosion sets fire to combustibles and damages objects in the area. It can melt metals with
+                    low melting points, such as lead, gold, copper, silver, and bronze. If the damage caused to an
+                    interposing barrier shatters or breaks through it, the explosion may continue beyond the barrier if
+                    the area permits; otherwise it stops at the barrier.
+                  <ul>
+                    <li><b>Critical fail</b>: The creature catch fire, taking your Constitution modifier in damage at
+                      the start of its next turn.</li>
+                    <li><b>Success</b>: Creatures take half damage but do not fall prone.</li>
+                  </ul>
+                  </p>
+                </li>
+              </ul>
             </div>
-            <div class="shadow infusion-box rounded border border-secondary text-left">
-              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Flame Blade</span>
-              <div class="infusions-body" style="display: none">
-                <ul style="list-style-type:none;">
-                  <li><b>Activation: </b>1 bonus action</li>
-                  <li><b>Cost: </b>Mana 2</li>
-                  <li><b>Trigger: </b>Somatic</li>
-                  <li><b>Range: </b>Self</li>
-                  <li><b>Duration: </b>1 minute</li>
-                  <li>
-                    <p>Fire motes gather in your free hand, forming a fiery blade similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can gather the motes into the blade again as a bonus action.</p>
-                    <p>You can make a fusion melee attack with the fiery blade. On a hit, the target takes 1d8 plus 1 point per Fireweaving tier in fire damage. The blade is immaterial, so Strength and Dexterity modifiers do not affect the damage.</p>
-                    <p>The blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet. It can also ignite combustible materials such as parchment, straw, dry sticks, and cloth.</p>
-                    <p><b>Empower</b>: You can spend up to 2 additional mana when triggering this ability to increase the damage of the flame blade by 1d8 per mana.</p>
-                  </li>
-                </ul>
-              </div>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Flame Blade</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>Mana 2</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>Self</li>
+                <li><b>Duration: </b>1 minute</li>
+                <li>
+                  <p>Fire motes gather in your free hand, forming a fiery blade similar in size and shape to a scimitar,
+                    and it lasts for the duration. If you let go of the blade, it disappears, but you can gather the
+                    motes into the blade again as a bonus action.</p>
+                  <p>You can make a fusion melee attack with the fiery blade. On a hit, the target takes 1d8 plus 1
+                    point per Fireweaving tier in fire damage. The blade is immaterial, so Strength and Dexterity
+                    modifiers do not affect the damage.</p>
+                  <p>The blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet. It can
+                    also ignite combustible materials such as parchment, straw, dry sticks, and cloth.</p>
+                  <p><b>Empower</b>: You can spend up to 2 additional mana when triggering this ability to increase the
+                    damage of the flame blade by 1d8 per mana.</p>
+                </li>
+              </ul>
             </div>
-            <div class="shadow infusion-box rounded border border-secondary text-left">
-              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Flame Arrows</span>
-              <div class="infusions-body" style="display: none">
-                <ul style="list-style-type:none;">
-                  <li><b>Activation: </b>1 bonus action</li>
-                  <li><b>Cost: </b>HD 1</li>
-                  <li><b>Trigger: </b>Somatic</li>
-                  <li><b>Range: </b>Ammunition you touch</li>
-                  <li><b>Duration: </b>1 minute</li>
-                  <li>
-                    <p>Fire motes transform ammunition (such as arrows, crossbow bolts, and sling stones) into fiery projectiles. Each piece of ammunition deals an extra 1d6 points of fire damage to any target it hits. A flaming projectile can easily ignite a flammable object or structure, but it won't ignite a creature it strikes.</p>
-                    <p><b>Empower</b>: While this ability is active, you can use a bonus action and spend 1 mana to turn your shot into a burst. Your shot deals damage as normal but also creates a burst of fire. All creatures within 10 feet of your target must make a Dexterity save or take 1d6 fire damage per Fireweaving tier you have mastered.
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Flame Arrows</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>HD 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>Ammunition you touch</li>
+                <li><b>Duration: </b>1 minute</li>
+                <li>
+                  <p>Fire motes transform ammunition (such as arrows, crossbow bolts, and sling stones) into fiery
+                    projectiles. Each piece of ammunition deals an extra 1d6 points of fire damage to any target it
+                    hits. A flaming projectile can easily ignite a flammable object or structure, but it won't ignite a
+                    creature it strikes.</p>
+                  <p><b>Empower</b>: While this ability is active, you can use a bonus action and spend 1 mana to turn
+                    your shot into a burst. Your shot deals damage as normal but also creates a burst of fire. All
+                    creatures within 10 feet of your target must make a Dexterity save or take 1d6 fire damage per
+                    Fireweaving tier you have mastered.
                   <ul>
                     <li><b>Success</b>: Creatures take half damage.</li>
                   </ul>
                   </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="shadow infusion-box rounded border border-secondary text-left">
-              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Flaming Sphere</span>
-              <div class="infusions-body" style="display: none">
-                <ul style="list-style-type:none;">
-                  <li><b>Activation: </b>1 bonus action</li>
-                  <li><b>Cost: </b>HD 2, P 1</li>
-                  <li><b>Trigger: </b>Somatic</li>
-                  <li><b>Range: </b>60 feet</li>
-                  <li><b>Duration: </b>Concentration, up to 1 minute</li>
-                  <li>
-                    <p>A burning globe of fire 5 feet in diameter rolls in whichever direction you point and burns those it strikes. It moves 30 feet per round. As part of this movement, it can ascend or jump up to 30 feet to strike a target. If it enters a space with a creature, it stops moving for the round and deals 3d6 points of fire damage to that creature, though a successful Dexterity save halves that damage. A flaming sphere rolls over barriers less than 4 feet tall. It ignites flammable substances it touches and illuminates the same area as a torch would.</p>
-                    <p>The sphere moves as long as you actively direct it with a bonus action. Otherwise, it merely stays at rest and burns. It can be extinguished by any means that would put out a fire of its size. The surface of the sphere has a spongy, yielding consistency and so does not cause damage except by its flame. It cannot push aside unwilling creatures or batter down large obstacles. The sphere winks out if it exceeds the ability’s range.</p>
-                    <p><b>Empower</b>: Spending an additional Hit Die and maintaining a mana pool of 2 increases the size of the sphere to 10 feet in diameter and it deals 6d6 points of fire damage to any creature it strikes. You can also control the sphere within 100 feet of you instead of 60 feet. Any creature that fails its save against the sphere is overheated, suffering disadvantage on its next saving throw or attack roll.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="shadow infusion-box rounded border border-secondary text-left">
-              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Fire Cloak</span>
-              <div class="infusions-body" style="display: none">
-                <ul style="list-style-type:none;">
-                  <li><b>Activation: </b>1 bonus action</li>
-                  <li><b>Cost: </b>HD 1</li>
-                  <li><b>Trigger: </b>Somatic</li>
-                  <li><b>Range: </b>Self</li>
-                  <li><b>Duration: </b>Concentration, up to 1 minute</li>
-                  <li>
-                    <p>Fire motes feed off your energy and cloak your body in flames that do not harm you or your carried equipment but damage other creatures and objects. The flames cast light as a torch. Any creature that attacks you with a non-reach melee weapon or that begins its turn engaged in a grapple with you takes 1d6 points of fire damage and must succeed at a Dexterity save or catch fire. A creature that catches fire takes fire damage equal to your Constitution modifier at the start of its next turn.</p>
-                    <p>Unattended flammable objects catch fire, spreading fire to one adjacent, flammable object each turn.</p>
-                    <p><b>Empower</b>: You can increase the damage of this ability by 1d6 for 1 mana. Damage taken by catching on fire does not increase, but its duration now lasts 2 turns instead of 1.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="shadow infusion-box rounded border border-secondary text-left">
-              <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Wildfire</span>
-              <div class="infusions-body" style="display: none">
-                <ul style="list-style-type:none;">
-                  <li><b>Activation: </b>1 action</li>
-                  <li><b>Cost: </b>HD 2</li>
-                  <li><b>Trigger: </b>Somatic, Verbal</li>
-                  <li><b>Range: </b>30 feet</li>
-                  <li><b>Duration: </b>Up to 1 minute</li>
-                  <li>
-                    <p>You stir chaos in nearby fire motes, bringing them to a fierce rage that attempts to engulf everything in flames. When you trigger this ability, you create a ball of wildflame in your hands. Make an infused ranged attack to throw this ball at a target you see within range. On a hit, you deal 2d6 fire damage per Fireweaving tier to the target and it gains the Wildfire status effect. Creatures that have Wildfire on them take your Constitution modifier in fire damage at the start of each of their turns for the duration of the ability.</p>
-                    <p>In addition, anytime you successfully target a creature using a Pyrofusion ability with Wildfire on it, you cause a contagious burst. Any creature within 10 feet of your Wildfire target must make a Dexterity saving throw. On a failure, they take fire damage equal to your Constitution modifier and catch fire as well.</p>
-                    <p>Wildfire is different from other flames in that it is difficult to pat out or douse. Wildfire damage does not stack with being on fire from other abilities. You are immune to catching fire from this ability, but you can take fire damage from being in the vicinity of any bursts.</p>
-                    <p>A creature can spend its entire turn to completely douse itself in water to put out the flames. There must be an adequate supply of water to do so, or a Hydrofusion ability that has a minimum cost of 1 Hit Die or 1 mana can also douse the flames. Alternatively, you can spend your reaction to douse Wildfire flames on a number of creatures up to your Constitution modifier that you can see within range.
-                      <ul>
-                        <li><b>Critical failure</b>: The target takes twice the amount of fire damage on the burst. The Wildfire effect remains the same.</li>
-                      </ul>
-                  </p>
-                    <p><b>Synergy</b>: For every Windweaving tier you master, your contagious burst increases by 5 feet.</p>
-                  </li>
-                </ul>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Flaming Sphere</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>HD 2, P 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>60 feet</li>
+                <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                <li>
+                  <p>A burning globe of fire 5 feet in diameter rolls in whichever direction you point and burns those
+                    it strikes. It moves 30 feet per round. As part of this movement, it can ascend or jump up to 30
+                    feet to strike a target. If it enters a space with a creature, it stops moving for the round and
+                    deals 3d6 points of fire damage to that creature, though a successful Dexterity save halves that
+                    damage. A flaming sphere rolls over barriers less than 4 feet tall. It ignites flammable substances
+                    it touches and illuminates the same area as a torch would.</p>
+                  <p>The sphere moves as long as you actively direct it with a bonus action. Otherwise, it merely stays
+                    at rest and burns. It can be extinguished by any means that would put out a fire of its size. The
+                    surface of the sphere has a spongy, yielding consistency and so does not cause damage except by its
+                    flame. It cannot push aside unwilling creatures or batter down large obstacles. The sphere winks out
+                    if it exceeds the ability’s range.</p>
+                  <p><b>Empower</b>: Spending an additional Hit Die and maintaining a mana pool of 2 increases the size
+                    of the sphere to 10 feet in diameter and it deals 6d6 points of fire damage to any creature it
+                    strikes. You can also control the sphere within 100 feet of you instead of 60 feet. Any creature
+                    that fails its save against the sphere is overheated, suffering disadvantage on its next saving
+                    throw or attack roll.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Fire Cloak</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 bonus action</li>
+                <li><b>Cost: </b>HD 1</li>
+                <li><b>Trigger: </b>Somatic</li>
+                <li><b>Range: </b>Self</li>
+                <li><b>Duration: </b>Concentration, up to 1 minute</li>
+                <li>
+                  <p>Fire motes feed off your energy and cloak your body in flames that do not harm you or your carried
+                    equipment but damage other creatures and objects. The flames cast light as a torch. Any creature
+                    that attacks you with a non-reach melee weapon or that begins its turn engaged in a grapple with you
+                    takes 1d6 points of fire damage and must succeed at a Dexterity save or catch fire. A creature that
+                    catches fire takes fire damage equal to your Constitution modifier at the start of its next turn.
+                  </p>
+                  <p>Unattended flammable objects catch fire, spreading fire to one adjacent, flammable object each
+                    turn.</p>
+                  <p><b>Empower</b>: You can increase the damage of this ability by 1d6 for 1 mana. Damage taken by
+                    catching on fire does not increase, but its duration now lasts 2 turns instead of 1.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="shadow infusion-box rounded border border-secondary text-left">
+            <span class="infusions-title p-2" role="button" onclick="collapsibleBox(this)">Wildfire</span>
+            <div class="infusions-body" style="display: none">
+              <ul style="list-style-type:none;">
+                <li><b>Activation: </b>1 action</li>
+                <li><b>Cost: </b>HD 2</li>
+                <li><b>Trigger: </b>Somatic, Verbal</li>
+                <li><b>Range: </b>30 feet</li>
+                <li><b>Duration: </b>Up to 1 minute</li>
+                <li>
+                  <p>You stir chaos in nearby fire motes, bringing them to a fierce rage that attempts to engulf
+                    everything in flames. When you trigger this ability, you create a ball of wildflame in your hands.
+                    Make an infused ranged attack to throw this ball at a target you see within range. On a hit, you
+                    deal 2d6 fire damage per Fireweaving tier to the target and it gains the Wildfire status effect.
+                    Creatures that have Wildfire on them take your Constitution modifier in fire damage at the start of
+                    each of their turns for the duration of the ability.</p>
+                  <p>In addition, anytime you successfully target a creature using a Pyrofusion ability with Wildfire on
+                    it, you cause a contagious burst. Any creature within 10 feet of your Wildfire target must make a
+                    Dexterity saving throw. On a failure, they take fire damage equal to your Constitution modifier and
+                    catch fire as well.</p>
+                  <p>Wildfire is different from other flames in that it is difficult to pat out or douse. Wildfire
+                    damage does not stack with being on fire from other abilities. You are immune to catching fire from
+                    this ability, but you can take fire damage from being in the vicinity of any bursts.</p>
+                  <p>A creature can spend its entire turn to completely douse itself in water to put out the flames.
+                    There must be an adequate supply of water to do so, or a Hydrofusion ability that has a minimum cost
+                    of 1 Hit Die or 1 mana can also douse the flames. Alternatively, you can spend your reaction to
+                    douse Wildfire flames on a number of creatures up to your Constitution modifier that you can see
+                    within range.
+                  <ul>
+                    <li><b>Critical failure</b>: The target takes twice the amount of fire damage on the burst. The
+                      Wildfire effect remains the same.</li>
+                  </ul>
+                  </p>
+                  <p><b>Synergy</b>: For every Windweaving tier you master, your contagious burst increases by 5 feet.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
 
